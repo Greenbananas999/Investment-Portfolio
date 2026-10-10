@@ -45,3 +45,11 @@ def test_metrics_drawdown():
     r = pd.Series([0.1, -0.5, 0.2], index=pd.bdate_range("2024-01-01", periods=3))
     m = backtest.metrics(r, pd.Series(0.0, index=r.index))
     assert np.isclose(m["Max drawdown"], -0.5)
+
+
+def test_remove_spikes_keeps_real_jumps():
+    s = pd.DataFrame({"TWD": [0.033, 0.034, 0.555, 0.033, 0.033],
+                      "CHF": [0.98, 0.98, 1.17, 1.16, 1.14]})
+    out = data.remove_spikes(s)
+    assert out["TWD"].max() < 0.04
+    assert out["CHF"].iloc[2] == 1.17

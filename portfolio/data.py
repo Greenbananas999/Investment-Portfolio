@@ -54,10 +54,20 @@ def load_prices(start="2010-01-01", refresh=False):
     return prices[tickers]
 
 
+def remove_spikes(df, jump=0.08, settle=0.04):
+    """Blank one-day bad ticks: a value far from both neighbours while the
+    neighbours agree with each other (Yahoo FX has a few, e.g. TWD in 2011).
+    Real jumps that persist, like the 2015 Swiss franc unpeg, are kept."""
+    prev, nxt = df.shift(1), df.shift(-1)
+    spike = (((df / prev - 1).abs() > jump) & ((df / nxt - 1).abs() > jump)
+             & ((nxt / prev - 1).abs() < settle))
+    return df.mask(spike).ffill()
+
+
 def load_fx(start="2010-01-01", refresh=False):
     """Daily USD value of one unit of each foreign currency."""
     if FX_CSV.exists() and not refresh:
-        return _read_csv(FX_CSV)
+        return remove_spikes(_read_csv(FX_CSV))
     direct = config.FX_TICKERS_DIRECT
     inverse = config.FX_TICKERS_INVERSE
     raw = _download(list(direct.values()) + list(inverse.values()), start)
@@ -69,7 +79,7 @@ def load_fx(start="2010-01-01", refresh=False):
     fx = fx.ffill()
     DATA_DIR.mkdir(exist_ok=True)
     fx.to_csv(FX_CSV)
-    return fx
+    return remove_spikes(fx)
 
 
 def daily_returns(prices):
