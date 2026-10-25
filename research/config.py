@@ -101,27 +101,34 @@ class MarketAssumptions:
 @dataclass
 class DCFSettings:
     explicit_years: int = 10       # forecast years before the terminal value
-    high_growth_years: int = 5     # growth held at the start rate, then fades linearly
-    max_start_growth: float = 0.30  # cap on starting FCF growth
+    high_growth_years: int = 4     # years 2..N grow at the start rate, then fade linearly
+    max_start_growth: float = 0.20  # cap on growth after the forward year
     min_start_growth: float = -0.05
+    # Year-1 cash flow = forward earnings x the firm's FCF/net-income conversion
+    # over the last 4 fiscal years, clipped to this range.
+    conversion_range: tuple = (0.35, 1.0)
     tax_rate: float = 0.21
     target_debt_weight_cap: float = 0.30
     cost_of_debt_spread: float = 0.012  # over the local risk-free rate
     terminal_growth_cap: float = 0.035
-    # Memory makers' free cash flow swings with the DRAM cycle; normalise the
-    # starting FCF to the average of the last N years instead of the last year.
-    normalise_years: dict = field(default_factory=lambda: {"SKHYNIX": 4, "SAMSUNG": 4})
+    # Memory makers are priced on peak-cycle forward earnings (forward P/E near 3
+    # in Oct 2026). Their cash flow is assumed to fall from the forward year to
+    # this fraction of it by year 4 (mid-cycle), then grow at nominal GDP.
+    # The Monte Carlo draws this fraction from 0.3 to 0.8.
+    cyclical_mid_cycle: dict = field(default_factory=lambda: {"SKHYNIX": 0.5, "SAMSUNG": 0.5})
+    cycle_years: int = 3
 
 
 @dataclass
 class GKSettings:
     """Grinold-Kroner: E[R] = D/P + inflation + real EPS growth - net dilution + repricing."""
     repricing_years: int = 10
-    # P/E the market is assumed to drift toward over `repricing_years`.
+    # Forward P/E the market is assumed to drift toward over `repricing_years`.
+    # For the memory makers this is a P/E on mid-cycle earnings.
     target_pe: dict = field(default_factory=lambda: {
-        "SKHYNIX": 10.0, "SAMSUNG": 13.0, "TSMC": 18.0,
-        "AAPL": 24.0, "NVDA": 28.0, "META": 22.0, "MSFT": 28.0})
-    # Long-run real earnings growth caps: no company out-grows its economy forever.
+        "SKHYNIX": 9.0, "SAMSUNG": 11.0, "TSMC": 18.0,
+        "AAPL": 24.0, "NVDA": 22.0, "META": 20.0, "MSFT": 26.0})
+    analyst_growth_cap: float = 0.20   # cap on the analyst growth used for years 1-5
     max_real_growth: float = 0.10
 
 
