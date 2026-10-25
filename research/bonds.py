@@ -60,18 +60,18 @@ def expected(bond, ds, a, horizon=None):
     Hold-period return for a bond held H years and sold at yield y_H:
         coupons (approx y0 per year) + price change at sale.
     Scenarios: yields unchanged (carry), yields revert halfway to a
-    fair value of (local real rate 1.5% + expected inflation), and +/-200 bp
+    fair value of (1 + real yield) x (1 + expected inflation) - 1, and +/-200 bp
     (Turkey: +/-800 bp) shocks.
     """
     h = horizon or a.horizon_years
-    y0 = ds.latest_yield(bond.yield_series)
+    y0, y_date, y_src = ds.latest_yield(bond.yield_series)
     if y0 is None:
         return None
     m = bond.maturity_years
-    fair = 0.015 + a.inflation[bond.currency]
+    fair = (1 + a.real_bond_yield[bond.currency]) * (1 + a.inflation[bond.currency]) - 1
     shock = 0.08 if bond.currency == "TRY" else 0.02
     scenarios = {"Yields unchanged": y0, "Halfway to fair value": y0 + 0.5 * (fair - y0),
-                 f"+{shock * 1e4:.0f} bp": y0 + shock, f"-{shock * 1e4:.0f} bp": max(0.0, y0 - shock)}
+                 "Yields up": y0 + shock, "Yields down": max(0.0, y0 - shock)}
     out = {}
     for name, yh in scenarios.items():
         # coupons reinvested at the average of today's and the exit yield;
@@ -85,7 +85,7 @@ def expected(bond, ds, a, horizon=None):
     dur, conv = duration_convexity(y0, m, bond.coupon_freq)
     base = out["Halfway to fair value"]
     return {
-        "yield": y0, "fair_yield": fair, "duration": dur, "convexity": conv,
+        "shock": shock, "yield": y0, "yield_date": y_date, "yield_source": y_src, "fair_yield": fair, "duration": dur, "convexity": conv,
         "scenarios_local": out,
         "expected_local": base,
         "fx_views": fxview.all_views(bond.currency, ds, a),

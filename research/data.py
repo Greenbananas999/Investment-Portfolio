@@ -32,6 +32,7 @@ class Dataset:
         self.yields = yields
         self.fundamentals = fundamentals or {}
         self.synthetic = synthetic
+        self.manual = set()
 
     @classmethod
     def load(cls):
@@ -48,7 +49,9 @@ class Dataset:
                 s = _read(f).iloc[:, 0]
                 yields[f.stem] = s.resample("MS").mean()
         fundamentals = {s.ticker: load_fundamentals(s.ticker) for s in config.STOCKS}
-        return cls(prices, fx, yields, fundamentals)
+        ds = cls(prices, fx, yields, fundamentals)
+        ds.manual = {f.stem for f in manual.glob("*.csv")} if manual.exists() else set()
+        return ds
 
     # ---- monthly series -------------------------------------------------
     def month_end(self, df):
@@ -101,8 +104,14 @@ class Dataset:
         return (s / 12).shift(1).reindex(idx).ffill().dropna()
 
     def latest_yield(self, name):
+        """(yield, date, source) from the series if current, else from config.SPOT_YIELDS."""
         s = self.monthly_yield(name)
-        return None if s is None or s.empty else float(s.iloc[-1])
+        last_price = self.prices.dropna(how="all").index[-1]
+        if s is not None and not s.empty and s.index[-1] >= last_price - pd.Timedelta(days=200):
+            return float(s.iloc[-1]), str(s.index[-1].date()), "FRED monthly" if name not in self.manual else "manual file"
+        if name in config.SPOT_YIELDS:
+            return config.SPOT_YIELDS[name]
+        return None, None, None
 
 
 def load_fundamentals(ticker):

@@ -51,6 +51,15 @@ BONDS = [
     Bond("TR_GOV10", "Turkey government 10Y", "TRY", "TR", "TR_10Y", 10.0, coupon_freq=2),
 ]
 
+# Spot yields for series with no current free history (decimal, date, source).
+# FRED's Turkish yields stop in 2010 and Stooq/OECD/IMF did not serve them in
+# Oct 2026. Used for forward-looking bond returns only; a monthly CSV at
+# data/research/manual/<series>.csv replaces these and adds the backtest.
+SPOT_YIELDS = {
+    "TR_10Y": (0.3584, "2026-10-23", "Trading Economics"),
+    "TR_2Y": (0.3653, "2026-10-23", "Trading Economics"),
+}
+
 # Benchmarks used for betas and for comparison lines.
 GLOBAL_INDEX = "ACWI"        # MSCI ACWI ETF in USD: the market for a USD investor
 US_INDEX = "^GSPC"
@@ -89,10 +98,13 @@ class MarketAssumptions:
         "US": 0.0, "KR": 0.008, "TW": 0.008, "FR": 0.007, "TR": 0.045})
     # Short rates used as the local risk-free rate when no yield series exists.
     risk_free: dict = field(default_factory=lambda: {
-        "USD": 0.039, "KRW": 0.025, "TWD": 0.018, "EUR": 0.021, "TRY": 0.38})
+        "USD": 0.039, "KRW": 0.025, "TWD": 0.018, "EUR": 0.021, "TRY": 0.36})
     # Long-run inflation expectations (used for FX via relative PPP and for G-K).
     inflation: dict = field(default_factory=lambda: {
-        "USD": 0.025, "KRW": 0.020, "TWD": 0.017, "EUR": 0.020, "TRY": 0.22})
+        "USD": 0.025, "KRW": 0.020, "TWD": 0.017, "EUR": 0.020, "TRY": 0.25})
+    # Real yield a long government bond should settle at (used for bond fair value).
+    real_bond_yield: dict = field(default_factory=lambda: {
+        "USD": 0.015, "KRW": 0.010, "TWD": 0.008, "EUR": 0.012, "TRY": 0.04})
     long_run_real_gdp: dict = field(default_factory=lambda: {
         "US": 0.018, "KR": 0.019, "TW": 0.025, "FR": 0.011, "TR": 0.035})
     horizon_years: int = 5

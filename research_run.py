@@ -74,10 +74,10 @@ def main():
     bond_out = {}
     for b in config.BONDS:
         e = bonds.expected(b, ds, a)
-        if e is None or b.key not in assets:
+        if e is None:
             continue
         bond_out[b.key] = {"name": b.name, "currency": b.currency, "maturity": b.maturity_years,
-                           **e, "consensus_local": e["expected_local"], "consensus_usd": e["expected_usd"]}
+                           "has_history": b.key in assets, **e, "consensus_local": e["expected_local"], "consensus_usd": e["expected_usd"]}
 
     # Monte Carlo on the joint USD (and local) history.
     keys = [k for k in assets]
