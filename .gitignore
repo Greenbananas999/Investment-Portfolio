@@ -1,3 +1,8 @@
 .env
 __pycache__/
 .pytest_cache/
+
+# Raw SEC companyfacts JSON (about 500 MB): regenerate with
+#   python -m research.fetch --universe research/plan/universe.csv --only edgar
+# The tidy extract data/research/edgar_facts.csv.gz is committed instead.
+data/research/edgar/*.json

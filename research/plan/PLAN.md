@@ -201,7 +201,7 @@ Answers log:
 
 | Date | Question | Answer |
 |---|---|---|
-| | | |
+| 2026-11-07 | Approve method and benchmarks, start Phase 2? | "Approve, start Phase 2." Defaults stand until John says otherwise: gold/commodities/cash/US TIPS count as US-neutral under the 70% rule (both treatments will be shown); open-end EM bond funds stay in the universe as candidates with their fees scored; the four-fund course analysis is not started unless John asks; no course brief file was provided. |
 
 ## Known limits and risks to the plan
 
@@ -226,3 +226,9 @@ Answers log:
 |---|---|
 | 2026-11-07 | Phase 0: repo read, data access confirmed from this PC, tests pass (13). Schema written. |
 | 2026-11-07 | Phase 1: `method.md` and `data_request.md` written; committed before any backtest. Check-in 1 requested. |
+| 2026-11-07 | Check-in 1: John approved ("Approve, start Phase 2"); defaults logged above. |
+| 2026-11-07 | Task 2.1 done: five long lists (US growth 87 candidates + 20 faded leaders; international 60 + 8; EM bonds 20 candidates, 11 excluded, 12 too young; other 33; overlays 15 strategies). FRED rate-limited this PC after a request burst; OECD SDMX adopted as the primary source for non-US rates (`data_request.md` section 4). |
+| 2026-11-07 | Task 2.3 done: `research/screen/` package (1,900 lines, 24 tests, `screen_usage.md`); conventions logged in `method.md` section 13. |
+| 2026-11-07 | Task 2.2 done: `research/fetch.py --universe` fetched 412 price tickers, 30 currencies, OECD rates for 47 countries plus FRED (answered again), CBOE indices, 209 fundamentals folders, 152 EDGAR files (3 CIKs 404), fund facts, volumes. Raw EDGAR JSON (489 MB) is git-ignored; the tidy extract `data/research/edgar_facts.csv.gz` is committed. |
+| 2026-11-07 | Task 2.4 done by the planner with the library CLI (hard, score, validate for all four types). Fix on the way: five legacy us-gaap revenue tags added to `research/screen/edgar.py` so Coca-Cola, J&J, Goldman and seven others were screened instead of passing unchecked (parsing fix, not a rule change). Result: 46/128 US, 31/81 international, 20/43 EM bond, 33/108 other rows pass; **no technical signal is kept** in any type. |
+| 2026-11-07 | Task 2.5 done: `shortlist.md` (8 US, 8 international, 8 EM bond funds, 8 other, 5 overlays) with reasons and near misses. Phase 2 committed. **Usage pause: waiting for John's "continue" before Phase 3.** |

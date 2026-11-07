@@ -71,9 +71,34 @@ HUF, CZK, THB, MYR, PHP, CLP, COP, ILS. Yahoo tickers `EURUSD=X` style where
 quoted direct, `JPY=X` style inverted. Already on disk: KRW, TWD, EUR, TRY and
 the 13 currencies in `data/fx.csv`.
 
-## 4. FRED series (monthly where available; daily series are month-ended)
+## 4. Rates, inflation and credit series (monthly; daily series are month-ended)
 
-Pulled with a 2-second gap between requests, failures logged not fatal.
+**Source order (decided 2026-11-07 after FRED rate-limited this PC):**
+
+1. **OECD SDMX API (primary for all non-US rates).** Tested OK, 1 second per
+   query, no key. One query returns every country:
+   `https://sdmx.oecd.org/public/rest/data/OECD.SDD.STES,DSD_STES@DF_FINMARK,/.M.IRLT.PA.....?startPeriod=2005-01&dimensionAtObservation=AllDimensions&format=csvfile`
+   (10-year government yield, `MEASURE=IRLT`) and the same with `IR3TIB`
+   (3-month interbank). Columns `REF_AREA` (ISO3), `TIME_PERIOD`, `OBS_VALUE`.
+   Coverage checked since 2017: BRA, CHL, CHN, COL, CZE, HUN, IDN (10y to
+   2024-12), IND, KOR, MEX, POL, ROU, ZAF, ISR plus all developed markets.
+   No Turkey. These are the same series FRED republishes as IRLTLT01xx and
+   IR3TIB01xx.
+2. **FRED fredgraph CSV** for US-only series, 5 seconds apart with retries,
+   only once FRED answers again (blocked as of 2026-11-07 after a burst).
+   Already on disk in `yields.csv`: TB3MS, GS10, CPIAUCSL, French and Korean
+   rates, Turkish and French CPI, to 2026-09.
+3. **Fallbacks if FRED stays blocked:** US real yields and nominal curve from
+   Treasury.gov daily CSVs (tested OK:
+   `https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/<year>/all?type=daily_treasury_real_yield_curve&field_tdr_date_value=<year>&page&_format=csv`,
+   and `type=daily_treasury_yield_curve` for nominal); broad dollar index via
+   UUP (Yahoo) or DX-Y.NYB; country CPI via the World Bank API
+   (`https://api.worldbank.org/v2/country/<ISO2;...>/indicator/FP.CPI.TOTL.ZG?format=json&date=2005:2026&per_page=200`, tested OK, annual) or the
+   OECD CPI dataflow; EM credit spreads (BAML series) have no free fallback
+   and are optional.
+
+FRED series list (kept for when FRED answers; the fetch logs failures and
+moves on):
 
 | Group | Series |
 |---|---|
@@ -138,3 +163,4 @@ the screener in `universe.csv` `source_url`, values in `funds.csv`).
 | Date | Event |
 |---|---|
 | 2026-11-07 | Draft written; sources tested from this PC. Fetch runs in task 2.2 after the long lists exist. |
+| 2026-11-07 | Fetch run (`python -m research.fetch --universe research/plan/universe.csv`, 1431 s, plus `--only volumes` 61 s). Prices 410/412 tickers (no data: EMBAX, WEMDX; one-row: EMTL, ^VXEEM), USD listings 51/53 (no data: CHL, CAJ; one row: TOELY), FX 30/30, OECD 10Y 47 / 3M 46 / CPI y/y 53 areas to 2026-09/10, FRED answered (7 new series; EM OAS only from 2023-11), World Bank CPI 25/25, CBOE 5/5, fundamentals 209/209 folders, EDGAR 152/155 (404: CSL.AX, IFX.DE, ICICIBANK.NS), funds 176/176, volumes.csv and volumes_usd_listing.csv added. pytest green. |

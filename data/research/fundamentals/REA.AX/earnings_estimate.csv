@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,,,,,,,AUD
++1q,,,,,,,AUD
+0y,5.61832,5.28,5.948,4.935,14.0,0.1385,AUD
++1y,6.43279,6.007,6.7,5.61832,14.0,0.145,AUD

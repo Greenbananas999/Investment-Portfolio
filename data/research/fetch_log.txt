@@ -1,87 +1,3393 @@
-price 000660.KS: 5395 rows
-price 005930.KS: 5395 rows
-price 2330.TW: 5360 rows
-price AAPL: 5487 rows
-price NVDA: 5487 rows
-price META: 3629 rows
-price MSFT: 5487 rows
-price ACWI: 4674 rows
-price SPY: 5487 rows
-price ^GSPC: 5487 rows
-price ^KS11: 5373 rows
-price ^TWII: 5335 rows
-price ^FCHI: 5578 rows
-price TSM: 5487 rows
-price ^IRX: 5482 rows
-price ^TNX: 5482 rows
-fx KRW: 5656 rows
-fx TWD: 5301 rows
-fx EUR: 5657 rows
-fx TRY: 5671 rows
-fred US_3M (TB3MS): 1113 rows, 1934-01-01 to 2026-09-01
-fred US_10Y (GS10): 882 rows, 1953-04-01 to 2026-09-01
-fred FR_10Y (IRLTLT01FRM156N): 801 rows, 1960-01-01 to 2026-09-01
-fred FR_3M (IR3TIB01FRM156N): 681 rows, 1970-01-01 to 2026-09-01
-fred TR_2Y (IRLTST01TRM156N): 115 rows, 1991-07-01 to 2010-09-01
-fred TR_3M (IR3TIB01TRM156N): 133 rows, 1991-07-01 to 2008-04-01
-fred KR_3M (IR3TIB01KRM156N): 429 rows, 1991-01-01 to 2026-09-01
-fred KR_10Y (IRLTLT01KRM156N): 312 rows, 2000-10-01 to 2026-09-01
-fred TR_CPI (TURCPIALLMINMEI): 844 rows, 1955-01-01 to 2025-04-01
-fred US_CPI (CPIAUCSL): 956 rows, 1947-01-01 to 2026-09-01
-fred FR_CPI (FRACPIALLMINMEI): 843 rows, 1955-01-01 to 2025-03-01
-info 000660.KS: 155 fields
-cashflow 000660.KS: ok
-balance_sheet 000660.KS: ok
-income_stmt 000660.KS: ok
-growth_estimates 000660.KS: ok
-earnings_estimate 000660.KS: ok
-revenue_estimate 000660.KS: ok
-dividends 000660.KS: ok
-info 005930.KS: 160 fields
-cashflow 005930.KS: ok
-balance_sheet 005930.KS: ok
-income_stmt 005930.KS: ok
-growth_estimates 005930.KS: ok
-earnings_estimate 005930.KS: ok
-revenue_estimate 005930.KS: ok
-dividends 005930.KS: ok
-info 2330.TW: 165 fields
-cashflow 2330.TW: ok
-balance_sheet 2330.TW: ok
-income_stmt 2330.TW: ok
-growth_estimates 2330.TW: ok
-earnings_estimate 2330.TW: ok
-revenue_estimate 2330.TW: ok
-dividends 2330.TW: ok
-info AAPL: 184 fields
-cashflow AAPL: ok
-balance_sheet AAPL: ok
-income_stmt AAPL: ok
-growth_estimates AAPL: ok
-earnings_estimate AAPL: ok
-revenue_estimate AAPL: ok
-dividends AAPL: ok
-info NVDA: 186 fields
-cashflow NVDA: ok
-balance_sheet NVDA: ok
-income_stmt NVDA: ok
-growth_estimates NVDA: ok
-earnings_estimate NVDA: ok
-revenue_estimate NVDA: ok
-dividends NVDA: ok
-info META: 182 fields
-cashflow META: ok
-balance_sheet META: ok
-income_stmt META: ok
-growth_estimates META: ok
-earnings_estimate META: ok
-revenue_estimate META: ok
-dividends META: ok
-info MSFT: 184 fields
-cashflow MSFT: ok
-balance_sheet MSFT: ok
-income_stmt MSFT: ok
-growth_estimates MSFT: ok
-earnings_estimate MSFT: ok
-revenue_estimate MSFT: ok
-dividends MSFT: ok
+Fetch run 2026-11-07 12:27:56  universe=research/plan/universe.csv  refresh=False  only=all
+universe rows: 442; steps: ['prices', 'fx', 'rates', 'cboe', 'fundamentals', 'edgar', 'funds']
+--- step prices start 12:27:56
+price: 412 in universe, 15 already on disk, 397 to fetch
+price chunk 1: 50 requested, 50 columns returned
+price chunk 2: 50 requested, 50 columns returned
+price chunk 3: 50 requested, 50 columns returned
+price chunk 4: 50 requested, 50 columns returned
+price chunk 5: 50 requested, 50 columns returned
+price chunk 6: 50 requested, 50 columns returned
+price chunk 7: 50 requested, 50 columns returned
+price chunk 8: 47 requested, 47 columns returned
+price ADBE: 5497 rows, 2005-01-03 to 2026-11-06
+price ADP: 5497 rows, 2005-01-03 to 2026-11-06
+price AMD: 5497 rows, 2005-01-03 to 2026-11-06
+price ABNB: 1484 rows, 2020-12-10 to 2026-11-06
+price ALNY: 5497 rows, 2005-01-03 to 2026-11-06
+price GOOGL: 5497 rows, 2005-01-03 to 2026-11-06
+price AMZN: 5497 rows, 2005-01-03 to 2026-11-06
+price AEP: 5497 rows, 2005-01-03 to 2026-11-06
+price AMGN: 5497 rows, 2005-01-03 to 2026-11-06
+price ADI: 5497 rows, 2005-01-03 to 2026-11-06
+price AMAT: 5497 rows, 2005-01-03 to 2026-11-06
+price APP: 1399 rows, 2021-04-15 to 2026-11-06
+price ALAB: 662 rows, 2024-03-20 to 2026-11-06
+price ADSK: 5497 rows, 2005-01-03 to 2026-11-06
+price AXON: 5497 rows, 2005-01-03 to 2026-11-06
+price BKR: 5497 rows, 2005-01-03 to 2026-11-06
+price BKNG: 5497 rows, 2005-01-03 to 2026-11-06
+price AVGO: 4341 rows, 2009-08-06 to 2026-11-06
+price CDNS: 5497 rows, 2005-01-03 to 2026-11-06
+price CTAS: 5497 rows, 2005-01-03 to 2026-11-06
+price CSCO: 5497 rows, 2005-01-03 to 2026-11-06
+price CMCSA: 5497 rows, 2005-01-03 to 2026-11-06
+price CEG: 1206 rows, 2022-01-19 to 2026-11-06
+price CPRT: 5497 rows, 2005-01-03 to 2026-11-06
+price CRWV: 406 rows, 2025-03-28 to 2026-11-06
+price COST: 5497 rows, 2005-01-03 to 2026-11-06
+price CRWD: 1863 rows, 2019-06-12 to 2026-11-06
+price CSX: 5497 rows, 2005-01-03 to 2026-11-06
+price DDOG: 1794 rows, 2019-09-19 to 2026-11-06
+price DXCM: 5427 rows, 2005-04-14 to 2026-11-06
+price FANG: 3537 rows, 2012-10-12 to 2026-11-06
+price DASH: 1485 rows, 2020-12-09 to 2026-11-06
+price EXC: 5497 rows, 2005-01-03 to 2026-11-06
+price FAST: 5497 rows, 2005-01-03 to 2026-11-06
+price FTNT: 4268 rows, 2009-11-18 to 2026-11-06
+price GEHC: 977 rows, 2022-12-15 to 2026-11-06
+price GILD: 5497 rows, 2005-01-03 to 2026-11-06
+price HON: 5497 rows, 2005-01-03 to 2026-11-06
+price IDXX: 5497 rows, 2005-01-03 to 2026-11-06
+price INTC: 5497 rows, 2005-01-03 to 2026-11-06
+price INTU: 5497 rows, 2005-01-03 to 2026-11-06
+price ISRG: 5497 rows, 2005-01-03 to 2026-11-06
+price KDP: 4656 rows, 2008-05-07 to 2026-11-06
+price KLAC: 5497 rows, 2005-01-03 to 2026-11-06
+price LRCX: 5497 rows, 2005-01-03 to 2026-11-06
+price LITE: 2841 rows, 2015-07-23 to 2026-11-06
+price MAR: 5497 rows, 2005-01-03 to 2026-11-06
+price MRVL: 5497 rows, 2005-01-03 to 2026-11-06
+price MCHP: 5497 rows, 2005-01-03 to 2026-11-06
+price MU: 5497 rows, 2005-01-03 to 2026-11-06
+price MSTR: 5497 rows, 2005-01-03 to 2026-11-06
+price MRNA: 1990 rows, 2018-12-07 to 2026-11-06
+price MDLZ: 5497 rows, 2005-01-03 to 2026-11-06
+price MPWR: 5497 rows, 2005-01-03 to 2026-11-06
+price MNST: 5497 rows, 2005-01-03 to 2026-11-06
+price NFLX: 5497 rows, 2005-01-03 to 2026-11-06
+price ORLY: 5497 rows, 2005-01-03 to 2026-11-06
+price ODFL: 5497 rows, 2005-01-03 to 2026-11-06
+price PCAR: 5497 rows, 2005-01-03 to 2026-11-06
+price PLTR: 1534 rows, 2020-09-30 to 2026-11-06
+price PANW: 3596 rows, 2012-07-20 to 2026-11-06
+price PAYX: 5497 rows, 2005-01-03 to 2026-11-06
+price PYPL: 2854 rows, 2015-07-06 to 2026-11-06
+price PEP: 5497 rows, 2005-01-03 to 2026-11-06
+price QCOM: 5497 rows, 2005-01-03 to 2026-11-06
+price REGN: 5497 rows, 2005-01-03 to 2026-11-06
+price RKLB: 1495 rows, 2020-11-24 to 2026-11-06
+price ROP: 5497 rows, 2005-01-03 to 2026-11-06
+price ROST: 5497 rows, 2005-01-03 to 2026-11-06
+price SNDK: 436 rows, 2025-02-13 to 2026-11-06
+price SBUX: 5497 rows, 2005-01-03 to 2026-11-06
+price SNPS: 5497 rows, 2005-01-03 to 2026-11-06
+price TMUS: 4921 rows, 2007-04-19 to 2026-11-06
+price TTWO: 5497 rows, 2005-01-03 to 2026-11-06
+price TER: 5497 rows, 2005-01-03 to 2026-11-06
+price TSLA: 4116 rows, 2010-06-29 to 2026-11-06
+price TXN: 5497 rows, 2005-01-03 to 2026-11-06
+price VRTX: 5497 rows, 2005-01-03 to 2026-11-06
+price WMT: 5497 rows, 2005-01-03 to 2026-11-06
+price WDC: 5497 rows, 2005-01-03 to 2026-11-06
+price WDAY: 3537 rows, 2012-10-12 to 2026-11-06
+price XEL: 5497 rows, 2005-01-03 to 2026-11-06
+price LLY: 5497 rows, 2005-01-03 to 2026-11-06
+price BRK-B: 5497 rows, 2005-01-03 to 2026-11-06
+price JPM: 5497 rows, 2005-01-03 to 2026-11-06
+price JNJ: 5497 rows, 2005-01-03 to 2026-11-06
+price V: 4690 rows, 2008-03-19 to 2026-11-06
+price MA: 5146 rows, 2006-05-25 to 2026-11-06
+price RTX: 5497 rows, 2005-01-03 to 2026-11-06
+price CAT: 5497 rows, 2005-01-03 to 2026-11-06
+price ABBV: 3484 rows, 2013-01-02 to 2026-11-06
+price GEV: 657 rows, 2024-03-27 to 2026-11-06
+price APH: 5497 rows, 2005-01-03 to 2026-11-06
+price GE: 5497 rows, 2005-01-03 to 2026-11-06
+price ANET: 3125 rows, 2014-06-06 to 2026-11-06
+price PM: 4692 rows, 2008-03-17 to 2026-11-06
+price WELL: 5497 rows, 2005-01-03 to 2026-11-06
+price GS: 5497 rows, 2005-01-03 to 2026-11-06
+price KO: 5497 rows, 2005-01-03 to 2026-11-06
+price UBER: 1885 rows, 2019-05-10 to 2026-11-06
+price MS: 5497 rows, 2005-01-03 to 2026-11-06
+price NEM: 5497 rows, 2005-01-03 to 2026-11-06
+price IBM: 5497 rows, 2005-01-03 to 2026-11-06
+price AXP: 5497 rows, 2005-01-03 to 2026-11-06
+price ORCL: 5497 rows, 2005-01-03 to 2026-11-06
+price MCD: 5497 rows, 2005-01-03 to 2026-11-06
+price HLT: 3245 rows, 2013-12-12 to 2026-11-06
+price EBAY: 5497 rows, 2005-01-03 to 2026-11-06
+price CTSH: 5497 rows, 2005-01-03 to 2026-11-06
+price BIIB: 5497 rows, 2005-01-03 to 2026-11-06
+price ILMN: 5497 rows, 2005-01-03 to 2026-11-06
+price UAA: 5274 rows, 2005-11-18 to 2026-11-06
+price FSLR: 5023 rows, 2006-11-17 to 2026-11-06
+price WYNN: 5497 rows, 2005-01-03 to 2026-11-06
+price FFIV: 5497 rows, 2005-01-03 to 2026-11-06
+price AKAM: 5497 rows, 2005-01-03 to 2026-11-06
+price GEN: 5497 rows, 2005-01-03 to 2026-11-06
+price EXPE: 5359 rows, 2005-07-21 to 2026-11-06
+price SIRI: 5497 rows, 2005-01-03 to 2026-11-06
+price FOSL: 5497 rows, 2005-01-03 to 2026-11-06
+price TRIP: 3751 rows, 2011-12-07 to 2026-11-06
+price GRPN: 3773 rows, 2011-11-04 to 2026-11-06
+price NTAP: 5497 rows, 2005-01-03 to 2026-11-06
+price GPRO: 3111 rows, 2014-06-26 to 2026-11-06
+price ATD.TO: 5485 rows, 2005-01-04 to 2026-11-06
+price CNR.TO: 5485 rows, 2005-01-04 to 2026-11-06
+price COH.AX: 5527 rows, 2005-01-04 to 2026-11-06
+price CP.TO: 5485 rows, 2005-01-04 to 2026-11-06
+price CSL.AX: 5527 rows, 2005-01-04 to 2026-11-06
+price CSU.TO: 4777 rows, 2007-10-25 to 2026-11-06
+price DOL.TO: 4285 rows, 2009-10-09 to 2026-11-06
+price MQG.AX: 5527 rows, 2005-01-04 to 2026-11-06
+price REA.AX: 5527 rows, 2005-01-04 to 2026-11-06
+price XRO.AX: 3544 rows, 2012-11-08 to 2026-11-06
+price 1299.HK: 3947 rows, 2010-10-29 to 2026-11-06
+price 0700.HK: 5387 rows, 2005-01-03 to 2026-11-06
+price 1211.HK: 5387 rows, 2005-01-03 to 2026-11-06
+price 2020.HK: 4767 rows, 2007-07-10 to 2026-11-06
+price 2318.HK: 5387 rows, 2005-01-03 to 2026-11-06
+price 600519.SS: 5323 rows, 2005-01-03 to 2026-11-06
+price ADS.DE: 5557 rows, 2005-01-03 to 2026-11-06
+price AIR.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price ASML.AS: 5599 rows, 2005-01-03 to 2026-11-06
+price ATCO-A.ST: 5508 rows, 2005-01-03 to 2026-11-06
+price AZN.L: 5529 rows, 2005-01-03 to 2026-11-06
+price DSY.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price EL.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price IFX.DE: 5557 rows, 2005-01-03 to 2026-11-06
+price LONN.SW: 5510 rows, 2005-01-03 to 2026-11-06
+price MC.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price NOVO-B.CO: 5476 rows, 2005-01-03 to 2026-11-06
+price OR.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price RMS.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price SAP.DE: 5557 rows, 2005-01-03 to 2026-11-06
+price SU.PA: 5594 rows, 2005-01-03 to 2026-11-06
+price BAJFINANCE.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price HDFCBANK.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price ICICIBANK.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price INFY.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price RELIANCE.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price TCS.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price TITAN.NS: 5393 rows, 2005-01-03 to 2026-11-06
+price 4063.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 4519.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 6367.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 6594.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 6758.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 6857.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 6861.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 7974.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 8035.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 9983.T: 5392 rows, 2005-01-03 to 2026-11-06
+price 006400.KS: 5405 rows, 2005-01-03 to 2026-11-06
+price 035420.KS: 5405 rows, 2005-01-03 to 2026-11-06
+price 2454.TW: 5369 rows, 2005-01-03 to 2026-11-06
+price ITUB4.SA: 5435 rows, 2005-01-03 to 2026-11-06
+price MELI: 4842 rows, 2007-08-10 to 2026-11-06
+price WALMEX.MX: 5506 rows, 2005-01-03 to 2026-11-06
+price WEGE3.SA: 5435 rows, 2005-01-03 to 2026-11-06
+price BBCA.JK: 5376 rows, 2005-01-03 to 2026-11-06
+price NPN.JO: 5566 rows, 2005-01-03 to 2026-11-06
+price 0941.HK: 5387 rows, 2005-01-03 to 2026-11-06
+price BIDU: 5348 rows, 2005-08-05 to 2026-11-06
+price ERIC-B.ST: 5508 rows, 2005-01-03 to 2026-11-06
+price NOKIA.HE: 5510 rows, 2005-01-03 to 2026-11-06
+price 7751.T: 5392 rows, 2005-01-03 to 2026-11-06
+price PETR4.SA: 5435 rows, 2005-01-03 to 2026-11-06
+price VALE3.SA: 5435 rows, 2005-01-03 to 2026-11-06
+price TEVA.TA: 4612 rows, 2005-01-03 to 2026-11-06
+price SHOP.TO: 2878 rows, 2015-05-21 to 2026-11-06
+price WTC.AX: 2680 rows, 2016-04-11 to 2026-11-06
+price 1810.HK: 2052 rows, 2018-07-09 to 2026-11-06
+price 300750.SZ: 2038 rows, 2018-06-11 to 2026-11-06
+price 3690.HK: 1999 rows, 2018-09-20 to 2026-11-06
+price 9988.HK: 1709 rows, 2019-11-26 to 2026-11-06
+price ADYEN.AS: 2153 rows, 2018-06-13 to 2026-11-06
+price RACE.MI: 2758 rows, 2016-01-04 to 2026-11-06
+price 6098.T: 2965 rows, 2014-10-16 to 2026-11-06
+price 207940.KS: 2443 rows, 2016-11-11 to 2026-11-06
+price 373220.KS: 1164 rows, 2022-01-27 to 2026-11-06
+price NU: 1233 rows, 2021-12-09 to 2026-11-06
+price SE: 2274 rows, 2017-10-20 to 2026-11-06
+price EMB: 4751 rows, 2007-12-19 to 2026-11-06
+price PCY: 4799 rows, 2007-10-11 to 2026-11-06
+price EMLC: 4099 rows, 2010-07-23 to 2026-11-06
+price LEMB: 3784 rows, 2011-10-20 to 2026-11-06
+price EBND: 3950 rows, 2011-02-24 to 2026-11-06
+price CEMB: 3660 rows, 2012-04-19 to 2026-11-06
+price EMHY: 3671 rows, 2012-04-03 to 2026-11-06
+price HYEM: 3643 rows, 2012-05-14 to 2026-11-06
+price PEBIX: 5497 rows, 2005-01-03 to 2026-11-06
+price PREMX: 5497 rows, 2005-01-03 to 2026-11-06
+price FNMIX: 5497 rows, 2005-01-03 to 2026-11-06
+price TGEIX: 5497 rows, 2005-01-03 to 2026-11-06
+price DBLEX: 4175 rows, 2010-04-06 to 2026-11-06
+price GSDIX: 5497 rows, 2005-01-03 to 2026-11-06
+price JEMDX: 5497 rows, 2005-01-03 to 2026-11-06
+price MEDIX: 5497 rows, 2005-01-03 to 2026-11-06
+price PYEMX: 5497 rows, 2005-01-03 to 2026-11-06
+price SHMDX: 4837 rows, 2007-08-17 to 2026-11-06
+price EEIIX: 4262 rows, 2009-11-27 to 2026-11-06
+price PRELX: 3885 rows, 2011-05-27 to 2026-11-06
+price PELBX: 4994 rows, 2007-01-03 to 2026-11-06
+price ELD: 4088 rows, 2010-08-09 to 2026-11-06
+price EMCB: 3689 rows, 2012-03-08 to 2026-11-06
+price EMBAX: NO DATA
+price FEMDX: 5143 rows, 2006-05-31 to 2026-11-06
+price EMDIX: 3673 rows, 2012-03-30 to 2026-11-06
+price EMKIX: 3777 rows, 2011-10-28 to 2026-11-06
+price PEMIX: 4365 rows, 2009-07-02 to 2026-11-06
+price EMDAX: 3924 rows, 2011-04-01 to 2026-11-06
+price FEDCX: 3927 rows, 2011-03-29 to 2026-11-06
+price WEMDX: NO DATA
+price VWOB: 3379 rows, 2013-06-04 to 2026-11-06
+price VEMBX: 2682 rows, 2016-03-10 to 2026-11-06
+price FEMB: 3019 rows, 2014-11-05 to 2026-11-06
+price EMTL: 1 rows, 2026-07-21 to 2026-07-21  SHORT (<60 rows)
+price JPMB: 2205 rows, 2018-01-31 to 2026-11-06
+price EMBD: 1617 rows, 2020-06-03 to 2026-11-06
+price EMHC: 1405 rows, 2021-04-07 to 2026-11-06
+price CBON: 3015 rows, 2014-11-11 to 2026-11-06
+price JEMIX: 2922 rows, 2015-03-27 to 2026-11-06
+price TRECX: 3634 rows, 2012-05-25 to 2026-11-06
+price PYELX: 3774 rows, 2011-11-03 to 2026-11-06
+price NEMDX: 989 rows, 2022-11-29 to 2026-11-06
+price BIL: 4893 rows, 2007-05-30 to 2026-11-06
+price SHV: 4988 rows, 2007-01-11 to 2026-11-06
+price DJP: 5037 rows, 2006-10-30 to 2026-11-06
+price GSG: 5107 rows, 2006-07-21 to 2026-11-06
+price GLD: 5497 rows, 2005-01-03 to 2026-11-06
+price IAU: 5479 rows, 2005-01-28 to 2026-11-06
+price SGOL: 4318 rows, 2009-09-09 to 2026-11-06
+price GII: 4975 rows, 2007-01-31 to 2026-11-06
+price IGF: 4756 rows, 2007-12-12 to 2026-11-06
+price WIP: 4690 rows, 2008-03-19 to 2026-11-06
+price GNR: 4063 rows, 2010-09-14 to 2026-11-06
+price GUNR: 3804 rows, 2011-09-22 to 2026-11-06
+price HAP: 4525 rows, 2008-11-11 to 2026-11-06
+price IGE: 5497 rows, 2005-01-03 to 2026-11-06
+price DBP: 4992 rows, 2007-01-05 to 2026-11-06
+price GLTR: 4035 rows, 2010-10-22 to 2026-11-06
+price PALL: 4234 rows, 2010-01-08 to 2026-11-06
+price PPLT: 4234 rows, 2010-01-08 to 2026-11-06
+price RWX: 5002 rows, 2006-12-19 to 2026-11-06
+price VNQI: 4029 rows, 2010-11-01 to 2026-11-06
+price RWO: 4645 rows, 2008-05-22 to 2026-11-06
+price SIVR: 4350 rows, 2009-07-24 to 2026-11-06
+price SLV: 5165 rows, 2006-04-28 to 2026-11-06
+price WOOD: 4622 rows, 2008-06-25 to 2026-11-06
+price LTPZ: 4319 rows, 2009-09-08 to 2026-11-06
+price SCHP: 4090 rows, 2010-08-05 to 2026-11-06
+price SPIP: 4893 rows, 2007-05-30 to 2026-11-06
+price STIP: 4006 rows, 2010-12-03 to 2026-11-06
+price STPZ: 4330 rows, 2009-08-21 to 2026-11-06
+price TDTT: 3803 rows, 2011-09-23 to 2026-11-06
+price TIP: 5497 rows, 2005-01-03 to 2026-11-06
+price VTIP: 3535 rows, 2012-10-16 to 2026-11-06
+price DBC: 5222 rows, 2006-02-06 to 2026-11-06
+price USCI: 4087 rows, 2010-08-10 to 2026-11-06
+price BWX: 4799 rows, 2007-10-11 to 2026-11-06
+price CEF: 5497 rows, 2005-01-03 to 2026-11-06
+price COPX: 4165 rows, 2010-04-20 to 2026-11-06
+price CPER: 3766 rows, 2011-11-15 to 2026-11-06
+price DBA: 4992 rows, 2007-01-05 to 2026-11-06
+price DBB: 4992 rows, 2007-01-05 to 2026-11-06
+price DBE: 4992 rows, 2007-01-05 to 2026-11-06
+price DBO: 4992 rows, 2007-01-05 to 2026-11-06
+price FLRN: 3755 rows, 2011-12-01 to 2026-11-06
+price FTAG: 4178 rows, 2010-03-31 to 2026-11-06
+price GDX: 5149 rows, 2006-05-22 to 2026-11-06
+price GDXJ: 4273 rows, 2009-11-11 to 2026-11-06
+price IYR: 5497 rows, 2005-01-03 to 2026-11-06
+price MINT: 4269 rows, 2009-11-17 to 2026-11-06
+price MNA: 4269 rows, 2009-11-17 to 2026-11-06
+price MOO: 4825 rows, 2007-09-05 to 2026-11-06
+price MXI: 5063 rows, 2006-09-22 to 2026-11-06
+price PHYS: 4201 rows, 2010-02-26 to 2026-11-06
+price PICK: 3713 rows, 2012-02-02 to 2026-11-06
+price PSLV: 4030 rows, 2010-10-29 to 2026-11-06
+price PSR: 4517 rows, 2008-11-21 to 2026-11-06
+price QAI: 4434 rows, 2009-03-25 to 2026-11-06
+price REMX: 4031 rows, 2010-10-28 to 2026-11-06
+price RLY: 3655 rows, 2012-04-26 to 2026-11-06
+price RWR: 5497 rows, 2005-01-03 to 2026-11-06
+price SCHH: 3978 rows, 2011-01-13 to 2026-11-06
+price SHY: 5497 rows, 2005-01-03 to 2026-11-06
+price UGL: 4510 rows, 2008-12-03 to 2026-11-06
+price UNG: 4922 rows, 2007-04-18 to 2026-11-06
+price USO: 5178 rows, 2006-04-10 to 2026-11-06
+price UUP: 4955 rows, 2007-03-01 to 2026-11-06
+price VNQ: 5497 rows, 2005-01-03 to 2026-11-06
+price WTMF: 3984 rows, 2011-01-05 to 2026-11-06
+price XLB: 5497 rows, 2005-01-03 to 2026-11-06
+price XME: 5127 rows, 2006-06-22 to 2026-11-06
+price FTRI: 4178 rows, 2010-03-31 to 2026-11-06
+price IFGL: 4772 rows, 2007-11-19 to 2026-11-06
+price CUT: 4778 rows, 2007-11-09 to 2026-11-06
+price VEGI: 3713 rows, 2012-02-02 to 2026-11-06
+price TIPZ: 4318 rows, 2009-09-09 to 2026-11-06
+price GBIL: 2552 rows, 2016-09-14 to 2026-11-06
+price ICSH: 3243 rows, 2013-12-16 to 2026-11-06
+price JPST: 2381 rows, 2017-05-19 to 2026-11-06
+price NEAR: 3294 rows, 2013-10-03 to 2026-11-06
+price SGOV: 1619 rows, 2020-06-01 to 2026-11-06
+price TFLO: 3210 rows, 2014-02-04 to 2026-11-06
+price USFR: 3210 rows, 2014-02-04 to 2026-11-06
+price BCD: 2415 rows, 2017-03-31 to 2026-11-06
+price BCI: 2415 rows, 2017-03-31 to 2026-11-06
+price CMDY: 2161 rows, 2018-04-05 to 2026-11-06
+price COMT: 3033 rows, 2014-10-16 to 2026-11-06
+price FTGC: 3280 rows, 2013-10-23 to 2026-11-06
+price GCC: 4728 rows, 2008-01-24 to 2026-11-06
+price PDBC: 3017 rows, 2014-11-07 to 2026-11-06
+price BITO: 1268 rows, 2021-10-20 to 2026-11-06
+price CTA: 1173 rows, 2022-03-08 to 2026-11-06
+price DBMF: 1887 rows, 2019-05-08 to 2026-11-06
+price FMF: 3337 rows, 2013-08-02 to 2026-11-06
+price GBTC: 2892 rows, 2015-05-11 to 2026-11-06
+price IBIT: 709 rows, 2024-01-11 to 2026-11-06
+price KMLM: 1490 rows, 2020-12-02 to 2026-11-06
+price AAAU: 2069 rows, 2018-08-15 to 2026-11-06
+price BAR: 2308 rows, 2017-09-01 to 2026-11-06
+price GLDM: 2104 rows, 2018-06-26 to 2026-11-06
+price IAUM: 1345 rows, 2021-07-01 to 2026-11-06
+price OUNZ: 3139 rows, 2014-05-16 to 2026-11-06
+price IFRA: 2161 rows, 2018-04-05 to 2026-11-06
+price NFRA: 3290 rows, 2013-10-09 to 2026-11-06
+price TOLZ: 3174 rows, 2014-03-27 to 2026-11-06
+price GTIP: 2024 rows, 2018-10-18 to 2026-11-06
+price NANR: 2737 rows, 2015-12-18 to 2026-11-06
+price REET: 3102 rows, 2014-07-10 to 2026-11-06
+price PBTP: 2293 rows, 2017-09-25 to 2026-11-06
+price TIPX: 3382 rows, 2013-05-30 to 2026-11-06
+price IVW: 5497 rows, 2005-01-03 to 2026-11-06
+price QQQ: 5497 rows, 2005-01-03 to 2026-11-06
+price EFG: 5348 rows, 2005-08-05 to 2026-11-06
+price EEM: 5497 rows, 2005-01-03 to 2026-11-06
+price ACWX: 4682 rows, 2008-04-01 to 2026-11-06
+price VXUS: 3968 rows, 2011-01-28 to 2026-11-06
+price AGG: 5497 rows, 2005-01-03 to 2026-11-06
+price EFA: 5497 rows, 2005-01-03 to 2026-11-06
+price HEFA: 3202 rows, 2014-02-14 to 2026-11-06
+price VGK: 5451 rows, 2005-03-10 to 2026-11-06
+price EWJ: 5497 rows, 2005-01-03 to 2026-11-06
+price DXJ: 5131 rows, 2006-06-16 to 2026-11-06
+price EWU: 5497 rows, 2005-01-03 to 2026-11-06
+price EWC: 5497 rows, 2005-01-03 to 2026-11-06
+price EWA: 5497 rows, 2005-01-03 to 2026-11-06
+price INDA: 3712 rows, 2012-02-03 to 2026-11-06
+price EWT: 5497 rows, 2005-01-03 to 2026-11-06
+price MCHI: 3925 rows, 2011-03-31 to 2026-11-06
+price BNDX: 3379 rows, 2013-06-04 to 2026-11-06
+price IGOV: 4471 rows, 2009-01-30 to 2026-11-06
+price IEF: 5497 rows, 2005-01-03 to 2026-11-06
+price ^NDX: 5497 rows, 2005-01-03 to 2026-11-06
+price ^N225: 5343 rows, 2005-01-04 to 2026-11-06
+price ^GDAXI: 5549 rows, 2005-01-03 to 2026-11-06
+price ^STOXX50E: 4916 rows, 2007-03-30 to 2026-11-06
+price ^FTSE: 5519 rows, 2005-01-04 to 2026-11-06
+price ^SSMI: 5484 rows, 2005-01-03 to 2026-11-06
+price ^HSI: 5381 rows, 2005-01-03 to 2026-11-06
+price ^NSEI: 4696 rows, 2007-09-17 to 2026-11-06
+price ^GSPTSE: 5485 rows, 2005-01-04 to 2026-11-06
+price ^AXJO: 5518 rows, 2005-01-04 to 2026-11-06
+price ^BVSP: 5412 rows, 2005-01-03 to 2026-11-06
+price ^MXX: 5483 rows, 2005-01-03 to 2026-11-06
+price ^OMX: 4506 rows, 2008-11-20 to 2026-11-06
+price ^AEX: 5591 rows, 2005-01-03 to 2026-11-06
+price 000001.SS: 5300 rows, 2005-01-04 to 2026-11-06
+price ^VIX: 5499 rows, 2005-01-03 to 2026-11-06
+price ^PUT: 5495 rows, 2005-01-03 to 2026-11-06
+price XYLD: 3365 rows, 2013-06-24 to 2026-11-06
+price QYLD: 3245 rows, 2013-12-12 to 2026-11-06
+price ^VXN: 5497 rows, 2005-01-03 to 2026-11-06
+price ^VIX3M: 5111 rows, 2006-07-17 to 2026-11-06
+price ^SKEW: 5434 rows, 2005-01-03 to 2026-11-06
+price ^VXEEM: 1 rows, 2026-11-06 to 2026-11-06  SHORT (<60 rows)
+price_usd: 53 in universe, 0 already on disk, 53 to fetch
+price_usd chunk 1: 50 requested, 50 columns returned
+price_usd chunk 2: 3 requested, 3 columns returned
+price_usd CNI: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd CHEOY: 4176 rows, 2010-04-05 to 2026-11-06
+price_usd CP: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd CSLLY: 4241 rows, 2009-12-29 to 2026-11-06
+price_usd MQBKY: 5108 rows, 2006-07-20 to 2026-11-06
+price_usd AAGIY: 3921 rows, 2011-04-06 to 2026-11-06
+price_usd TCEHY: 4237 rows, 2010-01-05 to 2026-11-06
+price_usd BYDDY: 4241 rows, 2009-12-29 to 2026-11-06
+price_usd ANPDY: 3481 rows, 2013-01-07 to 2026-11-06
+price_usd PNGAY: 4724 rows, 2008-01-30 to 2026-11-06
+price_usd ADDYY: 5143 rows, 2006-05-31 to 2026-11-06
+price_usd EADSY: 4990 rows, 2007-01-09 to 2026-11-06
+price_usd ASML: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd ATLKY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd AZN: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd DASTY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd ESLOY: 4724 rows, 2008-01-30 to 2026-11-06
+price_usd IFNNY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd LVMUY: 5228 rows, 2006-01-27 to 2026-11-06
+price_usd NVO: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd LRLCY: 4922 rows, 2007-04-18 to 2026-11-06
+price_usd HESAY: 3970 rows, 2011-01-26 to 2026-11-06
+price_usd SAP: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd SBGSY: 4227 rows, 2010-01-20 to 2026-11-06
+price_usd HDB: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd IBN: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd INFY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd SHECY: 4515 rows, 2008-11-25 to 2026-11-06
+price_usd CHGCY: 3586 rows, 2012-08-03 to 2026-11-06
+price_usd DKILY: 4211 rows, 2010-02-11 to 2026-11-06
+price_usd NJDCY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd SONY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd ATEYY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd KYCCF: 4161 rows, 2010-04-26 to 2026-11-06
+price_usd NTDOY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd TOELY: 1 rows, 2026-09-24 to 2026-09-24  SHORT (<60 rows)
+price_usd FRCOY: 4237 rows, 2010-01-05 to 2026-11-06
+price_usd TSM: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd ITUB: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd NPSNY: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd CHL: NO DATA
+price_usd ERIC: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd NOK: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd CAJ: NO DATA
+price_usd PBR: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd VALE: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd TEVA: 5497 rows, 2005-01-03 to 2026-11-06
+price_usd SHOP: 2885 rows, 2015-05-20 to 2026-11-06
+price_usd XIACY: 560 rows, 2024-08-15 to 2026-11-06
+price_usd MPNGY: 1762 rows, 2019-11-04 to 2026-11-06
+price_usd BABA: 3052 rows, 2014-09-19 to 2026-11-06
+price_usd RACE: 2778 rows, 2015-10-21 to 2026-11-06
+price_usd RCRRF: 2565 rows, 2016-08-25 to 2026-11-06
+--- step prices done in 66s
+--- step fx start 12:29:02
+fx chunk 1: 30 requested, 30 columns returned
+fx EUR (EURUSD=X, fx_direct): 5667 rows, 2005-01-03 to 2026-11-06
+fx GBP (GBPUSD=X, fx_direct): 5679 rows, 2005-01-03 to 2026-11-06
+fx AUD (AUDUSD=X, fx_direct): 5328 rows, 2006-05-16 to 2026-11-07
+fx NZD (NZDUSD=X, fx_direct): 5680 rows, 2005-01-03 to 2026-11-07
+fx CHF (CHF=X, fx_inverse): 5680 rows, 2005-01-03 to 2026-11-06
+fx SEK (SEK=X, fx_inverse): 5668 rows, 2005-01-03 to 2026-11-07
+fx DKK (DKK=X, fx_inverse): 5684 rows, 2005-01-03 to 2026-11-07
+fx NOK (NOK=X, fx_inverse): 5668 rows, 2005-01-03 to 2026-11-07
+fx JPY (JPY=X, fx_inverse): 5668 rows, 2005-01-03 to 2026-11-07
+fx HKD (HKD=X, fx_inverse): 5667 rows, 2005-01-03 to 2026-11-07
+fx CNY (CNY=X, fx_inverse): 5686 rows, 2005-01-03 to 2026-11-07
+fx TWD (TWD=X, fx_inverse): 5310 rows, 2006-05-16 to 2026-11-06
+fx KRW (KRW=X, fx_inverse): 5665 rows, 2005-01-03 to 2026-11-06
+fx INR (INR=X, fx_inverse): 5666 rows, 2005-01-03 to 2026-11-07
+fx SGD (SGD=X, fx_inverse): 5682 rows, 2005-01-03 to 2026-11-07
+fx CAD (CAD=X, fx_inverse): 5683 rows, 2005-01-03 to 2026-11-07
+fx BRL (BRL=X, fx_inverse): 5340 rows, 2006-03-24 to 2026-11-07
+fx MXN (MXN=X, fx_inverse): 5688 rows, 2005-01-03 to 2026-11-06
+fx ZAR (ZAR=X, fx_inverse): 5682 rows, 2005-01-03 to 2026-11-07
+fx TRY (TRY=X, fx_inverse): 5680 rows, 2005-01-03 to 2026-11-06
+fx IDR (IDR=X, fx_inverse): 5667 rows, 2005-01-03 to 2026-11-07
+fx PLN (PLN=X, fx_inverse): 5666 rows, 2005-01-03 to 2026-11-06
+fx HUF (HUF=X, fx_inverse): 5664 rows, 2005-01-03 to 2026-11-06
+fx CZK (CZK=X, fx_inverse): 5665 rows, 2005-01-03 to 2026-11-06
+fx THB (THB=X, fx_inverse): 5666 rows, 2005-01-03 to 2026-11-06
+fx MYR (MYR=X, fx_inverse): 5688 rows, 2005-01-03 to 2026-11-07
+fx PHP (PHP=X, fx_inverse): 5664 rows, 2005-01-03 to 2026-11-07
+fx CLP (CLP=X, fx_inverse): 5667 rows, 2005-01-03 to 2026-11-07
+fx COP (COP=X, fx_inverse): 5678 rows, 2005-01-03 to 2026-11-07
+fx ILS (ILS=X, fx_inverse): 5665 rows, 2005-01-03 to 2026-11-06
+--- step fx done in 4s
+--- step rates start 12:29:06
+oecd 10Y: 47 countries, 2005-01-01 to 2026-10-01
+oecd AT_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd AU_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd BE_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd BG_10Y: 260 rows, 2005-01-01 to 2026-08-01
+oecd BR_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd CA_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd CH_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd CL_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd CN_10Y: 153 rows, 2014-01-01 to 2026-09-01
+oecd CO_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd CR_10Y: 177 rows, 2011-08-01 to 2026-10-01
+oecd CZ_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd DE_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd DK_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd EA_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd EE_10Y: 76 rows, 2020-06-01 to 2026-09-01
+oecd ES_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd FI_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd FR_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd GB_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd GR_10Y: 261 rows, 2005-01-01 to 2026-10-01
+oecd HR_10Y: 250 rows, 2005-12-01 to 2026-09-01
+oecd HU_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd ID_10Y: 156 rows, 2012-01-01 to 2024-12-01
+oecd IE_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd IL_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd IN_10Y: 179 rows, 2011-12-01 to 2026-10-01
+oecd IS_10Y: 212 rows, 2005-01-01 to 2022-08-01
+oecd IT_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd JP_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd KR_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd LT_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd LU_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd LV_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd MX_10Y: 199 rows, 2005-01-01 to 2026-10-01
+oecd NL_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd NO_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd NZ_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd PL_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd PT_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd RO_10Y: 258 rows, 2005-04-01 to 2026-09-01
+oecd RU_10Y: 162 rows, 2005-01-01 to 2018-06-01
+oecd SE_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd SI_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd SK_10Y: 261 rows, 2005-01-01 to 2026-09-01
+oecd US_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd ZA_10Y: 262 rows, 2005-01-01 to 2026-10-01
+oecd 3M: 46 countries, 2005-01-01 to 2026-10-01
+oecd AT_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd AU_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd BE_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd BG_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd CA_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd CH_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd CL_3M: 243 rows, 2005-01-01 to 2026-09-01
+oecd CN_3M: 260 rows, 2005-01-01 to 2026-09-01
+oecd CO_3M: 261 rows, 2005-01-01 to 2026-09-01
+oecd CR_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd CZ_3M: 261 rows, 2005-01-01 to 2026-09-01
+oecd DE_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd DK_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd EA_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd EE_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd ES_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd FI_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd FR_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd GB_3M: 254 rows, 2005-01-01 to 2026-02-01
+oecd GR_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd HR_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd HU_3M: 241 rows, 2005-02-01 to 2026-10-01
+oecd ID_3M: 252 rows, 2005-01-01 to 2025-12-01
+oecd IE_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd IL_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd IN_3M: 180 rows, 2011-11-01 to 2026-10-01
+oecd IS_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd IT_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd JP_3M: 261 rows, 2005-01-01 to 2026-09-01
+oecd KR_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd LT_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd LU_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd LV_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd MX_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd NL_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd NO_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd NZ_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd PL_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd PT_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd RO_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd RU_3M: 203 rows, 2005-01-01 to 2022-02-01
+oecd SE_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd SI_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd SK_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd US_3M: 261 rows, 2005-01-01 to 2026-10-01
+oecd ZA_3M: 262 rows, 2005-01-01 to 2026-10-01
+oecd CPIYOY: 53 countries, 2005-01-01 to 2026-09-01
+oecd AR_CPIYOY: 106 rows, 2017-12-01 to 2026-09-01
+oecd AT_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd AU_CPIYOY: 18 rows, 2025-04-01 to 2026-09-01
+oecd BE_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd BG_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd BR_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd CA_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd CH_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd CL_CPIYOY: 228 rows, 2005-01-01 to 2023-12-01
+oecd CN_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd CO_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd CR_CPIYOY: 205 rows, 2005-01-01 to 2022-01-01
+oecd CZ_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd DE_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd DK_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd EA_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd EE_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd ES_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd EU27_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd FI_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd FR_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd G20_CPIYOY: 260 rows, 2005-01-01 to 2026-09-01
+oecd G7_CPIYOY: 260 rows, 2005-01-01 to 2026-09-01
+oecd GB_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd GR_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd HR_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd HU_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd ID_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd IE_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd IL_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd IN_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd IS_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd IT_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd JP_CPIYOY: 198 rows, 2005-01-01 to 2021-06-01
+oecd KR_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd LT_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd LU_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd LV_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd MX_CPIYOY: 235 rows, 2005-01-01 to 2024-07-01
+oecd NL_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd NO_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd OECDE_CPIYOY: 261 rows, 2005-01-01 to 2026-09-01
+oecd OECD_CPIYOY: 260 rows, 2005-01-01 to 2026-09-01
+oecd PL_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd PT_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd RU_CPIYOY: 207 rows, 2005-01-01 to 2022-03-01
+oecd SA_CPIYOY: 247 rows, 2005-01-01 to 2025-07-01
+oecd SE_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd SI_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd SK_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd TR_CPIYOY: 252 rows, 2005-01-01 to 2025-12-01
+oecd US_CPIYOY: 260 rows, 2005-01-01 to 2026-09-01
+oecd ZA_CPIYOY: 241 rows, 2005-01-01 to 2025-01-01
+fred US_2Y (DGS2): 12605 rows, 1976-06-01 to 2026-11-05 (month-ended to monthly)
+fred US_REAL10 (DFII10): 5966 rows, 2003-01-02 to 2026-11-05 (month-ended to monthly)
+fred US_BE10 (T10YIE): 5967 rows, 2003-01-02 to 2026-11-06 (month-ended to monthly)
+fred USD_BROAD (DTWEXBGS): 5222 rows, 2006-01-02 to 2026-10-30 (month-ended to monthly)
+fred EM_CORP_OAS (BAMLEMCBPIOAS): 786 rows, 2023-11-07 to 2026-11-05 (month-ended to monthly)
+fred EM_HY_OAS (BAMLEMHBHYCRPIOAS): 786 rows, 2023-11-07 to 2026-11-05 (month-ended to monthly)
+fred EM_CORP_TRI (BAMLEMCBPITRIV): 786 rows, 2023-11-07 to 2026-11-05 (month-ended to monthly)
+worldbank CPI: 25 of 25 countries, years 2005-2025
+--- step rates done in 43s
+--- step cboe start 12:29:49
+cboe BXM: 6195 rows, 2002-03-22 to 2026-11-06
+cboe BXMD: 10169 rows, 1986-06-20 to 2026-11-06
+cboe PUT: 5001 rows, 1991-03-04 to 2026-11-06
+cboe PPUT: 10163 rows, 1986-06-30 to 2026-11-06
+cboe CLL: 4538 rows, 2008-08-26 to 2026-11-06
+--- step cboe done in 2s
+--- step fundamentals start 12:29:51
+info ADBE: 183 fields
+cashflow ADBE: ok
+balance_sheet ADBE: ok
+income_stmt ADBE: ok
+growth_estimates ADBE: ok
+earnings_estimate ADBE: ok
+revenue_estimate ADBE: ok
+dividends ADBE: ok
+fundamentals ADBE: 8/8 items
+info ADP: 184 fields
+cashflow ADP: ok
+balance_sheet ADP: ok
+income_stmt ADP: ok
+growth_estimates ADP: ok
+earnings_estimate ADP: ok
+revenue_estimate ADP: ok
+dividends ADP: ok
+fundamentals ADP: 8/8 items
+info AMD: 179 fields
+cashflow AMD: ok
+balance_sheet AMD: ok
+income_stmt AMD: ok
+growth_estimates AMD: ok
+earnings_estimate AMD: ok
+revenue_estimate AMD: ok
+dividends AMD: empty
+fundamentals AMD: 7/8 items
+info ABNB: 176 fields
+cashflow ABNB: ok
+balance_sheet ABNB: ok
+income_stmt ABNB: ok
+growth_estimates ABNB: ok
+earnings_estimate ABNB: ok
+revenue_estimate ABNB: ok
+dividends ABNB: empty
+fundamentals ABNB: 7/8 items
+info ALNY: 177 fields
+cashflow ALNY: ok
+balance_sheet ALNY: ok
+income_stmt ALNY: ok
+growth_estimates ALNY: ok
+earnings_estimate ALNY: ok
+revenue_estimate ALNY: ok
+dividends ALNY: empty
+fundamentals ALNY: 7/8 items
+info GOOGL: 182 fields
+cashflow GOOGL: ok
+balance_sheet GOOGL: ok
+income_stmt GOOGL: ok
+growth_estimates GOOGL: ok
+earnings_estimate GOOGL: ok
+revenue_estimate GOOGL: ok
+dividends GOOGL: ok
+fundamentals GOOGL: 8/8 items
+info AMZN: 178 fields
+cashflow AMZN: ok
+balance_sheet AMZN: ok
+income_stmt AMZN: ok
+growth_estimates AMZN: ok
+earnings_estimate AMZN: ok
+revenue_estimate AMZN: ok
+dividends AMZN: empty
+fundamentals AMZN: 7/8 items
+info AEP: 184 fields
+cashflow AEP: ok
+balance_sheet AEP: ok
+income_stmt AEP: ok
+growth_estimates AEP: ok
+earnings_estimate AEP: ok
+revenue_estimate AEP: ok
+dividends AEP: ok
+fundamentals AEP: 8/8 items
+info AMGN: 185 fields
+cashflow AMGN: ok
+balance_sheet AMGN: ok
+income_stmt AMGN: ok
+growth_estimates AMGN: ok
+earnings_estimate AMGN: ok
+revenue_estimate AMGN: ok
+dividends AMGN: ok
+fundamentals AMGN: 8/8 items
+info ADI: 184 fields
+cashflow ADI: ok
+balance_sheet ADI: ok
+income_stmt ADI: ok
+growth_estimates ADI: ok
+earnings_estimate ADI: ok
+revenue_estimate ADI: ok
+dividends ADI: ok
+fundamentals ADI: 8/8 items
+fundamentals AAPL: folder exists, skipped
+info AMAT: 185 fields
+cashflow AMAT: ok
+balance_sheet AMAT: ok
+income_stmt AMAT: ok
+growth_estimates AMAT: ok
+earnings_estimate AMAT: ok
+revenue_estimate AMAT: ok
+dividends AMAT: ok
+fundamentals AMAT: 8/8 items
+info APP: 176 fields
+cashflow APP: ok
+balance_sheet APP: ok
+income_stmt APP: ok
+growth_estimates APP: ok
+earnings_estimate APP: ok
+revenue_estimate APP: ok
+dividends APP: empty
+fundamentals APP: 7/8 items
+info ALAB: 174 fields
+cashflow ALAB: ok
+balance_sheet ALAB: ok
+income_stmt ALAB: ok
+growth_estimates ALAB: ok
+earnings_estimate ALAB: ok
+revenue_estimate ALAB: ok
+dividends ALAB: empty
+fundamentals ALAB: 7/8 items
+info ADSK: 183 fields
+cashflow ADSK: ok
+balance_sheet ADSK: ok
+income_stmt ADSK: ok
+growth_estimates ADSK: ok
+earnings_estimate ADSK: ok
+revenue_estimate ADSK: ok
+dividends ADSK: ok
+fundamentals ADSK: 8/8 items
+info AXON: 176 fields
+cashflow AXON: ok
+balance_sheet AXON: ok
+income_stmt AXON: ok
+growth_estimates AXON: ok
+earnings_estimate AXON: ok
+revenue_estimate AXON: ok
+dividends AXON: empty
+fundamentals AXON: 7/8 items
+info BKR: 183 fields
+cashflow BKR: ok
+balance_sheet BKR: ok
+income_stmt BKR: ok
+growth_estimates BKR: ok
+earnings_estimate BKR: ok
+revenue_estimate BKR: ok
+dividends BKR: ok
+fundamentals BKR: 8/8 items
+info BKNG: 181 fields
+cashflow BKNG: ok
+balance_sheet BKNG: ok
+income_stmt BKNG: ok
+growth_estimates BKNG: ok
+earnings_estimate BKNG: ok
+revenue_estimate BKNG: ok
+dividends BKNG: ok
+fundamentals BKNG: 8/8 items
+info AVGO: 183 fields
+cashflow AVGO: ok
+balance_sheet AVGO: ok
+income_stmt AVGO: ok
+growth_estimates AVGO: ok
+earnings_estimate AVGO: ok
+revenue_estimate AVGO: ok
+dividends AVGO: ok
+fundamentals AVGO: 8/8 items
+info CDNS: 180 fields
+cashflow CDNS: ok
+balance_sheet CDNS: ok
+income_stmt CDNS: ok
+growth_estimates CDNS: ok
+earnings_estimate CDNS: ok
+revenue_estimate CDNS: ok
+dividends CDNS: empty
+fundamentals CDNS: 7/8 items
+info CTAS: 185 fields
+cashflow CTAS: ok
+balance_sheet CTAS: ok
+income_stmt CTAS: ok
+growth_estimates CTAS: ok
+earnings_estimate CTAS: ok
+revenue_estimate CTAS: ok
+dividends CTAS: ok
+fundamentals CTAS: 8/8 items
+info CSCO: 183 fields
+cashflow CSCO: ok
+balance_sheet CSCO: ok
+income_stmt CSCO: ok
+growth_estimates CSCO: ok
+earnings_estimate CSCO: ok
+revenue_estimate CSCO: ok
+dividends CSCO: ok
+fundamentals CSCO: 8/8 items
+info CMCSA: 184 fields
+cashflow CMCSA: ok
+balance_sheet CMCSA: ok
+income_stmt CMCSA: ok
+growth_estimates CMCSA: ok
+earnings_estimate CMCSA: ok
+revenue_estimate CMCSA: ok
+dividends CMCSA: ok
+fundamentals CMCSA: 8/8 items
+info CEG: 182 fields
+cashflow CEG: ok
+balance_sheet CEG: ok
+income_stmt CEG: ok
+growth_estimates CEG: ok
+earnings_estimate CEG: ok
+revenue_estimate CEG: ok
+dividends CEG: ok
+fundamentals CEG: 8/8 items
+info CPRT: 178 fields
+cashflow CPRT: ok
+balance_sheet CPRT: ok
+income_stmt CPRT: ok
+growth_estimates CPRT: ok
+earnings_estimate CPRT: ok
+revenue_estimate CPRT: ok
+dividends CPRT: empty
+fundamentals CPRT: 7/8 items
+info CRWV: 170 fields
+cashflow CRWV: ok
+balance_sheet CRWV: ok
+income_stmt CRWV: ok
+growth_estimates CRWV: ok
+earnings_estimate CRWV: ok
+revenue_estimate CRWV: ok
+dividends CRWV: empty
+fundamentals CRWV: 7/8 items
+info COST: 184 fields
+cashflow COST: ok
+balance_sheet COST: ok
+income_stmt COST: ok
+growth_estimates COST: ok
+earnings_estimate COST: ok
+revenue_estimate COST: ok
+dividends COST: ok
+fundamentals COST: 8/8 items
+info CRWD: 176 fields
+cashflow CRWD: ok
+balance_sheet CRWD: ok
+income_stmt CRWD: ok
+growth_estimates CRWD: ok
+earnings_estimate CRWD: ok
+revenue_estimate CRWD: ok
+dividends CRWD: empty
+fundamentals CRWD: 7/8 items
+info CSX: 185 fields
+cashflow CSX: ok
+balance_sheet CSX: ok
+income_stmt CSX: ok
+growth_estimates CSX: ok
+earnings_estimate CSX: ok
+revenue_estimate CSX: ok
+dividends CSX: ok
+fundamentals CSX: 8/8 items
+info DDOG: 176 fields
+cashflow DDOG: ok
+balance_sheet DDOG: ok
+income_stmt DDOG: ok
+growth_estimates DDOG: ok
+earnings_estimate DDOG: ok
+revenue_estimate DDOG: ok
+dividends DDOG: empty
+fundamentals DDOG: 7/8 items
+info DXCM: 178 fields
+cashflow DXCM: ok
+balance_sheet DXCM: ok
+income_stmt DXCM: ok
+growth_estimates DXCM: ok
+earnings_estimate DXCM: ok
+revenue_estimate DXCM: ok
+dividends DXCM: empty
+fundamentals DXCM: 7/8 items
+info FANG: 182 fields
+cashflow FANG: ok
+balance_sheet FANG: ok
+income_stmt FANG: ok
+growth_estimates FANG: ok
+earnings_estimate FANG: ok
+revenue_estimate FANG: ok
+dividends FANG: ok
+fundamentals FANG: 8/8 items
+info DASH: 177 fields
+cashflow DASH: ok
+balance_sheet DASH: ok
+income_stmt DASH: ok
+growth_estimates DASH: ok
+earnings_estimate DASH: ok
+revenue_estimate DASH: ok
+dividends DASH: empty
+fundamentals DASH: 7/8 items
+info EXC: 185 fields
+cashflow EXC: ok
+balance_sheet EXC: ok
+income_stmt EXC: ok
+growth_estimates EXC: ok
+earnings_estimate EXC: ok
+revenue_estimate EXC: ok
+dividends EXC: ok
+fundamentals EXC: 8/8 items
+info FAST: 184 fields
+cashflow FAST: ok
+balance_sheet FAST: ok
+income_stmt FAST: ok
+growth_estimates FAST: ok
+earnings_estimate FAST: ok
+revenue_estimate FAST: ok
+dividends FAST: ok
+fundamentals FAST: 8/8 items
+info FTNT: 178 fields
+cashflow FTNT: ok
+balance_sheet FTNT: ok
+income_stmt FTNT: ok
+growth_estimates FTNT: ok
+earnings_estimate FTNT: ok
+revenue_estimate FTNT: ok
+dividends FTNT: empty
+fundamentals FTNT: 7/8 items
+info GEHC: 180 fields
+cashflow GEHC: ok
+balance_sheet GEHC: ok
+income_stmt GEHC: ok
+growth_estimates GEHC: ok
+earnings_estimate GEHC: ok
+revenue_estimate GEHC: ok
+dividends GEHC: ok
+fundamentals GEHC: 8/8 items
+info GILD: 184 fields
+cashflow GILD: ok
+balance_sheet GILD: ok
+income_stmt GILD: ok
+growth_estimates GILD: ok
+earnings_estimate GILD: ok
+revenue_estimate GILD: ok
+dividends GILD: ok
+fundamentals GILD: 8/8 items
+info HON: 183 fields
+cashflow HON: ok
+balance_sheet HON: ok
+income_stmt HON: ok
+growth_estimates HON: ok
+earnings_estimate HON: ok
+revenue_estimate HON: ok
+dividends HON: ok
+fundamentals HON: 8/8 items
+info IDXX: 178 fields
+cashflow IDXX: ok
+balance_sheet IDXX: ok
+income_stmt IDXX: ok
+growth_estimates IDXX: ok
+earnings_estimate IDXX: ok
+revenue_estimate IDXX: ok
+dividends IDXX: empty
+fundamentals IDXX: 7/8 items
+info INTC: 181 fields
+cashflow INTC: ok
+balance_sheet INTC: ok
+income_stmt INTC: ok
+growth_estimates INTC: ok
+earnings_estimate INTC: ok
+revenue_estimate INTC: ok
+dividends INTC: ok
+fundamentals INTC: 8/8 items
+info INTU: 184 fields
+cashflow INTU: ok
+balance_sheet INTU: ok
+income_stmt INTU: ok
+growth_estimates INTU: ok
+earnings_estimate INTU: ok
+revenue_estimate INTU: ok
+dividends INTU: ok
+fundamentals INTU: 8/8 items
+info ISRG: 178 fields
+cashflow ISRG: ok
+balance_sheet ISRG: ok
+income_stmt ISRG: ok
+growth_estimates ISRG: ok
+earnings_estimate ISRG: ok
+revenue_estimate ISRG: ok
+dividends ISRG: empty
+fundamentals ISRG: 7/8 items
+info KDP: 181 fields
+cashflow KDP: ok
+balance_sheet KDP: ok
+income_stmt KDP: ok
+growth_estimates KDP: ok
+earnings_estimate KDP: ok
+revenue_estimate KDP: ok
+dividends KDP: ok
+fundamentals KDP: 8/8 items
+info KLAC: 185 fields
+cashflow KLAC: ok
+balance_sheet KLAC: ok
+income_stmt KLAC: ok
+growth_estimates KLAC: ok
+earnings_estimate KLAC: ok
+revenue_estimate KLAC: ok
+dividends KLAC: ok
+fundamentals KLAC: 8/8 items
+info LRCX: 184 fields
+cashflow LRCX: ok
+balance_sheet LRCX: ok
+income_stmt LRCX: ok
+growth_estimates LRCX: ok
+earnings_estimate LRCX: ok
+revenue_estimate LRCX: ok
+dividends LRCX: ok
+fundamentals LRCX: 8/8 items
+info LITE: 173 fields
+cashflow LITE: ok
+balance_sheet LITE: ok
+income_stmt LITE: ok
+growth_estimates LITE: ok
+earnings_estimate LITE: ok
+revenue_estimate LITE: ok
+dividends LITE: empty
+fundamentals LITE: 7/8 items
+info MAR: 182 fields
+cashflow MAR: ok
+balance_sheet MAR: ok
+income_stmt MAR: ok
+growth_estimates MAR: ok
+earnings_estimate MAR: ok
+revenue_estimate MAR: ok
+dividends MAR: ok
+fundamentals MAR: 8/8 items
+info MRVL: 186 fields
+cashflow MRVL: ok
+balance_sheet MRVL: ok
+income_stmt MRVL: ok
+growth_estimates MRVL: ok
+earnings_estimate MRVL: ok
+revenue_estimate MRVL: ok
+dividends MRVL: ok
+fundamentals MRVL: 8/8 items
+fundamentals META: folder exists, skipped
+info MCHP: 184 fields
+cashflow MCHP: ok
+balance_sheet MCHP: ok
+income_stmt MCHP: ok
+growth_estimates MCHP: ok
+earnings_estimate MCHP: ok
+revenue_estimate MCHP: ok
+dividends MCHP: ok
+fundamentals MCHP: 8/8 items
+info MU: 184 fields
+cashflow MU: ok
+balance_sheet MU: ok
+income_stmt MU: ok
+growth_estimates MU: ok
+earnings_estimate MU: ok
+revenue_estimate MU: ok
+dividends MU: ok
+fundamentals MU: 8/8 items
+fundamentals MSFT: folder exists, skipped
+info MSTR: 180 fields
+cashflow MSTR: ok
+balance_sheet MSTR: ok
+income_stmt MSTR: ok
+growth_estimates MSTR: ok
+earnings_estimate MSTR: ok
+revenue_estimate MSTR: ok
+dividends MSTR: empty
+fundamentals MSTR: 7/8 items
+info MRNA: 170 fields
+cashflow MRNA: ok
+balance_sheet MRNA: ok
+income_stmt MRNA: ok
+growth_estimates MRNA: ok
+earnings_estimate MRNA: ok
+revenue_estimate MRNA: ok
+dividends MRNA: empty
+fundamentals MRNA: 7/8 items
+info MDLZ: 183 fields
+cashflow MDLZ: ok
+balance_sheet MDLZ: ok
+income_stmt MDLZ: ok
+growth_estimates MDLZ: ok
+earnings_estimate MDLZ: ok
+revenue_estimate MDLZ: ok
+dividends MDLZ: ok
+fundamentals MDLZ: 8/8 items
+info MPWR: 182 fields
+cashflow MPWR: ok
+balance_sheet MPWR: ok
+income_stmt MPWR: ok
+growth_estimates MPWR: ok
+earnings_estimate MPWR: ok
+revenue_estimate MPWR: ok
+dividends MPWR: ok
+fundamentals MPWR: 8/8 items
+info MNST: 176 fields
+cashflow MNST: ok
+balance_sheet MNST: ok
+income_stmt MNST: ok
+growth_estimates MNST: ok
+earnings_estimate MNST: ok
+revenue_estimate MNST: ok
+dividends MNST: ok
+fundamentals MNST: 8/8 items
+info NFLX: 179 fields
+cashflow NFLX: ok
+balance_sheet NFLX: ok
+income_stmt NFLX: ok
+growth_estimates NFLX: ok
+earnings_estimate NFLX: ok
+revenue_estimate NFLX: ok
+dividends NFLX: empty
+fundamentals NFLX: 7/8 items
+fundamentals NVDA: folder exists, skipped
+info ORLY: 176 fields
+cashflow ORLY: ok
+balance_sheet ORLY: ok
+income_stmt ORLY: ok
+growth_estimates ORLY: ok
+earnings_estimate ORLY: ok
+revenue_estimate ORLY: ok
+dividends ORLY: empty
+fundamentals ORLY: 7/8 items
+info ODFL: 184 fields
+cashflow ODFL: ok
+balance_sheet ODFL: ok
+income_stmt ODFL: ok
+growth_estimates ODFL: ok
+earnings_estimate ODFL: ok
+revenue_estimate ODFL: ok
+dividends ODFL: ok
+fundamentals ODFL: 8/8 items
+info PCAR: 185 fields
+cashflow PCAR: ok
+balance_sheet PCAR: ok
+income_stmt PCAR: ok
+growth_estimates PCAR: ok
+earnings_estimate PCAR: ok
+revenue_estimate PCAR: ok
+dividends PCAR: ok
+fundamentals PCAR: 8/8 items
+info PLTR: 177 fields
+cashflow PLTR: ok
+balance_sheet PLTR: ok
+income_stmt PLTR: ok
+growth_estimates PLTR: ok
+earnings_estimate PLTR: ok
+revenue_estimate PLTR: ok
+dividends PLTR: empty
+fundamentals PLTR: 7/8 items
+info PANW: 176 fields
+cashflow PANW: ok
+balance_sheet PANW: ok
+income_stmt PANW: ok
+growth_estimates PANW: ok
+earnings_estimate PANW: ok
+revenue_estimate PANW: ok
+dividends PANW: empty
+fundamentals PANW: 7/8 items
+info PAYX: 184 fields
+cashflow PAYX: ok
+balance_sheet PAYX: ok
+income_stmt PAYX: ok
+growth_estimates PAYX: ok
+earnings_estimate PAYX: ok
+revenue_estimate PAYX: ok
+dividends PAYX: ok
+fundamentals PAYX: 8/8 items
+info PYPL: 180 fields
+cashflow PYPL: ok
+balance_sheet PYPL: ok
+income_stmt PYPL: ok
+growth_estimates PYPL: ok
+earnings_estimate PYPL: ok
+revenue_estimate PYPL: ok
+dividends PYPL: ok
+fundamentals PYPL: 8/8 items
+info PEP: 184 fields
+cashflow PEP: ok
+balance_sheet PEP: ok
+income_stmt PEP: ok
+growth_estimates PEP: ok
+earnings_estimate PEP: ok
+revenue_estimate PEP: ok
+dividends PEP: ok
+fundamentals PEP: 8/8 items
+info QCOM: 182 fields
+cashflow QCOM: ok
+balance_sheet QCOM: ok
+income_stmt QCOM: ok
+growth_estimates QCOM: ok
+earnings_estimate QCOM: ok
+revenue_estimate QCOM: ok
+dividends QCOM: ok
+fundamentals QCOM: 8/8 items
+info REGN: 181 fields
+cashflow REGN: ok
+balance_sheet REGN: ok
+income_stmt REGN: ok
+growth_estimates REGN: ok
+earnings_estimate REGN: ok
+revenue_estimate REGN: ok
+dividends REGN: ok
+fundamentals REGN: 8/8 items
+info RKLB: 172 fields
+cashflow RKLB: ok
+balance_sheet RKLB: ok
+income_stmt RKLB: ok
+growth_estimates RKLB: ok
+earnings_estimate RKLB: ok
+revenue_estimate RKLB: ok
+dividends RKLB: empty
+fundamentals RKLB: 7/8 items
+info ROP: 185 fields
+cashflow ROP: ok
+balance_sheet ROP: ok
+income_stmt ROP: ok
+growth_estimates ROP: ok
+earnings_estimate ROP: ok
+revenue_estimate ROP: ok
+dividends ROP: ok
+fundamentals ROP: 8/8 items
+info ROST: 184 fields
+cashflow ROST: ok
+balance_sheet ROST: ok
+income_stmt ROST: ok
+growth_estimates ROST: ok
+earnings_estimate ROST: ok
+revenue_estimate ROST: ok
+dividends ROST: ok
+fundamentals ROST: 8/8 items
+info SNDK: 172 fields
+cashflow SNDK: ok
+balance_sheet SNDK: ok
+income_stmt SNDK: ok
+growth_estimates SNDK: ok
+earnings_estimate SNDK: ok
+revenue_estimate SNDK: ok
+dividends SNDK: empty
+fundamentals SNDK: 7/8 items
+info SBUX: 181 fields
+cashflow SBUX: ok
+balance_sheet SBUX: ok
+income_stmt SBUX: ok
+growth_estimates SBUX: ok
+earnings_estimate SBUX: ok
+revenue_estimate SBUX: ok
+dividends SBUX: ok
+fundamentals SBUX: 8/8 items
+info SNPS: 179 fields
+cashflow SNPS: ok
+balance_sheet SNPS: ok
+income_stmt SNPS: ok
+growth_estimates SNPS: ok
+earnings_estimate SNPS: ok
+revenue_estimate SNPS: ok
+dividends SNPS: empty
+fundamentals SNPS: 7/8 items
+info TMUS: 183 fields
+cashflow TMUS: ok
+balance_sheet TMUS: ok
+income_stmt TMUS: ok
+growth_estimates TMUS: ok
+earnings_estimate TMUS: ok
+revenue_estimate TMUS: ok
+dividends TMUS: ok
+fundamentals TMUS: 8/8 items
+info TTWO: 177 fields
+cashflow TTWO: ok
+balance_sheet TTWO: ok
+income_stmt TTWO: ok
+growth_estimates TTWO: ok
+earnings_estimate TTWO: ok
+revenue_estimate TTWO: ok
+dividends TTWO: ok
+fundamentals TTWO: 8/8 items
+info TER: 184 fields
+cashflow TER: ok
+balance_sheet TER: ok
+income_stmt TER: ok
+growth_estimates TER: ok
+earnings_estimate TER: ok
+revenue_estimate TER: ok
+dividends TER: ok
+fundamentals TER: 8/8 items
+info TSLA: 177 fields
+cashflow TSLA: ok
+balance_sheet TSLA: ok
+income_stmt TSLA: ok
+growth_estimates TSLA: ok
+earnings_estimate TSLA: ok
+revenue_estimate TSLA: ok
+dividends TSLA: empty
+fundamentals TSLA: 7/8 items
+info TXN: 184 fields
+cashflow TXN: ok
+balance_sheet TXN: ok
+income_stmt TXN: ok
+growth_estimates TXN: ok
+earnings_estimate TXN: ok
+revenue_estimate TXN: ok
+dividends TXN: ok
+fundamentals TXN: 8/8 items
+info VRTX: 178 fields
+cashflow VRTX: ok
+balance_sheet VRTX: ok
+income_stmt VRTX: ok
+growth_estimates VRTX: ok
+earnings_estimate VRTX: ok
+revenue_estimate VRTX: ok
+dividends VRTX: empty
+fundamentals VRTX: 7/8 items
+info WMT: 184 fields
+cashflow WMT: ok
+balance_sheet WMT: ok
+income_stmt WMT: ok
+growth_estimates WMT: ok
+earnings_estimate WMT: ok
+revenue_estimate WMT: ok
+dividends WMT: ok
+fundamentals WMT: 8/8 items
+info WDC: 184 fields
+cashflow WDC: ok
+balance_sheet WDC: ok
+income_stmt WDC: ok
+growth_estimates WDC: ok
+earnings_estimate WDC: ok
+revenue_estimate WDC: ok
+dividends WDC: ok
+fundamentals WDC: 8/8 items
+info WDAY: 176 fields
+cashflow WDAY: ok
+balance_sheet WDAY: ok
+income_stmt WDAY: ok
+growth_estimates WDAY: ok
+earnings_estimate WDAY: ok
+revenue_estimate WDAY: ok
+dividends WDAY: empty
+fundamentals WDAY: 7/8 items
+info XEL: 184 fields
+cashflow XEL: ok
+balance_sheet XEL: ok
+income_stmt XEL: ok
+growth_estimates XEL: ok
+earnings_estimate XEL: ok
+revenue_estimate XEL: ok
+dividends XEL: ok
+fundamentals XEL: 8/8 items
+info LLY: 184 fields
+cashflow LLY: ok
+balance_sheet LLY: ok
+income_stmt LLY: ok
+growth_estimates LLY: ok
+earnings_estimate LLY: ok
+revenue_estimate LLY: ok
+dividends LLY: ok
+fundamentals LLY: 8/8 items
+info BRK-B: 172 fields
+cashflow BRK-B: ok
+balance_sheet BRK-B: ok
+income_stmt BRK-B: ok
+growth_estimates BRK-B: ok
+earnings_estimate BRK-B: ok
+revenue_estimate BRK-B: ok
+dividends BRK-B: empty
+fundamentals BRK-B: 7/8 items
+info JPM: 178 fields
+cashflow JPM: ok
+balance_sheet JPM: ok
+income_stmt JPM: ok
+growth_estimates JPM: ok
+earnings_estimate JPM: ok
+revenue_estimate JPM: ok
+dividends JPM: ok
+fundamentals JPM: 8/8 items
+info JNJ: 183 fields
+cashflow JNJ: ok
+balance_sheet JNJ: ok
+income_stmt JNJ: ok
+growth_estimates JNJ: ok
+earnings_estimate JNJ: ok
+revenue_estimate JNJ: ok
+dividends JNJ: ok
+fundamentals JNJ: 8/8 items
+info V: 183 fields
+cashflow V: ok
+balance_sheet V: ok
+income_stmt V: ok
+growth_estimates V: ok
+earnings_estimate V: ok
+revenue_estimate V: ok
+dividends V: ok
+fundamentals V: 8/8 items
+info MA: 183 fields
+cashflow MA: ok
+balance_sheet MA: ok
+income_stmt MA: ok
+growth_estimates MA: ok
+earnings_estimate MA: ok
+revenue_estimate MA: ok
+dividends MA: ok
+fundamentals MA: 8/8 items
+info RTX: 186 fields
+cashflow RTX: ok
+balance_sheet RTX: ok
+income_stmt RTX: ok
+growth_estimates RTX: ok
+earnings_estimate RTX: ok
+revenue_estimate RTX: ok
+dividends RTX: ok
+fundamentals RTX: 8/8 items
+info CAT: 186 fields
+cashflow CAT: ok
+balance_sheet CAT: ok
+income_stmt CAT: ok
+growth_estimates CAT: ok
+earnings_estimate CAT: ok
+revenue_estimate CAT: ok
+dividends CAT: ok
+fundamentals CAT: 8/8 items
+info ABBV: 179 fields
+cashflow ABBV: ok
+balance_sheet ABBV: ok
+income_stmt ABBV: ok
+growth_estimates ABBV: ok
+earnings_estimate ABBV: ok
+revenue_estimate ABBV: ok
+dividends ABBV: ok
+fundamentals ABBV: 8/8 items
+info GEV: 183 fields
+cashflow GEV: ok
+balance_sheet GEV: ok
+income_stmt GEV: ok
+growth_estimates GEV: ok
+earnings_estimate GEV: ok
+revenue_estimate GEV: ok
+dividends GEV: ok
+fundamentals GEV: 8/8 items
+info APH: 184 fields
+cashflow APH: ok
+balance_sheet APH: ok
+income_stmt APH: ok
+growth_estimates APH: ok
+earnings_estimate APH: ok
+revenue_estimate APH: ok
+dividends APH: ok
+fundamentals APH: 8/8 items
+info GE: 183 fields
+cashflow GE: ok
+balance_sheet GE: ok
+income_stmt GE: ok
+growth_estimates GE: ok
+earnings_estimate GE: ok
+revenue_estimate GE: ok
+dividends GE: ok
+fundamentals GE: 8/8 items
+info ANET: 177 fields
+cashflow ANET: ok
+balance_sheet ANET: ok
+income_stmt ANET: ok
+growth_estimates ANET: ok
+earnings_estimate ANET: ok
+revenue_estimate ANET: ok
+dividends ANET: empty
+fundamentals ANET: 7/8 items
+info PM: 180 fields
+cashflow PM: ok
+balance_sheet PM: ok
+income_stmt PM: ok
+growth_estimates PM: ok
+earnings_estimate PM: ok
+revenue_estimate PM: ok
+dividends PM: ok
+fundamentals PM: 8/8 items
+info WELL: 183 fields
+cashflow WELL: ok
+balance_sheet WELL: ok
+income_stmt WELL: ok
+growth_estimates WELL: ok
+earnings_estimate WELL: ok
+revenue_estimate WELL: ok
+dividends WELL: ok
+fundamentals WELL: 8/8 items
+info GS: 178 fields
+cashflow GS: ok
+balance_sheet GS: ok
+income_stmt GS: ok
+growth_estimates GS: ok
+earnings_estimate GS: ok
+revenue_estimate GS: ok
+dividends GS: ok
+fundamentals GS: 8/8 items
+info KO: 184 fields
+cashflow KO: ok
+balance_sheet KO: ok
+income_stmt KO: ok
+growth_estimates KO: ok
+earnings_estimate KO: ok
+revenue_estimate KO: ok
+dividends KO: ok
+fundamentals KO: 8/8 items
+info UBER: 175 fields
+cashflow UBER: ok
+balance_sheet UBER: ok
+income_stmt UBER: ok
+growth_estimates UBER: ok
+earnings_estimate UBER: ok
+revenue_estimate UBER: ok
+dividends UBER: empty
+fundamentals UBER: 7/8 items
+info MS: 179 fields
+cashflow MS: ok
+balance_sheet MS: ok
+income_stmt MS: ok
+growth_estimates MS: ok
+earnings_estimate MS: ok
+revenue_estimate MS: ok
+dividends MS: ok
+fundamentals MS: 8/8 items
+info NEM: 185 fields
+cashflow NEM: ok
+balance_sheet NEM: ok
+income_stmt NEM: ok
+growth_estimates NEM: ok
+earnings_estimate NEM: ok
+revenue_estimate NEM: ok
+dividends NEM: ok
+fundamentals NEM: 8/8 items
+info IBM: 184 fields
+cashflow IBM: ok
+balance_sheet IBM: ok
+income_stmt IBM: ok
+growth_estimates IBM: ok
+earnings_estimate IBM: ok
+revenue_estimate IBM: ok
+dividends IBM: ok
+fundamentals IBM: 8/8 items
+info AXP: 181 fields
+cashflow AXP: ok
+balance_sheet AXP: ok
+income_stmt AXP: ok
+growth_estimates AXP: ok
+earnings_estimate AXP: ok
+revenue_estimate AXP: ok
+dividends AXP: ok
+fundamentals AXP: 8/8 items
+info ORCL: 184 fields
+cashflow ORCL: ok
+balance_sheet ORCL: ok
+income_stmt ORCL: ok
+growth_estimates ORCL: ok
+earnings_estimate ORCL: ok
+revenue_estimate ORCL: ok
+dividends ORCL: ok
+fundamentals ORCL: 8/8 items
+info MCD: 177 fields
+cashflow MCD: ok
+balance_sheet MCD: ok
+income_stmt MCD: ok
+growth_estimates MCD: ok
+earnings_estimate MCD: ok
+revenue_estimate MCD: ok
+dividends MCD: ok
+fundamentals MCD: 8/8 items
+info HLT: 185 fields
+cashflow HLT: ok
+balance_sheet HLT: ok
+income_stmt HLT: ok
+growth_estimates HLT: ok
+earnings_estimate HLT: ok
+revenue_estimate HLT: ok
+dividends HLT: ok
+fundamentals HLT: 8/8 items
+info EBAY: 183 fields
+cashflow EBAY: ok
+balance_sheet EBAY: ok
+income_stmt EBAY: ok
+growth_estimates EBAY: ok
+earnings_estimate EBAY: ok
+revenue_estimate EBAY: ok
+dividends EBAY: ok
+fundamentals EBAY: 8/8 items
+info CTSH: 185 fields
+cashflow CTSH: ok
+balance_sheet CTSH: ok
+income_stmt CTSH: ok
+growth_estimates CTSH: ok
+earnings_estimate CTSH: ok
+revenue_estimate CTSH: ok
+dividends CTSH: ok
+fundamentals CTSH: 8/8 items
+info BIIB: 176 fields
+cashflow BIIB: ok
+balance_sheet BIIB: ok
+income_stmt BIIB: ok
+growth_estimates BIIB: ok
+earnings_estimate BIIB: ok
+revenue_estimate BIIB: ok
+dividends BIIB: empty
+fundamentals BIIB: 7/8 items
+info ILMN: 179 fields
+cashflow ILMN: ok
+balance_sheet ILMN: ok
+income_stmt ILMN: ok
+growth_estimates ILMN: ok
+earnings_estimate ILMN: ok
+revenue_estimate ILMN: ok
+dividends ILMN: empty
+fundamentals ILMN: 7/8 items
+info UAA: 174 fields
+cashflow UAA: ok
+balance_sheet UAA: ok
+income_stmt UAA: ok
+growth_estimates UAA: ok
+earnings_estimate UAA: ok
+revenue_estimate UAA: ok
+dividends UAA: empty
+fundamentals UAA: 7/8 items
+info FSLR: 177 fields
+cashflow FSLR: ok
+balance_sheet FSLR: ok
+income_stmt FSLR: ok
+growth_estimates FSLR: ok
+earnings_estimate FSLR: ok
+revenue_estimate FSLR: ok
+dividends FSLR: empty
+fundamentals FSLR: 7/8 items
+info WYNN: 179 fields
+cashflow WYNN: ok
+balance_sheet WYNN: ok
+income_stmt WYNN: ok
+growth_estimates WYNN: ok
+earnings_estimate WYNN: ok
+revenue_estimate WYNN: ok
+dividends WYNN: ok
+fundamentals WYNN: 8/8 items
+info FFIV: 180 fields
+cashflow FFIV: ok
+balance_sheet FFIV: ok
+income_stmt FFIV: ok
+growth_estimates FFIV: ok
+earnings_estimate FFIV: ok
+revenue_estimate FFIV: ok
+dividends FFIV: empty
+fundamentals FFIV: 7/8 items
+info AKAM: 177 fields
+cashflow AKAM: ok
+balance_sheet AKAM: ok
+income_stmt AKAM: ok
+growth_estimates AKAM: ok
+earnings_estimate AKAM: ok
+revenue_estimate AKAM: ok
+dividends AKAM: empty
+fundamentals AKAM: 7/8 items
+info GEN: 187 fields
+cashflow GEN: ok
+balance_sheet GEN: ok
+income_stmt GEN: ok
+growth_estimates GEN: ok
+earnings_estimate GEN: ok
+revenue_estimate GEN: ok
+dividends GEN: ok
+fundamentals GEN: 8/8 items
+info EXPE: 183 fields
+cashflow EXPE: ok
+balance_sheet EXPE: ok
+income_stmt EXPE: ok
+growth_estimates EXPE: ok
+earnings_estimate EXPE: ok
+revenue_estimate EXPE: ok
+dividends EXPE: ok
+fundamentals EXPE: 8/8 items
+info SIRI: 184 fields
+cashflow SIRI: ok
+balance_sheet SIRI: ok
+income_stmt SIRI: ok
+growth_estimates SIRI: ok
+earnings_estimate SIRI: ok
+revenue_estimate SIRI: ok
+dividends SIRI: ok
+fundamentals SIRI: 8/8 items
+info FOSL: 172 fields
+cashflow FOSL: ok
+balance_sheet FOSL: ok
+income_stmt FOSL: ok
+growth_estimates FOSL: ok
+earnings_estimate FOSL: ok
+revenue_estimate FOSL: ok
+dividends FOSL: empty
+fundamentals FOSL: 7/8 items
+info TRIP: 175 fields
+cashflow TRIP: ok
+balance_sheet TRIP: ok
+income_stmt TRIP: ok
+growth_estimates TRIP: ok
+earnings_estimate TRIP: ok
+revenue_estimate TRIP: ok
+dividends TRIP: ok
+fundamentals TRIP: 8/8 items
+info GRPN: 171 fields
+cashflow GRPN: ok
+balance_sheet GRPN: ok
+income_stmt GRPN: ok
+growth_estimates GRPN: ok
+earnings_estimate GRPN: ok
+revenue_estimate GRPN: ok
+dividends GRPN: empty
+fundamentals GRPN: 7/8 items
+info NTAP: 184 fields
+cashflow NTAP: ok
+balance_sheet NTAP: ok
+income_stmt NTAP: ok
+growth_estimates NTAP: ok
+earnings_estimate NTAP: ok
+revenue_estimate NTAP: ok
+dividends NTAP: ok
+fundamentals NTAP: 8/8 items
+info GPRO: 168 fields
+cashflow GPRO: ok
+balance_sheet GPRO: ok
+income_stmt GPRO: ok
+growth_estimates GPRO: ok
+earnings_estimate GPRO: ok
+revenue_estimate GPRO: ok
+dividends GPRO: empty
+fundamentals GPRO: 7/8 items
+info ATD.TO: 174 fields
+cashflow ATD.TO: ok
+balance_sheet ATD.TO: ok
+income_stmt ATD.TO: ok
+growth_estimates ATD.TO: ok
+earnings_estimate ATD.TO: ok
+revenue_estimate ATD.TO: ok
+dividends ATD.TO: ok
+fundamentals ATD.TO: 8/8 items
+info CNR.TO: 175 fields
+cashflow CNR.TO: ok
+balance_sheet CNR.TO: ok
+income_stmt CNR.TO: ok
+growth_estimates CNR.TO: ok
+earnings_estimate CNR.TO: ok
+revenue_estimate CNR.TO: ok
+dividends CNR.TO: ok
+fundamentals CNR.TO: 8/8 items
+info COH.AX: 167 fields
+cashflow COH.AX: ok
+balance_sheet COH.AX: ok
+income_stmt COH.AX: ok
+growth_estimates COH.AX: ok
+earnings_estimate COH.AX: ok
+revenue_estimate COH.AX: ok
+dividends COH.AX: ok
+fundamentals COH.AX: 8/8 items
+info CP.TO: 180 fields
+cashflow CP.TO: ok
+balance_sheet CP.TO: ok
+income_stmt CP.TO: ok
+growth_estimates CP.TO: ok
+earnings_estimate CP.TO: ok
+revenue_estimate CP.TO: ok
+dividends CP.TO: ok
+fundamentals CP.TO: 8/8 items
+info CSL.AX: 165 fields
+cashflow CSL.AX: ok
+balance_sheet CSL.AX: ok
+income_stmt CSL.AX: ok
+growth_estimates CSL.AX: ok
+earnings_estimate CSL.AX: ok
+revenue_estimate CSL.AX: ok
+dividends CSL.AX: ok
+fundamentals CSL.AX: 8/8 items
+info CSU.TO: 173 fields
+cashflow CSU.TO: ok
+balance_sheet CSU.TO: ok
+income_stmt CSU.TO: ok
+growth_estimates CSU.TO: ok
+earnings_estimate CSU.TO: ok
+revenue_estimate CSU.TO: ok
+dividends CSU.TO: ok
+fundamentals CSU.TO: 8/8 items
+info DOL.TO: 173 fields
+cashflow DOL.TO: ok
+balance_sheet DOL.TO: ok
+income_stmt DOL.TO: ok
+growth_estimates DOL.TO: ok
+earnings_estimate DOL.TO: ok
+revenue_estimate DOL.TO: ok
+dividends DOL.TO: ok
+fundamentals DOL.TO: 8/8 items
+info MQG.AX: 86 fields
+cashflow MQG.AX: ok
+balance_sheet MQG.AX: ok
+income_stmt MQG.AX: ok
+growth_estimates MQG.AX: ok
+earnings_estimate MQG.AX: ok
+revenue_estimate MQG.AX: ok
+dividends MQG.AX: ok
+fundamentals MQG.AX: 8/8 items
+info REA.AX: 163 fields
+cashflow REA.AX: ok
+balance_sheet REA.AX: ok
+income_stmt REA.AX: ok
+growth_estimates REA.AX: ok
+earnings_estimate REA.AX: ok
+revenue_estimate REA.AX: ok
+dividends REA.AX: ok
+fundamentals REA.AX: 8/8 items
+info XRO.AX: 158 fields
+cashflow XRO.AX: ok
+balance_sheet XRO.AX: ok
+income_stmt XRO.AX: ok
+growth_estimates XRO.AX: ok
+earnings_estimate XRO.AX: ok
+revenue_estimate XRO.AX: ok
+dividends XRO.AX: empty
+fundamentals XRO.AX: 7/8 items
+info 1299.HK: 166 fields
+cashflow 1299.HK: ok
+balance_sheet 1299.HK: ok
+income_stmt 1299.HK: ok
+growth_estimates 1299.HK: ok
+earnings_estimate 1299.HK: ok
+revenue_estimate 1299.HK: ok
+dividends 1299.HK: ok
+fundamentals 1299.HK: 8/8 items
+info 0700.HK: 170 fields
+cashflow 0700.HK: ok
+balance_sheet 0700.HK: ok
+income_stmt 0700.HK: ok
+growth_estimates 0700.HK: ok
+earnings_estimate 0700.HK: ok
+revenue_estimate 0700.HK: ok
+dividends 0700.HK: ok
+fundamentals 0700.HK: 8/8 items
+info 1211.HK: 170 fields
+cashflow 1211.HK: ok
+balance_sheet 1211.HK: ok
+income_stmt 1211.HK: ok
+growth_estimates 1211.HK: ok
+earnings_estimate 1211.HK: ok
+revenue_estimate 1211.HK: ok
+dividends 1211.HK: ok
+fundamentals 1211.HK: 8/8 items
+info 2020.HK: 168 fields
+cashflow 2020.HK: ok
+balance_sheet 2020.HK: ok
+income_stmt 2020.HK: ok
+growth_estimates 2020.HK: ok
+earnings_estimate 2020.HK: ok
+revenue_estimate 2020.HK: ok
+dividends 2020.HK: ok
+fundamentals 2020.HK: 8/8 items
+info 2318.HK: 171 fields
+cashflow 2318.HK: ok
+balance_sheet 2318.HK: ok
+income_stmt 2318.HK: ok
+growth_estimates 2318.HK: ok
+earnings_estimate 2318.HK: ok
+revenue_estimate 2318.HK: ok
+dividends 2318.HK: ok
+fundamentals 2318.HK: 8/8 items
+info 600519.SS: 151 fields
+cashflow 600519.SS: ok
+balance_sheet 600519.SS: ok
+income_stmt 600519.SS: ok
+growth_estimates 600519.SS: ok
+earnings_estimate 600519.SS: ok
+revenue_estimate 600519.SS: ok
+dividends 600519.SS: ok
+fundamentals 600519.SS: 8/8 items
+info ADS.DE: 169 fields
+cashflow ADS.DE: ok
+balance_sheet ADS.DE: ok
+income_stmt ADS.DE: ok
+growth_estimates ADS.DE: ok
+earnings_estimate ADS.DE: ok
+revenue_estimate ADS.DE: ok
+dividends ADS.DE: ok
+fundamentals ADS.DE: 8/8 items
+info AIR.PA: 166 fields
+cashflow AIR.PA: ok
+balance_sheet AIR.PA: ok
+income_stmt AIR.PA: ok
+growth_estimates AIR.PA: ok
+earnings_estimate AIR.PA: ok
+revenue_estimate AIR.PA: ok
+dividends AIR.PA: ok
+fundamentals AIR.PA: 8/8 items
+info ASML.AS: 170 fields
+cashflow ASML.AS: ok
+balance_sheet ASML.AS: ok
+income_stmt ASML.AS: ok
+growth_estimates ASML.AS: ok
+earnings_estimate ASML.AS: ok
+revenue_estimate ASML.AS: ok
+dividends ASML.AS: ok
+fundamentals ASML.AS: 8/8 items
+info ATCO-A.ST: 171 fields
+cashflow ATCO-A.ST: ok
+balance_sheet ATCO-A.ST: ok
+income_stmt ATCO-A.ST: ok
+growth_estimates ATCO-A.ST: ok
+earnings_estimate ATCO-A.ST: ok
+revenue_estimate ATCO-A.ST: ok
+dividends ATCO-A.ST: ok
+fundamentals ATCO-A.ST: 8/8 items
+info AZN.L: 168 fields
+cashflow AZN.L: ok
+balance_sheet AZN.L: ok
+income_stmt AZN.L: ok
+growth_estimates AZN.L: ok
+earnings_estimate AZN.L: ok
+revenue_estimate AZN.L: ok
+dividends AZN.L: ok
+fundamentals AZN.L: 8/8 items
+info DSY.PA: 170 fields
+cashflow DSY.PA: ok
+balance_sheet DSY.PA: ok
+income_stmt DSY.PA: ok
+growth_estimates DSY.PA: ok
+earnings_estimate DSY.PA: ok
+revenue_estimate DSY.PA: ok
+dividends DSY.PA: ok
+fundamentals DSY.PA: 8/8 items
+info EL.PA: 168 fields
+cashflow EL.PA: ok
+balance_sheet EL.PA: ok
+income_stmt EL.PA: ok
+growth_estimates EL.PA: ok
+earnings_estimate EL.PA: ok
+revenue_estimate EL.PA: ok
+dividends EL.PA: ok
+fundamentals EL.PA: 8/8 items
+info IFX.DE: 170 fields
+cashflow IFX.DE: ok
+balance_sheet IFX.DE: ok
+income_stmt IFX.DE: ok
+growth_estimates IFX.DE: ok
+earnings_estimate IFX.DE: ok
+revenue_estimate IFX.DE: ok
+dividends IFX.DE: ok
+fundamentals IFX.DE: 8/8 items
+info LONN.SW: 168 fields
+cashflow LONN.SW: ok
+balance_sheet LONN.SW: ok
+income_stmt LONN.SW: ok
+growth_estimates LONN.SW: ok
+earnings_estimate LONN.SW: ok
+revenue_estimate LONN.SW: ok
+dividends LONN.SW: ok
+fundamentals LONN.SW: 8/8 items
+info MC.PA: 170 fields
+cashflow MC.PA: ok
+balance_sheet MC.PA: ok
+income_stmt MC.PA: ok
+growth_estimates MC.PA: ok
+earnings_estimate MC.PA: ok
+revenue_estimate MC.PA: ok
+dividends MC.PA: ok
+fundamentals MC.PA: 8/8 items
+info NOVO-B.CO: 170 fields
+cashflow NOVO-B.CO: ok
+balance_sheet NOVO-B.CO: ok
+income_stmt NOVO-B.CO: ok
+growth_estimates NOVO-B.CO: ok
+earnings_estimate NOVO-B.CO: ok
+revenue_estimate NOVO-B.CO: ok
+dividends NOVO-B.CO: ok
+fundamentals NOVO-B.CO: 8/8 items
+info OR.PA: 169 fields
+cashflow OR.PA: ok
+balance_sheet OR.PA: ok
+income_stmt OR.PA: ok
+growth_estimates OR.PA: ok
+earnings_estimate OR.PA: ok
+revenue_estimate OR.PA: ok
+dividends OR.PA: ok
+fundamentals OR.PA: 8/8 items
+info RMS.PA: 162 fields
+cashflow RMS.PA: ok
+balance_sheet RMS.PA: ok
+income_stmt RMS.PA: ok
+growth_estimates RMS.PA: ok
+earnings_estimate RMS.PA: ok
+revenue_estimate RMS.PA: ok
+dividends RMS.PA: ok
+fundamentals RMS.PA: 8/8 items
+info SAP.DE: 170 fields
+cashflow SAP.DE: ok
+balance_sheet SAP.DE: ok
+income_stmt SAP.DE: ok
+growth_estimates SAP.DE: ok
+earnings_estimate SAP.DE: ok
+revenue_estimate SAP.DE: ok
+dividends SAP.DE: ok
+fundamentals SAP.DE: 8/8 items
+info SU.PA: 169 fields
+cashflow SU.PA: ok
+balance_sheet SU.PA: ok
+income_stmt SU.PA: ok
+growth_estimates SU.PA: ok
+earnings_estimate SU.PA: ok
+revenue_estimate SU.PA: ok
+dividends SU.PA: ok
+fundamentals SU.PA: 8/8 items
+info BAJFINANCE.NS: 160 fields
+cashflow BAJFINANCE.NS: ok
+balance_sheet BAJFINANCE.NS: ok
+income_stmt BAJFINANCE.NS: ok
+growth_estimates BAJFINANCE.NS: ok
+earnings_estimate BAJFINANCE.NS: ok
+revenue_estimate BAJFINANCE.NS: ok
+dividends BAJFINANCE.NS: ok
+fundamentals BAJFINANCE.NS: 8/8 items
+info HDFCBANK.NS: 156 fields
+cashflow HDFCBANK.NS: ok
+balance_sheet HDFCBANK.NS: ok
+income_stmt HDFCBANK.NS: ok
+growth_estimates HDFCBANK.NS: ok
+earnings_estimate HDFCBANK.NS: ok
+revenue_estimate HDFCBANK.NS: ok
+dividends HDFCBANK.NS: ok
+fundamentals HDFCBANK.NS: 8/8 items
+info ICICIBANK.NS: 159 fields
+cashflow ICICIBANK.NS: ok
+balance_sheet ICICIBANK.NS: ok
+income_stmt ICICIBANK.NS: ok
+growth_estimates ICICIBANK.NS: ok
+earnings_estimate ICICIBANK.NS: ok
+revenue_estimate ICICIBANK.NS: ok
+dividends ICICIBANK.NS: ok
+fundamentals ICICIBANK.NS: 8/8 items
+info INFY.NS: 166 fields
+cashflow INFY.NS: ok
+balance_sheet INFY.NS: ok
+income_stmt INFY.NS: ok
+growth_estimates INFY.NS: ok
+earnings_estimate INFY.NS: ok
+revenue_estimate INFY.NS: ok
+dividends INFY.NS: ok
+fundamentals INFY.NS: 8/8 items
+info RELIANCE.NS: 157 fields
+cashflow RELIANCE.NS: ok
+balance_sheet RELIANCE.NS: ok
+income_stmt RELIANCE.NS: ok
+growth_estimates RELIANCE.NS: ok
+earnings_estimate RELIANCE.NS: ok
+revenue_estimate RELIANCE.NS: ok
+dividends RELIANCE.NS: ok
+fundamentals RELIANCE.NS: 8/8 items
+info TCS.NS: 160 fields
+cashflow TCS.NS: ok
+balance_sheet TCS.NS: ok
+income_stmt TCS.NS: ok
+growth_estimates TCS.NS: ok
+earnings_estimate TCS.NS: ok
+revenue_estimate TCS.NS: ok
+dividends TCS.NS: ok
+fundamentals TCS.NS: 8/8 items
+info TITAN.NS: 163 fields
+cashflow TITAN.NS: ok
+balance_sheet TITAN.NS: ok
+income_stmt TITAN.NS: ok
+growth_estimates TITAN.NS: ok
+earnings_estimate TITAN.NS: ok
+revenue_estimate TITAN.NS: ok
+dividends TITAN.NS: ok
+fundamentals TITAN.NS: 8/8 items
+info 4063.T: 169 fields
+cashflow 4063.T: ok
+balance_sheet 4063.T: ok
+income_stmt 4063.T: ok
+growth_estimates 4063.T: ok
+earnings_estimate 4063.T: ok
+revenue_estimate 4063.T: ok
+dividends 4063.T: ok
+fundamentals 4063.T: 8/8 items
+info 4519.T: 169 fields
+cashflow 4519.T: ok
+balance_sheet 4519.T: ok
+income_stmt 4519.T: ok
+growth_estimates 4519.T: ok
+earnings_estimate 4519.T: ok
+revenue_estimate 4519.T: ok
+dividends 4519.T: ok
+fundamentals 4519.T: 8/8 items
+info 6367.T: 166 fields
+cashflow 6367.T: ok
+balance_sheet 6367.T: ok
+income_stmt 6367.T: ok
+growth_estimates 6367.T: ok
+earnings_estimate 6367.T: ok
+revenue_estimate 6367.T: ok
+dividends 6367.T: ok
+fundamentals 6367.T: 8/8 items
+info 6594.T: 164 fields
+cashflow 6594.T: ok
+balance_sheet 6594.T: ok
+income_stmt 6594.T: ok
+growth_estimates 6594.T: ok
+earnings_estimate 6594.T: ok
+revenue_estimate 6594.T: ok
+dividends 6594.T: ok
+fundamentals 6594.T: 8/8 items
+info 6758.T: 170 fields
+cashflow 6758.T: ok
+balance_sheet 6758.T: ok
+income_stmt 6758.T: ok
+growth_estimates 6758.T: ok
+earnings_estimate 6758.T: ok
+revenue_estimate 6758.T: ok
+dividends 6758.T: ok
+fundamentals 6758.T: 8/8 items
+info 6857.T: 169 fields
+cashflow 6857.T: ok
+balance_sheet 6857.T: ok
+income_stmt 6857.T: ok
+growth_estimates 6857.T: ok
+earnings_estimate 6857.T: ok
+revenue_estimate 6857.T: ok
+dividends 6857.T: ok
+fundamentals 6857.T: 8/8 items
+info 6861.T: 159 fields
+cashflow 6861.T: ok
+balance_sheet 6861.T: ok
+income_stmt 6861.T: ok
+growth_estimates 6861.T: ok
+earnings_estimate 6861.T: ok
+revenue_estimate 6861.T: ok
+dividends 6861.T: ok
+fundamentals 6861.T: 8/8 items
+info 7974.T: 165 fields
+cashflow 7974.T: ok
+balance_sheet 7974.T: ok
+income_stmt 7974.T: ok
+growth_estimates 7974.T: ok
+earnings_estimate 7974.T: ok
+revenue_estimate 7974.T: ok
+dividends 7974.T: ok
+fundamentals 7974.T: 8/8 items
+info 8035.T: 168 fields
+cashflow 8035.T: ok
+balance_sheet 8035.T: ok
+income_stmt 8035.T: ok
+growth_estimates 8035.T: ok
+earnings_estimate 8035.T: ok
+revenue_estimate 8035.T: ok
+dividends 8035.T: ok
+fundamentals 8035.T: 8/8 items
+info 9983.T: 166 fields
+cashflow 9983.T: ok
+balance_sheet 9983.T: ok
+income_stmt 9983.T: ok
+growth_estimates 9983.T: ok
+earnings_estimate 9983.T: ok
+revenue_estimate 9983.T: ok
+dividends 9983.T: ok
+fundamentals 9983.T: 8/8 items
+fundamentals 000660.KS: folder exists, skipped
+fundamentals 005930.KS: folder exists, skipped
+info 006400.KS: 143 fields
+cashflow 006400.KS: ok
+balance_sheet 006400.KS: ok
+income_stmt 006400.KS: ok
+growth_estimates 006400.KS: ok
+earnings_estimate 006400.KS: ok
+revenue_estimate 006400.KS: ok
+dividends 006400.KS: ok
+fundamentals 006400.KS: 8/8 items
+info 035420.KS: 156 fields
+cashflow 035420.KS: ok
+balance_sheet 035420.KS: ok
+income_stmt 035420.KS: ok
+growth_estimates 035420.KS: ok
+earnings_estimate 035420.KS: ok
+revenue_estimate 035420.KS: ok
+dividends 035420.KS: ok
+fundamentals 035420.KS: 8/8 items
+fundamentals 2330.TW: folder exists, skipped
+info 2454.TW: 163 fields
+cashflow 2454.TW: ok
+balance_sheet 2454.TW: ok
+income_stmt 2454.TW: ok
+growth_estimates 2454.TW: ok
+earnings_estimate 2454.TW: ok
+revenue_estimate 2454.TW: ok
+dividends 2454.TW: ok
+fundamentals 2454.TW: 8/8 items
+info ITUB4.SA: 157 fields
+cashflow ITUB4.SA: ok
+balance_sheet ITUB4.SA: ok
+income_stmt ITUB4.SA: ok
+growth_estimates ITUB4.SA: ok
+earnings_estimate ITUB4.SA: ok
+revenue_estimate ITUB4.SA: ok
+dividends ITUB4.SA: ok
+fundamentals ITUB4.SA: 8/8 items
+info MELI: 181 fields
+cashflow MELI: ok
+balance_sheet MELI: ok
+income_stmt MELI: ok
+growth_estimates MELI: ok
+earnings_estimate MELI: ok
+revenue_estimate MELI: ok
+dividends MELI: ok
+fundamentals MELI: 8/8 items
+info WALMEX.MX: 161 fields
+cashflow WALMEX.MX: ok
+balance_sheet WALMEX.MX: ok
+income_stmt WALMEX.MX: ok
+growth_estimates WALMEX.MX: ok
+earnings_estimate WALMEX.MX: ok
+revenue_estimate WALMEX.MX: ok
+dividends WALMEX.MX: ok
+fundamentals WALMEX.MX: 8/8 items
+info WEGE3.SA: 162 fields
+cashflow WEGE3.SA: ok
+balance_sheet WEGE3.SA: ok
+income_stmt WEGE3.SA: ok
+growth_estimates WEGE3.SA: ok
+earnings_estimate WEGE3.SA: ok
+revenue_estimate WEGE3.SA: ok
+dividends WEGE3.SA: ok
+fundamentals WEGE3.SA: 8/8 items
+info BBCA.JK: 157 fields
+cashflow BBCA.JK: ok
+balance_sheet BBCA.JK: ok
+income_stmt BBCA.JK: ok
+growth_estimates BBCA.JK: ok
+earnings_estimate BBCA.JK: ok
+revenue_estimate BBCA.JK: ok
+dividends BBCA.JK: ok
+fundamentals BBCA.JK: 8/8 items
+info NPN.JO: 167 fields
+cashflow NPN.JO: ok
+balance_sheet NPN.JO: ok
+income_stmt NPN.JO: ok
+growth_estimates NPN.JO: ok
+earnings_estimate NPN.JO: ok
+revenue_estimate NPN.JO: ok
+dividends NPN.JO: ok
+fundamentals NPN.JO: 8/8 items
+info 0941.HK: 161 fields
+cashflow 0941.HK: ok
+balance_sheet 0941.HK: ok
+income_stmt 0941.HK: ok
+growth_estimates 0941.HK: ok
+earnings_estimate 0941.HK: ok
+revenue_estimate 0941.HK: ok
+dividends 0941.HK: ok
+fundamentals 0941.HK: 8/8 items
+info BIDU: 170 fields
+cashflow BIDU: ok
+balance_sheet BIDU: ok
+income_stmt BIDU: ok
+growth_estimates BIDU: ok
+earnings_estimate BIDU: ok
+revenue_estimate BIDU: ok
+dividends BIDU: empty
+fundamentals BIDU: 7/8 items
+info ERIC-B.ST: 165 fields
+cashflow ERIC-B.ST: ok
+balance_sheet ERIC-B.ST: ok
+income_stmt ERIC-B.ST: ok
+growth_estimates ERIC-B.ST: ok
+earnings_estimate ERIC-B.ST: ok
+revenue_estimate ERIC-B.ST: ok
+dividends ERIC-B.ST: ok
+fundamentals ERIC-B.ST: 8/8 items
+info NOKIA.HE: 171 fields
+cashflow NOKIA.HE: ok
+balance_sheet NOKIA.HE: ok
+income_stmt NOKIA.HE: ok
+growth_estimates NOKIA.HE: ok
+earnings_estimate NOKIA.HE: ok
+revenue_estimate NOKIA.HE: ok
+dividends NOKIA.HE: ok
+fundamentals NOKIA.HE: 8/8 items
+info 7751.T: 165 fields
+cashflow 7751.T: ok
+balance_sheet 7751.T: ok
+income_stmt 7751.T: ok
+growth_estimates 7751.T: ok
+earnings_estimate 7751.T: ok
+revenue_estimate 7751.T: ok
+dividends 7751.T: ok
+fundamentals 7751.T: 8/8 items
+info PETR4.SA: 162 fields
+cashflow PETR4.SA: ok
+balance_sheet PETR4.SA: ok
+income_stmt PETR4.SA: ok
+growth_estimates PETR4.SA: ok
+earnings_estimate PETR4.SA: ok
+revenue_estimate PETR4.SA: ok
+dividends PETR4.SA: ok
+fundamentals PETR4.SA: 8/8 items
+info VALE3.SA: 162 fields
+cashflow VALE3.SA: ok
+balance_sheet VALE3.SA: ok
+income_stmt VALE3.SA: ok
+growth_estimates VALE3.SA: ok
+earnings_estimate VALE3.SA: ok
+revenue_estimate VALE3.SA: ok
+dividends VALE3.SA: ok
+fundamentals VALE3.SA: 8/8 items
+info TEVA.TA: 159 fields
+cashflow TEVA.TA: ok
+balance_sheet TEVA.TA: ok
+income_stmt TEVA.TA: ok
+growth_estimates TEVA.TA: ok
+earnings_estimate TEVA.TA: ok
+revenue_estimate TEVA.TA: ok
+dividends TEVA.TA: ok
+fundamentals TEVA.TA: 8/8 items
+info SHOP.TO: 173 fields
+cashflow SHOP.TO: ok
+balance_sheet SHOP.TO: ok
+income_stmt SHOP.TO: ok
+growth_estimates SHOP.TO: ok
+earnings_estimate SHOP.TO: ok
+revenue_estimate SHOP.TO: ok
+dividends SHOP.TO: empty
+fundamentals SHOP.TO: 7/8 items
+info WTC.AX: 167 fields
+cashflow WTC.AX: ok
+balance_sheet WTC.AX: ok
+income_stmt WTC.AX: ok
+growth_estimates WTC.AX: ok
+earnings_estimate WTC.AX: ok
+revenue_estimate WTC.AX: ok
+dividends WTC.AX: ok
+fundamentals WTC.AX: 8/8 items
+info 1810.HK: 161 fields
+cashflow 1810.HK: ok
+balance_sheet 1810.HK: ok
+income_stmt 1810.HK: ok
+growth_estimates 1810.HK: ok
+earnings_estimate 1810.HK: ok
+revenue_estimate 1810.HK: ok
+dividends 1810.HK: empty
+fundamentals 1810.HK: 7/8 items
+info 300750.SZ: 162 fields
+cashflow 300750.SZ: ok
+balance_sheet 300750.SZ: ok
+income_stmt 300750.SZ: ok
+growth_estimates 300750.SZ: ok
+earnings_estimate 300750.SZ: ok
+revenue_estimate 300750.SZ: ok
+dividends 300750.SZ: ok
+fundamentals 300750.SZ: 8/8 items
+info 3690.HK: 163 fields
+cashflow 3690.HK: ok
+balance_sheet 3690.HK: ok
+income_stmt 3690.HK: ok
+growth_estimates 3690.HK: ok
+earnings_estimate 3690.HK: ok
+revenue_estimate 3690.HK: ok
+dividends 3690.HK: empty
+fundamentals 3690.HK: 7/8 items
+info 9988.HK: 166 fields
+cashflow 9988.HK: ok
+balance_sheet 9988.HK: ok
+income_stmt 9988.HK: ok
+growth_estimates 9988.HK: ok
+earnings_estimate 9988.HK: ok
+revenue_estimate 9988.HK: ok
+dividends 9988.HK: ok
+fundamentals 9988.HK: 8/8 items
+info ADYEN.AS: 162 fields
+cashflow ADYEN.AS: ok
+balance_sheet ADYEN.AS: ok
+income_stmt ADYEN.AS: ok
+growth_estimates ADYEN.AS: ok
+earnings_estimate ADYEN.AS: ok
+revenue_estimate ADYEN.AS: ok
+dividends ADYEN.AS: empty
+fundamentals ADYEN.AS: 7/8 items
+info RACE.MI: 168 fields
+cashflow RACE.MI: ok
+balance_sheet RACE.MI: ok
+income_stmt RACE.MI: ok
+growth_estimates RACE.MI: ok
+earnings_estimate RACE.MI: ok
+revenue_estimate RACE.MI: ok
+dividends RACE.MI: ok
+fundamentals RACE.MI: 8/8 items
+info 6098.T: 168 fields
+cashflow 6098.T: ok
+balance_sheet 6098.T: ok
+income_stmt 6098.T: ok
+growth_estimates 6098.T: ok
+earnings_estimate 6098.T: ok
+revenue_estimate 6098.T: ok
+dividends 6098.T: ok
+fundamentals 6098.T: 8/8 items
+info 207940.KS: 147 fields
+cashflow 207940.KS: ok
+balance_sheet 207940.KS: ok
+income_stmt 207940.KS: ok
+growth_estimates 207940.KS: ok
+earnings_estimate 207940.KS: ok
+revenue_estimate 207940.KS: ok
+dividends 207940.KS: empty
+fundamentals 207940.KS: 7/8 items
+info 373220.KS: 143 fields
+cashflow 373220.KS: ok
+balance_sheet 373220.KS: ok
+income_stmt 373220.KS: ok
+growth_estimates 373220.KS: ok
+earnings_estimate 373220.KS: ok
+revenue_estimate 373220.KS: ok
+dividends 373220.KS: empty
+fundamentals 373220.KS: 7/8 items
+info NU: 162 fields
+cashflow NU: ok
+balance_sheet NU: ok
+income_stmt NU: ok
+growth_estimates NU: ok
+earnings_estimate NU: ok
+revenue_estimate NU: ok
+dividends NU: empty
+fundamentals NU: 7/8 items
+info SE: 167 fields
+cashflow SE: ok
+balance_sheet SE: ok
+income_stmt SE: ok
+growth_estimates SE: ok
+earnings_estimate SE: ok
+revenue_estimate SE: ok
+dividends SE: empty
+fundamentals SE: 7/8 items
+fundamentals: 202 folders fetched, 7 skipped
+--- step fundamentals done in 1115s
+--- step edgar start 12:48:26
+edgar CIK0000796343: ok, 4233 KB
+edgar CIK0000008670: ok, 4831 KB
+edgar CIK0000002488: ok, 3645 KB
+edgar CIK0001559720: ok, 1286 KB
+edgar CIK0001178670: ok, 2521 KB
+edgar CIK0001652044: ok, 3174 KB
+edgar CIK0001018724: ok, 4447 KB
+edgar CIK0000004904: ok, 5155 KB
+edgar CIK0000318154: ok, 3647 KB
+edgar CIK0000006281: ok, 4331 KB
+edgar CIK0000006951: ok, 4446 KB
+edgar CIK0001751008: ok, 1199 KB
+edgar CIK0001736297: ok, 555 KB
+edgar CIK0000769397: ok, 4098 KB
+edgar CIK0001069183: ok, 3363 KB
+edgar CIK0001701605: ok, 2184 KB
+edgar CIK0001075531: ok, 3317 KB
+edgar CIK0001730168: ok, 2296 KB
+edgar CIK0000813672: ok, 3622 KB
+edgar CIK0000723254: ok, 3412 KB
+edgar CIK0000858877: ok, 6034 KB
+edgar CIK0001166691: ok, 3713 KB
+edgar CIK0001868275: ok, 1432 KB
+edgar CIK0000900075: ok, 3430 KB
+edgar CIK0001769628: ok, 489 KB
+edgar CIK0000909832: ok, 3607 KB
+edgar CIK0001535527: ok, 1919 KB
+edgar CIK0000277948: ok, 2933 KB
+edgar CIK0001561550: ok, 1590 KB
+edgar CIK0001093557: ok, 3019 KB
+edgar CIK0001539838: ok, 3550 KB
+edgar CIK0001792789: ok, 1415 KB
+edgar CIK0001109357: ok, 5229 KB
+edgar CIK0000815556: ok, 2662 KB
+edgar CIK0001262039: ok, 3433 KB
+edgar CIK0001932393: ok, 1256 KB
+edgar CIK0000882095: ok, 4602 KB
+edgar CIK0000773840: ok, 4517 KB
+edgar CIK0000874716: ok, 3962 KB
+edgar CIK0000050863: ok, 4261 KB
+edgar CIK0000896878: ok, 4313 KB
+edgar CIK0001035267: ok, 4107 KB
+edgar CIK0001418135: ok, 5011 KB
+edgar CIK0000319201: ok, 4840 KB
+edgar CIK0000707549: ok, 4014 KB
+edgar CIK0001633978: ok, 3209 KB
+edgar CIK0001048286: ok, 3225 KB
+edgar CIK0001835632: ok, 1298 KB
+edgar CIK0001326801: ok, 2745 KB
+edgar CIK0000827054: ok, 4263 KB
+edgar CIK0000723125: ok, 4053 KB
+edgar CIK0000789019: ok, 4822 KB
+edgar CIK0001050446: ok, 2996 KB
+edgar CIK0001682852: ok, 1877 KB
+edgar CIK0001103982: ok, 4432 KB
+edgar CIK0001280452: ok, 3494 KB
+edgar CIK0000865752: ok, 3218 KB
+edgar CIK0001065280: ok, 3563 KB
+edgar CIK0001045810: ok, 3997 KB
+edgar CIK0000898173: ok, 2991 KB
+edgar CIK0000878927: ok, 2255 KB
+edgar CIK0000075362: ok, 3103 KB
+edgar CIK0001321655: ok, 1257 KB
+edgar CIK0001327567: ok, 3101 KB
+edgar CIK0000723531: ok, 3415 KB
+edgar CIK0001633917: ok, 3086 KB
+edgar CIK0000077476: ok, 4888 KB
+edgar CIK0000804328: ok, 4333 KB
+edgar CIK0000872589: ok, 2890 KB
+edgar CIK0001819994: ok, 1248 KB
+edgar CIK0000882835: ok, 3394 KB
+edgar CIK0000745732: ok, 2983 KB
+edgar CIK0002023554: ok, 573 KB
+edgar CIK0000829224: ok, 4059 KB
+edgar CIK0000883241: ok, 4153 KB
+edgar CIK0001283699: ok, 4444 KB
+edgar CIK0000946581: ok, 3239 KB
+edgar CIK0000097210: ok, 5073 KB
+edgar CIK0001318605: ok, 3613 KB
+edgar CIK0000097476: ok, 3609 KB
+edgar CIK0000875320: ok, 3884 KB
+edgar CIK0000104169: ok, 3683 KB
+edgar CIK0000106040: ok, 4193 KB
+edgar CIK0001327811: ok, 3265 KB
+edgar CIK0000072903: ok, 4282 KB
+edgar CIK0000059478: ok, 3467 KB
+edgar CIK0001067983: ok, 2732 KB
+edgar CIK0000019617: ok, 7943 KB
+edgar CIK0000200406: ok, 4120 KB
+edgar CIK0001403161: ok, 3606 KB
+edgar CIK0001141391: ok, 4084 KB
+edgar CIK0000101829: ok, 5067 KB
+edgar CIK0000018230: ok, 5797 KB
+edgar CIK0001551152: ok, 3088 KB
+edgar CIK0001996810: ok, 762 KB
+edgar CIK0000820313: ok, 3492 KB
+edgar CIK0000040545: ok, 6023 KB
+edgar CIK0001596532: ok, 2983 KB
+edgar CIK0001413329: ok, 4096 KB
+edgar CIK0000766704: ok, 5385 KB
+edgar CIK0000886982: ok, 5999 KB
+edgar CIK0000021344: ok, 5084 KB
+edgar CIK0001543151: ok, 2138 KB
+edgar CIK0000895421: ok, 7111 KB
+edgar CIK0001164727: ok, 5673 KB
+edgar CIK0000051143: ok, 5585 KB
+edgar CIK0000004962: ok, 4721 KB
+edgar CIK0001341439: ok, 3871 KB
+edgar CIK0000063908: ok, 3547 KB
+edgar CIK0001585689: ok, 3111 KB
+edgar CIK0001065088: ok, 4064 KB
+edgar CIK0001058290: ok, 3713 KB
+edgar CIK0000875045: ok, 4615 KB
+edgar CIK0001110803: ok, 3548 KB
+edgar CIK0001336917: ok, 3157 KB
+edgar CIK0001274494: ok, 4665 KB
+edgar CIK0001174922: ok, 3750 KB
+edgar CIK0001048695: ok, 3458 KB
+edgar CIK0001086222: ok, 3841 KB
+edgar CIK0000849399: ok, 4129 KB
+edgar CIK0001324424: ok, 3433 KB
+edgar CIK0000908937: ok, 3813 KB
+edgar CIK0000883569: ok, 3775 KB
+edgar CIK0001526520: ok, 3168 KB
+edgar CIK0001490281: ok, 4197 KB
+edgar CIK0001002047: ok, 4219 KB
+edgar CIK0001500435: ok, 2991 KB
+edgar CIK0000016868: ok, 1153 KB
+edgar CIK0000016875: ok, 3362 KB
+edgar CIK0001274152: FAILED HTTP 404
+edgar CIK0000937966: ok, 1794 KB
+edgar CIK0000901832: ok, 1339 KB
+edgar CIK0001107457: FAILED HTTP 404
+edgar CIK0000353278: ok, 620 KB
+edgar CIK0001000184: ok, 857 KB
+edgar CIK0001144967: ok, 2269 KB
+edgar CIK0001103838: FAILED HTTP 404
+edgar CIK0001067491: ok, 635 KB
+edgar CIK0000313838: ok, 2252 KB
+edgar CIK0001158838: ok, 598 KB
+edgar CIK0001132597: ok, 944 KB
+edgar CIK0001099590: ok, 3863 KB
+edgar CIK0001329099: ok, 2223 KB
+edgar CIK0000717826: ok, 833 KB
+edgar CIK0000924613: ok, 927 KB
+edgar CIK0001119639: ok, 1698 KB
+edgar CIK0000917851: ok, 2517 KB
+edgar CIK0000818686: ok, 3679 KB
+edgar CIK0001594805: ok, 950 KB
+edgar CIK0001577552: ok, 1365 KB
+edgar CIK0001648416: ok, 631 KB
+edgar CIK0001691493: ok, 179 KB
+edgar CIK0001703399: ok, 871 KB
+edgar: 150 fetched, 2 already on disk, 3 failed, of 155 CIKs
+--- step edgar done in 81s
+--- step funds start 12:49:47
+funds EMB: ok inception=2007-12-17 aum=13566665728 er=0.0039000000000000003
+funds PCY: ok inception=2007-10-11 aum=1172074880 er=0.005
+funds EMLC: ok inception=2010-07-22 aum=4888304640 er=0.003
+funds LEMB: ok inception=2011-10-18 aum=770560832 er=0.003
+funds EBND: ok inception=2011-02-23 aum=2242548736 er=0.003
+funds CEMB: ok inception=2012-04-17 aum=398686208 er=0.005
+funds EMHY: ok inception=2012-04-03 aum=560347456 er=0.005
+funds HYEM: ok inception=2012-05-08 aum=505924544 er=0.004
+funds PEBIX: ok inception=2008-04-30 aum=3250551552 er=0.009899999999999999
+funds PREMX: ok inception=1994-12-30 aum=5454295552 er=0.0095
+funds FNMIX: ok inception=2018-12-04 aum=3710065152 er=0.0075
+funds TGEIX: ok inception=2004-02-27 aum=3949390592 er=0.0085
+funds DBLEX: ok inception=2026-08-03 aum=285654176 er=0.0091
+funds GSDIX: ok inception=2006-09-29 aum=391756096 er=0.0083
+funds JEMDX: ok inception=2006-06-30 aum=803716864 er=0.008
+funds MEDIX: ok inception=2008-12-01 aum=6983712256 er=0.008199999999999999
+funds PYEMX: ok inception=1998-12-17 aum=970154176 er=0.0073
+funds SHMDX: ok inception=2007-08-16 aum=317733216 er=0.0076
+funds EEIIX: ok inception=2007-06-27 aum=1781887232 er=0.009300000000000001
+funds PRELX: ok inception=2021-02-22 aum=374338720 er=0.0092
+funds PELBX: ok inception=2008-05-30 aum=2652591872 er=0.0132
+funds ELD: ok inception=2010-08-09 aum=129691896 er=0.0055000000000000005
+funds EMCB: ok inception=2012-03-08 aum=99349800 er=0.0060999999999999995
+funds EMBAX: ok inception=2012-07-09 aum=93063104 er=0.0121
+funds FEMDX: ok inception=2006-05-24 aum=142038928 er=0.0102
+funds EMDIX: ok inception=1996-10-02 aum=45052816 er=0.009399999999999999
+funds EMKIX: ok inception=2011-05-12 aum=25210772 er=0.0121
+funds PEMIX: ok inception=2009-07-01 aum=59077284 er=0.009399999999999999
+funds EMDAX: ok inception=2011-03-30 aum=40468128 er=0.0113
+funds FEDCX: ok inception=2011-03-17 aum=1937279872 er=0.0
+funds WEMDX: ok inception=2013-09-03 aum=32700478 er=0.013000000000000001
+funds VWOB: ok inception=2013-05-31 aum=6580983296 er=0.0015
+funds VEMBX: ok inception=2017-12-06 aum=5724428288 er=0.005
+funds FEMB: ok inception=2014-11-04 aum=372262944 er=0.0085
+funds EMTL: ok inception=2016-04-13 aum=77081488 er=0.006500000000000001
+funds JPMB: ok inception=2018-01-29 aum=96262240 er=0.0039000000000000003
+funds EMBD: ok inception=2020-06-01 aum=250356688 er=0.0039000000000000003
+funds EMHC: ok inception=2021-04-06 aum=316325056 er=0.0023
+funds CBON: ok inception=2014-11-10 aum=33952100 er=0.005
+funds JEMIX: ok inception=2015-03-27 aum=2176604416 er=0.0077
+funds TRECX: ok inception=2025-05-12 aum=292840800 er=0.0088
+funds PYELX: ok inception=2022-02-28 aum=78541872 er=0.009899999999999999
+funds NEMDX: ok inception=2022-11-01 aum=27091700 er=0.0
+funds BIL: ok inception=2007-05-25 aum=48510820352 er=0.001352
+funds SHV: ok inception=2007-01-05 aum=21425623040 er=0.0015
+funds DJP: ok inception=2006-06-06 aum=1022932288 er=0.006999999999999999
+funds GSG: ok inception=2006-07-10 aum=1061296640 er=0.0075
+funds GLD: ok inception=2004-11-18 aum=131009642496 er=0.004
+funds IAU: ok inception=2005-01-21 aum=58116382720 er=0.0025
+funds SGOL: ok inception=2009-09-09 aum=6696057344 er=0.0017000000000000001
+funds GII: ok inception=2007-01-25 aum=965991936 er=0.004
+funds IGF: ok inception=2007-12-10 aum=10902711296 er=0.0037
+funds WIP: ok inception=2008-03-13 aum=462979776 er=0.005
+funds GNR: ok inception=2010-09-13 aum=5382645248 er=0.004
+funds GUNR: ok inception=2011-09-16 aum=7014095872 er=0.0046
+funds HAP: ok inception=2008-08-29 aum=326346336 er=0.0040999999999999995
+funds IGE: ok inception=2001-10-22 aum=838852864 er=0.0037
+funds DBP: ok inception=2007-01-05 aum=203556160 er=0.0075
+funds GLTR: ok inception=2010-10-22 aum=2314926848 er=0.006
+funds PALL: ok inception=2010-01-08 aum=504621184 er=0.006
+funds PPLT: ok inception=2010-01-08 aum=1678477312 er=0.006
+funds RWX: ok inception=2006-12-15 aum=231272112 er=0.0059
+funds VNQI: ok inception=2010-11-01 aum=3525859840 er=0.0012
+funds RWO: ok inception=2008-05-07 aum=1247310848 er=0.005
+funds SIVR: ok inception=2009-07-24 aum=3446195456 er=0.003
+funds SLV: ok inception=2006-04-21 aum=25189588992 er=0.005
+funds WOOD: ok inception=2008-06-24 aum=246851248 er=0.0039000000000000003
+funds LTPZ: ok inception=2009-09-03 aum=1238256128 er=0.002
+funds SCHP: ok inception=2010-08-05 aum=17500973056 er=0.0003
+funds SPIP: ok inception=2007-05-25 aum=1072385856 er=0.0012
+funds STIP: ok inception=2010-12-01 aum=16942168064 er=0.0003
+funds STPZ: ok inception=2009-08-20 aum=578130944 er=0.002
+funds TDTT: ok inception=2011-09-19 aum=2512865024 er=0.0018
+funds TIP: ok inception=2003-12-04 aum=14648541184 er=0.0018
+funds VTIP: ok inception=2012-10-12 aum=74652303360 er=0.0003
+funds DBC: ok inception=2006-02-03 aum=1943271808 er=0.0085
+funds USCI: ok inception=2010-08-10 aum=420732736 er=0.0105
+funds BWX: ok inception=2007-10-02 aum=1335865728 er=0.0034999999999999996
+funds CEF: ok inception=1986-04-03 aum=? er=?
+funds COPX: ok inception=2010-04-19 aum=6328031744 er=0.006500000000000001
+funds CPER: ok inception=2011-11-14 aum=663276992 er=0.0088
+funds DBA: ok inception=2007-01-05 aum=1131071616 er=0.0085
+funds DBB: ok inception=2007-01-05 aum=320775392 er=0.0075
+funds DBE: ok inception=2007-01-05 aum=152253808 er=0.0075
+funds DBO: ok inception=2007-01-05 aum=329948480 er=0.0075
+funds FLRN: ok inception=2011-11-30 aum=3155460096 er=0.0015
+funds FTAG: ok inception=2010-03-11 aum=14034282 er=0.006999999999999999
+funds GDX: ok inception=2006-05-16 aum=23820072960 er=0.0051
+funds GDXJ: ok inception=2009-11-10 aum=7075869184 er=0.0052
+funds IYR: ok inception=2000-06-12 aum=4030384640 er=0.0037
+funds MINT: ok inception=2009-11-16 aum=18337200128 er=0.0036
+funds MNA: ok inception=2009-11-17 aum=260406560 er=0.0078000000000000005
+funds MOO: ok inception=2007-08-31 aum=1099265920 er=0.005600000000000001
+funds MXI: ok inception=2006-09-12 aum=393777536 er=0.0037
+funds PHYS: ok inception=2010-02-26 aum=? er=?
+funds PICK: ok inception=2012-01-31 aum=2157677312 er=0.0039000000000000003
+funds PSLV: ok inception=2010-10-29 aum=? er=?
+funds PSR: ok inception=2008-11-20 aum=57483804 er=0.0034999999999999996
+funds QAI: ok inception=2009-03-25 aum=990201664 er=0.008100000000000001
+funds REMX: ok inception=2010-10-27 aum=1448121600 er=0.0053
+funds RLY: ok inception=2012-04-25 aum=1419035648 er=0.005
+funds RWR: ok inception=2001-04-23 aum=1820806656 er=0.0025
+funds SCHH: ok inception=2011-01-13 aum=11037447168 er=0.0007000000000000001
+funds SHY: ok inception=2002-07-22 aum=27439355904 er=0.0015
+funds UGL: ok inception=2008-12-01 aum=619785216 er=0.011899999999999999
+funds UNG: ok inception=2007-04-18 aum=503256320 er=0.011699999999999999
+funds USO: ok inception=2006-04-10 aum=1946440704 er=0.0086
+funds UUP: ok inception=2007-02-20 aum=481364192 er=0.0075
+funds VNQ: ok inception=2004-09-23 aum=69458698240 er=0.0013
+funds WTMF: ok inception=2011-01-05 aum=263756432 er=0.0066
+funds XLB: ok inception=1998-12-16 aum=8448828928 er=0.0008
+funds XME: ok inception=2006-06-19 aum=3690055424 er=0.0034999999999999996
+funds FTRI: ok inception=2010-03-11 aum=113902944 er=0.006999999999999999
+funds IFGL: ok inception=2007-11-12 aum=79590840 er=0.005
+funds CUT: ok inception=2007-11-09 aum=29590112 er=0.0076
+funds VEGI: ok inception=2012-01-31 aum=169680720 er=0.0039000000000000003
+funds TIPZ: ok inception=2009-09-03 aum=90622728 er=0.002
+funds GBIL: ok inception=2016-09-06 aum=7898360832 er=0.0012
+funds ICSH: ok inception=2013-12-11 aum=8971640832 er=0.0008
+funds JPST: ok inception=2017-05-17 aum=42514579456 er=0.0018
+funds NEAR: ok inception=2013-09-25 aum=5218244096 er=0.0025
+funds SGOV: ok inception=2020-05-26 aum=116836941824 er=0.0009
+funds TFLO: ok inception=2014-02-04 aum=7348822528 er=0.0015
+funds USFR: ok inception=2014-02-04 aum=21272145920 er=0.0015
+funds BCD: ok inception=2017-03-30 aum=441248608 er=0.003
+funds BCI: ok inception=2017-03-30 aum=3474652672 er=0.0026
+funds CMDY: ok inception=2018-04-03 aum=742732480 er=0.0028000000000000004
+funds COMT: ok inception=2014-10-15 aum=1432439296 er=0.0048
+funds FTGC: ok inception=2013-10-22 aum=3361799424 er=0.0098
+funds GCC: ok inception=2020-12-21 aum=209497392 er=0.005699999999999999
+funds PDBC: ok inception=2014-11-07 aum=8063454720 er=0.0059
+funds BITO: ok inception=2021-10-18 aum=1492754048 er=0.0095
+funds CTA: ok inception=2022-03-07 aum=1363676544 er=0.0086
+funds DBMF: ok inception=2019-05-07 aum=5182067712 er=0.0085
+funds FMF: ok inception=2013-08-01 aum=302423520 er=0.0098
+funds GBTC: ok inception=2013-09-25 aum=9615659008 er=0.015
+funds IBIT: ok inception=2024-01-05 aum=62297755648 er=0.0025
+funds KMLM: ok inception=2020-12-01 aum=595566848 er=0.009000000000000001
+funds AAAU: ok inception=2018-07-24 aum=2481856512 er=0.0018
+funds BAR: ok inception=2017-08-23 aum=1255241344 er=0.001749
+funds GLDM: ok inception=2018-06-25 aum=29630820352 er=0.001
+funds IAUM: ok inception=2021-06-15 aum=7869192704 er=0.0009
+funds OUNZ: ok inception=2014-05-16 aum=2513435648 er=0.0025
+funds IFRA: ok inception=2018-04-03 aum=4068390656 er=0.003
+funds NFRA: ok inception=2013-10-08 aum=3060155392 er=0.004699999999999999
+funds TOLZ: ok inception=2014-03-25 aum=172891920 er=0.0046
+funds GTIP: ok inception=2018-10-02 aum=294171136 er=0.0012
+funds NANR: ok inception=2015-12-15 aum=837456000 er=0.0034999999999999996
+funds REET: ok inception=2014-07-08 aum=4764517888 er=0.0014000000000000002
+funds PBTP: ok inception=2017-09-22 aum=248204992 er=0.0007000000000000001
+funds TIPX: ok inception=2013-05-29 aum=2120803072 er=0.0015
+funds IVW: ok inception=2000-05-22 aum=74727448576 er=0.0018
+funds QQQ: ok inception=1999-03-10 aum=463833595904 er=0.0018
+funds EFG: ok inception=2005-08-01 aum=14983920640 er=0.0034000000000000002
+funds EEM: ok inception=2003-04-07 aum=28246675456 er=0.0072
+funds ACWX: ok inception=2008-03-26 aum=17686390784 er=0.0032
+funds ACWI: ok inception=2008-03-26 aum=32279953408 er=0.0032
+funds VXUS: ok inception=2011-01-26 aum=630010281984 er=0.0005
+funds SPY: ok inception=1993-01-22 aum=796865200128 er=0.000945
+funds AGG: ok inception=2003-09-22 aum=139937972224 er=0.0003
+funds EFA: ok inception=2001-08-14 aum=76615032832 er=0.0032
+funds HEFA: ok inception=2014-01-31 aum=7543561216 er=0.0034999999999999996
+funds VGK: ok inception=2005-03-04 aum=37082832896 er=0.0006
+funds EWJ: ok inception=1996-03-12 aum=23398279168 er=0.0049
+funds DXJ: ok inception=2006-06-16 aum=7047421952 er=0.0048
+funds EWU: ok inception=1996-03-12 aum=3728868864 er=0.005
+funds EWC: ok inception=1996-03-12 aum=7577758720 er=0.005
+funds EWA: ok inception=1996-03-12 aum=1249133696 er=0.005
+funds INDA: ok inception=2012-02-02 aum=5841618944 er=0.0060999999999999995
+funds EWT: ok inception=2000-06-20 aum=11052632064 er=0.0059
+funds MCHI: ok inception=2011-03-29 aum=5485091328 er=0.0059
+funds BNDX: ok inception=2013-05-31 aum=124198166528 er=0.0007000000000000001
+funds IGOV: ok inception=2009-01-21 aum=1030125056 er=0.0034999999999999996
+funds IEF: ok inception=2002-07-22 aum=43529359360 er=0.0015
+funds XYLD: ok inception=2013-06-21 aum=3350652416 er=0.006
+funds QYLD: ok inception=2013-12-11 aum=8199295488 er=0.006
+funds: 176 fetched this run
+--- step funds done in 118s
+
+=== COVERAGE SUMMARY (prices.csv) ===
+benchmark/benchmark: 9/9 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+benchmark/support: 14/14 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/candidate: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/excluded: 9/11 with prices; earliest first date 2006-05-31; none: ['EMBAX', 'WEMDX']; under 60 rows: -
+em_bond/not_testable: 12/12 with prices; earliest first date 2011-11-03; none: -; under 60 rows: ['EMTL']
+index/support: 27/27 with prices; earliest first date 2005-01-03; none: -; under 60 rows: ['^VXEEM']
+intl_growth_stock/candidate: 60/60 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/faded_leader: 8/8 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/not_testable: 13/13 with prices; earliest first date 2014-10-16; none: -; under 60 rows: -
+other/candidate: 32/32 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/excluded: 42/42 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/not_testable: 34/34 with prices; earliest first date 2008-01-24; none: -; under 60 rows: -
+overlay/support: 2/2 with prices; earliest first date 2013-06-24; none: -; under 60 rows: -
+us_growth_stock/candidate: 87/87 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/faded_leader: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/not_testable: 21/21 with prices; earliest first date 2013-01-02; none: -; under 60 rows: -
+TOTAL tickers with no price data: 2: ['EMBAX', 'WEMDX']
+fx: 30/30 currencies with data; none: -
+prices_usd_listing: 51/53 with data; none: ['CHL', 'CAJ']
+fundamentals folders with info.json: 209/209; missing: -
+edgar files: 152/155; missing: ['0001274152', '0001107457', '0001103838']
+funds.csv: 176/176 tickers
+Total wall time 1431s
+Fetch run 2026-11-07 12:53:01  universe=research/plan/universe.csv  refresh=False  only=['volumes']
+universe rows: 442; steps: ['volumes']
+--- step volumes start 12:53:01
+volume: 412 in universe, 0 on disk, 412 to fetch
+volume chunk 1: 50 requested, 50 columns returned
+volume chunk 2: 50 requested, 50 columns returned
+volume chunk 3: 50 requested, 50 columns returned
+volume chunk 4: 50 requested, 50 columns returned
+volume chunk 5: 50 requested, 50 columns returned
+volume chunk 6: 50 requested, 50 columns returned
+volume chunk 7: 50 requested, 50 columns returned
+volume chunk 8: 50 requested, 50 columns returned
+volume chunk 9: 12 requested, 12 columns returned
+volume ADBE: 5497 rows, 2005-01-03 to 2026-11-06
+volume ADP: 5497 rows, 2005-01-03 to 2026-11-06
+volume AMD: 5497 rows, 2005-01-03 to 2026-11-06
+volume ABNB: 1484 rows, 2020-12-10 to 2026-11-06
+volume ALNY: 5497 rows, 2005-01-03 to 2026-11-06
+volume GOOGL: 5497 rows, 2005-01-03 to 2026-11-06
+volume AMZN: 5497 rows, 2005-01-03 to 2026-11-06
+volume AEP: 5497 rows, 2005-01-03 to 2026-11-06
+volume AMGN: 5497 rows, 2005-01-03 to 2026-11-06
+volume ADI: 5497 rows, 2005-01-03 to 2026-11-06
+volume AAPL: 5497 rows, 2005-01-03 to 2026-11-06
+volume AMAT: 5497 rows, 2005-01-03 to 2026-11-06
+volume APP: 1399 rows, 2021-04-15 to 2026-11-06
+volume ALAB: 662 rows, 2024-03-20 to 2026-11-06
+volume ADSK: 5497 rows, 2005-01-03 to 2026-11-06
+volume AXON: 5497 rows, 2005-01-03 to 2026-11-06
+volume BKR: 5497 rows, 2005-01-03 to 2026-11-06
+volume BKNG: 5497 rows, 2005-01-03 to 2026-11-06
+volume AVGO: 4341 rows, 2009-08-06 to 2026-11-06
+volume CDNS: 5497 rows, 2005-01-03 to 2026-11-06
+volume CTAS: 5497 rows, 2005-01-03 to 2026-11-06
+volume CSCO: 5497 rows, 2005-01-03 to 2026-11-06
+volume CMCSA: 5497 rows, 2005-01-03 to 2026-11-06
+volume CEG: 1206 rows, 2022-01-19 to 2026-11-06
+volume CPRT: 5497 rows, 2005-01-03 to 2026-11-06
+volume CRWV: 406 rows, 2025-03-28 to 2026-11-06
+volume COST: 5497 rows, 2005-01-03 to 2026-11-06
+volume CRWD: 1863 rows, 2019-06-12 to 2026-11-06
+volume CSX: 5497 rows, 2005-01-03 to 2026-11-06
+volume DDOG: 1794 rows, 2019-09-19 to 2026-11-06
+volume DXCM: 5427 rows, 2005-04-14 to 2026-11-06
+volume FANG: 3537 rows, 2012-10-12 to 2026-11-06
+volume DASH: 1485 rows, 2020-12-09 to 2026-11-06
+volume EXC: 5497 rows, 2005-01-03 to 2026-11-06
+volume FAST: 5497 rows, 2005-01-03 to 2026-11-06
+volume FTNT: 4268 rows, 2009-11-18 to 2026-11-06
+volume GEHC: 977 rows, 2022-12-15 to 2026-11-06
+volume GILD: 5497 rows, 2005-01-03 to 2026-11-06
+volume HON: 5497 rows, 2005-01-03 to 2026-11-06
+volume IDXX: 5497 rows, 2005-01-03 to 2026-11-06
+volume INTC: 5497 rows, 2005-01-03 to 2026-11-06
+volume INTU: 5497 rows, 2005-01-03 to 2026-11-06
+volume ISRG: 5497 rows, 2005-01-03 to 2026-11-06
+volume KDP: 4656 rows, 2008-05-07 to 2026-11-06
+volume KLAC: 5497 rows, 2005-01-03 to 2026-11-06
+volume LRCX: 5497 rows, 2005-01-03 to 2026-11-06
+volume LITE: 2841 rows, 2015-07-23 to 2026-11-06
+volume MAR: 5497 rows, 2005-01-03 to 2026-11-06
+volume MRVL: 5497 rows, 2005-01-03 to 2026-11-06
+volume META: 3639 rows, 2012-05-18 to 2026-11-06
+volume MCHP: 5497 rows, 2005-01-03 to 2026-11-06
+volume MU: 5497 rows, 2005-01-03 to 2026-11-06
+volume MSFT: 5497 rows, 2005-01-03 to 2026-11-06
+volume MSTR: 5497 rows, 2005-01-03 to 2026-11-06
+volume MRNA: 1990 rows, 2018-12-07 to 2026-11-06
+volume MDLZ: 5497 rows, 2005-01-03 to 2026-11-06
+volume MPWR: 5497 rows, 2005-01-03 to 2026-11-06
+volume MNST: 5497 rows, 2005-01-03 to 2026-11-06
+volume NFLX: 5497 rows, 2005-01-03 to 2026-11-06
+volume NVDA: 5497 rows, 2005-01-03 to 2026-11-06
+volume ORLY: 5497 rows, 2005-01-03 to 2026-11-06
+volume ODFL: 5497 rows, 2005-01-03 to 2026-11-06
+volume PCAR: 5497 rows, 2005-01-03 to 2026-11-06
+volume PLTR: 1534 rows, 2020-09-30 to 2026-11-06
+volume PANW: 3596 rows, 2012-07-20 to 2026-11-06
+volume PAYX: 5497 rows, 2005-01-03 to 2026-11-06
+volume PYPL: 2854 rows, 2015-07-06 to 2026-11-06
+volume PEP: 5497 rows, 2005-01-03 to 2026-11-06
+volume QCOM: 5497 rows, 2005-01-03 to 2026-11-06
+volume REGN: 5497 rows, 2005-01-03 to 2026-11-06
+volume RKLB: 1495 rows, 2020-11-24 to 2026-11-06
+volume ROP: 5497 rows, 2005-01-03 to 2026-11-06
+volume ROST: 5497 rows, 2005-01-03 to 2026-11-06
+volume SNDK: 436 rows, 2025-02-13 to 2026-11-06
+volume SBUX: 5497 rows, 2005-01-03 to 2026-11-06
+volume SNPS: 5497 rows, 2005-01-03 to 2026-11-06
+volume TMUS: 4921 rows, 2007-04-19 to 2026-11-06
+volume TTWO: 5497 rows, 2005-01-03 to 2026-11-06
+volume TER: 5497 rows, 2005-01-03 to 2026-11-06
+volume TSLA: 4116 rows, 2010-06-29 to 2026-11-06
+volume TXN: 5497 rows, 2005-01-03 to 2026-11-06
+volume VRTX: 5497 rows, 2005-01-03 to 2026-11-06
+volume WMT: 5497 rows, 2005-01-03 to 2026-11-06
+volume WDC: 5497 rows, 2005-01-03 to 2026-11-06
+volume WDAY: 3537 rows, 2012-10-12 to 2026-11-06
+volume XEL: 5497 rows, 2005-01-03 to 2026-11-06
+volume LLY: 5497 rows, 2005-01-03 to 2026-11-06
+volume BRK-B: 5497 rows, 2005-01-03 to 2026-11-06
+volume JPM: 5497 rows, 2005-01-03 to 2026-11-06
+volume JNJ: 5497 rows, 2005-01-03 to 2026-11-06
+volume V: 4690 rows, 2008-03-19 to 2026-11-06
+volume MA: 5146 rows, 2006-05-25 to 2026-11-06
+volume RTX: 5497 rows, 2005-01-03 to 2026-11-06
+volume CAT: 5497 rows, 2005-01-03 to 2026-11-06
+volume ABBV: 3484 rows, 2013-01-02 to 2026-11-06
+volume GEV: 657 rows, 2024-03-27 to 2026-11-06
+volume APH: 5497 rows, 2005-01-03 to 2026-11-06
+volume GE: 5497 rows, 2005-01-03 to 2026-11-06
+volume ANET: 3125 rows, 2014-06-06 to 2026-11-06
+volume PM: 4692 rows, 2008-03-17 to 2026-11-06
+volume WELL: 5497 rows, 2005-01-03 to 2026-11-06
+volume GS: 5497 rows, 2005-01-03 to 2026-11-06
+volume KO: 5497 rows, 2005-01-03 to 2026-11-06
+volume UBER: 1885 rows, 2019-05-10 to 2026-11-06
+volume MS: 5497 rows, 2005-01-03 to 2026-11-06
+volume NEM: 5497 rows, 2005-01-03 to 2026-11-06
+volume IBM: 5497 rows, 2005-01-03 to 2026-11-06
+volume AXP: 5497 rows, 2005-01-03 to 2026-11-06
+volume ORCL: 5497 rows, 2005-01-03 to 2026-11-06
+volume MCD: 5497 rows, 2005-01-03 to 2026-11-06
+volume HLT: 3245 rows, 2013-12-12 to 2026-11-06
+volume EBAY: 5497 rows, 2005-01-03 to 2026-11-06
+volume CTSH: 5497 rows, 2005-01-03 to 2026-11-06
+volume BIIB: 5497 rows, 2005-01-03 to 2026-11-06
+volume ILMN: 5497 rows, 2005-01-03 to 2026-11-06
+volume UAA: 5274 rows, 2005-11-18 to 2026-11-06
+volume FSLR: 5023 rows, 2006-11-17 to 2026-11-06
+volume WYNN: 5497 rows, 2005-01-03 to 2026-11-06
+volume FFIV: 5497 rows, 2005-01-03 to 2026-11-06
+volume AKAM: 5497 rows, 2005-01-03 to 2026-11-06
+volume GEN: 5497 rows, 2005-01-03 to 2026-11-06
+volume EXPE: 5359 rows, 2005-07-21 to 2026-11-06
+volume SIRI: 5497 rows, 2005-01-03 to 2026-11-06
+volume FOSL: 5497 rows, 2005-01-03 to 2026-11-06
+volume TRIP: 3751 rows, 2011-12-07 to 2026-11-06
+volume GRPN: 3773 rows, 2011-11-04 to 2026-11-06
+volume NTAP: 5497 rows, 2005-01-03 to 2026-11-06
+volume GPRO: 3111 rows, 2014-06-26 to 2026-11-06
+volume ATD.TO: 5485 rows, 2005-01-04 to 2026-11-06
+volume CNR.TO: 5485 rows, 2005-01-04 to 2026-11-06
+volume COH.AX: 5527 rows, 2005-01-04 to 2026-11-06
+volume CP.TO: 5485 rows, 2005-01-04 to 2026-11-06
+volume CSL.AX: 5527 rows, 2005-01-04 to 2026-11-06
+volume CSU.TO: 4777 rows, 2007-10-25 to 2026-11-06
+volume DOL.TO: 4285 rows, 2009-10-09 to 2026-11-06
+volume MQG.AX: 5527 rows, 2005-01-04 to 2026-11-06
+volume REA.AX: 5527 rows, 2005-01-04 to 2026-11-06
+volume XRO.AX: 3544 rows, 2012-11-08 to 2026-11-06
+volume 1299.HK: 3947 rows, 2010-10-29 to 2026-11-06
+volume 0700.HK: 5387 rows, 2005-01-03 to 2026-11-06
+volume 1211.HK: 5387 rows, 2005-01-03 to 2026-11-06
+volume 2020.HK: 4767 rows, 2007-07-10 to 2026-11-06
+volume 2318.HK: 5387 rows, 2005-01-03 to 2026-11-06
+volume 600519.SS: 5323 rows, 2005-01-03 to 2026-11-06
+volume ADS.DE: 5557 rows, 2005-01-03 to 2026-11-06
+volume AIR.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume ASML.AS: 5599 rows, 2005-01-03 to 2026-11-06
+volume ATCO-A.ST: 5508 rows, 2005-01-03 to 2026-11-06
+volume AZN.L: 5529 rows, 2005-01-03 to 2026-11-06
+volume DSY.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume EL.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume IFX.DE: 5557 rows, 2005-01-03 to 2026-11-06
+volume LONN.SW: 5510 rows, 2005-01-03 to 2026-11-06
+volume MC.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume NOVO-B.CO: 5476 rows, 2005-01-03 to 2026-11-06
+volume OR.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume RMS.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume SAP.DE: 5557 rows, 2005-01-03 to 2026-11-06
+volume SU.PA: 5594 rows, 2005-01-03 to 2026-11-06
+volume BAJFINANCE.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume HDFCBANK.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume ICICIBANK.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume INFY.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume RELIANCE.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume TCS.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume TITAN.NS: 5393 rows, 2005-01-03 to 2026-11-06
+volume 4063.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 4519.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 6367.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 6594.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 6758.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 6857.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 6861.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 7974.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 8035.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 9983.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume 000660.KS: 5405 rows, 2005-01-03 to 2026-11-06
+volume 005930.KS: 5405 rows, 2005-01-03 to 2026-11-06
+volume 006400.KS: 5405 rows, 2005-01-03 to 2026-11-06
+volume 035420.KS: 5405 rows, 2005-01-03 to 2026-11-06
+volume 2330.TW: 5369 rows, 2005-01-03 to 2026-11-06
+volume 2454.TW: 5369 rows, 2005-01-03 to 2026-11-06
+volume ITUB4.SA: 5435 rows, 2005-01-03 to 2026-11-06
+volume MELI: 4842 rows, 2007-08-10 to 2026-11-06
+volume WALMEX.MX: 5506 rows, 2005-01-03 to 2026-11-06
+volume WEGE3.SA: 5435 rows, 2005-01-03 to 2026-11-06
+volume BBCA.JK: 5376 rows, 2005-01-03 to 2026-11-06
+volume NPN.JO: 5566 rows, 2005-01-03 to 2026-11-06
+volume 0941.HK: 5387 rows, 2005-01-03 to 2026-11-06
+volume BIDU: 5348 rows, 2005-08-05 to 2026-11-06
+volume ERIC-B.ST: 5508 rows, 2005-01-03 to 2026-11-06
+volume NOKIA.HE: 5510 rows, 2005-01-03 to 2026-11-06
+volume 7751.T: 5392 rows, 2005-01-03 to 2026-11-06
+volume PETR4.SA: 5435 rows, 2005-01-03 to 2026-11-06
+volume VALE3.SA: 5435 rows, 2005-01-03 to 2026-11-06
+volume TEVA.TA: 4612 rows, 2005-01-03 to 2026-11-06
+volume SHOP.TO: 2878 rows, 2015-05-21 to 2026-11-06
+volume WTC.AX: 2680 rows, 2016-04-11 to 2026-11-06
+volume 1810.HK: 2052 rows, 2018-07-09 to 2026-11-06
+volume 300750.SZ: 2038 rows, 2018-06-11 to 2026-11-06
+volume 3690.HK: 1999 rows, 2018-09-20 to 2026-11-06
+volume 9988.HK: 1709 rows, 2019-11-26 to 2026-11-06
+volume ADYEN.AS: 2153 rows, 2018-06-13 to 2026-11-06
+volume RACE.MI: 2758 rows, 2016-01-04 to 2026-11-06
+volume 6098.T: 2965 rows, 2014-10-16 to 2026-11-06
+volume 207940.KS: 2443 rows, 2016-11-11 to 2026-11-06
+volume 373220.KS: 1164 rows, 2022-01-27 to 2026-11-06
+volume NU: 1233 rows, 2021-12-09 to 2026-11-06
+volume SE: 2274 rows, 2017-10-20 to 2026-11-06
+volume EMB: 4751 rows, 2007-12-19 to 2026-11-06
+volume PCY: 4799 rows, 2007-10-11 to 2026-11-06
+volume EMLC: 4099 rows, 2010-07-23 to 2026-11-06
+volume LEMB: 3784 rows, 2011-10-20 to 2026-11-06
+volume EBND: 3950 rows, 2011-02-24 to 2026-11-06
+volume CEMB: 3660 rows, 2012-04-19 to 2026-11-06
+volume EMHY: 3671 rows, 2012-04-03 to 2026-11-06
+volume HYEM: 3643 rows, 2012-05-14 to 2026-11-06
+volume PEBIX: 5497 rows, 2005-01-03 to 2026-11-06
+volume PREMX: 5497 rows, 2005-01-03 to 2026-11-06
+volume FNMIX: 5497 rows, 2005-01-03 to 2026-11-06
+volume TGEIX: 5497 rows, 2005-01-03 to 2026-11-06
+volume DBLEX: 4175 rows, 2010-04-06 to 2026-11-06
+volume GSDIX: 5497 rows, 2005-01-03 to 2026-11-06
+volume JEMDX: 5497 rows, 2005-01-03 to 2026-11-06
+volume MEDIX: 5497 rows, 2005-01-03 to 2026-11-06
+volume PYEMX: 5497 rows, 2005-01-03 to 2026-11-06
+volume SHMDX: 4837 rows, 2007-08-17 to 2026-11-06
+volume EEIIX: 4262 rows, 2009-11-27 to 2026-11-06
+volume PRELX: 3885 rows, 2011-05-27 to 2026-11-06
+volume PELBX: 4994 rows, 2007-01-03 to 2026-11-06
+volume ELD: 4088 rows, 2010-08-09 to 2026-11-06
+volume EMCB: 3689 rows, 2012-03-08 to 2026-11-06
+volume EMBAX: NO DATA
+volume FEMDX: 5143 rows, 2006-05-31 to 2026-11-06
+volume EMDIX: 3673 rows, 2012-03-30 to 2026-11-06
+volume EMKIX: 3777 rows, 2011-10-28 to 2026-11-06
+volume PEMIX: 4365 rows, 2009-07-02 to 2026-11-06
+volume EMDAX: 3924 rows, 2011-04-01 to 2026-11-06
+volume FEDCX: 3927 rows, 2011-03-29 to 2026-11-06
+volume WEMDX: NO DATA
+volume VWOB: 3379 rows, 2013-06-04 to 2026-11-06
+volume VEMBX: 2682 rows, 2016-03-10 to 2026-11-06
+volume FEMB: 3019 rows, 2014-11-05 to 2026-11-06
+volume EMTL: 1 rows, 2026-07-21 to 2026-07-21  SHORT (<60 rows)
+volume JPMB: 2205 rows, 2018-01-31 to 2026-11-06
+volume EMBD: 1617 rows, 2020-06-03 to 2026-11-06
+volume EMHC: 1405 rows, 2021-04-07 to 2026-11-06
+volume CBON: 3015 rows, 2014-11-11 to 2026-11-06
+volume JEMIX: 2922 rows, 2015-03-27 to 2026-11-06
+volume TRECX: 3634 rows, 2012-05-25 to 2026-11-06
+volume PYELX: 3774 rows, 2011-11-03 to 2026-11-06
+volume NEMDX: 989 rows, 2022-11-29 to 2026-11-06
+volume BIL: 4893 rows, 2007-05-30 to 2026-11-06
+volume SHV: 4988 rows, 2007-01-11 to 2026-11-06
+volume DJP: 5037 rows, 2006-10-30 to 2026-11-06
+volume GSG: 5107 rows, 2006-07-21 to 2026-11-06
+volume GLD: 5497 rows, 2005-01-03 to 2026-11-06
+volume IAU: 5479 rows, 2005-01-28 to 2026-11-06
+volume SGOL: 4318 rows, 2009-09-09 to 2026-11-06
+volume GII: 4975 rows, 2007-01-31 to 2026-11-06
+volume IGF: 4756 rows, 2007-12-12 to 2026-11-06
+volume WIP: 4690 rows, 2008-03-19 to 2026-11-06
+volume GNR: 4063 rows, 2010-09-14 to 2026-11-06
+volume GUNR: 3804 rows, 2011-09-22 to 2026-11-06
+volume HAP: 4525 rows, 2008-11-11 to 2026-11-06
+volume IGE: 5497 rows, 2005-01-03 to 2026-11-06
+volume DBP: 4992 rows, 2007-01-05 to 2026-11-06
+volume GLTR: 4035 rows, 2010-10-22 to 2026-11-06
+volume PALL: 4234 rows, 2010-01-08 to 2026-11-06
+volume PPLT: 4234 rows, 2010-01-08 to 2026-11-06
+volume RWX: 5002 rows, 2006-12-19 to 2026-11-06
+volume VNQI: 4029 rows, 2010-11-01 to 2026-11-06
+volume RWO: 4645 rows, 2008-05-22 to 2026-11-06
+volume SIVR: 4350 rows, 2009-07-24 to 2026-11-06
+volume SLV: 5165 rows, 2006-04-28 to 2026-11-06
+volume WOOD: 4622 rows, 2008-06-25 to 2026-11-06
+volume LTPZ: 4319 rows, 2009-09-08 to 2026-11-06
+volume SCHP: 4090 rows, 2010-08-05 to 2026-11-06
+volume SPIP: 4893 rows, 2007-05-30 to 2026-11-06
+volume STIP: 4006 rows, 2010-12-03 to 2026-11-06
+volume STPZ: 4330 rows, 2009-08-21 to 2026-11-06
+volume TDTT: 3803 rows, 2011-09-23 to 2026-11-06
+volume TIP: 5497 rows, 2005-01-03 to 2026-11-06
+volume VTIP: 3535 rows, 2012-10-16 to 2026-11-06
+volume DBC: 5222 rows, 2006-02-06 to 2026-11-06
+volume USCI: 4087 rows, 2010-08-10 to 2026-11-06
+volume BWX: 4799 rows, 2007-10-11 to 2026-11-06
+volume CEF: 5497 rows, 2005-01-03 to 2026-11-06
+volume COPX: 4165 rows, 2010-04-20 to 2026-11-06
+volume CPER: 3766 rows, 2011-11-15 to 2026-11-06
+volume DBA: 4992 rows, 2007-01-05 to 2026-11-06
+volume DBB: 4992 rows, 2007-01-05 to 2026-11-06
+volume DBE: 4992 rows, 2007-01-05 to 2026-11-06
+volume DBO: 4992 rows, 2007-01-05 to 2026-11-06
+volume FLRN: 3755 rows, 2011-12-01 to 2026-11-06
+volume FTAG: 4178 rows, 2010-03-31 to 2026-11-06
+volume GDX: 5149 rows, 2006-05-22 to 2026-11-06
+volume GDXJ: 4273 rows, 2009-11-11 to 2026-11-06
+volume IYR: 5497 rows, 2005-01-03 to 2026-11-06
+volume MINT: 4269 rows, 2009-11-17 to 2026-11-06
+volume MNA: 4269 rows, 2009-11-17 to 2026-11-06
+volume MOO: 4825 rows, 2007-09-05 to 2026-11-06
+volume MXI: 5063 rows, 2006-09-22 to 2026-11-06
+volume PHYS: 4201 rows, 2010-02-26 to 2026-11-06
+volume PICK: 3713 rows, 2012-02-02 to 2026-11-06
+volume PSLV: 4030 rows, 2010-10-29 to 2026-11-06
+volume PSR: 4517 rows, 2008-11-21 to 2026-11-06
+volume QAI: 4434 rows, 2009-03-25 to 2026-11-06
+volume REMX: 4031 rows, 2010-10-28 to 2026-11-06
+volume RLY: 3655 rows, 2012-04-26 to 2026-11-06
+volume RWR: 5497 rows, 2005-01-03 to 2026-11-06
+volume SCHH: 3978 rows, 2011-01-13 to 2026-11-06
+volume SHY: 5497 rows, 2005-01-03 to 2026-11-06
+volume UGL: 4510 rows, 2008-12-03 to 2026-11-06
+volume UNG: 4922 rows, 2007-04-18 to 2026-11-06
+volume USO: 5178 rows, 2006-04-10 to 2026-11-06
+volume UUP: 4955 rows, 2007-03-01 to 2026-11-06
+volume VNQ: 5497 rows, 2005-01-03 to 2026-11-06
+volume WTMF: 3984 rows, 2011-01-05 to 2026-11-06
+volume XLB: 5497 rows, 2005-01-03 to 2026-11-06
+volume XME: 5127 rows, 2006-06-22 to 2026-11-06
+volume FTRI: 4178 rows, 2010-03-31 to 2026-11-06
+volume IFGL: 4772 rows, 2007-11-19 to 2026-11-06
+volume CUT: 4778 rows, 2007-11-09 to 2026-11-06
+volume VEGI: 3713 rows, 2012-02-02 to 2026-11-06
+volume TIPZ: 4318 rows, 2009-09-09 to 2026-11-06
+volume GBIL: 2552 rows, 2016-09-14 to 2026-11-06
+volume ICSH: 3243 rows, 2013-12-16 to 2026-11-06
+volume JPST: 2381 rows, 2017-05-19 to 2026-11-06
+volume NEAR: 3294 rows, 2013-10-03 to 2026-11-06
+volume SGOV: 1619 rows, 2020-06-01 to 2026-11-06
+volume TFLO: 3210 rows, 2014-02-04 to 2026-11-06
+volume USFR: 3210 rows, 2014-02-04 to 2026-11-06
+volume BCD: 2415 rows, 2017-03-31 to 2026-11-06
+volume BCI: 2415 rows, 2017-03-31 to 2026-11-06
+volume CMDY: 2161 rows, 2018-04-05 to 2026-11-06
+volume COMT: 3033 rows, 2014-10-16 to 2026-11-06
+volume FTGC: 3280 rows, 2013-10-23 to 2026-11-06
+volume GCC: 4728 rows, 2008-01-24 to 2026-11-06
+volume PDBC: 3017 rows, 2014-11-07 to 2026-11-06
+volume BITO: 1268 rows, 2021-10-20 to 2026-11-06
+volume CTA: 1173 rows, 2022-03-08 to 2026-11-06
+volume DBMF: 1887 rows, 2019-05-08 to 2026-11-06
+volume FMF: 3337 rows, 2013-08-02 to 2026-11-06
+volume GBTC: 2892 rows, 2015-05-11 to 2026-11-06
+volume IBIT: 709 rows, 2024-01-11 to 2026-11-06
+volume KMLM: 1490 rows, 2020-12-02 to 2026-11-06
+volume AAAU: 2069 rows, 2018-08-15 to 2026-11-06
+volume BAR: 2308 rows, 2017-09-01 to 2026-11-06
+volume GLDM: 2104 rows, 2018-06-26 to 2026-11-06
+volume IAUM: 1345 rows, 2021-07-01 to 2026-11-06
+volume OUNZ: 3139 rows, 2014-05-16 to 2026-11-06
+volume IFRA: 2161 rows, 2018-04-05 to 2026-11-06
+volume NFRA: 3290 rows, 2013-10-09 to 2026-11-06
+volume TOLZ: 3174 rows, 2014-03-27 to 2026-11-06
+volume GTIP: 2024 rows, 2018-10-18 to 2026-11-06
+volume NANR: 2737 rows, 2015-12-18 to 2026-11-06
+volume REET: 3102 rows, 2014-07-10 to 2026-11-06
+volume PBTP: 2293 rows, 2017-09-25 to 2026-11-06
+volume TIPX: 3382 rows, 2013-05-30 to 2026-11-06
+volume IVW: 5497 rows, 2005-01-03 to 2026-11-06
+volume QQQ: 5497 rows, 2005-01-03 to 2026-11-06
+volume EFG: 5348 rows, 2005-08-05 to 2026-11-06
+volume EEM: 5497 rows, 2005-01-03 to 2026-11-06
+volume ACWX: 4682 rows, 2008-04-01 to 2026-11-06
+volume ACWI: 4684 rows, 2008-03-28 to 2026-11-06
+volume VXUS: 3968 rows, 2011-01-28 to 2026-11-06
+volume SPY: 5497 rows, 2005-01-03 to 2026-11-06
+volume AGG: 5497 rows, 2005-01-03 to 2026-11-06
+volume EFA: 5497 rows, 2005-01-03 to 2026-11-06
+volume HEFA: 3202 rows, 2014-02-14 to 2026-11-06
+volume VGK: 5451 rows, 2005-03-10 to 2026-11-06
+volume EWJ: 5497 rows, 2005-01-03 to 2026-11-06
+volume DXJ: 5131 rows, 2006-06-16 to 2026-11-06
+volume EWU: 5497 rows, 2005-01-03 to 2026-11-06
+volume EWC: 5497 rows, 2005-01-03 to 2026-11-06
+volume EWA: 5497 rows, 2005-01-03 to 2026-11-06
+volume INDA: 3712 rows, 2012-02-03 to 2026-11-06
+volume EWT: 5497 rows, 2005-01-03 to 2026-11-06
+volume MCHI: 3925 rows, 2011-03-31 to 2026-11-06
+volume BNDX: 3379 rows, 2013-06-04 to 2026-11-06
+volume IGOV: 4471 rows, 2009-01-30 to 2026-11-06
+volume IEF: 5497 rows, 2005-01-03 to 2026-11-06
+volume ^GSPC: 5497 rows, 2005-01-03 to 2026-11-06
+volume ^NDX: 5497 rows, 2005-01-03 to 2026-11-06
+volume ^N225: 5343 rows, 2005-01-04 to 2026-11-06
+volume ^FCHI: 5588 rows, 2005-01-03 to 2026-11-06
+volume ^GDAXI: 5549 rows, 2005-01-03 to 2026-11-06
+volume ^STOXX50E: 4916 rows, 2007-03-30 to 2026-11-06
+volume ^FTSE: 5519 rows, 2005-01-04 to 2026-11-06
+volume ^SSMI: 5484 rows, 2005-01-03 to 2026-11-06
+volume ^KS11: 5383 rows, 2005-01-03 to 2026-11-06
+volume ^TWII: 5344 rows, 2005-01-03 to 2026-11-06
+volume ^HSI: 5381 rows, 2005-01-03 to 2026-11-06
+volume ^NSEI: 4696 rows, 2007-09-17 to 2026-11-06
+volume ^GSPTSE: 5485 rows, 2005-01-04 to 2026-11-06
+volume ^AXJO: 5518 rows, 2005-01-04 to 2026-11-06
+volume ^BVSP: 5412 rows, 2005-01-03 to 2026-11-06
+volume ^MXX: 5483 rows, 2005-01-03 to 2026-11-06
+volume ^OMX: 4506 rows, 2008-11-20 to 2026-11-06
+volume ^AEX: 5591 rows, 2005-01-03 to 2026-11-06
+volume 000001.SS: 5300 rows, 2005-01-04 to 2026-11-06
+volume ^IRX: 5492 rows, 2005-01-03 to 2026-11-06
+volume ^TNX: 5492 rows, 2005-01-03 to 2026-11-06
+volume ^VIX: 5499 rows, 2005-01-03 to 2026-11-06
+volume ^PUT: 5495 rows, 2005-01-03 to 2026-11-06
+volume XYLD: 3365 rows, 2013-06-24 to 2026-11-06
+volume QYLD: 3245 rows, 2013-12-12 to 2026-11-06
+volume ^VXN: 5497 rows, 2005-01-03 to 2026-11-06
+volume ^VIX3M: 5111 rows, 2006-07-17 to 2026-11-06
+volume ^SKEW: 5434 rows, 2005-01-03 to 2026-11-06
+volume ^VXEEM: 1 rows, 2026-11-06 to 2026-11-06  SHORT (<60 rows)
+volume_usd: 53 in universe, 0 on disk, 53 to fetch
+volume_usd chunk 1: 50 requested, 50 columns returned
+volume_usd chunk 2: 3 requested, 3 columns returned
+volume_usd CNI: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd CHEOY: 4176 rows, 2010-04-05 to 2026-11-06
+volume_usd CP: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd CSLLY: 4241 rows, 2009-12-29 to 2026-11-06
+volume_usd MQBKY: 5108 rows, 2006-07-20 to 2026-11-06
+volume_usd AAGIY: 3921 rows, 2011-04-06 to 2026-11-06
+volume_usd TCEHY: 4237 rows, 2010-01-05 to 2026-11-06
+volume_usd BYDDY: 4241 rows, 2009-12-29 to 2026-11-06
+volume_usd ANPDY: 3481 rows, 2013-01-07 to 2026-11-06
+volume_usd PNGAY: 4724 rows, 2008-01-30 to 2026-11-06
+volume_usd ADDYY: 5143 rows, 2006-05-31 to 2026-11-06
+volume_usd EADSY: 4990 rows, 2007-01-09 to 2026-11-06
+volume_usd ASML: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd ATLKY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd AZN: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd DASTY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd ESLOY: 4724 rows, 2008-01-30 to 2026-11-06
+volume_usd IFNNY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd LVMUY: 5228 rows, 2006-01-27 to 2026-11-06
+volume_usd NVO: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd LRLCY: 4922 rows, 2007-04-18 to 2026-11-06
+volume_usd HESAY: 3970 rows, 2011-01-26 to 2026-11-06
+volume_usd SAP: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd SBGSY: 4227 rows, 2010-01-20 to 2026-11-06
+volume_usd HDB: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd IBN: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd INFY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd SHECY: 4515 rows, 2008-11-25 to 2026-11-06
+volume_usd CHGCY: 3586 rows, 2012-08-03 to 2026-11-06
+volume_usd DKILY: 4211 rows, 2010-02-11 to 2026-11-06
+volume_usd NJDCY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd SONY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd ATEYY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd KYCCF: 4161 rows, 2010-04-26 to 2026-11-06
+volume_usd NTDOY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd TOELY: 1 rows, 2026-09-24 to 2026-09-24  SHORT (<60 rows)
+volume_usd FRCOY: 4237 rows, 2010-01-05 to 2026-11-06
+volume_usd TSM: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd ITUB: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd NPSNY: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd CHL: NO DATA
+volume_usd ERIC: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd NOK: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd CAJ: NO DATA
+volume_usd PBR: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd VALE: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd TEVA: 5497 rows, 2005-01-03 to 2026-11-06
+volume_usd SHOP: 2885 rows, 2015-05-20 to 2026-11-06
+volume_usd XIACY: 560 rows, 2024-08-15 to 2026-11-06
+volume_usd MPNGY: 1762 rows, 2019-11-04 to 2026-11-06
+volume_usd BABA: 3052 rows, 2014-09-19 to 2026-11-06
+volume_usd RACE: 2778 rows, 2015-10-21 to 2026-11-06
+volume_usd RCRRF: 2565 rows, 2016-08-25 to 2026-11-06
+--- step volumes done in 57s
+
+=== COVERAGE SUMMARY (prices.csv) ===
+benchmark/benchmark: 9/9 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+benchmark/support: 14/14 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/candidate: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/excluded: 9/11 with prices; earliest first date 2006-05-31; none: ['EMBAX', 'WEMDX']; under 60 rows: -
+em_bond/not_testable: 12/12 with prices; earliest first date 2011-11-03; none: -; under 60 rows: ['EMTL']
+index/support: 27/27 with prices; earliest first date 2005-01-03; none: -; under 60 rows: ['^VXEEM']
+intl_growth_stock/candidate: 60/60 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/faded_leader: 8/8 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/not_testable: 13/13 with prices; earliest first date 2014-10-16; none: -; under 60 rows: -
+other/candidate: 33/33 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/excluded: 41/41 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/not_testable: 34/34 with prices; earliest first date 2008-01-24; none: -; under 60 rows: -
+overlay/support: 2/2 with prices; earliest first date 2013-06-24; none: -; under 60 rows: -
+us_growth_stock/candidate: 87/87 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/faded_leader: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/not_testable: 21/21 with prices; earliest first date 2013-01-02; none: -; under 60 rows: -
+TOTAL tickers with no price data: 2: ['EMBAX', 'WEMDX']
+fx: 30/30 currencies with data; none: -
+prices_usd_listing: 51/53 with data; none: ['CHL', 'CAJ']
+fundamentals folders with info.json: 209/209; missing: -
+edgar files: 152/155; missing: ['0001274152', '0001107457', '0001103838']
+funds.csv: 176/176 tickers
+Total wall time 58s
+Fetch run 2026-11-07 13:07:46  universe=research/plan/universe.csv  refresh=False  only=['edgar']
+universe rows: 442; steps: ['edgar']
+--- step edgar start 13:07:46
+edgar CIK0001274152: FAILED HTTP 404
+edgar CIK0001107457: FAILED HTTP 404
+edgar CIK0001103838: FAILED HTTP 404
+edgar: 0 fetched, 152 already on disk, 3 failed, of 155 CIKs
+--- step edgar done in 1s
+
+=== COVERAGE SUMMARY (prices.csv) ===
+benchmark/benchmark: 9/9 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+benchmark/support: 14/14 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/candidate: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+em_bond/excluded: 9/11 with prices; earliest first date 2006-05-31; none: ['EMBAX', 'WEMDX']; under 60 rows: -
+em_bond/not_testable: 12/12 with prices; earliest first date 2011-11-03; none: -; under 60 rows: ['EMTL']
+index/support: 27/27 with prices; earliest first date 2005-01-03; none: -; under 60 rows: ['^VXEEM']
+intl_growth_stock/candidate: 60/60 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/faded_leader: 8/8 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+intl_growth_stock/not_testable: 13/13 with prices; earliest first date 2014-10-16; none: -; under 60 rows: -
+other/candidate: 33/33 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/excluded: 41/41 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+other/not_testable: 34/34 with prices; earliest first date 2008-01-24; none: -; under 60 rows: -
+overlay/support: 2/2 with prices; earliest first date 2013-06-24; none: -; under 60 rows: -
+us_growth_stock/candidate: 87/87 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/faded_leader: 20/20 with prices; earliest first date 2005-01-03; none: -; under 60 rows: -
+us_growth_stock/not_testable: 21/21 with prices; earliest first date 2013-01-02; none: -; under 60 rows: -
+TOTAL tickers with no price data: 2: ['EMBAX', 'WEMDX']
+fx: 30/30 currencies with data; none: -
+prices_usd_listing: 51/53 with data; none: ['CHL', 'CAJ']
+fundamentals folders with info.json: 209/209; missing: -
+edgar files: 152/155; missing: ['0001274152', '0001107457', '0001103838']
+funds.csv: 176/176 tickers
+Total wall time 3s

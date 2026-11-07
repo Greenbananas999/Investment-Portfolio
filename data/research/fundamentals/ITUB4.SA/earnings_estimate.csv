@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,1.21333,1.2,1.23,1.0628,3,0.1416,BRL
++1q,1.155,1.1,1.21,1.11,2,0.0405,BRL
+0y,4.59773,4.55,4.65,4.2246,10,0.0883,BRL
++1y,5.03591,4.84,5.2,4.59773,10,0.0953,BRL
