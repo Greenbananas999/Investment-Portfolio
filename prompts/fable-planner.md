@@ -35,11 +35,8 @@ framing).
 - **Constraint 1, non-US:** the portfolio must be 70% non-US. The team's
   reason: the US has had the best returns historically, but recent
   instability argues for a more secure, less US-dependent portfolio.
-  The proposal says "70% non-US equities", and 70% of the whole portfolio
-  can't be non-US *equities* when equities are only about 55%. Use "at least
-  70% of total portfolio value is non-US" as the binding rule, also report
-  whether the equity sleeve alone is 70% non-US, and confirm the reading with
-  John at the first check-in.
+  John confirmed the rule means at least 70% of total portfolio value is
+  non-US (stocks, bonds and other combined), so US assets are at most 30%.
 - **Constraint 2, mix:** roughly 55% stocks, 35% bonds, 10% other. This is a
   guideline. You may move away from it if a different allocation is clearly
   better on risk-adjusted terms, but you must show the guideline portfolio
@@ -360,8 +357,7 @@ and fix anything that overclaims.
 Stop and ask John, with a short summary and a recommendation, at these points
 only:
 
-1. After Phase 1: the method, the benchmarks, the reading of the 70% rule,
-   and whether the four-fund course analysis is still needed.
+1. After Phase 1: the method, the benchmarks, and whether the four-fund course analysis is still needed.
 2. When the data request is ready (he runs the fetch script on his PC).
 3. After Phase 4: the picks and runners-up, before the portfolio build.
 4. When the dashboard first runs, so he can try it and ask for changes.
