@@ -200,9 +200,16 @@ calls on the US growth stocks, protective puts or collars on the equity
 sleeve, FX forwards to hedge some of the EM local-currency bond exposure,
 and index futures for cheap rebalancing.
 
+**Usage pause (required):** after Phase 2 is committed, stop. Post a short
+summary of the shortlist, the data request, and a plan for Phases 3-7 with
+the number of subagents and which model each uses. Then wait for John to
+check his usage and say "continue". Do not start Phase 3 without that.
+
 ### Phase 3: deep research on each candidate (parallel subagents)
 
-Spawn one subagent per candidate (or per small group) in parallel. Sonnet for
+Spawn one subagent per position type (about five), each analysing all of
+its shortlisted candidates with one shared script, rather than one subagent
+per candidate. This keeps usage down and makes the candidates comparable. Sonnet for
 standard backtest and metrics work; Opus for anything with real modeling
 judgement (DCF, expected returns, EM bond scenarios, option overlays,
 attribution). Every subagent gets the brief template at the end of this
