@@ -1,0 +1,31 @@
+{
+  "_source": "Copied from research/plan/scorecard.md (the 'why the runners-up lost' paragraphs and per-type notes), shortened. Numbers in the tables come from reports/candidates/scorecard.csv, not from this file.",
+  "types": {
+    "us_growth_stock": {
+      "title": "US growth stocks",
+      "text": "Only NVDA and AVGO beat IVW on out-of-sample Sharpe, and NVDA's edge is one regime with a deep drawdown, so the optimizer must keep it small. Faded leaders fell from in-sample ranks 10-18 to 43-46: the 2017 screen did not find the 2018-2026 winners."
+    },
+    "intl_growth_stock": {
+      "title": "International growth stocks",
+      "text": "TSMC is the only international name whose edge clears the multiple-testing bar. SK Hynix is the judgement call: it has the highest rubric total of the type, but the reviewer downgraded it because its shortlist slot came from a fundamental score built on 2025 statements (on price alone it ranked 19th of 31 in-sample). The pre-registered rule ranks a downgrade after every pass, which puts REA and Novo ahead of it. The look-ahead caveat applies to all eight international names, not only SK Hynix. Tencent fails drop rule 8.2 outright."
+    },
+    "em_bond": {
+      "title": "EM bond funds",
+      "text": "No EM bond fund has a convincing out-of-sample record: the funds cannot be told apart on returns, so the picks follow cost, drawdown and the forward yield. HYEM takes the fourth slot only because the type has three passes for four spots; the reviewer's downgrade is recorded. No local-currency fund is picked: its local bonds earned a positive return out of sample but the currencies took it back, and hedging would have cost more than the carry."
+    },
+    "other": {
+      "title": "Other sleeve",
+      "text": "Gold set a high bar in 2018-2026 and six of eight candidates fail drop rule 8.2 against it, so the sleeve that survives is precious metals only. Gold was not an inflation hedge in this sample; it was a diversifier. The only asset that behaved as an inflation hedge, broad commodities, lost money over every other window and is dropped. Under method.md section 3 both picks count as US-neutral."
+    }
+  },
+  "tickers": {
+    "META": "META's drawdown and its 2022 loss are the worst of the type; its forward estimate does not compensate.",
+    "MA": "MA has the smallest drawdown and the best 2022, but the reviewer downgraded the 'defensive' label (it fell more than the index in the Covid window) and its information ratio is weak, so under the pre-registered rule it ranks after the three passes. It is the natural substitute if John wants a lower-volatility US sleeve.",
+    "REA.AX": "Passed review but ranked below the three picks on the pre-registered rubric, with a weaker out-of-sample record and a lower t-statistic. Runner-up as the best remaining pass.",
+    "NOVO-B.CO": "Passed review but ranked below the three picks, and its drawdown is the deepest of the international passes. SK Hynix, not Novo, is the stronger alternative if John accepts the look-ahead caveat.",
+    "TGEIX": "Reviewer downgrade: its lead over the picks is too small to separate on returns, so it ranks after the passes.",
+    "EMLC": "Local-currency fund: bond returns were positive but currency losses and the cost of hedging erased them. It stays a runner-up because the FX-hedge overlay was tested on it.",
+    "GNR": "Fails drop rule 8.2 (Sharpe below gold's and information ratio below zero) but stays a runner-up because the type has fewer than five survivors. Its correlation with world ex-US stocks is high, so it diversifies less than gold.",
+    "IGF": "Fails drop rule 8.2 but stays a runner-up because the type has fewer than five survivors. Its correlation with world ex-US stocks is high, so it diversifies less than gold."
+  }
+}

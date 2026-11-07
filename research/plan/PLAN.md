@@ -201,6 +201,7 @@ Answers log:
 
 | Date | Question | Answer |
 |---|---|---|
+| 2026-11-07 | Check-in 3: approve the picks and runners-up, SK Hynix left out per the downgrade rule? | "Approved, please continue." Picks stand as in `scorecard.md`; SK Hynix stays out; Phase 5 started. |
 | 2026-11-07 | Approve method and benchmarks, start Phase 2? | "Approve, start Phase 2." Defaults stand until John says otherwise: gold/commodities/cash/US TIPS count as US-neutral under the 70% rule (both treatments will be shown); open-end EM bond funds stay in the universe as candidates with their fees scored; the four-fund course analysis is not started unless John asks; no course brief file was provided. |
 
 ## Known limits and risks to the plan
@@ -235,4 +236,5 @@ Answers log:
 | 2026-11-07 | John: "Continue". Phase 3 started: five analysts in parallel (US growth, international growth, EM bonds, overlays on Opus; other sleeve on Sonnet), one shared script per type, outputs per `results_schema.md` into `reports/candidates/`. Each analyst also computes the control table of every hard-screen passer and faded leader for the in-sample vs OOS rank test. |
 | 2026-11-07 | Phase 3 done: 38 candidate JSONs (32 positions, 6 overlays), memos, charts, control tables. Planner reran every script and spot-checked two numbers per type independently (all matched to 3 decimals or better). |
 | 2026-11-07 | Phase 4: five Opus reviewers (two were cut off by an API spend limit and resumed on John's "Try again"). All numbers reproduced; fixes made and rerun: G-K repricing basis (US), fee double-count and Mexico gap splicing (EM bonds), financial-tag substring bug (`research/screen/cli.py`), non-circular Monte Carlo (`research/montecarlo.py`). `research/plan/scorecard.py --write` applied the rubric and verdicts; `scorecard.md` written. **Check-in 3 requested.** |
+| 2026-11-07 | Check-in 3: John approved the picks as scored (SK Hynix out). Phase 5 started (one Opus builder: `portfolio/build.py`, extends `portfolio/optimize.py` and `research/frontier.py`, writes `reports/final/portfolio.json`). Phase 6 dashboard builder (Sonnet) started in parallel against the specified `portfolio.json` layout; Plotly bundled from the installed Python package so the site works offline and from file://. |
 | 2026-11-07 | Key results: no technical signal kept; the 2017 in-sample ranking had no predictive value in any sleeve (rho -0.02 to +0.20, all p > 0.3); only NVDA, AVGO and TSMC beat their benchmarks with t > 2; no EM bond fund has an OOS Sharpe above 0.13; six of eight other-sleeve funds fail against gold; no overlay passes at portfolio level except the protective put on drawdown, which is kept as a with/without test. |
