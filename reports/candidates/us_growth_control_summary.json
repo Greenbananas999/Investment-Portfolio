@@ -1,0 +1,148 @@
+{
+ "n_names": 46,
+ "benchmark_oos_sharpe": 0.774561,
+ "rank_tests": {
+  "composite_vs_oos_sharpe": {
+   "rho": 0.139292,
+   "p_value": 0.355882,
+   "n": 46,
+   "predictive": false,
+   "rho_positive": true,
+   "label": "positive, not significant"
+  },
+  "composite_vs_oos_ir": {
+   "rho": 0.079578,
+   "p_value": 0.599092,
+   "n": 46,
+   "predictive": false,
+   "rho_positive": true,
+   "label": "positive, not significant"
+  },
+  "is_sharpe_vs_oos_sharpe": {
+   "rho": 0.186679,
+   "p_value": 0.214152,
+   "n": 46,
+   "predictive": false,
+   "rho_positive": true,
+   "label": "positive, not significant"
+  },
+  "fundamental_vs_oos_sharpe": {
+   "rho": 0.076287,
+   "p_value": 0.61433,
+   "n": 46,
+   "predictive": false,
+   "rho_positive": true,
+   "label": "positive, not significant"
+  }
+ },
+ "share_beating_ivw_sharpe_oos": 0.195652,
+ "share_ir_positive_oos": 0.652174,
+ "top8_by_composite": {
+  "tickers": [
+   "META",
+   "AVGO",
+   "AMZN",
+   "FANG",
+   "REGN",
+   "ADBE",
+   "LRCX",
+   "ORLY"
+  ],
+  "median_sharpe_oos": 0.544413,
+  "share_ir_positive_oos": 0.75
+ },
+ "shortlist": {
+  "median_sharpe_oos": 0.57154,
+  "share_ir_positive_oos": 0.625
+ },
+ "faded_leaders": {
+  "tickers": [
+   "BIIB",
+   "ILMN",
+   "SIRI",
+   "CTSH",
+   "AKAM",
+   "EXPE"
+  ],
+  "median_sharpe_oos": 0.136012,
+  "median_ir_oos": -0.325787,
+  "share_ir_positive_oos": 0.166667
+ },
+ "all_median_sharpe_oos": 0.57154,
+ "best10_oos": [
+  {
+   "ticker": "NVDA",
+   "rank_oos": 1,
+   "rank_is": 9.0,
+   "group": "shortlist"
+  },
+  {
+   "ticker": "AVGO",
+   "rank_oos": 2,
+   "rank_is": 2.0,
+   "group": "shortlist"
+  },
+  {
+   "ticker": "APH",
+   "rank_oos": 3,
+   "rank_is": 32.0,
+   "group": "other passer"
+  },
+  {
+   "ticker": "PANW",
+   "rank_oos": 4,
+   "rank_is": 19.0,
+   "group": "other passer"
+  },
+  {
+   "ticker": "FTNT",
+   "rank_oos": 5,
+   "rank_is": 29.0,
+   "group": "other passer"
+  },
+  {
+   "ticker": "LRCX",
+   "rank_oos": 6,
+   "rank_is": 7.0,
+   "group": "near miss (shortlist.md)"
+  },
+  {
+   "ticker": "MPWR",
+   "rank_oos": 7,
+   "rank_is": 21.0,
+   "group": "other passer"
+  },
+  {
+   "ticker": "ORLY",
+   "rank_oos": 8,
+   "rank_is": 8.0,
+   "group": "near miss (shortlist.md)"
+  },
+  {
+   "ticker": "CTAS",
+   "rank_oos": 9,
+   "rank_is": 23.0,
+   "group": "other passer"
+  },
+  {
+   "ticker": "TSLA",
+   "rank_oos": 10,
+   "rank_is": 30.0,
+   "group": "other passer"
+  }
+ ],
+ "near_misses": {
+  "tickers": [
+   "FANG",
+   "ORLY",
+   "LRCX",
+   "SBUX",
+   "AMAT",
+   "MNST",
+   "ODFL"
+  ],
+  "median_sharpe_oos": 0.591017
+ },
+ "n_trials_deflated_sharpe": 46,
+ "command": "python -m research.candidates.us_growth --control --write"
+}

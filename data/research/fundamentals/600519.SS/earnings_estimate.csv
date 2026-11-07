@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,15.21,15.21,15.21,14.13,1.0,0.0764,CNY
++1q,,,,,,,CNY
+0y,67.05832,66.34,68.36,65.64,11.0,0.0216,CNY
++1y,72.02187,69.32,76.3,67.05832,13.0,0.074,CNY

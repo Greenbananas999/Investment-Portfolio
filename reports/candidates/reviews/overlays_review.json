@@ -1,0 +1,98 @@
+{
+  "type": "overlay",
+  "reviewer": "opus",
+  "date": "2026-11-07",
+  "reproduced": true,
+  "reproduce_note": "`python -m research.candidates.overlays --all --write` rewrote all 6 JSONs, 6 monthly CSVs and 7 memos byte-identical to the files before the run (cmp). An independent engine (own roll calendar, smile, strike solver, loop, costs) reproduces the published monthly series to 5e-9 for cc_spx_30d_1m, cc_spx_atm_1m and collar_cll_95_110, to 6e-5 a month for pput_5pct_3m, and to 5e-9 for both FX overlays. OOS Sharpe, vol and max DD recomputed from the CSVs with BIL from raw prices.csv match the JSON to 1e-7.",
+  "check_command": "python -m research.reviews.overlays_check",
+  "candidates": {
+    "cc_spx_30d_1m": {
+      "verdict": "fail",
+      "claims": [
+        {"claim": "OOS Sharpe 0.75 -> 0.60, vol 16.2% -> 12.6%, max DD -23.9% -> -23.8%, cost 0.17%/yr", "status": "pass", "evidence": "Recomputed from the CSV: 0.751 -> 0.596, 0.162 -> 0.126, -0.239 -> -0.238. Cost: 0.17% full, 0.16% OOS."},
+        {"claim": "IS R2 0.91 vs BXMD, OOS tracking error 2.0%", "status": "pass", "evidence": "Own engine, gross, h=1: IS R2 of the overlay part 0.907, OOS TE 2.02%, OOS R2 0.865."},
+        {"claim": "fails rule 8.5", "status": "weak evidence", "evidence": "Fails on the model at both ratios: 1 contract dSharpe -0.156 and DD +0.14 pts; at 100% dSharpe -0.083 and DD +1.35 pts. On the real CBOE BXMD index over the same OOS months it passes the drawdown clause: DD -21.6% vs SPY -23.9% = +2.35 pts (gross; BXMD's SPX base has no 0.09% SPY fee). The model is 0.93%/yr above BXMD on return but gives a smaller drawdown cut than the index (-22.5% gross vs -21.6%). On the indicative portfolio test at 1 contract it also passes on drawdown (-25.6% -> -23.3%)."},
+        {"claim": "Overlay-only rule", "status": "fail (disclosed)", "evidence": "One XSP contract = $76,237 = 1.386 of a $55k sleeve, so 39% of the short call has no stock behind it. Even at 100% an XSP call against single stocks is margined as uncovered (feasibility block). The only rule-compliant size at $100,000 is 0 contracts."}
+      ],
+      "notes": "Drop it. The decisive reason is that it cannot be held under method.md s10 at $100k (the only compliant size is zero), not the rule-8.5 result, which depends on whether you use the model or the real index."
+    },
+    "cc_spx_atm_1m": {
+      "verdict": "fail",
+      "claims": [
+        {"claim": "Sharpe 0.75 -> 0.31, DD worse -28.5%", "status": "pass", "evidence": "0.751 -> 0.308; DD -0.239 -> -0.285 (1 contract). At 100%: 0.527 and -0.242."},
+        {"claim": "fails 8.5", "status": "pass", "evidence": "Fails at both ratios on the model and on the real BXM index (Sharpe 0.463, DD -22.2% = +1.70 pts < 2). Caveat: on the indicative portfolio test at 100% it passes on drawdown (-25.6% -> -22.0%), with Sharpe falling 0.342 -> 0.069."},
+        {"claim": "XYLD cross-check", "status": "unverified", "evidence": "Not recomputed (only 54 months before 2018; cross-check only)."}
+      ],
+      "notes": "Fail stands: the standalone tests agree, and it breaks the overlay-only rule at 1 contract."
+    },
+    "pput_5pct_3m": {
+      "verdict": "downgrade",
+      "claims": [
+        {"claim": "Sharpe 0.75 -> 0.69, DD -16.6%, cost 0.13%, passes on drawdown", "status": "pass", "evidence": "0.751 -> 0.685, DD -0.239 -> -0.166 (+7.29 pts), cost 0.13%/yr."},
+        {"claim": "At exactly 100%: Sharpe 0.77, DD -17.6%", "status": "pass", "evidence": "0.768 (+0.017) and -0.176 (+6.35 pts). Passes both clauses at 100%."},
+        {"claim": "Model tracks PPUT with 2.3% TE OOS (explain sentence)", "status": "weak evidence", "evidence": "The 2.3% is the 1-month PPUT calibration model. The 3-month quarterly overlay itself against PPUT has OOS TE 4.94% and overlay-part R2 0.47 (IS 3.37%, 0.35). The quarterly put leg is checked only indirectly, through the CLL hold-out (OOS TE 2.6%, R2 0.91)."},
+        {"claim": "passes method.md rule 8.5", "status": "weak evidence", "evidence": "Rule 8.5 is about the portfolio. On an indicative GUIDE_BENCH portfolio (55% ACWX / 35% EMB / 10% GLD) with 0.55 x the overlay P&L, the put fails both clauses: at 100% Sharpe 0.342 -> 0.264 and DD -25.6% -> -25.6% (+0.02 pts); at 1 contract 0.206 and -26.2%. The portfolio's drawdown runs 2021-05/08 to 2022-09/10. Over that stretch the put lost 6.3% from 2021-06 to 2021-12 and 4.5% in 2022-10, and gained only 6.7% from 2022-01 to 2022-09."}
+      ],
+      "notes": "Numbers reproduce and the standalone pass is robust, including on the real PPUT index (+3.12 pts DD). But the pre-registered test is at portfolio level, and a first proxy says the put does not survive it. At 1 contract it is also 39% net short below the strike. Phase 5 must run the real test before keeping it."
+    },
+    "collar_cll_95_110": {
+      "verdict": "fail",
+      "claims": [
+        {"claim": "Sharpe 0.75 -> 0.51, DD -15.6%, passes on drawdown", "status": "pass", "evidence": "0.751 -> 0.514, DD +8.28 pts at 1 contract; at 100% 0.669 and -16.9% (+7.06 pts)."},
+        {"claim": "CLL is a never-fitted hold-out, R2 0.90", "status": "pass", "evidence": "calibrate() (overlays.py lines 294-309) fits only BXM, BXMD and PPUT. IS R2 of the overlay part vs CLL 0.897, OOS 0.911, OOS TE 2.63%. The model is 0.93%/yr below CLL OOS. On the real CLL index the drawdown clause passes too (+7.38 pts)."},
+        {"claim": "Implementable as an overlay", "status": "fail", "evidence": "The short 110% call at 1 contract is on 139% of the sleeve (uncovered part, overlay-only rule broken). The 100% version needs a fractional contract. The indicative portfolio test fails at both ratios (100%: Sharpe 0.342 -> 0.172, DD +0.27 pts)."}
+      ],
+      "notes": "The model and the hold-out are sound. The overlay cannot be held compliantly at $100,000, and the first portfolio-level proxy fails it."
+    },
+    "fxfwd_emlocal_50pct_3m": {
+      "verdict": "downgrade",
+      "claims": [
+        {"claim": "Sharpe -0.10 -> -0.22, vol 10.6% -> 7.3%, DD -25.5% -> -20.7%, carry given up 1.4%/yr", "status": "pass", "evidence": "-0.096 -> -0.224, 0.106 -> 0.073, -0.255 -> -0.207 (+4.80 pts). Carry 1.37%/yr OOS (own quarterly-roll calculation 2.72%/2 = 1.36%)."},
+        {"claim": "EMLC beta 1.25 to the hedged basket (R2 0.83)", "status": "pass", "evidence": "OOS beta 1.249, R2 0.827; IS 1.209, 0.802."},
+        {"claim": "Forwards by CIP, correct sign", "status": "pass", "evidence": "MXN 2019-03 F/S 0.985593 by hand = code; PLN 2023-06 0.995906 = code. corr(overlay, basket spot) = -0.998. Example: 2020-11 basket +4.6%, overlay -4.8%. Independent loop reproduces the CSV to 5e-9."},
+        {"claim": "Basket weights", "status": "weak evidence", "evidence": "INR gets 19.2% of the hedge in every month since 2011-11, although INR entered the GBI-EM only in 2024 (from memory, not verified this session). CNY (14.93% GBI-EM weight in em_bonds_countries.csv, CN_3M available to 2026-09) is left out without being listed in FX_EXCLUDED. HUF, CZK and COP get 11.1% each as averages."}
+      ],
+      "notes": "The rule-8.5 drawdown pass reproduces. On an indicative portfolio with EMLC at 8.75%, Sharpe 0.334 -> 0.337 (+0.003, noise) and DD +0.47 pts. It cannot be traded in a retail account (disclosed). Treat it as a diagnostic of EMLC's currency risk, not as a holding."
+    },
+    "fxfwd_emlocal_100pct_3m": {
+      "verdict": "downgrade",
+      "claims": [
+        {"claim": "Sharpe -0.47, vol 4.9%, DD -16.1%, carry 2.7%/yr", "status": "pass", "evidence": "-0.469, 0.049, -0.161 (+9.44 pts); carry 2.73% (own 2.72%); roll cost 0.20%/yr = 4 x 5 bp."},
+        {"claim": "Standalone Sharpe falls", "status": "pass, but misleading", "evidence": "The unhedged Sharpe is negative, so cutting vol makes it more negative. At portfolio level (EMLC 8.75%) Sharpe goes 0.334 -> 0.341 and DD +0.94 pts, so it passes 8.5 on the Sharpe clause by a margin that is noise."}
+      ],
+      "notes": "Same as the 50% hedge. It is not implementable at $100k, and a 100% notional on 9 currencies that are only part of EMLC is a proxy hedge."
+    }
+  },
+  "methodology": [
+    {"severity": "high", "finding": "Rule 8.5 is a portfolio rule, but every verdict is standalone on an SPY sleeve (disclosed in the verdict_rule text). An indicative portfolio test (GUIDE_BENCH 55/35/10, 0.55 x overlay P&L, monthly rebalance) changes the verdict at one ratio or another for all four option overlays. pput and collar fail at both ratios; cc_spx_atm_1m at 100% and cc_spx_30d_1m at 1 contract pass on drawdown. The verdicts are not robust to the level at which they are tested.", "evidence": "research/reviews/overlays_check.py check_portfolio(); for example pput h100: Sharpe 0.342 -> 0.264, DD -25.62% -> -25.60%."},
+    {"severity": "high", "finding": "Sizing and compliance: 1 XSP contract = $76,237 = 1.386 x $55k. Short calls on 139% are partly uncovered, which breaks method.md s10 'derivatives only as overlays on positions held'. The only compliant count for the covered calls and the collar at $100k is zero. Puts at 139% are 39% net short below the strike. The analyst disclosed all of this; it is still decisive.", "evidence": "^GSPC 7623.68 on 2026-10-23; SPY lot $75,997; ratio 1.17 at a 65% equity sleeve and 1.69 at 45%."},
+    {"severity": "medium", "finding": "The covered-call verdict depends on the model. On the real BXMD index OOS the drawdown clause passes (+2.35 pts) while the model shows +1.35 pts at 100%. The model's +0.93%/yr OOS return bias against BXM and BXMD is real but unexplained. It is not costs (the comparison is gross) and not XSP vs SPX (the SPY fee works against the model). It comes mostly from 2021 (+4.8%) and 2022 (+3.3%) for BXMD. In-sample years swing as much (2010 +4.3%, 2013 -2.9%), so t is about 1.4: not distinguishable from noise. It flatters covered-call returns by about 0.9%/yr but does not flatter their drawdown.", "evidence": "check_tracking(); yearly gaps printed in the review."},
+    {"severity": "medium", "finding": "The quarterly 3-month put (pput_5pct_3m and the collar's put leg) has no direct calibration target. The 2.3% TE quoted in its explain text belongs to the 1-month PPUT model; the overlay itself is at 4.9% TE and R2 0.47 against PPUT. The CLL hold-out (TE 2.6%) is the only check of the 3-month put pricing (VIX3M plus a put skew fitted on 1-month options).", "evidence": "check_tracking() pput_5pct_3m_vs_PPUT."},
+    {"severity": "medium", "finding": "FX basket look-ahead and coverage beyond the disclosed 'today's weights'. INR is 19% of the hedge since 2011 (GBI-EM entry 2024, from memory). CNY, the largest GBI-EM weight in the project's own file, is silently omitted although CN_3M exists. TRY is omitted (TR_3M ends 2008, which is justified but not stated). The 100% notional is spread over 9 currencies that are only part of EMLC.", "evidence": "assumptions_overlays.py FX_CURRENCIES/FX_EXCLUDED; em_bonds_countries.csv; yields.csv CN_3M last 2026-09-01, TR_3M last 2008-04-01."},
+    {"severity": "low", "finding": "FX rates: the OECD month-t average is used to price the forward at month-t end (fx_inputs, overlays.py lines 378-385), while the option engine uses the previous month's TB3MS (line 159-162). Mild within-month look-ahead, and the two engines are inconsistent."},
+    {"severity": "low", "finding": "The cost model gives about $0 for the 110% call (model premium $0 at 8.9% vol). The real half-spread cannot be below half an XSP tick. Immaterial to the results."},
+    {"severity": "low", "finding": "The VRP uses next-21-day realised vol (vrp_table, line 524). That is the correct ex-post definition and is diagnostic only. Pricing uses VIX/VIX3M at the roll close: perturbing VIX and SPY after 2020-02-14 changed no month up to 2020-01 (0.0 difference), and calibration with all post-2017 data distorted returned identical parameters."},
+    {"severity": "low", "finding": "October 2026 is partial (SPY ends 2026-10-23) and is included in the 106 OOS months. The constant 1.386 ratio is applied to all history, although 1 XSP was $10,739 in January 2010."}
+  ],
+  "checks": {
+    "1_reproduce": "pass: byte-identical outputs; stats from CSV match JSON to 1e-7",
+    "2_black_scholes": "pass: S=K=100, r=0, sigma=0.2, T=1/12 call = put = 2.302974 = textbook S(2N(sigma sqrtT/2)-1); parity and independent BS error 4.6e-13; short call credits premium (cash -= sign*q*prem with sign -1), long put debits; dividends via SPY adjusted close with q=0; roll on the third-Friday close, expiry settled at intrinsic on the next roll's close; no forward data in pricing (perturbation test)",
+    "3_calibration": "pass: fitted on 2010-01..2017-12 only (calibrate() truncates at CALIBRATION_END, line 297) and frozen; params -0.03067 / 0.23227 / 0.29299 reproduced; OOS TE BXMD 2.02%, PPUT (1m) 2.32%; collar is a true hold-out",
+    "4_vrp": "pass: 4.03 pts IS and 3.71 OOS (VIX minus next-21d realised); trailing version 3.97 / 3.77; medians 4.53 / 4.66; consistent with the screener's 4.2 for 1990-2018",
+    "5_costs": "pass: 1% of premium + $0.65 x h x V / (10 x SPX) per opening trade (overlays.py line 250-251), no closing cost (cash-settled); FX 5 bp of hedged notional per quarterly roll; own engine cost column matches to 6e-9; cc30 0.17%/yr, pput 0.13%, FX 0.10% / 0.20%",
+    "6_sizing": "pass on the numbers; headline at 139% is not what the portfolio can hold compliantly for calls (see phase5_guidance)",
+    "7_verdict_rule": "1 contract (139%): pass = pput, collar, fx50, fx100; fail = cc30, ccATM. Exact 100%: pass = pput (both clauses), collar (DD), fx50 and fx100 (DD); fail = cc30 (+1.35 pts), ccATM. Indicative portfolio level: pass = fx50, fx100 (Sharpe +0.003 / +0.006), ccATM at 100% (DD +3.6), cc30 at 1 contract (DD +2.3); fail = pput and collar at both ratios",
+    "8_fx": "pass: CIP by hand = code; quarterly roll at Mar/Jun/Sep/Dec month ends with a stub first roll; hedge sign correct (corr -0.998); carry given up 4.21%/2.72% (own) vs 4.27%/2.73% (JSON); exclusions BRL/THB/MYR stated, CNY/TRY omissions not stated",
+    "9_lookahead": "option engine clean (perturbation); FX weights look-ahead larger than disclosed (INR, CNY)",
+    "10_memos": "explain sentences match the JSON (rounded); pput's '2.3% a year' refers to the 1-month model, not the overlay; 'passes rule 8.5' should read 'passes the standalone version of 8.5' (the memo body says so, the explain sentence does not)"
+  },
+  "recommended_changes": [
+    "Change the explain sentences to say 'passes the standalone (sleeve-level) version of rule 8.5; the portfolio test is Phase 5's'.",
+    "pput memo and summary: give the quarterly overlay's own fit vs PPUT (OOS TE 4.9%, R2 0.47) next to the 1-month model's 2.3%.",
+    "Add CNY (and TRY with its reason) to FX_EXCLUDED with the reason, or include CNY using CN_3M. Flag INR's pre-2024 weight as look-ahead, or set INR to 0 before 2024 as a sensitivity.",
+    "State in the covered-call memos that the real BXMD index passes the drawdown clause (+2.35 pts) while the model does not, and that the +0.93%/yr OOS bias is unexplained (t about 1.4).",
+    "Use the previous month's OECD rate in fx_inputs, to match the option engine (expected effect small; not rerun).",
+    "Optional: add a minimum half-spread of half an XSP tick ($2.50 per contract) to the cost model."
+  ],
+  "phase5_guidance": "Use the column overlay_return_h100 (net of costs, P&L per $1 of equity sleeve at exactly 100% notional) as the overlay's economic series, not overlaid_return and not the 139% overlay_return. Add h_t x overlay_return_h100 to the ACTUAL equity-sleeve return of the candidate portfolio, not SPY, so the international basis is in the test. h_t = whole contracts x XSP notional / equity-sleeve value at each roll; linear scaling misses the 139% series by at most 0.27%/yr (collar) and 0.15%/yr (put). Apply rule 8.5 at portfolio level, which is what method.md says. Run it for h = 0 (no overlay), h = 1.0 (economic test) and the implementable h at 1 contract (about 1.17-1.69 depending on the equity weight). Puts are admissible at 1 contract only as a stated over-hedge. Covered calls and the collar are not admissible at $100,000: the only compliant contract count is 0, so do not include them in the optimizer; show them only as non-implementable hypotheticals. The FX hedges are not tradeable in a retail account: use fxfwd_emlocal_*_monthly.csv only to decide how much unhedged EMLC to hold, not as positions. Expect the put to fail at portfolio level: on a GUIDE_BENCH proxy it gives no drawdown cut (-25.6% both ways) and lowers Sharpe from 0.342 to 0.264."
+}

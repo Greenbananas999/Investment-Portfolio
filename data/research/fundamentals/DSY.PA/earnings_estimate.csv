@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,0.4318,0.42979,0.44,0.4,7,0.0795,EUR
++1q,0.35,0.33,0.37,0.3,2,0.1667,EUR
+0y,1.35327,1.28,1.38996,1.31,19,0.033,EUR
++1y,1.44659,1.32,1.53,1.35327,19,0.069,EUR

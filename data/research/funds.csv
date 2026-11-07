@@ -1,0 +1,177 @@
+ticker,name,inception,aum_usd,expense_ratio,category,yield,currency,quoteType
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,2007-12-17,13566665728,0.0039000000000000003,Emerging Markets Bond,0.0537,USD,ETF
+PCY,Invesco Emerging Markets Sovereign Debt ETF,2007-10-11,1172074880,0.005,Emerging Markets Bond,0.0624,USD,ETF
+EMLC,VanEck J.P. Morgan EM Local Currency Bond ETF,2010-07-22,4888304640,0.003,Emerging-Markets Local-Currency Bond,0.064899996,USD,ETF
+LEMB,iShares J.P. Morgan EM Local Currency Bond ETF,2011-10-18,770560832,0.003,Emerging-Markets Local-Currency Bond,0.0242,USD,ETF
+EBND,State Street SPDR Bloomberg Emerging Markets Local Bond ETF,2011-02-23,2242548736,0.003,Emerging-Markets Local-Currency Bond,0.060599998,USD,ETF
+CEMB,iShares J.P. Morgan EM Corporate Bond ETF,2012-04-17,398686208,0.005,Emerging Markets Bond,0.0537,USD,ETF
+EMHY,iShares J.P. Morgan EM High Yield Bond ETF,2012-04-03,560347456,0.005,Emerging Markets Bond,0.0683,USD,ETF
+HYEM,VanEck Emerging Markets High Yield Bond ETF,2012-05-08,505924544,0.004,Emerging Markets Bond,0.0708,USD,ETF
+PEBIX,PIMCO Emerging Markets Bond Instl,2008-04-30,3250551552,0.009899999999999999,,0.0668,USD,MUTUALFUND
+PREMX,T. Rowe Price Emerging Markets Bond,1994-12-30,5454295552,0.0095,,0.059899997,USD,MUTUALFUND
+FNMIX,Fidelity New Markets Income,2018-12-04,3710065152,0.0075,,0.0519,USD,MUTUALFUND
+TGEIX,TCW Emerging Markets Income I,2004-02-27,3949390592,0.0085,,0.0652,USD,MUTUALFUND
+DBLEX,DoubleLine Emerging Markets Fixed Inc I,2026-08-03,285654176,0.0091,,0.056199998,USD,MUTUALFUND
+GSDIX,Goldman Sachs Emerging Markets Dbt Instl,2006-09-29,391756096,0.0083,,0.058000002,USD,MUTUALFUND
+JEMDX,JPMorgan Emerging Markets Debt I,2006-06-30,803716864,0.008,,0.0713,USD,MUTUALFUND
+MEDIX,MFS Emerging Markets Debt I,2008-12-01,6983712256,0.008199999999999999,,0.0594,USD,MUTUALFUND
+PYEMX,Payden Emerging Markets Bond,1998-12-17,970154176,0.0073,,0.070300005,USD,MUTUALFUND
+SHMDX,Virtus Stone Harbor Emerg Mkts Dbt Inc I,2007-08-16,317733216,0.0076,,0.060399998,USD,MUTUALFUND
+EEIIX,Eaton Vance Emerging Markets Local Inc I,2007-06-27,1781887232,0.009300000000000001,,0.106800005,USD,MUTUALFUND
+PRELX,T. Rowe Price Emerg Mkts Lcl Ccy Bd,2021-02-22,374338720,0.0092,,0.0678,USD,MUTUALFUND
+PELBX,PIMCO Emerging Mkts Lcl Ccy and Bd Instl,2008-05-30,2652591872,0.0132,,0.073699996,USD,MUTUALFUND
+ELD,WisdomTree Emerging Markets Local Debt Fund,2010-08-09,129691896,0.0055000000000000005,Emerging-Markets Local-Currency Bond,0.0631,USD,ETF
+EMCB,WisdomTree Emerging Markets Corporate Bond Fund,2012-03-08,99349800,0.0060999999999999995,Emerging Markets Bond,0.0557,USD,ETF
+EMBAX,VanEck Funds - VanEck Emerging Markets Bond ETF,2012-07-09,93063104,0.0121,,0.0671,USD,MUTUALFUND
+FEMDX,Franklin Emerging Market Debt Opps,2006-05-24,142038928,0.0102,,0.0602,USD,MUTUALFUND
+EMDIX,Federated Hermes Emerging Market Debt IS,1996-10-02,45052816,0.009399999999999999,,0.0505,USD,MUTUALFUND
+EMKIX,Ashmore Emerging Markets Tot Ret Instl,2011-05-12,25210772,0.0121,,0.0734,USD,MUTUALFUND
+PEMIX,PIMCO Emerging Markets Corp Bd Instl,2009-07-01,59077284,0.009399999999999999,,0.0674,USD,MUTUALFUND
+EMDAX,PGIM Emerging Markets Dbt Lcl Ccy A,2011-03-30,40468128,0.0113,,0.064,USD,MUTUALFUND
+FEDCX,Fidelity Series Emerging Markets Debt,2011-03-17,1937279872,0.0,,0.0615,USD,MUTUALFUND
+WEMDX,Legg Mason Partners Income Trust - Western Asset Emerging Markets Debt Fund,2013-09-03,32700478,0.013000000000000001,,0.0149,USD,MUTUALFUND
+VWOB,Vanguard Emerging Markets Government Bond Index Fund ETF Shares,2013-05-31,6580983296,0.0015,Emerging Markets Bond,0.060700003,USD,ETF
+VEMBX,Vanguard Emerging Markets Bond Investor,2017-12-06,5724428288,0.005,,0.059499998,USD,MUTUALFUND
+FEMB,First Trust Emerging Markets Local Currency Bond ETF,2014-11-04,372262944,0.0085,Emerging-Markets Local-Currency Bond,0.0705,USD,ETF
+EMTL,State Street DoubleLine Emerging Markets Fixed Income ETF,2016-04-13,77081488,0.006500000000000001,Emerging Markets Bond,0.0495,USD,ETF
+JPMB,JPMorgan USD Emerging Markets Sovereign Bond ETF,2018-01-29,96262240,0.0039000000000000003,Emerging Markets Bond,0.059299998,USD,ETF
+EMBD,Global X Emerging Markets Bond ETF,2020-06-01,250356688,0.0039000000000000003,Emerging Markets Bond,0.059299998,USD,ETF
+EMHC,State Street SPDR Bloomberg Emerging Markets USD Bond ETF,2021-04-06,316325056,0.0023,Emerging Markets Bond,0.0633,USD,ETF
+CBON,VanEck China Bond ETF,2014-11-10,33952100,0.005,Emerging-Markets Local-Currency Bond,0.014199999,USD,ETF
+JEMIX,JHancock Emerging Markets Debt R6,2015-03-27,2176604416,0.0077,,0.060599998,USD,MUTUALFUND
+TRECX,T. Rowe Price Emerging Mkts Corp Bd,2025-05-12,292840800,0.0088,,0.059699997,USD,MUTUALFUND
+PYELX,Payden Emerging Markets Local Bond Inv,2022-02-28,78541872,0.009899999999999999,,0.0743,USD,MUTUALFUND
+NEMDX,Nuveen Emerging Markets Dbt Mgd Acc Com,2022-11-01,27091700,0.0,,0.0635,USD,MUTUALFUND
+BIL,State Street SPDR Bloomberg 1-3 Month T-Bill ETF,2007-05-25,48510820352,0.001352,Ultrashort Bond,0.0366,USD,ETF
+SHV,iShares 0–1 Year Treasury Bond ETF,2007-01-05,21425623040,0.0015,Ultrashort Bond,0.0363,USD,ETF
+DJP,iPath Bloomberg Commodity Index Total Return(SM) ETN,2006-06-06,1022932288,0.006999999999999999,Commodities Broad Basket,0.0,USD,ETF
+GSG,iShares S&P GSCI Commodity-Indexed Trust,2006-07-10,1061296640,0.0075,Commodities Broad Basket,0.0,USD,ETF
+GLD,SPDR Gold Shares,2004-11-18,131009642496,0.004,Commodities Focused,0.0,USD,ETF
+IAU,iShares Gold Trust,2005-01-21,58116382720,0.0025,Commodities Focused,0.0,USD,ETF
+SGOL,abrdn Physical Gold Shares ETF,2009-09-09,6696057344,0.0017000000000000001,Commodities Focused,0.0,USD,ETF
+GII,State Street SPDR S&P Global Infrastructure ETF,2007-01-25,965991936,0.004,Infrastructure,0.027,USD,ETF
+IGF,iShares Global Infrastructure ETF,2007-12-10,10902711296,0.0037,Infrastructure,0.0293,USD,ETF
+WIP,State Street SPDR FTSE International Government Inflation-Protected Bond ETF,2008-03-13,462979776,0.005,Global Bond,0.0634,USD,ETF
+GNR,State Street SPDR S&P Global Natural Resources ETF,2010-09-13,5382645248,0.004,Natural Resources,0.0241,USD,ETF
+GUNR,Northern Trust Morningstar Global Upstream Natural Resources ETF,2011-09-16,7014095872,0.0046,Natural Resources,0.023,USD,ETF
+HAP,VanEck Natural Resources ETF,2008-08-29,326346336,0.0040999999999999995,Natural Resources,0.0184,USD,ETF
+IGE,iShares North American Natural Resources ETF,2001-10-22,838852864,0.0037,Natural Resources,0.018099999,USD,ETF
+DBP,Invesco DB Precious Metals Fund,2007-01-05,203556160,0.0075,Commodities Focused,0.028900001,USD,ETF
+GLTR,abrdn Physical Precious Metals Basket Shares ETF,2010-10-22,2314926848,0.006,Commodities Focused,0.0,USD,ETF
+PALL,abrdn Physical Palladium Shares ETF,2010-01-08,504621184,0.006,Commodities Focused,0.0,USD,ETF
+PPLT,abrdn Physical Platinum Shares ETF,2010-01-08,1678477312,0.006,Commodities Focused,0.0,USD,ETF
+RWX,State Street SPDR Dow Jones International Real Estate ETF,2006-12-15,231272112,0.0059,Global Real Estate,0.0418,USD,ETF
+VNQI,Vanguard Global ex-U.S. Real Estate Index Fund ETF Shares,2010-11-01,3525859840,0.0012,Global Real Estate,0.0506,USD,ETF
+RWO,State Street SPDR Dow Jones Global Real Estate ETF,2008-05-07,1247310848,0.005,Global Real Estate,0.0342,USD,ETF
+SIVR,abrdn Physical Silver Shares ETF,2009-07-24,3446195456,0.003,Commodities Focused,0.0,USD,ETF
+SLV,iShares Silver Trust,2006-04-21,25189588992,0.005,Commodities Focused,0.0,USD,ETF
+WOOD,iShares Global Timber & Forestry ETF,2008-06-24,246851248,0.0039000000000000003,Natural Resources,0.025799999,USD,ETF
+LTPZ,PIMCO 15+ Year U.S. TIPS Index Exchange-Traded Fund,2009-09-03,1238256128,0.002,Inflation-Protected Bond,0.0623,USD,ETF
+SCHP,Schwab U.S. TIPS ETF,2010-08-05,17500973056,0.0003,Inflation-Protected Bond,0.048899997,USD,ETF
+SPIP,State Street SPDR Portfolio TIPS Index ETF,2007-05-25,1072385856,0.0012,Inflation-Protected Bond,0.0539,USD,ETF
+STIP,iShares 0-5 Year TIPS Bond ETF,2010-12-01,16942168064,0.0003,Short-Term Inflation-Protected Bond,0.0468,USD,ETF
+STPZ,PIMCO 1-5 Year U.S. TIPS Index Exchange-Traded Fund,2009-08-20,578130944,0.002,Short-Term Inflation-Protected Bond,0.0463,USD,ETF
+TDTT,Northern Trust iBoxx 3-Year Target Duration TIPS ETF,2011-09-19,2512865024,0.0018,Short-Term Inflation-Protected Bond,0.0484,USD,ETF
+TIP,iShares TIPS Bond ETF,2003-12-04,14648541184,0.0018,Inflation-Protected Bond,0.044099998,USD,ETF
+VTIP,Vanguard Short-Term Inflation-Protected Securities Index Fund ETF Shares,2012-10-12,74652303360,0.0003,Short-Term Inflation-Protected Bond,0.048,USD,ETF
+DBC,Invesco DB Commodity Index Tracking Fund,2006-02-03,1943271808,0.0085,Commodities Broad Basket,0.022,USD,ETF
+USCI,"United States Commodity Index Fund, LP",2010-08-10,420732736,0.0105,Commodities Broad Basket,0.0,USD,ETF
+BWX,State Street SPDR Bloomberg International Treasury Bond ETF,2007-10-02,1335865728,0.0034999999999999996,Global Bond,0.024600001,USD,ETF
+CEF,Sprott Physical Gold and Silver Trust,1986-04-03,,,,0.0,USD,EQUITY
+COPX,Global X Copper Miners ETF,2010-04-19,6328031744,0.006500000000000001,,0.026600001,USD,ETF
+CPER,"United States Copper Index Fund, LP",2011-11-14,663276992,0.0088,Commodities Focused,0.0,USD,ETF
+DBA,Invesco DB Agriculture Fund,2007-01-05,1131071616,0.0085,Commodities Focused,0.0339,USD,ETF
+DBB,Invesco DB Base Metals Fund,2007-01-05,320775392,0.0075,Commodities Focused,0.0241,USD,ETF
+DBE,Invesco DB Energy Fund,2007-01-05,152253808,0.0075,Commodities Focused,0.0164,USD,ETF
+DBO,Invesco DB Oil Fund,2007-01-05,329948480,0.0075,Commodities Focused,0.015700001,USD,ETF
+FLRN,State Street SPDR Bloomberg Investment Grade Floating Rate ETF,2011-11-30,3155460096,0.0015,Ultrashort Bond,0.042600002,USD,ETF
+FTAG,First Trust Indxx Global Agriculture ETF,2010-03-11,14034282,0.006999999999999999,Natural Resources,0.0117999995,USD,ETF
+GDX,VanEck Gold Miners ETF,2006-05-16,23820072960,0.0051,Equity Precious Metals,0.0082,USD,ETF
+GDXJ,VanEck Junior Gold Miners ETF,2009-11-10,7075869184,0.0052,Equity Precious Metals,0.0277,USD,ETF
+IYR,iShares U.S. Real Estate ETF,2000-06-12,4030384640,0.0037,Real Estate,0.0239,USD,ETF
+MINT,PIMCO Enhanced Short Maturity Active Exchange-Traded Fund,2009-11-16,18337200128,0.0036,Ultrashort Bond,0.040799998,USD,ETF
+MNA,NYLI Merger Arbitrage ETF,2009-11-17,260406560,0.0078000000000000005,Event Driven,0.0,USD,ETF
+MOO,VanEck Agribusiness ETF,2007-08-31,1099265920,0.005600000000000001,Natural Resources,0.0219,USD,ETF
+MXI,iShares Global Materials ETF,2006-09-12,393777536,0.0037,Natural Resources,0.0172,USD,ETF
+PHYS,Sprott Physical Gold Trust,2010-02-26,,,,0.0,USD,EQUITY
+PICK,iShares MSCI Global Metals & Mining Producers ETF,2012-01-31,2157677312,0.0039000000000000003,,0.0241,USD,ETF
+PSLV,Sprott Physical Silver Trust,2010-10-29,,,,0.0,USD,EQUITY
+PSR,Invesco Active U.S. Real Estate Fund,2008-11-20,57483804,0.0034999999999999996,Real Estate,0.0269,USD,ETF
+QAI,NYLI Hedge Multi-Strategy Tracker ETF,2009-03-25,990201664,0.008100000000000001,Multistrategy,0.014199999,USD,ETF
+REMX,VanEck Rare Earth and Strategic Metals ETF,2010-10-27,1448121600,0.0053,,0.0257,USD,ETF
+RLY,State Street Multi-Asset Real Return ETF,2012-04-25,1419035648,0.005,Global Moderate Allocation,0.028800001,USD,ETF
+RWR,State Street SPDR Dow Jones REIT ETF,2001-04-23,1820806656,0.0025,Real Estate,0.0348,USD,ETF
+SCHH,Schwab U.S. REIT ETF,2011-01-13,11037447168,0.0007000000000000001,Real Estate,0.0294,USD,ETF
+SHY,iShares 1-3 Year Treasury Bond ETF,2002-07-22,27439355904,0.0015,Short Government,0.0361,USD,ETF
+UGL,ProShares Ultra Gold,2008-12-01,619785216,0.011899999999999999,Trading--Leveraged Commodities,0.0,USD,ETF
+UNG,"United States Natural Gas Fund, LP",2007-04-18,503256320,0.011699999999999999,Commodities Focused,0.0,USD,ETF
+USO,"United States Oil Fund, LP",2006-04-10,1946440704,0.0086,Commodities Focused,0.0,USD,ETF
+UUP,Invesco DB US Dollar Index Bullish Fund,2007-02-20,481364192,0.0075,Trading--Miscellaneous,0.032,USD,ETF
+VNQ,Vanguard Real Estate Index Fund ETF Shares,2004-09-23,69458698240,0.0013,Real Estate,0.0363,USD,ETF
+WTMF,WisdomTree Managed Futures Strategy Fund,2011-01-05,263756432,0.0066,Systematic Trend,0.0792,USD,ETF
+XLB,State Street Materials Select Sector SPDR ETF,1998-12-16,8448828928,0.0008,Natural Resources,0.0164,USD,ETF
+XME,State Street SPDR S&P Metals & Mining ETF,2006-06-19,3690055424,0.0034999999999999996,Natural Resources,0.0034999999,USD,ETF
+FTRI,First Trust Indxx Global Natural Resources Income ETF,2010-03-11,113902944,0.006999999999999999,Natural Resources,0.021,USD,ETF
+IFGL,iShares International Developed Real Estate ETF,2007-11-12,79590840,0.005,Global Real Estate,0.045500003,USD,ETF
+CUT,Invesco MSCI Global Timber ETF,2007-11-09,29590112,0.0076,Natural Resources,0.0254,USD,ETF
+VEGI,iShares MSCI Agriculture Producers ETF,2012-01-31,169680720,0.0039000000000000003,Natural Resources,0.019,USD,ETF
+TIPZ,PIMCO Broad U.S. TIPS Index Exchange-Traded Fund,2009-09-03,90622728,0.002,Inflation-Protected Bond,0.0556,USD,ETF
+GBIL,Goldman Sachs Access Treasury 0-1 Year ETF,2016-09-06,7898360832,0.0012,Ultrashort Bond,0.0359,USD,ETF
+ICSH,iShares Ultra Short Duration Bond Active ETF,2013-12-11,8971640832,0.0008,Ultrashort Bond,0.041300002,USD,ETF
+JPST,JPMorgan Ultra-Short Income ETF,2017-05-17,42514579456,0.0018,Ultrashort Bond,0.041300002,USD,ETF
+NEAR,iShares Short Duration Bond Active ETF,2013-09-25,5218244096,0.0025,Short-Term Bond,0.0448,USD,ETF
+SGOV,iShares 0-3 Month Treasury Bond ETF,2020-05-26,116836941824,0.0009,Ultrashort Bond,0.0364,USD,ETF
+TFLO,iShares Treasury Floating Rate Bond ETF,2014-02-04,7348822528,0.0015,Ultrashort Bond,0.0372,USD,ETF
+USFR,WisdomTree Floating Rate Treasury Fund,2014-02-04,21272145920,0.0015,Ultrashort Bond,0.037100002,USD,ETF
+BCD,abrdn Bloomberg All Commodity Longer Dated Strategy K-1 Free ETF,2017-03-30,441248608,0.003,Commodities Broad Basket,0.1104,USD,ETF
+BCI,abrdn Bloomberg All Commodity Strategy K-1 Free ETF,2017-03-30,3474652672,0.0026,Commodities Broad Basket,0.105399996,USD,ETF
+CMDY,iShares Bloomberg Roll Select Commodity Strategy ETF,2018-04-03,742732480,0.0028000000000000004,Commodities Broad Basket,0.0994,USD,ETF
+COMT,iShares GSCI Commodity Dynamic Roll Strategy ETF,2014-10-15,1432439296,0.0048,Commodities Broad Basket,0.0496,USD,ETF
+FTGC,First Trust Global Tactical Commodity Strategy Fund,2013-10-22,3361799424,0.0098,Commodities Broad Basket,0.145,USD,ETF
+GCC,WisdomTree Enhanced Commodity Strategy Fund,2020-12-21,209497392,0.005699999999999999,Commodities Broad Basket,0.3426,USD,ETF
+PDBC,Invesco Optimum Yield Diversified Commodity Strategy No K-1 ETF,2014-11-07,8063454720,0.0059,Commodities Broad Basket,0.0253,USD,ETF
+BITO,ProShares Bitcoin ETF,2021-10-18,1492754048,0.0095,Digital Assets,0.24129999,USD,ETF
+CTA,Simplify Managed Futures Strategy ETF,2022-03-07,1363676544,0.0086,Systematic Trend,0.0515,USD,ETF
+DBMF,iMGP DBi Managed Futures Strategy ETF,2019-05-07,5182067712,0.0085,Systematic Trend,0.048800003,USD,ETF
+FMF,First Trust Managed Futures Strategy Fund,2013-08-01,302423520,0.0098,Systematic Trend,0.047199998,USD,ETF
+GBTC,Grayscale Bitcoin Trust ETF,2013-09-25,9615659008,0.015,Digital Assets,0.0,USD,ETF
+IBIT,iShares Bitcoin Trust ETF,2024-01-05,62297755648,0.0025,Digital Assets,0.0,USD,ETF
+KMLM,KraneShares Mount Lucas Managed Futures Index Strategy ETF,2020-12-01,595566848,0.009000000000000001,Systematic Trend,0.0425,USD,ETF
+AAAU,Goldman Sachs Physical Gold ETF,2018-07-24,2481856512,0.0018,Commodities Focused,0.0,USD,ETF
+BAR,GraniteShares Gold Trust,2017-08-23,1255241344,0.001749,Commodities Focused,0.0,USD,ETF
+GLDM,SPDR Gold MiniShares,2018-06-25,29630820352,0.001,Commodities Focused,0.0,USD,ETF
+IAUM,iShares Gold Trust Micro,2021-06-15,7869192704,0.0009,Commodities Focused,0.0,USD,ETF
+OUNZ,VanEck Merk Gold Trust,2014-05-16,2513435648,0.0025,Commodities Focused,0.0,USD,ETF
+IFRA,iShares U.S. Infrastructure ETF,2018-04-03,4068390656,0.003,Infrastructure,0.0174,USD,ETF
+NFRA,Northern Trust STOXX Global Broad Infrastructure ETF,2013-10-08,3060155392,0.004699999999999999,Infrastructure,0.0573,USD,ETF
+TOLZ,ProShares DJ Brookfield Global Infrastructure ETF,2014-03-25,172891920,0.0046,Infrastructure,0.030299999,USD,ETF
+GTIP,Goldman Sachs Access Inflation Protected USD Bond ETF,2018-10-02,294171136,0.0012,Inflation-Protected Bond,0.053200003,USD,ETF
+NANR,State Street SPDR S&P North American Natural Resources ETF,2015-12-15,837456000,0.0034999999999999996,Natural Resources,0.0162,USD,ETF
+REET,iShares Global REIT ETF,2014-07-08,4764517888,0.0014000000000000002,Global Real Estate,0.0352,USD,ETF
+PBTP,Invesco 0-5 Yr US TIPS ETF,2017-09-22,248204992,0.0007000000000000001,Short-Term Inflation-Protected Bond,0.0399,USD,ETF
+TIPX,State Street SPDR Bloomberg 1-10 Year TIPS ETF,2013-05-29,2120803072,0.0015,Short-Term Inflation-Protected Bond,0.0504,USD,ETF
+IVW,iShares S&P 500 Growth ETF,2000-05-22,74727448576,0.0018,Large Growth,0.0036000002,USD,ETF
+QQQ,Invesco QQQ Trust,1999-03-10,463833595904,0.0018,Large Growth,0.0045,USD,ETF
+EFG,iShares MSCI EAFE Growth ETF,2005-08-01,14983920640,0.0034000000000000002,Foreign Large Growth,0.0235,USD,ETF
+EEM,iShares MSCI Emerging Markets ETF,2003-04-07,28246675456,0.0072,Diversified Emerging Mkts,0.0183,USD,ETF
+ACWX,iShares MSCI ACWI ex U.S. ETF,2008-03-26,17686390784,0.0032,Foreign Large Blend,0.025899999,USD,ETF
+ACWI,iShares MSCI ACWI ETF,2008-03-26,32279953408,0.0032,Global Large-Stock Blend,0.014400001,USD,ETF
+VXUS,Vanguard Total International Stock Index Fund ETF Shares,2011-01-26,630010281984,0.0005,Foreign Large Blend,0.0242,USD,ETF
+SPY,State Street SPDR S&P 500 ETF Trust,1993-01-22,796865200128,0.000945,Large Blend,0.01,USD,ETF
+AGG,iShares Core U.S. Aggregate Bond ETF,2003-09-22,139937972224,0.0003,Intermediate Core Bond,0.041100003,USD,ETF
+EFA,iShares MSCI EAFE ETF,2001-08-14,76615032832,0.0032,Foreign Large Blend,0.0326,USD,ETF
+HEFA,iShares Currency Hedged MSCI EAFE ETF,2014-01-31,7543561216,0.0034999999999999996,Foreign Large Blend,0.0311,USD,ETF
+VGK,Vanguard FTSE Europe ETF,2005-03-04,37082832896,0.0006,Europe Stock,0.0295,USD,ETF
+EWJ,iShares MSCI Japan ETF,1996-03-12,23398279168,0.0049,Japan Stock,0.0383,USD,ETF
+DXJ,WisdomTree Japan Hedged Equity Fund,2006-06-16,7047421952,0.0048,Japan Stock,0.0092,USD,ETF
+EWU,iShares MSCI United Kingdom ETF,1996-03-12,3728868864,0.005,Focused Region,0.031400003,USD,ETF
+EWC,iShares MSCI Canada ETF,1996-03-12,7577758720,0.005,Focused Region,0.0124,USD,ETF
+EWA,iShares MSCI Australia ETF,1996-03-12,1249133696,0.005,Focused Region,0.028800001,USD,ETF
+INDA,iShares MSCI India ETF,2012-02-02,5841618944,0.0060999999999999995,India Equity,0.0,USD,ETF
+EWT,iShares MSCI Taiwan ETF,2000-06-20,11052632064,0.0059,Greater China Region,0.0098,USD,ETF
+MCHI,iShares MSCI China ETF,2011-03-29,5485091328,0.0059,Greater China Region,0.0224,USD,ETF
+BNDX,Vanguard Total International Bond Index Fund ETF Shares,2013-05-31,124198166528,0.0007000000000000001,Global Bond-USD Hedged,0.0464,USD,ETF
+IGOV,iShares International Treasury Bond ETF,2009-01-21,1030125056,0.0034999999999999996,Global Bond,0.0146,USD,ETF
+IEF,iShares 7-10 Year Treasury Bond ETF,2002-07-22,43529359360,0.0015,Long Government,0.0405,USD,ETF
+XYLD,Global X S&P 500 Covered Call ETF,2013-06-21,3350652416,0.006,Derivative Income,0.062800005,USD,ETF
+QYLD,Global X NASDAQ 100 Covered Call ETF,2013-12-11,8199295488,0.006,Derivative Income,0.059699997,USD,ETF

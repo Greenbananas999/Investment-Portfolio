@@ -100,3 +100,23 @@ def fx_exposure_returns(fx, index):
             if ccy in fx_ret.columns:
                 out[a.ticker] += w * fx_ret[ccy]
     return out
+
+
+def align_to_calendar(prices, calendar, limit=5):
+    """Put daily prices on another trading calendar (Phase 5).
+
+    Each column is forward-filled over the union of its own dates and
+    `calendar` for at most `limit` rows, then read on `calendar` only. Used to
+    put Taiwan, India and Canada closes on US trading days: a local holiday
+    carries the last close for up to five days, never longer, and never back.
+    """
+    calendar = pd.DatetimeIndex(calendar)
+    out = {}
+    for c in prices.columns:
+        s = prices[c].dropna()
+        if s.empty:
+            out[c] = pd.Series(index=calendar, dtype=float)
+            continue
+        u = s.reindex(s.index.union(calendar)).ffill(limit=limit)
+        out[c] = u.reindex(calendar)
+    return pd.DataFrame(out, index=calendar)

@@ -1,0 +1,22 @@
+{
+ "composite_vs_oos_sharpe": {
+  "rho": 0.20330237358101136,
+  "p_value": 0.4184467334719627,
+  "n": 18,
+  "predictive": true
+ },
+ "is_sharpe_vs_oos_sharpe": {
+  "rho": 0.33082706766917286,
+  "p_value": 0.1542360444809862,
+  "n": 20,
+  "predictive": true
+ },
+ "composite_vs_oos_ir": {
+  "rho": -0.04231166150670795,
+  "p_value": 0.8676065335789527,
+  "n": 18,
+  "predictive": false
+ },
+ "note": "Spearman rank correlation (research.screen.is_oos_rank_test) of the in-sample composite (em_bond_insample_table.csv; EMB and EMLC have none, n=18) and of the in-sample Sharpe (n=20) with OOS Sharpe/IR",
+ "command": "python -m research.candidates.em_bonds --all --write"
+}

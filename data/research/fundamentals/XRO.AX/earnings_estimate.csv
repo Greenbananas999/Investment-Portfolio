@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,,,,,,,NZD
++1q,,,,,,,NZD
+0y,1.32754,1.221,1.54154,0.8619,12.0,0.5402,NZD
++1y,2.33464,1.64,2.9037,1.32754,12.0,0.7586,NZD

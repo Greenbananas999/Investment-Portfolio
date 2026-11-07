@@ -1,0 +1,114 @@
+{
+ "rank_test_composite_vs_oos_sharpe": {
+  "rho": -0.015327,
+  "p_value": 0.934777,
+  "n": 31,
+  "predictive": false
+ },
+ "rank_test_is_sharpe_vs_oos_sharpe": {
+  "rho": 0.066129,
+  "p_value": 0.723753,
+  "n": 31,
+  "predictive": true
+ },
+ "rank_test_composite_vs_oos_ir": {
+  "rho": -0.032469,
+  "p_value": 0.862338,
+  "n": 31,
+  "predictive": false
+ },
+ "n_trials": 31,
+ "benchmark_oos": {
+  "id": "EFG_EEM_5050",
+  "sharpe": 0.27306,
+  "cagr": 0.058223,
+  "max_drawdown": -0.329768
+ },
+ "faded_leaders": [
+  {
+   "ticker": "BIDU",
+   "insample_rank": 26,
+   "sharpe_is": 0.733959,
+   "sharpe_oos": -0.108873,
+   "ir_oos": -0.235233,
+   "maxdd_oos": -0.730473
+  },
+  {
+   "ticker": "VALE3.SA",
+   "insample_rank": 29,
+   "sharpe_is": 0.074259,
+   "sharpe_oos": 0.299259,
+   "ir_oos": 0.205497,
+   "maxdd_oos": -0.450098
+  },
+  {
+   "ticker": "PETR4.SA",
+   "insample_rank": 30,
+   "sharpe_is": -0.017778,
+   "sharpe_oos": 0.695507,
+   "ir_oos": 0.632524,
+   "maxdd_oos": -0.64093
+  },
+  {
+   "ticker": "TEVA.TA",
+   "insample_rank": 31,
+   "sharpe_is": -0.251689,
+   "sharpe_oos": 0.361749,
+   "ir_oos": 0.275018,
+   "maxdd_oos": -0.7143
+  }
+ ],
+ "best_not_shortlisted_by_oos_sharpe": [
+  {
+   "ticker": "ASML.AS",
+   "insample_rank": 24,
+   "sharpe_oos": 0.838898,
+   "ir_oos": 0.955843,
+   "t_ir_oos": 2.840854,
+   "deflated_sharpe_oos": 0.655408
+  },
+  {
+   "ticker": "PETR4.SA",
+   "insample_rank": 30,
+   "sharpe_oos": 0.695507,
+   "ir_oos": 0.632524,
+   "t_ir_oos": 1.87992,
+   "deflated_sharpe_oos": 0.488605
+  },
+  {
+   "ticker": "DOL.TO",
+   "insample_rank": 9,
+   "sharpe_oos": 0.615284,
+   "ir_oos": 0.448561,
+   "t_ir_oos": 1.333164,
+   "deflated_sharpe_oos": 0.396545
+  },
+  {
+   "ticker": "9983.T",
+   "insample_rank": 23,
+   "sharpe_oos": 0.579093,
+   "ir_oos": 0.479758,
+   "t_ir_oos": 1.425886,
+   "deflated_sharpe_oos": 0.352263
+  },
+  {
+   "ticker": "MELI",
+   "insample_rank": 20,
+   "sharpe_oos": 0.569518,
+   "ir_oos": 0.529153,
+   "t_ir_oos": 1.572691,
+   "deflated_sharpe_oos": 0.335895
+  }
+ ],
+ "window": {
+  "in_sample": [
+   "2010-01-01",
+   "2017-12-31"
+  ],
+  "out_of_sample": [
+   "2018-01-01",
+   "2026-10-31"
+  ]
+ },
+ "command": "python -m research.candidates.intl_growth --all --write"
+}

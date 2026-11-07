@@ -1,0 +1,5 @@
+period,avg,low,high,numberOfAnalysts,yearAgoRevenue,growth,currency
+0q,0,0,0,0,,,USD
++1q,0,0,0,0,,,USD
+0y,543128140,543128140,543128140,1,651542000.0,-0.1664,USD
++1y,735818100,735818100,735818100,1,543128140.0,0.3548,USD

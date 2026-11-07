@@ -1,0 +1,5 @@
+period,avg,low,high,yearAgoEps,numberOfAnalysts,growth,currency
+0q,,,,,,,USD
++1q,,,,,,,USD
+0y,6.19141,6.06,6.59,6.4277,17.0,-0.0368,USD
++1y,6.63015,6.24,6.9,6.19141,17.0,0.0709,USD

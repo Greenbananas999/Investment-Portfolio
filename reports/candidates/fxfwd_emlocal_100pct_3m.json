@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "id": "fxfwd_emlocal_100pct_3m",
+  "ticker": null,
+  "usd_ticker": null,
+  "name": "EM local-currency FX hedge, 100%, 3-month forwards",
+  "position_type": "overlay",
+  "instrument": "overlay",
+  "country": "MULTI",
+  "currency": "MULTI",
+  "sector": null,
+  "non_us": true,
+  "benchmark": "EMLC",
+  "data": {
+    "price_start": "2010-08-31",
+    "price_end": "2026-11-30",
+    "months_total": 196,
+    "months_in_sample": 89,
+    "months_out_of_sample": 107,
+    "sources": [
+      "data/research/prices.csv",
+      "data/research/fx.csv",
+      "data/research/yields.csv",
+      "research/plan/longlists/em_bonds_countries.csv"
+    ],
+    "fund_fee": null,
+    "notes": "EMLC starts 2010-07, so the series starts 2010-08."
+  },
+  "metrics": {
+    "in_sample": {
+      "usd": {
+        "start": "2010-08-31",
+        "end": "2017-12-31",
+        "months": 89,
+        "cagr": -0.015306402009576225,
+        "vol": 0.08754331445454906,
+        "sharpe": -0.13313920748328514,
+        "sortino": -0.1973481188956895,
+        "max_drawdown": -0.16183564256372684,
+        "calmar": -0.09457991927550166,
+        "best_month": 0.08659524312433053,
+        "worst_month": -0.056699841585435506,
+        "pct_positive_months": 0.43820224719101125,
+        "deflated_sharpe": 0.36083825278429327
+      },
+      "local": null
+    },
+    "out_of_sample": {
+      "usd": {
+        "start": "2018-01-31",
+        "end": "2026-11-30",
+        "months": 107,
+        "cagr": -0.015235420658174958,
+        "vol": 0.07705864536021223,
+        "sharpe": -0.16120118096803931,
+        "sortino": -0.23775329293988248,
+        "max_drawdown": -0.25746640312297164,
+        "calmar": -0.0591744028478084,
+        "best_month": 0.08512030258623837,
+        "worst_month": -0.04816865618608501,
+        "pct_positive_months": 0.42990654205607476,
+        "deflated_sharpe": 0.3184015571485804
+      },
+      "local": null
+    },
+    "full": {
+      "usd": {
+        "start": "2010-08-31",
+        "end": "2026-11-30",
+        "months": 196,
+        "cagr": -0.015267652620274519,
+        "vol": 0.08177051308299502,
+        "sharpe": -0.1476558225320509,
+        "sortino": -0.21776423474952672,
+        "max_drawdown": -0.2859770448232871,
+        "calmar": -0.05338768581831038,
+        "best_month": 0.08659524312433053,
+        "worst_month": -0.056699841585435506,
+        "pct_positive_months": 0.4336734693877551,
+        "deflated_sharpe": 0.27849560499125614
+      },
+      "local": null
+    }
+  },
+  "stress": {
+    "gfc_2008": {
+      "start": "2007-10-31",
+      "end": "2009-02-28",
+      "note": "not covered by the model history"
+    },
+    "taper_2013": {
+      "start": "2013-04-30",
+      "end": "2013-08-31",
+      "with": {
+        "return": -0.07483208510499517,
+        "max_drawdown": -0.045975151042957685
+      },
+      "without": {
+        "return": -0.1416210357982065,
+        "max_drawdown": -0.08631594926527264
+      },
+      "drawdown_reduction": 0.040340798222314955,
+      "return_difference": 0.06678895069321134
+    },
+    "covid_2020": {
+      "start": "2020-01-31",
+      "end": "2020-03-31",
+      "with": {
+        "return": -0.044221062216194706,
+        "max_drawdown": -0.032444481837003325
+      },
+      "without": {
+        "return": -0.14405429261476577,
+        "max_drawdown": -0.11756478442324181
+      },
+      "drawdown_reduction": 0.08512030258623848,
+      "return_difference": 0.09983323039857106
+    },
+    "inflation_2022": {
+      "start": "2021-12-31",
+      "end": "2022-10-31",
+      "with": {
+        "return": -0.11167982839015234,
+        "max_drawdown": -0.10477175889515356
+      },
+      "without": {
+        "return": -0.17499945349160217,
+        "max_drawdown": -0.17787379737637088
+      },
+      "drawdown_reduction": 0.07310203848121732,
+      "return_difference": 0.06331962510144984
+    },
+    "strong_usd": {
+      "definition": "months when FRED DTWEXBGS (monthly) rose >= 2%",
+      "months": 23,
+      "avg_return_with": -0.010746884464210103,
+      "avg_return_without": -0.048502339171342654,
+      "usd_2014": {
+        "start": "2014-06-30",
+        "end": "2015-03-31",
+        "with": {
+          "return": -0.028339900940881457,
+          "max_drawdown": -0.03909003051247306
+        },
+        "without": {
+          "return": -0.13805068730762782,
+          "max_drawdown": -0.13473718791274136
+        }
+      },
+      "usd_2021": {
+        "start": "2021-06-30",
+        "end": "2022-09-30",
+        "with": {
+          "return": -0.1276249334961571,
+          "max_drawdown": -0.1347096295941249
+        },
+        "without": {
+          "return": -0.2251269461758888,
+          "max_drawdown": -0.22618589442006998
+        }
+      }
+    }
+  },
+  "overlay": {
+    "underlying": "EMLC",
+    "strategy": "sell 3-month CIP forwards on 100% of the EMLC currency basket, rolled quarterly",
+    "parameters": {
+      "hedge_ratio": 1.0,
+      "tenor_months": 3,
+      "roll": "quarter-end months",
+      "currencies": {
+        "MXN": 0.1111,
+        "ZAR": 0.0882,
+        "INR": 0.1921,
+        "IDR": 0.0955,
+        "PLN": 0.0947,
+        "HUF": 0.1111,
+        "CZK": 0.1111,
+        "CLP": 0.085,
+        "COP": 0.1111
+      },
+      "excluded": {
+        "BRL": "no BR_3M column in data/research/yields.csv",
+        "THB": "no OECD 3-month series",
+        "MYR": "no OECD 3-month series"
+      },
+      "rate_series": {
+        "USD": "US_3M",
+        "MXN": "MX_3M",
+        "ZAR": "ZA_3M",
+        "INR": "IN_3M",
+        "IDR": "ID_3M",
+        "PLN": "PL_3M",
+        "HUF": "HU_3M",
+        "CZK": "CZ_3M",
+        "CLP": "CL_3M",
+        "COP": "CO_3M"
+      },
+      "rate_coverage": {
+        "start": {
+          "USD": "1934-01-31",
+          "MXN": "2005-01-31",
+          "ZAR": "2005-01-31",
+          "INR": "2011-11-30",
+          "IDR": "2005-01-31",
+          "PLN": "2005-01-31",
+          "HUF": "2005-02-28",
+          "CZK": "2005-01-31",
+          "CLP": "2005-01-31",
+          "COP": "2005-01-31"
+        },
+        "end": {
+          "USD": "2026-11-30",
+          "MXN": "2026-11-30",
+          "ZAR": "2026-11-30",
+          "INR": "2026-11-30",
+          "IDR": "2026-11-30",
+          "PLN": "2026-11-30",
+          "HUF": "2026-11-30",
+          "CZK": "2026-11-30",
+          "CLP": "2026-11-30",
+          "COP": "2026-11-30"
+        }
+      }
+    },
+    "assumptions": "research/candidates/assumptions_overlays.py",
+    "calibration": {
+      "fitted": "none (no free parameter; forwards from covered interest parity)",
+      "fx_explains_fund": {
+        "in_sample": {
+          "beta_to_basket_fx": 1.208813177412727,
+          "r2": 0.8017081839204425
+        },
+        "out_of_sample": {
+          "beta_to_basket_fx": 1.2488418173394176,
+          "r2": 0.8270564269040589
+        },
+        "full": {
+          "beta_to_basket_fx": 1.2272369735852007,
+          "r2": 0.8132669063281809
+        }
+      }
+    },
+    "vrp_in_sample": null,
+    "vrp_oos": null,
+    "with": {
+      "in_sample": {
+        "start": "2010-08-31",
+        "end": "2017-12-31",
+        "months": 89,
+        "cagr": 0.003219861192579554,
+        "vol": 0.05597551705528969,
+        "sharpe": 0.07495089016078806,
+        "sortino": 0.10346442518003982,
+        "max_drawdown": -0.13753404476154318,
+        "worst_month": -0.043962160293472,
+        "up_capture": 0.31829801085364484,
+        "down_capture": 0.32142138219978417,
+        "info_ratio": -0.13313920748328514,
+        "tracking_error": 0.08754331445454906
+      },
+      "out_of_sample": {
+        "start": "2018-01-31",
+        "end": "2026-11-30",
+        "months": 107,
+        "cagr": 0.0010300134622536206,
+        "vol": 0.04879127549917759,
+        "sharpe": -0.4693109203899702,
+        "sortino": -0.5925979828152823,
+        "max_drawdown": -0.16071377995189606,
+        "worst_month": -0.05005947594437543,
+        "up_capture": 0.28648716846825395,
+        "down_capture": 0.3012774137773758,
+        "info_ratio": -0.16120118096803931,
+        "tracking_error": 0.07705864536021223
+      },
+      "full": {
+        "start": "2010-08-31",
+        "end": "2026-11-30",
+        "months": 196,
+        "cagr": 0.0020237900013320154,
+        "vol": 0.052040202515985554,
+        "sharpe": -0.2014274306249897,
+        "sortino": -0.26611486472276324,
+        "max_drawdown": -0.17216996920259697,
+        "worst_month": -0.05005947594437543,
+        "up_capture": 0.3016836006756354,
+        "down_capture": 0.31088905805078243,
+        "info_ratio": -0.1476558225320509,
+        "tracking_error": 0.08177051308299502
+      }
+    },
+    "without": {
+      "in_sample": {
+        "start": "2010-08-31",
+        "end": "2017-12-31",
+        "months": 89,
+        "cagr": 0.009686218729676233,
+        "vol": 0.11643807369943014,
+        "sharpe": 0.1361439334541877,
+        "sortino": 0.18553820729915055,
+        "max_drawdown": -0.2883155345986803,
+        "worst_month": -0.11018593343983818,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      },
+      "out_of_sample": {
+        "start": "2018-01-31",
+        "end": "2026-11-30",
+        "months": 107,
+        "cagr": 0.009015456096483021,
+        "vol": 0.10629053902937943,
+        "sharpe": -0.09630147206745439,
+        "sortino": -0.12750455541800262,
+        "max_drawdown": -0.25513957993437886,
+        "worst_month": -0.1175647844232417,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      },
+      "full": {
+        "start": "2010-08-31",
+        "end": "2026-11-30",
+        "months": 196,
+        "cagr": 0.009319981839290392,
+        "vol": 0.11072385448750985,
+        "sharpe": 0.014776653556269162,
+        "sortino": 0.019805428575431633,
+        "max_drawdown": -0.31112619525965257,
+        "worst_month": -0.1175647844232417,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      }
+    },
+    "drawdown_reduction": {
+      "gfc_2008": null,
+      "taper_2013": 0.040340798222314955,
+      "covid_2020": 0.08512030258623848,
+      "inflation_2022": 0.07310203848121732
+    },
+    "annual_cost": {
+      "full": 0.002020422800542993,
+      "in_sample": 0.0020908034775759593,
+      "out_of_sample": 0.0019618818635716473
+    },
+    "feasibility": {
+      "contract": "3-month deliverable/non-deliverable FX forwards on 9 EM currencies (bank OTC)",
+      "notional_per_contract": null,
+      "contracts": null,
+      "hedge_ratio": 1.0,
+      "position_usd_example": 8750.0,
+      "hedged_notional_usd_example": 8750.0,
+      "margin": "Bank forwards and NDFs need a dealer credit line or ISDA; not normally open to a retail brokerage account (not verified for a specific broker). The exchange route is CME FX futures on MXN, ZAR and BRL only, whose standard sizes (500,000 MXN = about $26,623; 500,000 ZAR = about $30,272; 100,000 BRL = about $18,195 at fx.csv's last rates; sizes from memory, NOT verified this session) exceed a ~$8,750 EMLC position.",
+      "implementable_at_100k": false
+    },
+    "verdict_rule": {
+      "rule": "method.md s8 item 5, standalone sleeve: OOS Sharpe higher, or OOS max drawdown at least 2 points smaller, net of costs; the portfolio-level test is Phase 5's",
+      "oos_sharpe_change": -0.3730094483225158,
+      "oos_max_drawdown_change": 0.0944257999824828,
+      "oos_vol_change": -0.05749926353020184,
+      "passes_standalone": true
+    },
+    "monthly_series": "reports/candidates/overlays/fxfwd_emlocal_100pct_3m_monthly.csv",
+    "fx_hedge_cost": {
+      "in_sample": {
+        "carry_given_up_per_year_at_100pct": 0.04266250279263061,
+        "carry_given_up_at_ratio": 0.04266250279263061,
+        "roll_cost_per_year": 0.0020908034775759593,
+        "spot_gain_from_hedge_per_year": 0.03309785876326789
+      },
+      "out_of_sample": {
+        "carry_given_up_per_year_at_100pct": 0.02732493260184896,
+        "carry_given_up_at_ratio": 0.02732493260184896,
+        "roll_cost_per_year": 0.0019618818635716473,
+        "spot_gain_from_hedge_per_year": 0.01686486982955707
+      },
+      "full": {
+        "carry_given_up_per_year_at_100pct": 0.03428944151501001,
+        "carry_given_up_at_ratio": 0.03428944151501001,
+        "roll_cost_per_year": 0.002020422800542993,
+        "spot_gain_from_hedge_per_year": 0.024235971947415547
+      }
+    },
+    "ebnd_crosscheck": {
+      "with_oos": {
+        "start": "2018-01-31",
+        "end": "2026-11-30",
+        "months": 107,
+        "cagr": -0.002337977360624688,
+        "vol": 0.05128508838128275,
+        "sharpe": -0.5110308877128794,
+        "sortino": -0.660987635905363,
+        "max_drawdown": -0.2107865888423205,
+        "worst_month": -0.04130145096811244,
+        "up_capture": 0.2490348857349975,
+        "down_capture": 0.28023990544130284,
+        "info_ratio": -0.1622071674192466,
+        "tracking_error": 0.07693121605991776
+      },
+      "without_oos": {
+        "start": "2018-01-31",
+        "end": "2026-11-30",
+        "months": 107,
+        "cagr": 0.006700034571075708,
+        "vol": 0.09783279495804861,
+        "sharpe": -0.13761786168594758,
+        "sortino": -0.1841212228934049,
+        "max_drawdown": -0.2800231758617546,
+        "worst_month": -0.09141507253517078,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      }
+    }
+  },
+  "explain": [
+    "Selling 100% of EMLC's currency exposure forward each quarter changed its 2018-2026 Sharpe from -0.10 to -0.47 and its worst drawdown from -26% to -16%.",
+    "The hedge gives up the interest-rate gap between EM and US cash, about 2.7% a year out of sample, which is most of what local-currency bonds pay for their risk.",
+    "It cannot be bought in a $100,000 brokerage account as modelled (bank forwards on nine currencies), so it is a test of whether the currency risk is worth taking, not a trade."
+  ],
+  "memo": "research/candidates/memos/fxfwd_emlocal_100pct_3m.md",
+  "charts": {
+    "growth": "reports/candidates/charts/fxfwd_emlocal_100pct_3m_growth.png"
+  },
+  "reproduce": "python -m research.candidates.overlays --overlay fxfwd_emlocal_100pct_3m --write"
+}

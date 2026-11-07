@@ -112,3 +112,83 @@ def metrics(returns, rf, fx_contribution=None, turnover=None, capital=100_000.0)
     if turnover is not None and len(turnover):
         out["Avg turnover / rebalance"] = turnover.iloc[1:].mean() if len(turnover) > 1 else np.nan
     return out
+
+
+# --------------------------------------------------------------------------
+# Generic walk-forward engine (Phase 5). Added 2026-11-07; `run` above is unchanged.
+# --------------------------------------------------------------------------
+
+@dataclass
+class WalkResult:
+    returns: pd.Series           # daily portfolio return, net of trading costs
+    costs: pd.Series             # daily trading cost (fraction of portfolio value)
+    holdings: pd.DataFrame       # start-of-day weights after any trade (drift between rebalances)
+    weights: pd.DataFrame        # target weights at each rebalance
+    turnover: pd.Series          # one-way turnover at each rebalance (0.5 x sum |dw|)
+    triggered: list              # rebalance dates forced by the drift trigger, not the schedule
+
+
+def rebalance_schedule(dates, start, freq):
+    """Boolean mask: first trading day of each new period on or after `start`.
+
+    freq: "monthly", "quarterly", "semiannual", "annual" (calendar periods)."""
+    dates = pd.DatetimeIndex(dates)
+    months = {"monthly": 1, "quarterly": 3, "semiannual": 6, "annual": 12}[freq]
+    key = dates.year * 12 + (dates.month - 1) // months
+    first = np.r_[True, key[1:] != key[:-1]]
+    return first & (dates >= pd.Timestamp(start))
+
+
+def walk_forward(asset_ret, weight_fn, schedule, cost_one_way, drift_trigger=None, first=None):
+    """Daily walk-forward with drifting weights between rebalances.
+
+    asset_ret      daily simple returns (DataFrame, NaN treated as 0 for held assets)
+    weight_fn(i)   target weights for day i using data up to day i-1 only
+                   (the caller slices asset_ret.iloc[:i]); trades at day i's open
+    schedule       boolean mask over asset_ret.index: scheduled rebalance days
+    cost_one_way   per-asset one-way cost (decimal) charged on |dw|
+    drift_trigger  f(weights) -> True forces a rebalance the next day
+    first          first day index (default: first scheduled day)
+    """
+    dates = asset_ret.index
+    sched = np.asarray(schedule, bool)
+    if first is None:
+        first = int(np.flatnonzero(sched)[0])
+    cost = np.asarray(cost_one_way, float)
+    R = asset_ret.fillna(0.0).to_numpy()
+    n = R.shape[1]
+    w = np.zeros(n)
+    port, costs, hold = [], [], []
+    targets, turn, trig = {}, {}, []
+    force = False
+    for i in range(first, len(dates)):
+        c = 0.0
+        if sched[i] or force or i == first:
+            new_w = np.asarray(weight_fn(i), float)
+            dw = np.abs(new_w - w)
+            c = float(cost @ dw)
+            if force and not sched[i]:
+                trig.append(dates[i])
+            targets[dates[i]] = new_w
+            turn[dates[i]] = float(dw.sum() / 2)
+            w = new_w
+            force = False
+        hold.append(w.copy())
+        r = R[i]
+        rp = float(w @ r)
+        port.append(rp - c)
+        costs.append(c)
+        w = w * (1 + r) / (1 + rp) if 1 + rp != 0 else w
+        if drift_trigger is not None and drift_trigger(w):
+            force = True
+    idx = dates[first:]
+    cols = list(asset_ret.columns)
+    return WalkResult(pd.Series(port, index=idx), pd.Series(costs, index=idx),
+                      pd.DataFrame(hold, index=idx, columns=cols),
+                      pd.DataFrame.from_dict(targets, orient="index", columns=cols),
+                      pd.Series(turn), trig)
+
+
+def to_monthly(daily):
+    """Compound daily returns into calendar-month ('ME') returns."""
+    return (1 + daily).resample("ME").prod() - 1

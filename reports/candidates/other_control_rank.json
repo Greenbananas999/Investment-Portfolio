@@ -1,0 +1,26 @@
+{
+ "composite_vs_oos_sharpe": {
+  "rho": 0.13266129032258067,
+  "p_value": 0.47681938963514553,
+  "n": 31,
+  "predictive": true
+ },
+ "composite_vs_oos_ir_vs_gld": {
+  "rho": 0.2524193548387097,
+  "p_value": 0.17069909374579978,
+  "n": 31,
+  "predictive": true
+ },
+ "fundamental_score_vs_oos_sharpe": {
+  "rho": 0.49802951359383735,
+  "p_value": 0.003723514648327563,
+  "n": 32,
+  "predictive": true
+ },
+ "is_sharpe_vs_oos_sharpe": {
+  "rho": -0.5945747800586509,
+  "p_value": 0.00033246763986488317,
+  "n": 32,
+  "predictive": false
+ }
+}

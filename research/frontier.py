@@ -44,3 +44,48 @@ def frontier(mu, S, names, non_us_mask, rf, max_w=0.25, min_non_us=0.70, points=
     return {"points": pts, "min_variance": pack(w_min), "max_sharpe": pack(w_tan),
             "assets": [{"key": k, "ret": float(m), "vol": float(np.sqrt(S[i, i]))}
                        for i, (k, m) in enumerate(zip(names, mu))]}
+
+
+def frontier_constrained(mu, S, names, rf, constraints, points=25):
+    """Efficient frontier under a portfolio.optimize.Constraints set (Phase 5).
+
+    Same idea as `frontier` but with per-asset bounds, sleeve bands and the
+    non-US floor (or no floor) from the general constraint builder. Each point
+    carries its weights so a dashboard can show them on hover. Returns None
+    when the constraint set is empty.
+    """
+    from portfolio import optimize as O
+
+    c = constraints
+    if O.feasible_point(c) is None:
+        return None
+    mu = np.asarray(mu, float)
+    S = np.asarray(S, float)
+    var = lambda w: w @ S @ w
+    w_min = O.solve_constrained(var, c)
+    w_max = O.solve_constrained(lambda w: -(w @ mu), c)
+    lo, hi = w_min @ mu, w_max @ mu
+
+    def pack(w):
+        v = float(np.sqrt(w @ S @ w))
+        return {"ret": float(w @ mu), "vol": v, "sharpe": float((w @ mu - rf) / v) if v > 0 else None,
+                "non_us_share": float(np.asarray(c.non_us, float) @ w),
+                "weights": {k: float(round(x, 6)) for k, x in zip(names, w)}}
+
+    pts = []
+    prev = w_min
+    for target in np.linspace(lo, hi, points):
+        cc = O.Constraints(c.names, c.lower, c.upper, c.non_us, c.min_non_us, c.neutral, dict(c.groups))
+        # the return target as a two-sided band on w @ mu
+        cc.groups["_target"] = (mu, target, target)
+        try:
+            w = O.solve_constrained(var, cc, prev)
+        except O.InfeasibleError:
+            continue
+        if abs(w @ mu - target) < 1e-4:
+            pts.append(pack(w))
+            prev = w
+    w_tan = O.max_sharpe_constrained(mu - rf, S, c)
+    return {"points": pts, "min_variance": pack(w_min), "max_sharpe": pack(w_tan), "rf": float(rf),
+            "assets": [{"key": k, "ret": float(m), "vol": float(np.sqrt(S[i, i]))}
+                       for i, (k, m) in enumerate(zip(names, mu))]}

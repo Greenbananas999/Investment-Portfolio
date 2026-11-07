@@ -1,0 +1,13 @@
+ticker,name,sleeve,weight,dollars,shares,fractional,price_local,currency,fx_usd_per_unit,price_usd,price_date,invested_usd,non_us_share,exchange,expected_return_7y,adr
+AVGO,Broadcom Inc.,us_equity,0.066667,6666.666667,22.0,False,293.690002,USD,1.0,293.690002,2026-11-06,6461.180054,0.0,NASDAQ,0.113973,
+NVDA,NVIDIA Corporation,us_equity,0.066667,6666.666667,31.0,False,210.960007,USD,1.0,210.960007,2026-10-23,6539.760208,0.0,NASDAQ,0.12977,
+AMZN,"Amazon.com, Inc.",us_equity,0.066667,6666.666667,25.0,False,259.299988,USD,1.0,259.299988,2026-11-06,6482.499695,0.0,NASDAQ,0.080786,
+2330.TW,Taiwan Semiconductor Manufacturing Company Limited,intl_equity,0.116667,11666.666667,159.0,False,2385.0,TWD,0.030678,73.166242,2026-10-23,11633.432481,1.0,TWSE,0.109293,TSM
+BAJFINANCE.NS,Bajaj Finance Limited,intl_equity,0.116667,11666.666667,1013.0,False,1087.75,INR,0.010587,11.51559,2026-11-06,11665.292998,1.0,NSE India,0.111339,
+CSU.TO,Constellation Software Inc.,intl_equity,0.116667,11666.666667,4.0,False,3526.52002,CAD,0.713409,2515.851883,2026-11-06,10063.407532,1.0,TSX,0.086742,
+PYEMX,Payden Emerging Markets Bond Fund,em_bonds,0.0875,8750.0,820.056,True,10.67,USD,1.0,10.67,2026-11-06,8749.997583,1.0,open-end,0.066373,
+CEMB,iShares J.P. Morgan EM Corporate Bond ETF,em_bonds,0.0875,8750.0,198.0,False,44.040001,USD,1.0,44.040001,2026-11-06,8719.920181,1.0,Cboe BZX,0.059521,
+EMB,iShares J.P. Morgan USD Emerging Markets Bond ETF,em_bonds,0.0875,8750.0,95.0,False,91.959999,USD,1.0,91.959999,2026-11-06,8736.199913,1.0,Nasdaq,0.062538,
+HYEM,VanEck Emerging Markets High Yield Bond ETF,em_bonds,0.0875,8750.0,456.0,False,19.18,USD,1.0,19.18,2026-11-06,8746.080139,1.0,NYSE Arca,0.055721,
+IAU,iShares Gold Trust,other,0.05,5000.0,65.0,False,76.379997,USD,1.0,76.379997,2026-11-06,4964.699821,0.0,NYSE Arca,0.052906,
+SLV,iShares Silver Trust,other,0.05,5000.0,106.0,False,46.869999,USD,1.0,46.869999,2026-11-06,4968.219887,0.0,NYSE Arca,0.030708,

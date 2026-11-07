@@ -1,5 +1,5 @@
 {
- "as_of": "2026-10-23",
+ "as_of": "2026-11-06",
  "synthetic": false,
  "assumptions": {
   "mature_erp": 0.045,
@@ -80,66 +80,66 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.270662,
-      "Volatility": 0.48902,
-      "Sharpe": 0.681605,
+      "CAGR": 0.269164,
+      "Volatility": 0.487859,
+      "Sharpe": 0.679476,
       "Max drawdown": -0.530453,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 1.570309,
-      "Info ratio": 0.543112
+      "Beta": 1.570684,
+      "Info ratio": 0.541746
      },
      "local": {
-      "CAGR": 0.28125,
-      "Volatility": 0.470427,
-      "Sharpe": 0.689633,
+      "CAGR": 0.279687,
+      "Volatility": 0.469314,
+      "Sharpe": 0.687549,
       "Max drawdown": -0.518009,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
-     "fx_contribution": -0.010588
+     "fx_contribution": -0.010523
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.407971,
-      "Volatility": 0.563217,
-      "Sharpe": 0.815392,
+      "CAGR": 0.404173,
+      "Volatility": 0.563347,
+      "Sharpe": 0.809819,
       "Max drawdown": -0.530453,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.832028,
-      "Info ratio": 0.693071
+      "Start": "2016-12-31",
+      "Beta": 1.833049,
+      "Info ratio": 0.68964
      },
      "local": {
-      "CAGR": 0.428323,
-      "Volatility": 0.550716,
-      "Sharpe": 0.854064,
+      "CAGR": 0.421868,
+      "Volatility": 0.550866,
+      "Sharpe": 0.845163,
       "Max drawdown": -0.518009,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
-     "fx_contribution": -0.020352
+     "fx_contribution": -0.017695
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.630786,
-      "Volatility": 0.717594,
-      "Sharpe": 0.944052,
+      "CAGR": 0.604372,
+      "Volatility": 0.717987,
+      "Sharpe": 0.919003,
       "Max drawdown": -0.467263,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 2.680555,
-      "Info ratio": 0.936517
+      "Start": "2021-12-31",
+      "Beta": 2.71768,
+      "Info ratio": 0.903336
      },
      "local": {
-      "CAGR": 0.672286,
-      "Volatility": 0.704761,
-      "Sharpe": 0.998234,
+      "CAGR": 0.638691,
+      "Volatility": 0.704972,
+      "Sharpe": 0.967224,
       "Max drawdown": -0.518009,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
-     "fx_contribution": -0.0415
+     "fx_contribution": -0.034319
     }
    },
    "calendar_usd": {
@@ -187,66 +187,66 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.179224,
-      "Volatility": 0.355479,
-      "Sharpe": 0.593013,
+      "CAGR": 0.178267,
+      "Volatility": 0.354627,
+      "Sharpe": 0.590982,
       "Max drawdown": -0.483654,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 1.370367,
-      "Info ratio": 0.390935
+      "Beta": 1.37053,
+      "Info ratio": 0.389963
      },
      "local": {
-      "CAGR": 0.18905,
-      "Volatility": 0.324437,
-      "Sharpe": 0.617425,
+      "CAGR": 0.188036,
+      "Volatility": 0.323665,
+      "Sharpe": 0.615394,
       "Max drawdown": -0.36766,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
-     "fx_contribution": -0.009826
+     "fx_contribution": -0.009769
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.219906,
-      "Volatility": 0.390856,
-      "Sharpe": 0.632249,
+      "CAGR": 0.214434,
+      "Volatility": 0.390849,
+      "Sharpe": 0.619776,
       "Max drawdown": -0.483654,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.497847,
-      "Info ratio": 0.427783
+      "Start": "2016-12-31",
+      "Beta": 1.498214,
+      "Info ratio": 0.417141
      },
      "local": {
-      "CAGR": 0.23754,
-      "Volatility": 0.370894,
-      "Sharpe": 0.692646,
+      "CAGR": 0.229738,
+      "Volatility": 0.370721,
+      "Sharpe": 0.675001,
       "Max drawdown": -0.36766,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
-     "fx_contribution": -0.017633
+     "fx_contribution": -0.015304
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.245353,
-      "Volatility": 0.480829,
-      "Sharpe": 0.603078,
+      "CAGR": 0.244994,
+      "Volatility": 0.480845,
+      "Sharpe": 0.601146,
       "Max drawdown": -0.425471,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 1.871155,
-      "Info ratio": 0.530217
+      "Start": "2021-12-31",
+      "Beta": 1.882498,
+      "Info ratio": 0.518281
      },
      "local": {
-      "CAGR": 0.277044,
-      "Volatility": 0.463905,
-      "Sharpe": 0.67944,
+      "CAGR": 0.271625,
+      "Volatility": 0.464073,
+      "Sharpe": 0.669251,
       "Max drawdown": -0.36766,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
-     "fx_contribution": -0.031692
+     "fx_contribution": -0.026631
     }
    },
    "calendar_usd": {
@@ -294,66 +294,66 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.274679,
-      "Volatility": 0.262885,
-      "Sharpe": 1.003227,
+      "CAGR": 0.273156,
+      "Volatility": 0.262294,
+      "Sharpe": 0.999795,
       "Max drawdown": -0.460026,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 1.065706,
-      "Info ratio": 0.798235
+      "Beta": 1.06605,
+      "Info ratio": 0.796171
      },
      "local": {
-      "CAGR": 0.276135,
-      "Volatility": 0.23392,
-      "Sharpe": 1.087319,
+      "CAGR": 0.274603,
+      "Volatility": 0.233406,
+      "Sharpe": 1.083968,
       "Max drawdown": -0.376838,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
-     "fx_contribution": -0.001456
+     "fx_contribution": -0.001447
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.317052,
-      "Volatility": 0.303718,
-      "Sharpe": 0.982129,
+      "CAGR": 0.321804,
+      "Volatility": 0.303192,
+      "Sharpe": 0.99443,
       "Max drawdown": -0.460026,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.295352,
-      "Info ratio": 0.798532
+      "Start": "2016-12-31",
+      "Beta": 1.295909,
+      "Info ratio": 0.819976
      },
      "local": {
-      "CAGR": 0.320999,
-      "Volatility": 0.275526,
-      "Sharpe": 1.086927,
+      "CAGR": 0.324916,
+      "Volatility": 0.275086,
+      "Sharpe": 1.099272,
       "Max drawdown": -0.376838,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
-     "fx_contribution": -0.003946
+     "fx_contribution": -0.003112
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.303394,
-      "Volatility": 0.335593,
-      "Sharpe": 0.848975,
+      "CAGR": 0.300968,
+      "Volatility": 0.335718,
+      "Sharpe": 0.841165,
       "Max drawdown": -0.460026,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 1.581278,
-      "Info ratio": 0.835793
+      "Start": "2021-12-31",
+      "Beta": 1.592533,
+      "Info ratio": 0.810312
      },
      "local": {
-      "CAGR": 0.346078,
-      "Volatility": 0.299272,
-      "Sharpe": 1.088336,
+      "CAGR": 0.343357,
+      "Volatility": 0.299434,
+      "Sharpe": 1.080954,
       "Max drawdown": -0.376838,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
-     "fx_contribution": -0.042684
+     "fx_contribution": -0.042389
     }
    },
    "calendar_usd": {
@@ -401,64 +401,64 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.269017,
-      "Volatility": 0.263621,
-      "Sharpe": 0.984975,
+      "CAGR": 0.267529,
+      "Volatility": 0.263026,
+      "Sharpe": 0.981605,
       "Max drawdown": -0.395421,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 0.994857,
-      "Info ratio": 0.754208
+      "Beta": 0.995209,
+      "Info ratio": 0.752269
      },
      "local": {
-      "CAGR": 0.269017,
-      "Volatility": 0.263621,
-      "Sharpe": 0.984975,
+      "CAGR": 0.267529,
+      "Volatility": 0.263026,
+      "Sharpe": 0.981605,
       "Max drawdown": -0.395421,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
      "fx_contribution": 0.0
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.29624,
-      "Volatility": 0.271298,
-      "Sharpe": 1.007748,
+      "CAGR": 0.299074,
+      "Volatility": 0.271011,
+      "Sharpe": 1.015578,
       "Max drawdown": -0.304616,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.10082,
-      "Info ratio": 0.770661
+      "Start": "2016-12-31",
+      "Beta": 1.101406,
+      "Info ratio": 0.786825
      },
      "local": {
-      "CAGR": 0.29624,
-      "Volatility": 0.271298,
-      "Sharpe": 1.007748,
+      "CAGR": 0.299074,
+      "Volatility": 0.271011,
+      "Sharpe": 1.015578,
       "Max drawdown": -0.304616,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
      "fx_contribution": 0.0
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.189357,
-      "Volatility": 0.24674,
-      "Sharpe": 0.674901,
+      "CAGR": 0.165825,
+      "Volatility": 0.243565,
+      "Sharpe": 0.595394,
       "Max drawdown": -0.264042,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 1.007574,
-      "Info ratio": 0.487666
+      "Start": "2021-12-31",
+      "Beta": 1.044984,
+      "Info ratio": 0.371972
      },
      "local": {
-      "CAGR": 0.189357,
-      "Volatility": 0.24674,
-      "Sharpe": 0.674901,
+      "CAGR": 0.165825,
+      "Volatility": 0.243565,
+      "Sharpe": 0.595394,
       "Max drawdown": -0.264042,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
      "fx_contribution": 0.0
     }
@@ -508,64 +508,64 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.445494,
-      "Volatility": 0.443537,
-      "Sharpe": 1.02294,
+      "CAGR": 0.442873,
+      "Volatility": 0.44254,
+      "Sharpe": 1.019758,
       "Max drawdown": -0.628206,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 1.589259,
-      "Info ratio": 0.926335
+      "Beta": 1.589884,
+      "Info ratio": 0.923899
      },
      "local": {
-      "CAGR": 0.445494,
-      "Volatility": 0.443537,
-      "Sharpe": 1.02294,
+      "CAGR": 0.442873,
+      "Volatility": 0.44254,
+      "Sharpe": 1.019758,
       "Max drawdown": -0.628206,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
      "fx_contribution": 0.0
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.615183,
-      "Volatility": 0.466276,
-      "Sharpe": 1.223251,
+      "CAGR": 0.573646,
+      "Volatility": 0.459761,
+      "Sharpe": 1.175439,
       "Max drawdown": -0.628206,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.817818,
-      "Info ratio": 1.157658
+      "Start": "2016-12-31",
+      "Beta": 1.819727,
+      "Info ratio": 1.107444
      },
      "local": {
-      "CAGR": 0.615183,
-      "Volatility": 0.466276,
-      "Sharpe": 1.223251,
+      "CAGR": 0.573646,
+      "Volatility": 0.459761,
+      "Sharpe": 1.175439,
       "Max drawdown": -0.628206,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
      "fx_contribution": 0.0
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.526461,
-      "Volatility": 0.49701,
-      "Sharpe": 1.031496,
-      "Max drawdown": -0.628206,
+      "CAGR": 0.453369,
+      "Volatility": 0.486011,
+      "Sharpe": 0.939562,
+      "Max drawdown": -0.586983,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 2.125968,
-      "Info ratio": 1.050996
+      "Start": "2021-12-31",
+      "Beta": 2.219941,
+      "Info ratio": 0.946558
      },
      "local": {
-      "CAGR": 0.526461,
-      "Volatility": 0.49701,
-      "Sharpe": 1.031496,
-      "Max drawdown": -0.628206,
+      "CAGR": 0.453369,
+      "Volatility": 0.486011,
+      "Sharpe": 0.939562,
+      "Max drawdown": -0.586983,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
      "fx_contribution": 0.0
     }
@@ -615,64 +615,64 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.238807,
-      "Volatility": 0.380055,
-      "Sharpe": 0.709911,
+      "CAGR": 0.237283,
+      "Volatility": 0.379007,
+      "Sharpe": 0.707205,
       "Max drawdown": -0.754442,
-      "Months": 173,
+      "Months": 174,
       "Start": "2012-06-30",
-      "Beta": 1.267327,
-      "Info ratio": 0.486682
+      "Beta": 1.267756,
+      "Info ratio": 0.485262
      },
      "local": {
-      "CAGR": 0.238807,
-      "Volatility": 0.380055,
-      "Sharpe": 0.709911,
+      "CAGR": 0.237283,
+      "Volatility": 0.379007,
+      "Sharpe": 0.707205,
       "Max drawdown": -0.754442,
-      "Months": 173,
+      "Months": 174,
       "Start": "2012-06-30"
      },
      "fx_contribution": 0.0
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.173507,
-      "Volatility": 0.366614,
-      "Sharpe": 0.557395,
+      "CAGR": 0.185405,
+      "Volatility": 0.364831,
+      "Sharpe": 0.585622,
       "Max drawdown": -0.754442,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 1.354943,
-      "Info ratio": 0.315995
+      "Start": "2016-12-31",
+      "Beta": 1.354988,
+      "Info ratio": 0.352328
      },
      "local": {
-      "CAGR": 0.173507,
-      "Volatility": 0.366614,
-      "Sharpe": 0.557395,
+      "CAGR": 0.185405,
+      "Volatility": 0.364831,
+      "Sharpe": 0.585622,
       "Max drawdown": -0.754442,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
      "fx_contribution": 0.0
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.149278,
-      "Volatility": 0.431013,
-      "Sharpe": 0.456918,
+      "CAGR": 0.148647,
+      "Volatility": 0.431037,
+      "Sharpe": 0.454164,
       "Max drawdown": -0.723027,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 1.381518,
-      "Info ratio": 0.327723
+      "Start": "2021-12-31",
+      "Beta": 1.390551,
+      "Info ratio": 0.314292
      },
      "local": {
-      "CAGR": 0.149278,
-      "Volatility": 0.431013,
-      "Sharpe": 0.456918,
+      "CAGR": 0.148647,
+      "Volatility": 0.431037,
+      "Sharpe": 0.454164,
       "Max drawdown": -0.723027,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
      "fx_contribution": 0.0
     }
@@ -718,64 +718,64 @@
    "periods": {
     "Since 2010": {
      "usd": {
-      "CAGR": 0.205278,
-      "Volatility": 0.229569,
-      "Sharpe": 0.867459,
+      "CAGR": 0.20417,
+      "Volatility": 0.229041,
+      "Sharpe": 0.864341,
       "Max drawdown": -0.305285,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31",
-      "Beta": 0.944102,
-      "Info ratio": 0.572348
+      "Beta": 0.944338,
+      "Info ratio": 0.570905
      },
      "local": {
-      "CAGR": 0.205278,
-      "Volatility": 0.229569,
-      "Sharpe": 0.867459,
+      "CAGR": 0.20417,
+      "Volatility": 0.229041,
+      "Sharpe": 0.864341,
       "Max drawdown": -0.305285,
-      "Months": 202,
+      "Months": 203,
       "Start": "2010-01-31"
      },
      "fx_contribution": 0.0
     },
     "10 years": {
      "usd": {
-      "CAGR": 0.257125,
-      "Volatility": 0.227531,
-      "Sharpe": 1.018099,
+      "CAGR": 0.255568,
+      "Volatility": 0.227614,
+      "Sharpe": 1.010941,
       "Max drawdown": -0.305285,
       "Months": 120,
-      "Start": "2016-11-30",
-      "Beta": 0.934664,
-      "Info ratio": 0.695537
+      "Start": "2016-12-31",
+      "Beta": 0.935222,
+      "Info ratio": 0.694334
      },
      "local": {
-      "CAGR": 0.257125,
-      "Volatility": 0.227531,
-      "Sharpe": 1.018099,
+      "CAGR": 0.255568,
+      "Volatility": 0.227614,
+      "Sharpe": 1.010941,
       "Max drawdown": -0.305285,
       "Months": 120,
-      "Start": "2016-11-30"
+      "Start": "2016-12-31"
      },
      "fx_contribution": 0.0
     },
     "5 years": {
      "usd": {
-      "CAGR": 0.105078,
-      "Volatility": 0.262931,
-      "Sharpe": 0.365825,
+      "CAGR": 0.105362,
+      "Volatility": 0.262919,
+      "Sharpe": 0.364449,
       "Max drawdown": -0.305285,
       "Months": 60,
-      "Start": "2021-11-30",
-      "Beta": 0.998569,
-      "Info ratio": 0.116832
+      "Start": "2021-12-31",
+      "Beta": 1.004741,
+      "Info ratio": 0.096881
      },
      "local": {
-      "CAGR": 0.105078,
-      "Volatility": 0.262931,
-      "Sharpe": 0.365825,
+      "CAGR": 0.105362,
+      "Volatility": 0.262919,
+      "Sharpe": 0.364449,
       "Max drawdown": -0.305285,
       "Months": 60,
-      "Start": "2021-11-30"
+      "Start": "2021-12-31"
      },
      "fx_contribution": 0.0
     }
@@ -1071,7 +1071,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     0.9947,
@@ -1215,6 +1216,7 @@
     31.986,
     32.158,
     34.7897,
+    25.5221,
     25.5221
    ],
    "local": [
@@ -1359,6 +1361,7 @@
     41.4857,
     40.432,
     42.8956,
+    30.8433,
     30.8433
    ]
   },
@@ -1505,7 +1508,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     1.0254,
@@ -1649,6 +1653,7 @@
     9.9451,
     10.1615,
     10.7004,
+    8.7624,
     8.7624
    ],
    "local": [
@@ -1793,6 +1798,7 @@
     12.8987,
     12.7759,
     13.1936,
+    10.5893,
     10.5893
    ]
   },
@@ -1939,7 +1945,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     0.9827,
@@ -2083,6 +2090,7 @@
     22.4729,
     22.8295,
     23.4447,
+    22.0482,
     22.0482
    ],
    "local": [
@@ -2227,6 +2235,7 @@
     23.516,
     23.3221,
     24.1202,
+    23.1962,
     23.1962
    ]
   },
@@ -2373,7 +2382,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     1.0614,
@@ -2517,6 +2527,7 @@
     12.6473,
     12.9836,
     13.6462,
+    14.249,
     14.249
    ],
    "local": [
@@ -2661,6 +2672,7 @@
     12.6473,
     12.9836,
     13.6462,
+    14.249,
     14.249
    ]
   },
@@ -2807,7 +2819,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     0.9576,
@@ -2951,6 +2964,7 @@
     417.7888,
     459.4741,
     475.8226,
+    439.5286,
     439.5286
    ],
    "local": [
@@ -3095,6 +3109,7 @@
     417.7888,
     459.4741,
     475.8226,
+    439.5286,
     439.5286
    ]
   },
@@ -3241,7 +3256,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     0.973,
@@ -3385,6 +3401,7 @@
     7.1981,
     7.4002,
     9.3838,
+    8.3155,
     8.3155
    ],
    "local": [
@@ -3529,6 +3546,7 @@
     7.1981,
     7.4002,
     9.3838,
+    8.3155,
     8.3155
    ]
   },
@@ -3675,7 +3693,8 @@
     "2026-07",
     "2026-08",
     "2026-09",
-    "2026-10"
+    "2026-10",
+    "2026-11"
    ],
    "usd": [
     0.8698,
@@ -3819,6 +3838,7 @@
     11.7893,
     12.8935,
     13.0361,
+    13.3312,
     13.3312
    ],
    "local": [
@@ -3963,6 +3983,7 @@
     11.7893,
     12.8935,
     13.0361,
+    13.3312,
     13.3312
    ]
   },
@@ -4961,16 +4982,16 @@
    "currency": "KRW",
    "country": "KR",
    "capm": {
-    "beta_local_raw": 1.789653,
-    "beta_global_raw": 2.680555,
-    "beta_local": 1.529067,
-    "beta_global": 2.125972,
+    "beta_local_raw": 1.806395,
+    "beta_global_raw": 2.71768,
+    "beta_local": 1.540285,
+    "beta_global": 2.150845,
     "rf_local": 0.025,
     "crp": 0.008,
-    "expected_local": 0.106041,
-    "expected_usd": 0.111462,
-    "expected_usd_global_capm": 0.142669,
-    "cost_of_equity": 0.106041
+    "expected_local": 0.106635,
+    "expected_usd": 0.11206,
+    "expected_usd_global_capm": 0.143788,
+    "cost_of_equity": 0.106635
    },
    "dcf": {
     "cf1": 174522566298911.9,
@@ -4982,8 +5003,8 @@
     "g_source": "cyclical: falls to 50% of year 1 by year 4",
     "g_nominal": 0.039,
     "g_terminal": 0.025,
-    "wacc": 0.10405,
-    "cost_of_equity": 0.106041,
+    "wacc": 0.104629,
+    "cost_of_equity": 0.106635,
     "debt": 24757848000000.0,
     "cash": 35137512000000.0,
     "market_cap": 930762698260480.0,
@@ -5001,19 +5022,19 @@
      102143087345128.16,
      104696664528756.34
     ],
-    "ev_fair": 1197603089692362.0,
-    "equity_fair": 1207982753692362.0,
-    "upside": 0.297842,
+    "ev_fair": 1189787971810344.5,
+    "equity_fair": 1200167635810344.5,
+    "upside": 0.289445,
     "expected_local": 0.13139,
     "expected_usd": 0.136936,
     "mc_upside": {
-     "5": -0.156284,
-     "25": 0.123208,
-     "50": 0.386947,
-     "75": 0.699883,
-     "95": 1.208386
+     "5": -0.16099,
+     "25": 0.116368,
+     "50": 0.377631,
+     "75": 0.687823,
+     "95": 1.190556
     },
-    "mc_prob_undervalued": 0.85475,
+    "mc_prob_undervalued": 0.84925,
     "mc_implied_return": {
      "5": 0.091352,
      "25": 0.115637,
@@ -5021,7 +5042,7 @@
      "75": 0.16301,
      "95": 0.196543
     },
-    "terminal_share_of_value": 0.421261
+    "terminal_share_of_value": 0.418742
    },
    "gk": {
     "dividend_yield": 0.001175,
@@ -5036,21 +5057,21 @@
     "expected_usd": 0.084729
    },
    "methods_local": {
-    "CAPM": 0.106041,
+    "CAPM": 0.106635,
     "DCF implied": 0.13139,
     "Grinold-Kroner": 0.079438
    },
    "methods_usd": {
-    "CAPM": 0.111462,
+    "CAPM": 0.11206,
     "DCF implied": 0.136936,
     "Grinold-Kroner": 0.084729
    },
-   "consensus_local": 0.105623,
-   "consensus_usd": 0.111043,
+   "consensus_local": 0.105821,
+   "consensus_usd": 0.111242,
    "fx_views": {
     "ppp": 0.004902,
     "uip": 0.013659,
-    "trend": -0.014249
+    "trend": -0.012445
    },
    "price": 1277000.0
   },
@@ -5060,16 +5081,16 @@
    "currency": "KRW",
    "country": "KR",
    "capm": {
-    "beta_local_raw": 1.217945,
-    "beta_global_raw": 1.871155,
-    "beta_local": 1.146023,
-    "beta_global": 1.583674,
+    "beta_local_raw": 1.225002,
+    "beta_global_raw": 1.882498,
+    "beta_local": 1.150751,
+    "beta_global": 1.591274,
     "rf_local": 0.025,
     "crp": 0.008,
-    "expected_local": 0.085739,
-    "expected_usd": 0.091061,
-    "expected_usd_global_capm": 0.118265,
-    "cost_of_equity": 0.085739
+    "expected_local": 0.08599,
+    "expected_usd": 0.091313,
+    "expected_usd_global_capm": 0.118607,
+    "cost_of_equity": 0.08599
    },
    "dcf": {
     "cf1": 165220400758937.34,
@@ -5081,8 +5102,8 @@
     "g_source": "cyclical: falls to 50% of year 1 by year 4",
     "g_nominal": 0.039,
     "g_terminal": 0.025,
-    "wacc": 0.084741,
-    "cost_of_equity": 0.085739,
+    "wacc": 0.084987,
+    "cost_of_equity": 0.08599,
     "debt": 25239139000000.0,
     "cash": 125847114000000.0,
     "market_cap": 1403319360684032.0,
@@ -5100,19 +5121,19 @@
      96698794796615.55,
      99116264666530.92
     ],
-    "ev_fair": 1461584287789683.0,
-    "equity_fair": 1562192262789683.0,
-    "upside": 0.113212,
+    "ev_fair": 1456089630890674.5,
+    "equity_fair": 1556697605890674.5,
+    "upside": 0.109297,
     "expected_local": 0.092775,
     "expected_usd": 0.098132,
     "mc_upside": {
-     "5": -0.281352,
-     "25": -0.037571,
-     "50": 0.195165,
-     "75": 0.467565,
-     "95": 0.972905
+     "5": -0.282977,
+     "25": -0.040942,
+     "50": 0.191052,
+     "75": 0.462224,
+     "95": 0.964024
     },
-    "mc_prob_undervalued": 0.70625,
+    "mc_prob_undervalued": 0.702,
     "mc_implied_return": {
      "5": 0.066168,
      "25": 0.082367,
@@ -5120,7 +5141,7 @@
      "75": 0.114302,
      "95": 0.136412
     },
-    "terminal_share_of_value": 0.515838
+    "terminal_share_of_value": 0.514491
    },
    "gk": {
     "dividend_yield": 0.006942,
@@ -5135,21 +5156,21 @@
     "expected_usd": 0.11267
    },
    "methods_local": {
-    "CAPM": 0.085739,
+    "CAPM": 0.08599,
     "DCF implied": 0.092775,
     "Grinold-Kroner": 0.107243
    },
    "methods_usd": {
-    "CAPM": 0.091061,
+    "CAPM": 0.091313,
     "DCF implied": 0.098132,
     "Grinold-Kroner": 0.11267
    },
-   "consensus_local": 0.095252,
-   "consensus_usd": 0.100621,
+   "consensus_local": 0.095336,
+   "consensus_usd": 0.100705,
    "fx_views": {
     "ppp": 0.004902,
     "uip": 0.013659,
-    "trend": -0.014249
+    "trend": -0.012445
    },
    "price": 215500.0
   },
@@ -5159,16 +5180,16 @@
    "currency": "TWD",
    "country": "TW",
    "capm": {
-    "beta_local_raw": 1.211524,
-    "beta_global_raw": 1.581278,
-    "beta_local": 1.141721,
-    "beta_global": 1.389456,
+    "beta_local_raw": 1.212845,
+    "beta_global_raw": 1.592533,
+    "beta_local": 1.142606,
+    "beta_global": 1.396997,
     "rf_local": 0.018,
     "crp": 0.008,
-    "expected_local": 0.078511,
-    "expected_usd": 0.086995,
-    "expected_usd_global_capm": 0.109526,
-    "cost_of_equity": 0.078511
+    "expected_local": 0.078558,
+    "expected_usd": 0.087042,
+    "expected_usd_global_capm": 0.109865,
+    "cost_of_equity": 0.078558
    },
    "dcf": {
     "cf1": 2195409912735.0334,
@@ -5180,8 +5201,8 @@
     "g_source": "analyst +1y growth",
     "g_nominal": 0.042,
     "g_terminal": 0.018,
-    "wacc": 0.077584,
-    "cost_of_equity": 0.078511,
+    "wacc": 0.07763,
+    "cost_of_equity": 0.078558,
     "debt": 1064582700000.0,
     "cash": 3128068100000.0,
     "market_cap": 61848703467520.0,
@@ -5199,17 +5220,17 @@
      6867455029529.72,
      6991069220061.255
     ],
-    "ev_fair": 86679915298617.0,
-    "equity_fair": 88743400698617.0,
-    "upside": 0.434847,
+    "ev_fair": 86604284505283.34,
+    "equity_fair": 88667769905283.34,
+    "upside": 0.433624,
     "expected_local": 0.100404,
     "expected_usd": 0.10906,
     "mc_upside": {
-     "5": -0.321516,
-     "25": 0.064991,
-     "50": 0.463408,
-     "75": 1.019635,
-     "95": 2.191171
+     "5": -0.321933,
+     "25": 0.06424,
+     "50": 0.462133,
+     "75": 1.017977,
+     "95": 2.188442
     },
     "mc_prob_undervalued": 0.79375,
     "mc_implied_return": {
@@ -5219,7 +5240,7 @@
      "75": 0.122732,
      "95": 0.156961
     },
-    "terminal_share_of_value": 0.652732
+    "terminal_share_of_value": 0.652517
    },
    "gk": {
     "dividend_yield": 0.01174,
@@ -5234,21 +5255,21 @@
     "expected_usd": 0.149406
    },
    "methods_local": {
-    "CAPM": 0.078511,
+    "CAPM": 0.078558,
     "DCF implied": 0.100404,
     "Grinold-Kroner": 0.140435
    },
    "methods_usd": {
-    "CAPM": 0.086995,
+    "CAPM": 0.087042,
     "DCF implied": 0.10906,
     "Grinold-Kroner": 0.149406
    },
-   "consensus_local": 0.10645,
-   "consensus_usd": 0.115154,
+   "consensus_local": 0.106466,
+   "consensus_usd": 0.11517,
    "fx_views": {
     "ppp": 0.007866,
     "uip": 0.020629,
-    "trend": -0.002987
+    "trend": -0.002349
    },
    "price": 2385.0
   },
@@ -5258,16 +5279,16 @@
    "currency": "USD",
    "country": "US",
    "capm": {
-    "beta_local_raw": 1.076516,
-    "beta_global_raw": 1.007574,
-    "beta_local": 1.051266,
-    "beta_global": 1.005075,
+    "beta_local_raw": 1.093524,
+    "beta_global_raw": 1.044984,
+    "beta_local": 1.062661,
+    "beta_global": 1.030139,
     "rf_local": 0.039,
     "crp": 0.0,
-    "expected_local": 0.086307,
-    "expected_usd": 0.086307,
-    "expected_usd_global_capm": 0.084228,
-    "cost_of_equity": 0.086307
+    "expected_local": 0.08682,
+    "expected_usd": 0.08682,
+    "expected_usd_global_capm": 0.085356,
+    "cost_of_equity": 0.08682
    },
    "dcf": {
     "cf1": 142655876504.09973,
@@ -5279,8 +5300,8 @@
     "g_source": "analyst +1y growth",
     "g_nominal": 0.043,
     "g_terminal": 0.035,
-    "wacc": 0.085429,
-    "cost_of_equity": 0.086307,
+    "wacc": 0.085932,
+    "cost_of_equity": 0.08682,
     "debt": 98657000000.0,
     "cash": 54697000000.0,
     "market_cap": 5074761285632.0,
@@ -5298,19 +5319,19 @@
      245127481751.5149,
      253706943612.8179
     ],
-    "ev_fair": 3551072177379.499,
-    "equity_fair": 3507112177379.499,
-    "upside": -0.308911,
+    "ev_fair": 3514796732680.5957,
+    "equity_fair": 3470836732680.5957,
+    "upside": -0.316059,
     "expected_local": 0.070359,
     "expected_usd": 0.070359,
     "mc_upside": {
-     "5": -0.625979,
-     "25": -0.466139,
-     "50": -0.317047,
-     "75": -0.117356,
-     "95": 0.258941
+     "5": -0.629978,
+     "25": -0.470756,
+     "50": -0.324058,
+     "75": -0.127288,
+     "95": 0.240711
     },
-    "mc_prob_undervalued": 0.15475,
+    "mc_prob_undervalued": 0.14775,
     "mc_implied_return": {
      "5": 0.053481,
      "25": 0.061933,
@@ -5318,7 +5339,7 @@
      "75": 0.076943,
      "95": 0.090141
     },
-    "terminal_share_of_value": 0.645972
+    "terminal_share_of_value": 0.643206
    },
    "gk": {
     "dividend_yield": 0.003106,
@@ -5333,17 +5354,17 @@
     "expected_usd": 0.049888
    },
    "methods_local": {
-    "CAPM": 0.086307,
+    "CAPM": 0.08682,
     "DCF implied": 0.070359,
     "Grinold-Kroner": 0.049888
    },
    "methods_usd": {
-    "CAPM": 0.086307,
+    "CAPM": 0.08682,
     "DCF implied": 0.070359,
     "Grinold-Kroner": 0.049888
    },
-   "consensus_local": 0.068851,
-   "consensus_usd": 0.068851,
+   "consensus_local": 0.069022,
+   "consensus_usd": 0.069022,
    "fx_views": {
     "ppp": 0.0,
     "uip": 0.0,
@@ -5357,16 +5378,16 @@
    "currency": "USD",
    "country": "US",
    "capm": {
-    "beta_local_raw": 2.199028,
-    "beta_global_raw": 2.125968,
-    "beta_local": 1.803349,
-    "beta_global": 1.754399,
+    "beta_local_raw": 2.242712,
+    "beta_global_raw": 2.219941,
+    "beta_local": 1.832617,
+    "beta_global": 1.81736,
     "rf_local": 0.039,
     "crp": 0.0,
-    "expected_local": 0.120151,
-    "expected_usd": 0.120151,
-    "expected_usd_global_capm": 0.117948,
-    "cost_of_equity": 0.120151
+    "expected_local": 0.121468,
+    "expected_usd": 0.121468,
+    "expected_usd_global_capm": 0.120781,
+    "cost_of_equity": 0.121468
    },
    "dcf": {
     "cf1": 318971807101.0602,
@@ -5378,8 +5399,8 @@
     "g_source": "analyst +1y growth",
     "g_nominal": 0.043,
     "g_terminal": 0.035,
-    "wacc": 0.119978,
-    "cost_of_equity": 0.120151,
+    "wacc": 0.121292,
+    "cost_of_equity": 0.121468,
     "debt": 11040000000.0,
     "cash": 62556000000.0,
     "market_cap": 5094050889728.0,
@@ -5397,19 +5418,19 @@
      1029247368519.8674,
      1065271026418.0627
     ],
-    "ev_fair": 7711530556218.073,
-    "equity_fair": 7763046556218.073,
-    "upside": 0.523944,
+    "ev_fair": 7576379967950.949,
+    "equity_fair": 7627895967950.949,
+    "upside": 0.497413,
     "expected_local": 0.157136,
     "expected_usd": 0.157136,
     "mc_upside": {
-     "5": -0.253079,
-     "25": 0.140741,
-     "50": 0.519095,
-     "75": 1.034362,
-     "95": 2.059676
+     "5": -0.263912,
+     "25": 0.121903,
+     "50": 0.492961,
+     "75": 0.998163,
+     "95": 1.999325
     },
-    "mc_prob_undervalued": 0.836,
+    "mc_prob_undervalued": 0.82925,
     "mc_implied_return": {
      "5": 0.09975,
      "25": 0.131607,
@@ -5417,7 +5438,7 @@
      "75": 0.185466,
      "95": 0.229185
     },
-    "terminal_share_of_value": 0.541824
+    "terminal_share_of_value": 0.536759
    },
    "gk": {
     "dividend_yield": 0.00474,
@@ -5432,17 +5453,17 @@
     "expected_usd": 0.183056
    },
    "methods_local": {
-    "CAPM": 0.120151,
+    "CAPM": 0.121468,
     "DCF implied": 0.157136,
     "Grinold-Kroner": 0.183056
    },
    "methods_usd": {
-    "CAPM": 0.120151,
+    "CAPM": 0.121468,
     "DCF implied": 0.157136,
     "Grinold-Kroner": 0.183056
    },
-   "consensus_local": 0.153448,
-   "consensus_usd": 0.153448,
+   "consensus_local": 0.153887,
+   "consensus_usd": 0.153887,
    "fx_views": {
     "ppp": 0.0,
     "uip": 0.0,
@@ -5456,16 +5477,16 @@
    "currency": "USD",
    "country": "US",
    "capm": {
-    "beta_local_raw": 1.267749,
-    "beta_global_raw": 1.381518,
-    "beta_local": 1.179392,
-    "beta_global": 1.255617,
+    "beta_local_raw": 1.269251,
+    "beta_global_raw": 1.390551,
+    "beta_local": 1.180398,
+    "beta_global": 1.261669,
     "rf_local": 0.039,
     "crp": 0.0,
-    "expected_local": 0.092073,
-    "expected_usd": 0.092073,
-    "expected_usd_global_capm": 0.095503,
-    "cost_of_equity": 0.092073
+    "expected_local": 0.092118,
+    "expected_usd": 0.092118,
+    "expected_usd_global_capm": 0.095775,
+    "cost_of_equity": 0.092118
    },
    "dcf": {
     "cf1": 79286333575.9517,
@@ -5477,8 +5498,8 @@
     "g_source": "analyst +1y growth",
     "g_nominal": 0.043,
     "g_terminal": 0.035,
-    "wacc": 0.089548,
-    "cost_of_equity": 0.092073,
+    "wacc": 0.089591,
+    "cost_of_equity": 0.092118,
     "debt": 83897000000.0,
     "cash": 81592000000.0,
     "market_cap": 1637078401024.0,
@@ -5496,19 +5517,19 @@
      189329803310.4062,
      195956346426.2704
     ],
-    "ev_fair": 2420319661438.8867,
-    "equity_fair": 2418014661438.8867,
-    "upside": 0.47703,
+    "ev_fair": 2418263690677.951,
+    "equity_fair": 2415958690677.951,
+    "upside": 0.475775,
     "expected_local": 0.113044,
     "expected_usd": 0.113044,
     "mc_upside": {
-     "5": -0.262173,
-     "25": 0.101695,
-     "50": 0.463546,
-     "75": 0.95548,
-     "95": 1.919219
+     "5": -0.262786,
+     "25": 0.100827,
+     "50": 0.462387,
+     "75": 0.953984,
+     "95": 1.915965
     },
-    "mc_prob_undervalued": 0.822,
+    "mc_prob_undervalued": 0.821,
     "mc_implied_return": {
      "5": 0.077045,
      "25": 0.096261,
@@ -5516,7 +5537,7 @@
      "75": 0.130448,
      "95": 0.159882
     },
-    "terminal_share_of_value": 0.651601
+    "terminal_share_of_value": 0.651382
    },
    "gk": {
     "dividend_yield": 0.003268,
@@ -5531,17 +5552,17 @@
     "expected_usd": 0.114786
    },
    "methods_local": {
-    "CAPM": 0.092073,
+    "CAPM": 0.092118,
     "DCF implied": 0.113044,
     "Grinold-Kroner": 0.114786
    },
    "methods_usd": {
-    "CAPM": 0.092073,
+    "CAPM": 0.092118,
     "DCF implied": 0.113044,
     "Grinold-Kroner": 0.114786
    },
-   "consensus_local": 0.106634,
-   "consensus_usd": 0.106634,
+   "consensus_local": 0.106649,
+   "consensus_usd": 0.106649,
    "fx_views": {
     "ppp": 0.0,
     "uip": 0.0,
@@ -5555,16 +5576,16 @@
    "currency": "USD",
    "country": "US",
    "capm": {
-    "beta_local_raw": 1.048825,
-    "beta_global_raw": 0.998569,
-    "beta_local": 1.032712,
-    "beta_global": 0.999041,
+    "beta_local_raw": 1.049879,
+    "beta_global_raw": 1.004741,
+    "beta_local": 1.033419,
+    "beta_global": 1.003177,
     "rf_local": 0.039,
     "crp": 0.0,
-    "expected_local": 0.085472,
-    "expected_usd": 0.085472,
-    "expected_usd_global_capm": 0.083957,
-    "cost_of_equity": 0.085472
+    "expected_local": 0.085504,
+    "expected_usd": 0.085504,
+    "expected_usd_global_capm": 0.084143,
+    "cost_of_equity": 0.085504
    },
    "dcf": {
     "cf1": 123341797757.27983,
@@ -5576,8 +5597,8 @@
     "g_source": "analyst +1y growth",
     "g_nominal": 0.043,
     "g_terminal": 0.035,
-    "wacc": 0.084822,
-    "cost_of_equity": 0.085472,
+    "wacc": 0.084854,
+    "cost_of_equity": 0.085504,
     "debt": 56826000000.0,
     "cash": 76651000000.0,
     "market_cap": 3894773022720.0,
@@ -5595,19 +5616,19 @@
      396981649241.15137,
      410876006964.5916
     ],
-    "ev_fair": 5423739351642.663,
-    "equity_fair": 5443564351642.663,
-    "upside": 0.397659,
+    "ev_fair": 5419990238356.273,
+    "equity_fair": 5439815238356.273,
+    "upside": 0.396696,
     "expected_local": 0.10239,
     "expected_usd": 0.10239,
     "mc_upside": {
-     "5": -0.376862,
-     "25": -0.00622,
-     "50": 0.38701,
-     "75": 0.939085,
-     "95": 2.105983
+     "5": -0.377267,
+     "25": -0.00677,
+     "50": 0.38614,
+     "75": 0.937837,
+     "95": 2.103511
     },
-    "mc_prob_undervalued": 0.74525,
+    "mc_prob_undervalued": 0.7445,
     "mc_implied_return": {
      "5": 0.06681,
      "25": 0.085643,
@@ -5615,7 +5636,7 @@
      "75": 0.120327,
      "95": 0.150729
     },
-    "terminal_share_of_value": 0.697176
+    "terminal_share_of_value": 0.697018
    },
    "gk": {
     "dividend_yield": 0.007474,
@@ -5630,17 +5651,17 @@
     "expected_usd": 0.145199
    },
    "methods_local": {
-    "CAPM": 0.085472,
+    "CAPM": 0.085504,
     "DCF implied": 0.10239,
     "Grinold-Kroner": 0.145199
    },
    "methods_usd": {
-    "CAPM": 0.085472,
+    "CAPM": 0.085504,
     "DCF implied": 0.10239,
     "Grinold-Kroner": 0.145199
    },
-   "consensus_local": 0.11102,
-   "consensus_usd": 0.11102,
+   "consensus_local": 0.111031,
+   "consensus_usd": 0.111031,
    "fx_views": {
     "ppp": 0.0,
     "uip": 0.0,
@@ -5672,7 +5693,7 @@
    "fx_views": {
     "ppp": 0.004902,
     "uip": 0.01763,
-    "trend": 0.001983
+    "trend": 0.005103
    },
    "expected_usd": 0.054322,
    "expected_usd_carry": 0.049892,
@@ -5701,7 +5722,7 @@
    "fx_views": {
     "ppp": -0.18,
     "uip": -0.236029,
-    "trend": -0.242164
+    "trend": -0.235076
    },
    "expected_usd": 0.102698,
    "expected_usd_carry": 0.119546,
@@ -5730,7 +5751,7 @@
    "fx_views": {
     "ppp": -0.18,
     "uip": -0.236029,
-    "trend": -0.242164
+    "trend": -0.235076
    },
    "expected_usd": 0.112426,
    "expected_usd_carry": 0.113888,
@@ -6529,74 +6550,74 @@
   "usd_forward": {
    "SKHYNIX": {
     "annualised": {
-     "5": -0.203624,
-     "25": -0.036952,
-     "50": 0.104998,
-     "75": 0.280413,
-     "95": 0.622141
+     "5": -0.203481,
+     "25": -0.03678,
+     "50": 0.105196,
+     "75": 0.280642,
+     "95": 0.622432
     },
-    "mean_annualised": 0.144021,
-    "prob_loss_5y": 0.31065,
-    "var95_1y": 0.451426,
-    "cvar95_1y": 0.527682,
+    "mean_annualised": 0.144226,
+    "prob_loss_5y": 0.31015,
+    "var95_1y": 0.451328,
+    "cvar95_1y": 0.527597,
     "terminal_100k": {
-     "5": 32032.575801,
-     "25": 82839.788726,
-     "50": 164742.994504,
-     "75": 344151.578275,
-     "95": 1123165.131973
+     "5": 32061.294054,
+     "25": 82914.057308,
+     "50": 164890.69199,
+     "75": 344460.121428,
+     "95": 1124172.086271
     },
     "hist": [
      4,
      13,
      39,
      140,
-     314,
-     536,
-     886,
-     1178,
-     1465,
-     1638,
-     1843,
-     1788,
-     1596,
-     1517,
-     1356,
-     1096,
+     312,
+     537,
+     882,
+     1177,
+     1464,
+     1635,
+     1846,
+     1789,
+     1599,
+     1510,
+     1359,
+     1099,
      913,
-     739,
-     614,
-     502,
-     385,
-     323,
+     742,
+     613,
+     503,
+     383,
+     326,
      243,
-     202,
-     143,
-     119,
-     99,
-     79,
-     44,
-     186
+     200,
+     144,
+     120,
+     98,
+     78,
+     45,
+     187
     ]
    },
    "SAMSUNG": {
     "annualised": {
-     "5": -0.15308,
-     "25": -0.02442,
-     "50": 0.086493,
-     "75": 0.221712,
-     "95": 0.464595
+     "5": -0.153015,
+     "25": -0.024346,
+     "50": 0.086576,
+     "75": 0.221805,
+     "95": 0.464707
     },
-    "mean_annualised": 0.112821,
-    "prob_loss_5y": 0.3014,
-    "var95_1y": 0.359849,
-    "cvar95_1y": 0.434204,
+    "mean_annualised": 0.112905,
+    "prob_loss_5y": 0.30135,
+    "var95_1y": 0.3598,
+    "cvar95_1y": 0.434161,
     "terminal_100k": {
-     "5": 43572.566757,
-     "25": 88371.832859,
-     "50": 151402.997294,
-     "75": 272172.090439,
-     "95": 673887.661095
+     "5": 43589.184737,
+     "25": 88405.536663,
+     "50": 151460.740319,
+     "75": 272275.893139,
+     "95": 674144.672602
     },
     "hist": [
      0,
@@ -6605,22 +6626,22 @@
      18,
      97,
      306,
-     632,
+     631,
      1171,
-     1714,
-     2085,
-     2315,
+     1710,
+     2089,
+     2312,
      2238,
-     2057,
-     1735,
-     1368,
-     1126,
-     866,
-     674,
-     481,
-     326,
-     252,
-     166,
+     2058,
+     1733,
+     1373,
+     1122,
+     869,
+     673,
+     482,
+     327,
+     251,
+     167,
      117,
      73,
      55,
@@ -6633,22 +6654,22 @@
    },
    "TSMC": {
     "annualised": {
-     "5": -0.071022,
-     "25": 0.037376,
-     "50": 0.119303,
-     "75": 0.205198,
-     "95": 0.346103
+     "5": -0.071009,
+     "25": 0.03739,
+     "50": 0.119319,
+     "75": 0.205216,
+     "95": 0.346122
     },
-    "mean_annualised": 0.125386,
+    "mean_annualised": 0.125402,
     "prob_loss_5y": 0.159,
-    "var95_1y": 0.25789,
-    "cvar95_1y": 0.3492,
+    "var95_1y": 0.257879,
+    "cvar95_1y": 0.349191,
     "terminal_100k": {
-     "5": 69187.534977,
-     "25": 120138.026177,
-     "50": 175686.522412,
-     "75": 254268.693549,
-     "95": 441969.150608
+     "5": 69192.424388,
+     "25": 120146.516206,
+     "50": 175698.937996,
+     "75": 254286.662453,
+     "95": 442000.384108
     },
     "hist": [
      0,
@@ -6661,12 +6682,12 @@
      372,
      906,
      1718,
-     2505,
-     3103,
+     2503,
+     3105,
      3141,
      2829,
-     2087,
-     1344,
+     2085,
+     1346,
      863,
      490,
      235,
@@ -6685,22 +6706,22 @@
    },
    "AAPL": {
     "annualised": {
-     "5": -0.123546,
-     "25": -0.016411,
-     "50": 0.064094,
-     "75": 0.148869,
-     "95": 0.279295
+     "5": -0.123406,
+     "25": -0.016254,
+     "50": 0.064264,
+     "75": 0.149053,
+     "95": 0.279499
     },
-    "mean_annualised": 0.069609,
-    "prob_loss_5y": 0.2948,
-    "var95_1y": 0.314349,
-    "cvar95_1y": 0.388407,
+    "mean_annualised": 0.06978,
+    "prob_loss_5y": 0.2944,
+    "var95_1y": 0.31424,
+    "cvar95_1y": 0.388309,
     "terminal_100k": {
-     "5": 51718.455641,
-     "25": 92059.334007,
-     "50": 136427.069125,
-     "75": 200148.562853,
-     "95": 342652.057685
+     "5": 51759.82352,
+     "25": 92132.969219,
+     "50": 136536.192618,
+     "75": 200308.655058,
+     "95": 342926.133715
     },
     "hist": [
      0,
@@ -6708,19 +6729,19 @@
      0,
      4,
      36,
-     138,
+     137,
      390,
-     920,
-     1814,
-     2594,
-     3153,
-     3171,
-     2831,
-     2041,
-     1405,
-     775,
-     401,
-     186,
+     913,
+     1809,
+     2599,
+     3140,
+     3183,
+     2830,
+     2049,
+     1402,
+     777,
+     402,
+     188,
      87,
      37,
      10,
@@ -6737,74 +6758,74 @@
    },
    "NVDA": {
     "annualised": {
-     "5": -0.179435,
-     "25": 0.009045,
-     "50": 0.157331,
-     "75": 0.326201,
-     "95": 0.610599
+     "5": -0.179123,
+     "25": 0.009429,
+     "50": 0.157772,
+     "75": 0.326706,
+     "95": 0.611212
     },
-    "mean_annualised": 0.179423,
-    "prob_loss_5y": 0.2353,
-    "var95_1y": 0.490284,
-    "cvar95_1y": 0.589397,
+    "mean_annualised": 0.179872,
+    "prob_loss_5y": 0.23465,
+    "var95_1y": 0.49009,
+    "cvar95_1y": 0.589241,
     "terminal_100k": {
-     "5": 37201.800875,
-     "25": 104605.171754,
-     "50": 207629.409261,
-     "75": 410248.896726,
-     "95": 1083768.464047
+     "5": 37272.653013,
+     "25": 104804.395982,
+     "50": 208024.846773,
+     "75": 411030.230176,
+     "95": 1085832.539198
     },
     "hist": [
      11,
      20,
      34,
      116,
-     221,
-     371,
-     606,
-     877,
-     1159,
-     1291,
-     1567,
-     1754,
-     1728,
-     1622,
-     1547,
-     1384,
-     1267,
-     950,
-     832,
+     220,
+     369,
+     603,
+     872,
+     1162,
+     1286,
+     1569,
+     1751,
+     1723,
+     1629,
+     1549,
+     1381,
+     1272,
+     945,
+     836,
      637,
-     518,
-     419,
-     282,
+     521,
+     422,
+     284,
      229,
-     167,
+     165,
      114,
-     94,
+     96,
      56,
      38,
-     89
+     90
     ]
    },
    "META": {
     "annualised": {
-     "5": -0.160453,
-     "25": -0.002944,
-     "50": 0.118844,
-     "75": 0.253981,
-     "95": 0.476886
+     "5": -0.160442,
+     "25": -0.00293,
+     "50": 0.118859,
+     "75": 0.253998,
+     "95": 0.476906
     },
-    "mean_annualised": 0.133684,
+    "mean_annualised": 0.133699,
     "prob_loss_5y": 0.2554,
-    "var95_1y": 0.44631,
-    "cvar95_1y": 0.54058,
+    "var95_1y": 0.446303,
+    "cvar95_1y": 0.540574,
     "terminal_100k": {
-     "5": 41708.510017,
-     "25": 98536.596838,
-     "50": 175326.621641,
-     "75": 310066.652358,
-     "95": 702644.004941
+     "5": 41711.35524,
+     "25": 98543.318694,
+     "50": 175338.58187,
+     "75": 310087.804127,
+     "95": 702691.937098
     },
     "hist": [
      2,
@@ -6813,18 +6834,18 @@
      76,
      167,
      311,
-     561,
+     560,
      946,
-     1345,
+     1346,
      1675,
-     1993,
-     2103,
+     1992,
+     2104,
      2094,
      1909,
-     1691,
-     1368,
-     1027,
-     851,
+     1690,
+     1369,
+     1026,
+     852,
      589,
      434,
      260,
@@ -6841,22 +6862,22 @@
    },
    "MSFT": {
     "annualised": {
-     "5": -0.050546,
-     "25": 0.043247,
-     "50": 0.109396,
-     "75": 0.175669,
-     "95": 0.272597
+     "5": -0.050537,
+     "25": 0.043257,
+     "50": 0.109406,
+     "75": 0.17568,
+     "95": 0.272609
     },
-    "mean_annualised": 0.10975,
+    "mean_annualised": 0.10976,
     "prob_loss_5y": 0.13385,
-    "var95_1y": 0.22841,
-    "cvar95_1y": 0.308342,
+    "var95_1y": 0.228402,
+    "cvar95_1y": 0.308335,
     "terminal_100k": {
-     "5": 77155.816251,
-     "25": 123576.640066,
-     "50": 168047.719656,
-     "75": 224607.629787,
-     "95": 333775.891598
+     "5": 77159.495007,
+     "25": 123582.532146,
+     "50": 168055.732099,
+     "75": 224618.338982,
+     "95": 333791.805888
     },
     "hist": [
      0,
@@ -6866,8 +6887,8 @@
      3,
      11,
      48,
-     217,
-     731,
+     216,
+     732,
      1667,
      2775,
      3834,
@@ -6945,22 +6966,22 @@
    },
    "PORTFOLIO": {
     "annualised": {
-     "5": -0.047036,
-     "25": 0.056152,
-     "50": 0.133012,
-     "75": 0.21242,
-     "95": 0.338563
+     "5": -0.046951,
+     "25": 0.056247,
+     "50": 0.133114,
+     "75": 0.212529,
+     "95": 0.338684
     },
-    "mean_annualised": 0.137367,
-    "prob_loss_5y": 0.11665,
-    "var95_1y": 0.23021,
-    "cvar95_1y": 0.31847,
+    "mean_annualised": 0.137469,
+    "prob_loss_5y": 0.11645,
+    "var95_1y": 0.230142,
+    "cvar95_1y": 0.318409,
     "terminal_100k": {
-     "5": 78592.83804,
-     "25": 131411.306274,
-     "50": 186712.275231,
-     "75": 261978.386996,
-     "95": 429728.113632
+     "5": 78627.893961,
+     "25": 131470.080466,
+     "50": 186795.930245,
+     "75": 262096.011721,
+     "95": 429923.103684
     },
     "hist": [
      0,
@@ -6970,17 +6991,17 @@
      2,
      8,
      62,
-     239,
-     623,
-     1398,
+     237,
+     625,
+     1394,
      2336,
-     3106,
-     3412,
-     3174,
-     2334,
-     1546,
-     912,
-     456,
+     3103,
+     3411,
+     3179,
+     2329,
+     1552,
+     911,
+     459,
      235,
      84,
      40,
@@ -6997,189 +7018,189 @@
     "fan": {
      "5": [
       0.9342,
-      0.8846,
+      0.8847,
       0.863,
       0.8344,
       0.8155,
-      0.8258,
-      0.8094,
-      0.8013,
-      0.7947,
-      0.7868,
-      0.7746,
-      0.7698,
-      0.7681,
+      0.8259,
+      0.8095,
+      0.8014,
+      0.7948,
+      0.7869,
+      0.7747,
+      0.7699,
+      0.7682,
+      0.7656,
       0.7655,
-      0.7654,
       0.7612,
-      0.754,
-      0.7478,
-      0.7492,
-      0.7492,
-      0.7474,
-      0.7463,
-      0.7428,
-      0.7434,
-      0.7422,
-      0.7396,
-      0.7407,
-      0.7418,
-      0.7405,
-      0.7399,
-      0.7356,
-      0.7389,
-      0.7381,
-      0.7372,
-      0.7381,
-      0.7354,
-      0.7404,
-      0.7427,
-      0.7457,
-      0.7478,
-      0.7434,
-      0.7396,
-      0.7403,
+      0.7541,
+      0.7479,
+      0.7493,
+      0.7493,
+      0.7476,
+      0.7464,
+      0.7429,
+      0.7435,
+      0.7423,
       0.7398,
-      0.7413,
-      0.7484,
-      0.7488,
-      0.7545,
-      0.756,
-      0.7608,
-      0.7713,
-      0.7726,
-      0.7726,
-      0.7718,
-      0.7733,
-      0.7788,
-      0.7833,
-      0.7912,
-      0.7857,
-      0.7859
+      0.7409,
+      0.7419,
+      0.7407,
+      0.74,
+      0.7358,
+      0.7391,
+      0.7383,
+      0.7374,
+      0.7383,
+      0.7356,
+      0.7406,
+      0.7429,
+      0.7459,
+      0.748,
+      0.7436,
+      0.7398,
+      0.7406,
+      0.7401,
+      0.7415,
+      0.7486,
+      0.7491,
+      0.7547,
+      0.7562,
+      0.7611,
+      0.7716,
+      0.7729,
+      0.7729,
+      0.7721,
+      0.7736,
+      0.7791,
+      0.7836,
+      0.7916,
+      0.7861,
+      0.7863
      ],
      "25": [
       0.9778,
       0.973,
-      0.9742,
-      0.9659,
+      0.9743,
+      0.966,
       0.9748,
       0.9657,
       0.967,
-      0.9675,
-      0.9723,
+      0.9676,
+      0.9724,
       0.9756,
-      0.9767,
-      0.9796,
-      0.9812,
-      0.9851,
-      0.9908,
-      0.9947,
-      0.9959,
-      1.0018,
-      1.0066,
-      1.0116,
-      1.0174,
-      1.0218,
-      1.0297,
-      1.0326,
-      1.0417,
-      1.0482,
-      1.0554,
-      1.0642,
-      1.0684,
-      1.0743,
-      1.0804,
-      1.0891,
-      1.0991,
-      1.1019,
-      1.1071,
-      1.1119,
-      1.121,
-      1.1295,
-      1.1375,
-      1.1455,
-      1.1542,
-      1.1575,
-      1.1665,
-      1.1742,
-      1.1853,
-      1.1937,
-      1.196,
-      1.2017,
-      1.2112,
-      1.2242,
-      1.2348,
-      1.2442,
-      1.2522,
-      1.2631,
-      1.2692,
-      1.2775,
-      1.2868,
-      1.2934,
-      1.3026,
-      1.3141
+      0.9768,
+      0.9797,
+      0.9813,
+      0.9852,
+      0.991,
+      0.9948,
+      0.996,
+      1.0019,
+      1.0068,
+      1.0118,
+      1.0175,
+      1.022,
+      1.0298,
+      1.0328,
+      1.0419,
+      1.0484,
+      1.0557,
+      1.0644,
+      1.0686,
+      1.0745,
+      1.0806,
+      1.0893,
+      1.0993,
+      1.1021,
+      1.1074,
+      1.1122,
+      1.1213,
+      1.1299,
+      1.1378,
+      1.1459,
+      1.1546,
+      1.1579,
+      1.1668,
+      1.1746,
+      1.1857,
+      1.1941,
+      1.1964,
+      1.2021,
+      1.2117,
+      1.2247,
+      1.2353,
+      1.2446,
+      1.2527,
+      1.2636,
+      1.2697,
+      1.278,
+      1.2874,
+      1.2939,
+      1.3031,
+      1.3147
      ],
      "50": [
       1.0081,
       1.0234,
-      1.03,
+      1.0301,
       1.0287,
       1.039,
       1.0546,
       1.0707,
-      1.0811,
+      1.0812,
       1.0971,
       1.1097,
-      1.1196,
-      1.1316,
-      1.1414,
-      1.1523,
-      1.1663,
-      1.1789,
-      1.1885,
-      1.2025,
-      1.2153,
-      1.2251,
-      1.2403,
-      1.2564,
-      1.2683,
-      1.2793,
-      1.2929,
-      1.303,
-      1.3217,
-      1.3381,
-      1.3467,
-      1.3618,
-      1.3741,
-      1.3903,
-      1.4063,
-      1.4191,
-      1.4348,
-      1.4531,
-      1.4642,
-      1.4813,
-      1.4942,
-      1.5109,
-      1.5245,
-      1.539,
-      1.5578,
-      1.5771,
-      1.5967,
-      1.6142,
-      1.6325,
-      1.6502,
-      1.6682,
-      1.6884,
-      1.7018,
-      1.7142,
-      1.7328,
-      1.7522,
-      1.7729,
-      1.794,
-      1.8088,
-      1.8251,
-      1.841,
-      1.8671
+      1.1197,
+      1.1317,
+      1.1415,
+      1.1525,
+      1.1664,
+      1.179,
+      1.1887,
+      1.2026,
+      1.2155,
+      1.2252,
+      1.2405,
+      1.2566,
+      1.2685,
+      1.2795,
+      1.2931,
+      1.3033,
+      1.322,
+      1.3383,
+      1.347,
+      1.3621,
+      1.3744,
+      1.3907,
+      1.4066,
+      1.4194,
+      1.4351,
+      1.4535,
+      1.4646,
+      1.4817,
+      1.4947,
+      1.5114,
+      1.525,
+      1.5395,
+      1.5583,
+      1.5776,
+      1.5972,
+      1.6147,
+      1.6331,
+      1.6508,
+      1.6689,
+      1.689,
+      1.7025,
+      1.7149,
+      1.7335,
+      1.7529,
+      1.7737,
+      1.7947,
+      1.8096,
+      1.8259,
+      1.8418,
+      1.868
      ],
      "75": [
       1.0417,
@@ -7187,61 +7208,61 @@
       1.0997,
       1.1295,
       1.1544,
-      1.1883,
-      1.1978,
-      1.2179,
-      1.2375,
-      1.2604,
-      1.2812,
-      1.3062,
-      1.3288,
-      1.3512,
-      1.3724,
-      1.3952,
-      1.421,
-      1.4461,
-      1.4678,
-      1.4924,
-      1.5159,
-      1.5389,
-      1.5642,
-      1.5885,
-      1.6074,
-      1.6301,
-      1.6586,
-      1.6805,
-      1.7047,
-      1.7355,
-      1.7554,
-      1.7818,
-      1.8077,
-      1.831,
-      1.8648,
-      1.8903,
-      1.9167,
-      1.9423,
-      1.97,
-      2.0003,
-      2.0305,
-      2.061,
-      2.0895,
-      2.116,
-      2.1463,
-      2.1765,
-      2.21,
-      2.2399,
-      2.2665,
-      2.2968,
-      2.3219,
-      2.3493,
-      2.3931,
-      2.4238,
-      2.4468,
-      2.4848,
-      2.5216,
-      2.5491,
-      2.5866,
-      2.6198
+      1.1884,
+      1.1979,
+      1.218,
+      1.2376,
+      1.2605,
+      1.2813,
+      1.3063,
+      1.3289,
+      1.3514,
+      1.3725,
+      1.3954,
+      1.4211,
+      1.4463,
+      1.4681,
+      1.4926,
+      1.5161,
+      1.5391,
+      1.5645,
+      1.5888,
+      1.6077,
+      1.6304,
+      1.6589,
+      1.6809,
+      1.7051,
+      1.7359,
+      1.7558,
+      1.7823,
+      1.8082,
+      1.8314,
+      1.8653,
+      1.8908,
+      1.9172,
+      1.9428,
+      1.9706,
+      2.0009,
+      2.0311,
+      2.0616,
+      2.0902,
+      2.1167,
+      2.147,
+      2.1773,
+      2.2108,
+      2.2407,
+      2.2673,
+      2.2976,
+      2.3227,
+      2.3502,
+      2.3941,
+      2.4247,
+      2.4478,
+      2.4859,
+      2.5227,
+      2.5502,
+      2.5878,
+      2.621
      ],
      "95": [
       1.1124,
@@ -7250,60 +7271,60 @@
       1.2739,
       1.3176,
       1.3946,
-      1.4279,
+      1.428,
       1.4822,
-      1.5103,
-      1.5561,
-      1.613,
-      1.6622,
-      1.7031,
-      1.7486,
-      1.7886,
-      1.8208,
-      1.8821,
-      1.931,
-      1.9684,
-      2.0076,
-      2.0442,
-      2.0876,
-      2.138,
-      2.1931,
-      2.2348,
-      2.2726,
-      2.3141,
-      2.3638,
-      2.414,
-      2.4665,
-      2.5095,
-      2.564,
-      2.6129,
-      2.6592,
-      2.712,
-      2.7783,
-      2.8242,
-      2.868,
-      2.9214,
-      2.9667,
-      3.0429,
-      3.1031,
-      3.154,
-      3.2084,
-      3.2778,
-      3.3274,
-      3.3951,
-      3.4783,
-      3.5305,
-      3.586,
-      3.6526,
-      3.7191,
-      3.8075,
-      3.8693,
-      3.9548,
-      4.0119,
-      4.0657,
-      4.141,
-      4.2034,
-      4.2973
+      1.5104,
+      1.5562,
+      1.6132,
+      1.6624,
+      1.7032,
+      1.7488,
+      1.7888,
+      1.821,
+      1.8824,
+      1.9313,
+      1.9687,
+      2.0079,
+      2.0445,
+      2.0879,
+      2.1383,
+      2.1935,
+      2.2352,
+      2.2731,
+      2.3146,
+      2.3643,
+      2.4146,
+      2.4671,
+      2.5101,
+      2.5646,
+      2.6136,
+      2.6599,
+      2.7127,
+      2.7791,
+      2.825,
+      2.8688,
+      2.9223,
+      2.9676,
+      3.0438,
+      3.1041,
+      3.155,
+      3.2095,
+      3.2789,
+      3.3286,
+      3.3963,
+      3.4796,
+      3.5318,
+      3.5874,
+      3.654,
+      3.7205,
+      3.8091,
+      3.8709,
+      3.9564,
+      4.0136,
+      4.0675,
+      4.1428,
+      4.2053,
+      4.2992
      ]
     }
    }
@@ -7311,74 +7332,74 @@
   "local_forward": {
    "SKHYNIX": {
     "annualised": {
-     "5": -0.185026,
-     "25": -0.029982,
-     "50": 0.10473,
-     "75": 0.277175,
-     "95": 0.614451
+     "5": -0.18488,
+     "25": -0.029808,
+     "50": 0.104928,
+     "75": 0.277404,
+     "95": 0.61474
     },
-    "mean_annualised": 0.145703,
-    "prob_loss_5y": 0.30465,
-    "var95_1y": 0.414478,
-    "cvar95_1y": 0.486081,
+    "mean_annualised": 0.145908,
+    "prob_loss_5y": 0.3043,
+    "var95_1y": 0.414373,
+    "cvar95_1y": 0.485989,
     "terminal_100k": {
-     "5": 35951.658037,
-     "25": 85881.385524,
-     "50": 164543.806091,
-     "75": 339823.062592,
-     "95": 1096792.052855
+     "5": 35983.889875,
+     "25": 85958.380997,
+     "50": 164691.324998,
+     "75": 340127.725089,
+     "95": 1097775.362826
     },
     "hist": [
      2,
      3,
      17,
      74,
-     218,
-     487,
-     786,
-     1225,
-     1486,
-     1795,
-     1867,
-     1894,
-     1663,
-     1526,
-     1346,
-     1104,
+     217,
+     488,
+     781,
+     1229,
+     1485,
+     1790,
+     1865,
+     1890,
+     1674,
+     1520,
+     1348,
+     1105,
      934,
      732,
-     600,
-     499,
-     371,
-     301,
+     604,
+     497,
+     373,
+     302,
      218,
-     201,
-     152,
+     200,
+     153,
      114,
      84,
      74,
-     48,
-     179
+     46,
+     181
     ]
    },
    "SAMSUNG": {
     "annualised": {
-     "5": -0.130029,
-     "25": -0.014915,
-     "50": 0.085671,
-     "75": 0.213493,
-     "95": 0.451073
+     "5": -0.129962,
+     "25": -0.01484,
+     "50": 0.085753,
+     "75": 0.213585,
+     "95": 0.451183
     },
-    "mean_annualised": 0.114458,
-    "prob_loss_5y": 0.28585,
-    "var95_1y": 0.315507,
-    "cvar95_1y": 0.384008,
+    "mean_annualised": 0.114543,
+    "prob_loss_5y": 0.2856,
+    "var95_1y": 0.315455,
+    "cvar95_1y": 0.383961,
     "terminal_100k": {
-     "5": 49833.869457,
-     "25": 92761.766839,
-     "50": 150830.911279,
-     "75": 263139.592854,
-     "95": 643347.447226
+     "5": 49852.875411,
+     "25": 92797.144904,
+     "50": 150888.436118,
+     "75": 263239.950683,
+     "95": 643592.811115
     },
     "hist": [
      0,
@@ -7388,26 +7409,26 @@
      34,
      171,
      494,
-     1042,
-     1680,
-     2293,
-     2520,
-     2425,
-     2129,
-     1797,
+     1040,
+     1679,
+     2291,
+     2524,
+     2423,
+     2127,
+     1800,
      1395,
-     1083,
+     1085,
      824,
-     659,
+     658,
      443,
-     304,
-     217,
+     302,
+     220,
      153,
      109,
      65,
      50,
-     34,
-     20,
+     33,
+     21,
      14,
      8,
      34
@@ -7415,22 +7436,22 @@
    },
    "TSMC": {
     "annualised": {
-     "5": -0.061553,
-     "25": 0.034049,
-     "50": 0.110038,
-     "75": 0.188829,
-     "95": 0.319352
+     "5": -0.061539,
+     "25": 0.034063,
+     "50": 0.110054,
+     "75": 0.188846,
+     "95": 0.319371
     },
-    "mean_annualised": 0.115736,
+    "mean_annualised": 0.115752,
     "prob_loss_5y": 0.15765,
-    "var95_1y": 0.22435,
-    "cvar95_1y": 0.30374,
+    "var95_1y": 0.22434,
+    "cvar95_1y": 0.30373,
     "terminal_100k": {
-     "5": 72786.253366,
-     "25": 118223.911584,
-     "50": 168534.847625,
-     "75": 237464.020571,
-     "95": 399764.330164
+     "5": 72791.397095,
+     "25": 118232.266344,
+     "50": 168546.757807,
+     "75": 237480.801906,
+     "95": 399792.581094
     },
     "hist": [
      0,
@@ -7441,14 +7462,14 @@
      14,
      86,
      299,
-     876,
-     1876,
-     2812,
-     3347,
-     3444,
-     2809,
-     1920,
-     1211,
+     875,
+     1877,
+     2811,
+     3348,
+     3443,
+     2810,
+     1919,
+     1212,
      685,
      337,
      168,
@@ -7467,22 +7488,22 @@
    },
    "AAPL": {
     "annualised": {
-     "5": -0.123546,
-     "25": -0.016411,
-     "50": 0.064094,
-     "75": 0.148869,
-     "95": 0.279295
+     "5": -0.123406,
+     "25": -0.016254,
+     "50": 0.064264,
+     "75": 0.149053,
+     "95": 0.279499
     },
-    "mean_annualised": 0.069609,
-    "prob_loss_5y": 0.2948,
-    "var95_1y": 0.314349,
-    "cvar95_1y": 0.388407,
+    "mean_annualised": 0.06978,
+    "prob_loss_5y": 0.2944,
+    "var95_1y": 0.31424,
+    "cvar95_1y": 0.388309,
     "terminal_100k": {
-     "5": 51718.455641,
-     "25": 92059.334007,
-     "50": 136427.069125,
-     "75": 200148.562853,
-     "95": 342652.057685
+     "5": 51759.82352,
+     "25": 92132.969219,
+     "50": 136536.192618,
+     "75": 200308.655058,
+     "95": 342926.133715
     },
     "hist": [
      0,
@@ -7490,19 +7511,19 @@
      0,
      4,
      36,
-     138,
+     137,
      390,
-     920,
-     1814,
-     2594,
-     3153,
-     3171,
-     2831,
-     2041,
-     1405,
-     775,
-     401,
-     186,
+     913,
+     1809,
+     2599,
+     3140,
+     3183,
+     2830,
+     2049,
+     1402,
+     777,
+     402,
+     188,
      87,
      37,
      10,
@@ -7519,74 +7540,74 @@
    },
    "NVDA": {
     "annualised": {
-     "5": -0.179435,
-     "25": 0.009045,
-     "50": 0.157331,
-     "75": 0.326201,
-     "95": 0.610599
+     "5": -0.179123,
+     "25": 0.009429,
+     "50": 0.157772,
+     "75": 0.326706,
+     "95": 0.611212
     },
-    "mean_annualised": 0.179423,
-    "prob_loss_5y": 0.2353,
-    "var95_1y": 0.490284,
-    "cvar95_1y": 0.589397,
+    "mean_annualised": 0.179872,
+    "prob_loss_5y": 0.23465,
+    "var95_1y": 0.49009,
+    "cvar95_1y": 0.589241,
     "terminal_100k": {
-     "5": 37201.800875,
-     "25": 104605.171754,
-     "50": 207629.409261,
-     "75": 410248.896726,
-     "95": 1083768.464047
+     "5": 37272.653013,
+     "25": 104804.395982,
+     "50": 208024.846773,
+     "75": 411030.230176,
+     "95": 1085832.539198
     },
     "hist": [
      11,
      20,
      34,
      116,
-     221,
-     371,
-     606,
-     877,
-     1159,
-     1291,
-     1567,
-     1754,
-     1728,
-     1622,
-     1547,
-     1384,
-     1267,
-     950,
-     832,
+     220,
+     369,
+     603,
+     872,
+     1162,
+     1286,
+     1569,
+     1751,
+     1723,
+     1629,
+     1549,
+     1381,
+     1272,
+     945,
+     836,
      637,
-     518,
-     419,
-     282,
+     521,
+     422,
+     284,
      229,
-     167,
+     165,
      114,
-     94,
+     96,
      56,
      38,
-     89
+     90
     ]
    },
    "META": {
     "annualised": {
-     "5": -0.160453,
-     "25": -0.002944,
-     "50": 0.118844,
-     "75": 0.253981,
-     "95": 0.476886
+     "5": -0.160442,
+     "25": -0.00293,
+     "50": 0.118859,
+     "75": 0.253998,
+     "95": 0.476906
     },
-    "mean_annualised": 0.133684,
+    "mean_annualised": 0.133699,
     "prob_loss_5y": 0.2554,
-    "var95_1y": 0.44631,
-    "cvar95_1y": 0.54058,
+    "var95_1y": 0.446303,
+    "cvar95_1y": 0.540574,
     "terminal_100k": {
-     "5": 41708.510017,
-     "25": 98536.596838,
-     "50": 175326.621641,
-     "75": 310066.652358,
-     "95": 702644.004941
+     "5": 41711.35524,
+     "25": 98543.318694,
+     "50": 175338.58187,
+     "75": 310087.804127,
+     "95": 702691.937098
     },
     "hist": [
      2,
@@ -7595,18 +7616,18 @@
      76,
      167,
      311,
-     561,
+     560,
      946,
-     1345,
+     1346,
      1675,
-     1993,
-     2103,
+     1992,
+     2104,
      2094,
      1909,
-     1691,
-     1368,
-     1027,
-     851,
+     1690,
+     1369,
+     1026,
+     852,
      589,
      434,
      260,
@@ -7623,22 +7644,22 @@
    },
    "MSFT": {
     "annualised": {
-     "5": -0.050546,
-     "25": 0.043247,
-     "50": 0.109396,
-     "75": 0.175669,
-     "95": 0.272597
+     "5": -0.050537,
+     "25": 0.043257,
+     "50": 0.109406,
+     "75": 0.17568,
+     "95": 0.272609
     },
-    "mean_annualised": 0.10975,
+    "mean_annualised": 0.10976,
     "prob_loss_5y": 0.13385,
-    "var95_1y": 0.22841,
-    "cvar95_1y": 0.308342,
+    "var95_1y": 0.228402,
+    "cvar95_1y": 0.308335,
     "terminal_100k": {
-     "5": 77155.816251,
-     "25": 123576.640066,
-     "50": 168047.719656,
-     "75": 224607.629787,
-     "95": 333775.891598
+     "5": 77159.495007,
+     "25": 123582.532146,
+     "50": 168055.732099,
+     "75": 224618.338982,
+     "95": 333791.805888
     },
     "hist": [
      0,
@@ -7648,8 +7669,8 @@
      3,
      11,
      48,
-     217,
-     731,
+     216,
+     732,
      1667,
      2775,
      3834,
@@ -7757,103 +7778,103 @@
   "rule_70": {
    "points": [
     {
-     "ret": 0.092753,
+     "ret": 0.092792,
      "vol": 0.154695
     },
     {
-     "ret": 0.093912,
-     "vol": 0.154882
+     "ret": 0.093957,
+     "vol": 0.154886
     },
     {
-     "ret": 0.095072,
-     "vol": 0.155443
+     "ret": 0.095123,
+     "vol": 0.155456
     },
     {
-     "ret": 0.096232,
-     "vol": 0.156377
+     "ret": 0.096289,
+     "vol": 0.156403
     },
     {
-     "ret": 0.097392,
-     "vol": 0.157853
+     "ret": 0.097454,
+     "vol": 0.157884
     },
     {
-     "ret": 0.098551,
-     "vol": 0.159951
+     "ret": 0.09862,
+     "vol": 0.159983
     },
     {
-     "ret": 0.099711,
-     "vol": 0.162648
+     "ret": 0.099786,
+     "vol": 0.162673
     },
     {
-     "ret": 0.100871,
-     "vol": 0.165915
+     "ret": 0.100951,
+     "vol": 0.165928
     },
     {
-     "ret": 0.102031,
-     "vol": 0.169718
+     "ret": 0.102117,
+     "vol": 0.169714
     },
     {
-     "ret": 0.10319,
-     "vol": 0.174042
+     "ret": 0.103283,
+     "vol": 0.174015
     },
     {
-     "ret": 0.10435,
-     "vol": 0.17884
+     "ret": 0.104448,
+     "vol": 0.178799
     },
     {
-     "ret": 0.10551,
-     "vol": 0.183803
+     "ret": 0.105614,
+     "vol": 0.183762
     },
     {
-     "ret": 0.10667,
-     "vol": 0.188882
+     "ret": 0.106779,
+     "vol": 0.188841
     },
     {
-     "ret": 0.107829,
-     "vol": 0.194068
+     "ret": 0.107945,
+     "vol": 0.194025
     },
     {
-     "ret": 0.108989,
-     "vol": 0.199351
+     "ret": 0.109111,
+     "vol": 0.199308
     },
     {
-     "ret": 0.110149,
-     "vol": 0.204724
+     "ret": 0.110276,
+     "vol": 0.204681
     },
     {
-     "ret": 0.111308,
-     "vol": 0.210181
+     "ret": 0.111442,
+     "vol": 0.210137
     },
     {
-     "ret": 0.112468,
-     "vol": 0.215714
+     "ret": 0.112608,
+     "vol": 0.215671
     },
     {
-     "ret": 0.113628,
-     "vol": 0.221321
+     "ret": 0.113773,
+     "vol": 0.221282
     },
     {
-     "ret": 0.114788,
-     "vol": 0.227049
+     "ret": 0.114939,
+     "vol": 0.227023
     },
     {
-     "ret": 0.115947,
-     "vol": 0.233005
+     "ret": 0.116105,
+     "vol": 0.232987
     },
     {
-     "ret": 0.117107,
-     "vol": 0.23922
+     "ret": 0.11727,
+     "vol": 0.239211
     },
     {
-     "ret": 0.118267,
-     "vol": 0.245674
+     "ret": 0.118436,
+     "vol": 0.245676
     },
     {
-     "ret": 0.119427,
-     "vol": 0.25235
+     "ret": 0.119601,
+     "vol": 0.252362
     },
     {
-     "ret": 0.120586,
+     "ret": 0.120767,
      "vol": 0.262022
     }
    ],
@@ -7868,59 +7889,59 @@
      "MSFT": 0.1909,
      "FR_OAT10": 0.25
     },
-    "ret": 0.092753,
+    "ret": 0.092792,
     "vol": 0.154695,
-    "sharpe": 0.347476
+    "sharpe": 0.347729
    },
    "max_sharpe": {
     "weights": {
-     "SKHYNIX": 0.0439,
-     "SAMSUNG": 0.1561,
+     "SKHYNIX": 0.0441,
+     "SAMSUNG": 0.1559,
      "TSMC": 0.25,
      "AAPL": 0.0,
-     "NVDA": 0.0889,
-     "META": 0.0164,
-     "MSFT": 0.1947,
+     "NVDA": 0.0901,
+     "META": 0.0161,
+     "MSFT": 0.1937,
      "FR_OAT10": 0.25
     },
-    "ret": 0.099956,
-    "vol": 0.163293,
-    "sharpe": 0.373295
+    "ret": 0.10008,
+    "vol": 0.163442,
+    "sharpe": 0.373707
    },
    "assets": [
     {
      "key": "SKHYNIX",
-     "ret": 0.111043,
+     "ret": 0.111242,
      "vol": 0.488244
     },
     {
      "key": "SAMSUNG",
-     "ret": 0.100621,
+     "ret": 0.100705,
      "vol": 0.358699
     },
     {
      "key": "TSMC",
-     "ret": 0.115154,
+     "ret": 0.11517,
      "vol": 0.272154
     },
     {
      "key": "AAPL",
-     "ret": 0.068851,
+     "ret": 0.069022,
      "vol": 0.265678
     },
     {
      "key": "NVDA",
-     "ret": 0.153448,
+     "ret": 0.153887,
      "vol": 0.418178
     },
     {
      "key": "META",
-     "ret": 0.106634,
+     "ret": 0.106649,
      "vol": 0.379404
     },
     {
      "key": "MSFT",
-     "ret": 0.11102,
+     "ret": 0.111031,
      "vol": 0.227062
     },
     {
@@ -7933,103 +7954,103 @@
   "unconstrained": {
    "points": [
     {
-     "ret": 0.088089,
+     "ret": 0.088136,
      "vol": 0.140406
     },
     {
-     "ret": 0.08953,
-     "vol": 0.140738
+     "ret": 0.089582,
+     "vol": 0.140741
     },
     {
-     "ret": 0.090971,
-     "vol": 0.141478
+     "ret": 0.091028,
+     "vol": 0.141484
     },
     {
-     "ret": 0.092411,
-     "vol": 0.142522
+     "ret": 0.092473,
+     "vol": 0.142533
     },
     {
-     "ret": 0.093852,
-     "vol": 0.143865
+     "ret": 0.093919,
+     "vol": 0.143881
     },
     {
-     "ret": 0.095293,
-     "vol": 0.145498
+     "ret": 0.095365,
+     "vol": 0.14552
     },
     {
-     "ret": 0.096733,
-     "vol": 0.147411
+     "ret": 0.09681,
+     "vol": 0.14744
     },
     {
-     "ret": 0.098174,
-     "vol": 0.149594
+     "ret": 0.098256,
+     "vol": 0.14963
     },
     {
-     "ret": 0.099615,
-     "vol": 0.152035
+     "ret": 0.099702,
+     "vol": 0.15208
     },
     {
-     "ret": 0.101056,
-     "vol": 0.154721
+     "ret": 0.101147,
+     "vol": 0.154776
     },
     {
-     "ret": 0.102496,
-     "vol": 0.157892
+     "ret": 0.102593,
+     "vol": 0.157949
     },
     {
-     "ret": 0.103937,
-     "vol": 0.161666
+     "ret": 0.104039,
+     "vol": 0.161727
     },
     {
-     "ret": 0.105378,
-     "vol": 0.165501
+     "ret": 0.105484,
+     "vol": 0.165567
     },
     {
-     "ret": 0.106818,
-     "vol": 0.169382
+     "ret": 0.10693,
+     "vol": 0.169454
     },
     {
-     "ret": 0.108259,
-     "vol": 0.173306
+     "ret": 0.108376,
+     "vol": 0.173384
     },
     {
-     "ret": 0.1097,
-     "vol": 0.177282
+     "ret": 0.109821,
+     "vol": 0.177362
     },
     {
-     "ret": 0.111141,
-     "vol": 0.181325
+     "ret": 0.111267,
+     "vol": 0.181406
     },
     {
-     "ret": 0.112581,
-     "vol": 0.18543
+     "ret": 0.112713,
+     "vol": 0.185513
     },
     {
-     "ret": 0.114022,
-     "vol": 0.189593
+     "ret": 0.114158,
+     "vol": 0.189677
     },
     {
-     "ret": 0.115463,
-     "vol": 0.193811
+     "ret": 0.115604,
+     "vol": 0.193896
     },
     {
-     "ret": 0.116903,
-     "vol": 0.198079
+     "ret": 0.11705,
+     "vol": 0.198166
     },
     {
-     "ret": 0.118344,
-     "vol": 0.202395
+     "ret": 0.118495,
+     "vol": 0.202483
     },
     {
-     "ret": 0.119785,
-     "vol": 0.206756
+     "ret": 0.119941,
+     "vol": 0.206846
     },
     {
-     "ret": 0.121225,
-     "vol": 0.211256
+     "ret": 0.121387,
+     "vol": 0.211379
     },
     {
-     "ret": 0.122666,
+     "ret": 0.122832,
      "vol": 0.239426
     }
    ],
@@ -8044,59 +8065,59 @@
      "MSFT": 0.25,
      "FR_OAT10": 0.25
     },
-    "ret": 0.088089,
+    "ret": 0.088136,
     "vol": 0.140406,
-    "sharpe": 0.349623
+    "sharpe": 0.349957
    },
    "max_sharpe": {
     "weights": {
-     "SKHYNIX": 0.0107,
+     "SKHYNIX": 0.011,
      "SAMSUNG": 0.0593,
-     "TSMC": 0.2147,
+     "TSMC": 0.2138,
      "AAPL": 0.0,
-     "NVDA": 0.1339,
-     "META": 0.0814,
+     "NVDA": 0.1348,
+     "META": 0.0811,
      "MSFT": 0.25,
      "FR_OAT10": 0.25
     },
-    "ret": 0.102439,
-    "vol": 0.15775,
-    "sharpe": 0.402152
+    "ret": 0.102552,
+    "vol": 0.157846,
+    "sharpe": 0.402617
    },
    "assets": [
     {
      "key": "SKHYNIX",
-     "ret": 0.111043,
+     "ret": 0.111242,
      "vol": 0.488244
     },
     {
      "key": "SAMSUNG",
-     "ret": 0.100621,
+     "ret": 0.100705,
      "vol": 0.358699
     },
     {
      "key": "TSMC",
-     "ret": 0.115154,
+     "ret": 0.11517,
      "vol": 0.272154
     },
     {
      "key": "AAPL",
-     "ret": 0.068851,
+     "ret": 0.069022,
      "vol": 0.265678
     },
     {
      "key": "NVDA",
-     "ret": 0.153448,
+     "ret": 0.153887,
      "vol": 0.418178
     },
     {
      "key": "META",
-     "ret": 0.106634,
+     "ret": 0.106649,
      "vol": 0.379404
     },
     {
      "key": "MSFT",
-     "ret": 0.11102,
+     "ret": 0.111031,
      "vol": 0.227062
     },
     {
@@ -8109,16 +8130,16 @@
  },
  "fx_history": {
   "KRW": {
-   "cagr_10y": -0.014249
+   "cagr_10y": -0.012445
   },
   "TWD": {
-   "cagr_10y": -0.002987
+   "cagr_10y": -0.002349
   },
   "EUR": {
-   "cagr_10y": 0.001983
+   "cagr_10y": 0.005103
   },
   "TRY": {
-   "cagr_10y": -0.242164
+   "cagr_10y": -0.235076
   }
  }
 }
