@@ -37,6 +37,26 @@ The 70% non-US and $100k rules came from John, not the assignment documents.
 Run every portfolio-level result both with and without the 70% floor so the
 cost of the rule is visible.
 
+## Portfolio rules (from John; these bind every portfolio you build)
+
+1. At least 70% of the portfolio in non-US assets (by market value; an asset
+   counts as non-US by the issuer's or fund holdings' country, not by where it
+   is listed).
+2. $100,000 USD paper account. Report positions in dollars and shares.
+3. Goal: the best risk-adjusted return in the class (Sharpe and information
+   ratio, judged out of sample).
+4. Any assortment of assets is allowed as long as rules 1-3 hold: individual
+   stocks in any market, government and corporate bonds, bond and equity ETFs,
+   mutual funds, REITs, commodity ETFs such as gold. The stocks and bonds
+   already modeled in `research/` (SK Hynix, Samsung, TSMC, Apple, Nvidia,
+   Meta, Microsoft, French OAT, Turkish government bonds) are earlier
+   examples, not a required list. Use or drop them on the evidence.
+
+Not yet known: whether short selling, leverage, derivatives or currency
+hedges are allowed, the grading period, and any minimum or maximum number of
+holdings. Default to long-only, no leverage, no derivatives, unhedged or
+hedged share classes allowed, and ask John at the first check-in.
+
 ## What the assignment requires
 
 Read `/mnt/project-files/notes/assignment-rules.md` if it exists (the project
@@ -59,6 +79,27 @@ summary of the brief). The short version:
 
 "Best" means best risk-adjusted, judged out of sample: Sharpe and information
 ratio first, with drawdown, fees and FX risk as tie-breakers.
+
+The paper portfolio and the report are related but different. The paper
+portfolio can hold any mix of assets (rules above). The report still needs
+the four funds, so pick them too, and where possible make the paper
+portfolio's holdings map onto them (e.g. the active equity fund's top
+holdings, or the passive funds as the core).
+
+## Asset categories (the "slots" below)
+
+Shortlist candidates in each category, and add or merge categories if your
+method gives a reason:
+
+1. Developed ex-US equity (single stocks, country or regional ETFs, active funds)
+2. Emerging markets equity
+3. US equity (at most 30% of the portfolio together with other US assets)
+4. Non-US government bonds (hedged and unhedged)
+5. Emerging markets debt (hard and local currency)
+6. US Treasuries and investment-grade bonds
+7. Real assets and diversifiers (gold, global REITs, infrastructure)
+8. The four report funds: active global equity, active global bond, passive
+   S&P 500, passive bond
 
 ## What already exists in this repo (reuse it, do not rebuild it)
 
@@ -120,13 +161,15 @@ Write `research/plan/method.md` and commit it **before** any candidate is
 backtested. It must state:
 
 - The client and its objective, constraints, horizon and risk tolerance.
-- For each of the four slots, the screening universe (where candidates come
-  from: e.g. Morningstar category "Global Large-Stock Blend/Growth/Value",
+- For each asset category, the screening universe (where candidates come
+  from: e.g. for single stocks, the largest names by market cap in each
+  region screened on quality, value and momentum; for funds, Morningstar category "Global Large-Stock Blend/Growth/Value",
   "World Bond", "Global Bond-USD Hedged"; for passive slots, every S&P 500
   index fund/ETF and the major aggregate/global bond index funds).
 - Hard screens: minimum 10 years of history (or a documented reason for an
-  exception), expense ratio cap, minimum assets under management, still open
-  to investors, a clear benchmark.
+  exception), liquidity (enough volume to trade the position), for funds an
+  expense ratio cap, minimum assets under management, still open to
+  investors, and a clear benchmark.
 - The scoring rubric with weights, decided now: e.g. out-of-sample Sharpe,
   information ratio vs. the slot's benchmark, tracking error (passive slots:
   tracking difference and expense ratio dominate), max drawdown, consistency
@@ -145,18 +188,18 @@ under the new rubric.
 
 ### Phase 2: wide screen, then shortlist
 
-Delegate one screening subagent per slot (Sonnet). Each one builds a long list
-(15-30 funds), applies the hard screens, and returns a table of survivors with
-ticker, name, category, expense ratio, AUM, inception date, benchmark,
-manager tenure and source links. You pick `candidates_per_slot` per slot from
+Delegate one screening subagent per asset category (Sonnet). Each one builds
+a long list (15-30 stocks, bonds or funds), applies the hard screens, and
+returns a table of survivors with ticker, name, country, currency, category,
+and for funds the expense ratio, AUM, inception date, benchmark and manager
+tenure, plus source links. You pick `candidates_per_slot` per slot from
 the survivors using **only in-sample data** (before `out_of_sample_start`)
 plus the non-performance criteria. Write the reasoning for each pick and each
-near miss to `research/plan/shortlist.md`. Include funds that disagree with
-each other (e.g. a value fund and a growth fund, a hedged and an unhedged bond
-fund), so the comparison actually tests something.
+near miss to `research/plan/shortlist.md`. Include candidates that disagree
+with each other (e.g. a value and a growth pick, a hedged and an unhedged bond
+fund, a single stock and the ETF that holds it), so the comparison actually tests something.
 
-If the 70% non-US rule is on, the active slots should lean non-US; note which
-candidates make the floor easy or hard to reach.
+Note which candidates make the 70% non-US floor easy or hard to reach.
 
 ### Phase 3: deep research on each candidate (parallel subagents)
 
@@ -192,8 +235,10 @@ mistakes, and overfitting. It returns a pass/fail per claim with reasons. A
 candidate whose edge disappears under review is dropped or downgraded, and
 you say so in the report.
 
-Then pick `finalists_per_slot` per slot and one winner, scored by the Phase 1
-rubric. Write the scorecard to `research/plan/scorecard.md`.
+Then pick `finalists_per_slot` per category, scored by the Phase 1 rubric.
+The finalists from every category are the universe the optimizer chooses from
+in Phase 5; a category can end up with zero weight. Also name one winner for
+each of the four report funds. Write the scorecard to `research/plan/scorecard.md`.
 
 ### Phase 5: build the portfolio and the frontiers
 
@@ -201,7 +246,10 @@ One Opus subagent extends the existing optimizer (`portfolio/optimize.py`,
 `research/frontier.py`) instead of writing a new one:
 
 - Ex-post efficient frontiers from realized returns: active pair vs. passive
-  pair, as the brief asks, and the four winners together.
+  pair, as the brief asks, and the four report funds together.
+- The paper portfolio: optimize over all finalists under the portfolio
+  rules (70% non-US, weight cap, $100k), and compare it with the four-fund
+  portfolio.
 - Ex-ante frontier from the Phase 3 expected returns and Ledoit-Wolf
   covariance.
 - Each frontier with and without short sales, and with and without the 70%
