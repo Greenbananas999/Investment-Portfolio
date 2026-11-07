@@ -51,7 +51,7 @@ def check_schema(res):
         assert {"start", "end", "return", "benchmark"} <= set(res["stress"][k])
     assert {"definition", "avg_return", "benchmark"} <= set(res["stress"]["strong_usd"])
     assert {"fundamental_score", "technical_score", "hard_screens_passed", "detail"} <= set(res["screens"])
-    assert res["review"] is None
+    assert res["review"] is None or isinstance(res["review"], dict)  # filled in Phase 4
     assert len(res["explain"]) == 3 and all(isinstance(s, str) and s for s in res["explain"])
     json.dumps(res, allow_nan=False)   # no NaN/inf anywhere
 
