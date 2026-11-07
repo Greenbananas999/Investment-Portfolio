@@ -166,7 +166,7 @@ portfolio for the three US stocks.
 
 ## Derivative overlays (section 8 item 5, tested at portfolio level in Phase 5)
 
-| Overlay | OOS effect on the SPY sleeve (exact 100% ratio) | Standalone 8.5 | Review | Phase 5 use |
+| Overlay | OOS effect on the SPY sleeve (1 XSP contract = 139% of the sleeve; the put row at exactly 100%) | Standalone 8.5 | Review | Phase 5 use |
 |---|---|---|---|---|
 | cc_spx_30d_1m | Sharpe 0.75 to 0.60, DD -23.9% to -23.8% | fails | fail (uncovered at 139%, model 0.9%/yr too kind) | not used |
 | cc_spx_atm_1m | Sharpe to 0.31, DD worse | fails | fail | not used |

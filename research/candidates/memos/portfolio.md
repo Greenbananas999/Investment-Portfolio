@@ -79,7 +79,7 @@ Quarterly rebalancing, net of costs (0.04%/yr cost drag, 23%/yr one-way
 turnover), against buy-and-hold from the first weights: OOS CAGR -14.1
 points/yr, OOS max drawdown 6.3 points shallower, OOS Sharpe -0.13.
 Buy-and-hold let NVDA run, so it earned far more. Its non-US share drifted
-down to 23%, so it would have broken the 70% rule within two years. The
+down to 23%, so it would have broken the 70% rule by 2016-11-30 (the first month-end below 70% in the JSON). The
 adjustments bought rule compliance and a smaller drawdown, and they cost
 return. Rebalancing frequency and lookback hardly matter: OOS Sharpe ranges
 0.94-0.98 across monthly, quarterly, semi-annual and annual and across 3-

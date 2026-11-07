@@ -21,7 +21,7 @@ section 7) is applied later, on out-of-sample data, in Phase 4.
 | US growth stocks | 128 rows (87 candidates, 20 faded leaders, 21 too young) | 87 | 46 (40 candidates + 6 faded leaders) | 3-year revenue CAGR to 2017 below 8% (47 names, e.g. Apple 7.8%, Microsoft 1.2%, Costco 4.6%); market cap at 2017 below $2B (Axon) |
 | International growth stocks | 81 rows (60 candidates, 8 faded leaders, 13 too young) | 60 | 31 (27 + 4 faded leaders) | revenue CAGR below 8% (33 names, e.g. SAP 7.6%, LVMH 0.7%, Samsung 3.3%); market cap below $10B (Xero, Cochlear) |
 | EM bond funds | 43 rows | 20 | 20 | (excluded before screening: 11 on AUM or fees, 12 too young) |
-| Other sleeve | 108 rows | 33 | 33 | (excluded before screening: 42 by class or fees, 34 too young) |
+| Other sleeve | 108 rows | 33 | 33 | (excluded before screening: 41 by class or fees, 34 too young) |
 | Overlays | 15 strategies | 15 | n/a (modelled in Phase 3) | 5 infeasible at $100,000 or outside the overlay-only rule |
 
 Flags that apply to every stock table: traded value "not checked" (the
@@ -100,8 +100,13 @@ on a 0.75 Sharpe and 0.19 IR.
 | 7 | 000660.KS SK Hynix | KR, KRW | 18% / 0.65 / 0.53 / -52% | 0.83 | highest fundamental score; the cyclical, value-leaning candidate (memory cycle), already modelled in `research/` |
 | 8 | CSU.TO Constellation Software | CA, CAD | 46% / 1.66 / 1.48 / -18% | 0.48 | best in-sample Sharpe of the type; serial acquirer, Canada |
 
-These are the top eight by composite; no diversity swap was needed because
-they already span eight countries and currencies with four EM names. Near
+These were the top eight by composite in the table as it stood when the
+shortlist was frozen on 2026-11-07, and no diversity swap was made. Later
+that day the screening library's financial-tag bug was fixed (method.md
+section 13) and the in-sample table was regenerated: HDFC Bank moved to 7th
+and Constellation to 10th. The shortlist was not changed, because by then
+out-of-sample work had started and changing it would not have been a
+clean in-sample choice; the regenerated table is the one on disk. Near
 misses: DOL.TO Dollarama (rank 9, 1.55 Sharpe, Canada already covered),
 RMS.PA Hermes (rank 10), HDFCBANK.NS (rank 11, India covered), 035420.KS
 Naver, 6861.T Keyence (rank 17, the best Japanese name, 1.16 Sharpe), MELI
