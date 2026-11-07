@@ -1,0 +1,87 @@
+price 000660.KS: 5395 rows
+price 005930.KS: 5395 rows
+price 2330.TW: 5360 rows
+price AAPL: 5487 rows
+price NVDA: 5487 rows
+price META: 3629 rows
+price MSFT: 5487 rows
+price ACWI: 4674 rows
+price SPY: 5487 rows
+price ^GSPC: 5487 rows
+price ^KS11: 5373 rows
+price ^TWII: 5335 rows
+price ^FCHI: 5578 rows
+price TSM: 5487 rows
+price ^IRX: 5482 rows
+price ^TNX: 5482 rows
+fx KRW: 5656 rows
+fx TWD: 5301 rows
+fx EUR: 5657 rows
+fx TRY: 5671 rows
+fred US_3M (TB3MS): 1113 rows, 1934-01-01 to 2026-09-01
+fred US_10Y (GS10): 882 rows, 1953-04-01 to 2026-09-01
+fred FR_10Y (IRLTLT01FRM156N): 801 rows, 1960-01-01 to 2026-09-01
+fred FR_3M (IR3TIB01FRM156N): 681 rows, 1970-01-01 to 2026-09-01
+fred TR_2Y (IRLTST01TRM156N): 115 rows, 1991-07-01 to 2010-09-01
+fred TR_3M (IR3TIB01TRM156N): 133 rows, 1991-07-01 to 2008-04-01
+fred KR_3M (IR3TIB01KRM156N): 429 rows, 1991-01-01 to 2026-09-01
+fred KR_10Y (IRLTLT01KRM156N): 312 rows, 2000-10-01 to 2026-09-01
+fred TR_CPI (TURCPIALLMINMEI): 844 rows, 1955-01-01 to 2025-04-01
+fred US_CPI (CPIAUCSL): 956 rows, 1947-01-01 to 2026-09-01
+fred FR_CPI (FRACPIALLMINMEI): 843 rows, 1955-01-01 to 2025-03-01
+info 000660.KS: 155 fields
+cashflow 000660.KS: ok
+balance_sheet 000660.KS: ok
+income_stmt 000660.KS: ok
+growth_estimates 000660.KS: ok
+earnings_estimate 000660.KS: ok
+revenue_estimate 000660.KS: ok
+dividends 000660.KS: ok
+info 005930.KS: 160 fields
+cashflow 005930.KS: ok
+balance_sheet 005930.KS: ok
+income_stmt 005930.KS: ok
+growth_estimates 005930.KS: ok
+earnings_estimate 005930.KS: ok
+revenue_estimate 005930.KS: ok
+dividends 005930.KS: ok
+info 2330.TW: 165 fields
+cashflow 2330.TW: ok
+balance_sheet 2330.TW: ok
+income_stmt 2330.TW: ok
+growth_estimates 2330.TW: ok
+earnings_estimate 2330.TW: ok
+revenue_estimate 2330.TW: ok
+dividends 2330.TW: ok
+info AAPL: 184 fields
+cashflow AAPL: ok
+balance_sheet AAPL: ok
+income_stmt AAPL: ok
+growth_estimates AAPL: ok
+earnings_estimate AAPL: ok
+revenue_estimate AAPL: ok
+dividends AAPL: ok
+info NVDA: 186 fields
+cashflow NVDA: ok
+balance_sheet NVDA: ok
+income_stmt NVDA: ok
+growth_estimates NVDA: ok
+earnings_estimate NVDA: ok
+revenue_estimate NVDA: ok
+dividends NVDA: ok
+info META: 182 fields
+cashflow META: ok
+balance_sheet META: ok
+income_stmt META: ok
+growth_estimates META: ok
+earnings_estimate META: ok
+revenue_estimate META: ok
+dividends META: ok
+info MSFT: 184 fields
+cashflow MSFT: ok
+balance_sheet MSFT: ok
+income_stmt MSFT: ok
+growth_estimates MSFT: ok
+earnings_estimate MSFT: ok
+revenue_estimate MSFT: ok
+dividends MSFT: ok

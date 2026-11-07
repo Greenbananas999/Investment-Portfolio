@@ -1,0 +1,458 @@
+<title>622 Expected Returns</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single research-note column; tables and charts break out to a wider measure. */
+:root {
+  --bg: #f6f8fa; --panel: #ffffff; --fg: #121820; --muted: #56606c; --faint: #8a939d;
+  --line: #dde3e9; --accent: #0f5e8c; --accent-soft: #e3eef6;
+  --good: #1a7f4b; --bad: #c4372f; --warn: #b26b00;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #6250d6; --s5: #e34948;
+  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-data: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1419; --panel: #161d24; --fg: #e8edf2; --muted: #a3adb8; --faint: #6f7a86;
+  --line: #2a343e; --accent: #5aa9dc; --accent-soft: #17293a;
+  --good: #3fb67a; --bad: #ef6b63; --warn: #e0a03a;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #9085e9; --s5: #e66767; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1419; --panel: #161d24; --fg: #e8edf2; --muted: #a3adb8; --faint: #6f7a86;
+  --line: #2a343e; --accent: #5aa9dc; --accent-soft: #17293a;
+  --good: #3fb67a; --bad: #ef6b63; --warn: #e0a03a;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #9085e9; --s5: #e66767; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font: 15px/1.6 var(--font-body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.prose { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; line-height: 1.15; margin: 0; }
+h1 { font-size: clamp(30px, 5vw, 44px); font-weight: 700; letter-spacing: -0.01em; }
+h2 { font-size: 26px; font-weight: 600; }
+h3 { font-size: 18px; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font: 500 12px/1 var(--font-data); text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+.meta { color: var(--muted); font-size: 14px; }
+header { display: grid; gap: 12px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+section { display: grid; gap: 16px; padding-block: 40px 8px; }
+.lede { font-size: 17px; color: var(--fg); }
+.banner { border: 1px solid var(--bad); color: var(--bad); padding: 12px 16px; border-radius: 6px; font-weight: 600; }
+.takeaways { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.take { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.take .num { font: 600 28px/1.1 var(--font-display); }
+.take p { color: var(--muted); font-size: 14px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; min-width: 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+th, td { padding: 7px 10px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th { font: 500 11.5px/1.3 var(--font-data); text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); vertical-align: bottom; }
+th:first-child, td:first-child { text-align: left; }
+td { font-family: var(--font-data); font-variant-numeric: tabular-nums; }
+td:first-child { font-family: var(--font-body); font-weight: 500; }
+td.wrap-ok { white-space: normal; min-width: 180px; font-family: var(--font-body); color: var(--muted); text-align: left; }
+tr.em td { font-weight: 600; }
+td.cons { background: var(--accent-soft); font-weight: 600; }
+.neg { color: var(--bad); } .pos { color: var(--good); }
+.sub { color: var(--faint); font-size: 12px; font-family: var(--font-body); font-weight: 400; display: block; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.seg button { font: 500 13px var(--font-body); padding: 6px 12px; border: 0; background: var(--panel); color: var(--muted); cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--panel); }
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.sw.line { width: 16px; height: 2px; border-radius: 1px; }
+.sw.dash { width: 16px; height: 0; border-top: 2px dashed; border-radius: 0; background: none !important; }
+svg text { fill: var(--muted); font: 11px var(--font-data); }
+svg .lbl { fill: var(--fg); font: 500 12px var(--font-body); }
+svg .grid { stroke: var(--line); stroke-width: 1; }
+svg .zero { stroke: var(--faint); stroke-width: 1; }
+.multiples { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.mult { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px; min-width: 0; display: grid; gap: 4px; }
+.mult h3 { font-size: 15px; }
+.mult .fig { font: 12px var(--font-data); color: var(--muted); }
+.two { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.two > * { min-width: 0; }
+.note { font-size: 13.5px; color: var(--muted); max-width: 72ch; }
+.callout { border-left: 3px solid var(--warn); padding: 8px 14px; background: var(--panel); font-size: 14px; max-width: 72ch; }
+code { font: 13px var(--font-data); background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; }
+ul.tight { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+#tip { position: fixed; pointer-events: none; z-index: 20; background: var(--fg); color: var(--bg); font: 12px/1.45 var(--font-body);
+  padding: 7px 10px; border-radius: 6px; max-width: 260px; box-shadow: 0 4px 14px rgba(0,0,0,.18); }
+#tip b { font-weight: 600; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--faint); font-size: 13px; }
+@media (prefers-reduced-motion: no-preference) { .seg button { transition: background .15s, color .15s; } }
+</style>
+
+<div class="wrap">
+<header>
+  <span class="eyebrow">AFMBA 622 · Global portfolio research</span>
+  <h1>Expected returns for seven chip and platform stocks, French OATs and Turkish bonds</h1>
+  <p class="meta" id="asof"></p>
+  <div id="synthetic" class="banner" hidden>Synthetic data. These numbers only check that the code runs; they are not results.</div>
+</header>
+
+<section>
+  <p class="lede prose" id="lede"></p>
+  <div class="takeaways" id="takeaways"></div>
+</section>
+
+<section id="expected">
+  <span class="eyebrow">Forward-looking</span>
+  <h2>Expected annual return by method</h2>
+  <p class="note">Each method answers the same question differently. CAPM prices risk (beta), the DCF solves for the return that today's price implies, Grinold-Kroner adds up dividend yield, growth, buybacks and valuation change, and bonds start from their yield. The consensus is the plain average of the methods. USD figures add the expected currency move from relative purchasing power parity (the inflation gap against the dollar).</p>
+  <div class="controls"><div class="seg" id="exp-ccy" role="group" aria-label="Currency">
+    <button type="button" aria-pressed="false" data-v="local">Local currency</button><button type="button" aria-pressed="true" data-v="usd">USD</button></div>
+    <div class="legend" id="exp-legend"></div></div>
+  <div class="panel"><div id="exp-chart"></div></div>
+  <div class="panel scroll"><table id="exp-table"></table></div>
+</section>
+
+<section id="history">
+  <span class="eyebrow">Historical backtest</span>
+  <h2>What each asset returned, in its own currency and in dollars</h2>
+  <p class="note">Growth of 1 unit since January 2015, monthly. The solid line is the return a dollar investor earned; the dashed line is the local-currency return. The gap between them is the currency effect.</p>
+  <div class="legend"><span><i class="sw line" style="background:var(--s1)"></i>USD</span><span><i class="sw dash" style="border-color:var(--s2)"></i>Local currency</span></div>
+  <div class="multiples" id="mult"></div>
+  <div class="controls">
+    <div class="seg" id="hist-period" role="group" aria-label="Period"><button type="button" aria-pressed="true" data-v="Since 2010">Since 2010</button><button type="button" aria-pressed="false" data-v="10 years">10 years</button><button type="button" aria-pressed="false" data-v="5 years">5 years</button></div>
+  </div>
+  <div class="panel scroll"><table id="hist-table"></table></div>
+  <p class="note">Sharpe uses US T-bills for USD returns and the local short rate for local returns. Beta and information ratio are against MSCI ACWI in USD. Max drawdown is the worst peak-to-trough fall in monthly data.</p>
+</section>
+
+<section id="mc">
+  <span class="eyebrow">Monte Carlo</span>
+  <h2>Range of five-year outcomes</h2>
+  <p class="note">20,000 five-year paths built by resampling six-month blocks of the assets' joint monthly history, so fat tails, correlation and currency swings come along. <b>Forward</b> rescales each asset's history so its average growth equals the consensus expected return. <b>Historical</b> replays the past as it was, which assumes Nvidia's last decade happens again; read it as a stress view, not a forecast.</p>
+  <div class="controls"><div class="seg" id="mc-mode" role="group" aria-label="Drift"><button type="button" aria-pressed="true" data-v="usd_forward">Forward (USD)</button><button type="button" aria-pressed="false" data-v="usd_historical">Historical (USD)</button><button type="button" aria-pressed="false" data-v="local_forward">Forward (local)</button></div>
+  <div class="legend"><span><i class="sw" style="background:var(--s1);opacity:.3;border-radius:2px"></i>5th to 95th percentile</span><span><i class="sw" style="background:var(--s1);border-radius:2px"></i>25th to 75th</span><span><i class="sw line" style="background:var(--fg)"></i>Median</span></div></div>
+  <div class="panel"><div id="mc-chart"></div></div>
+  <div class="two">
+    <div class="panel"><h3 id="fan-title">70/30 sample portfolio, value of $100,000</h3><div id="fan"></div></div>
+    <div class="panel scroll"><table id="mc-table"></table></div>
+  </div>
+</section>
+
+<section id="dcf">
+  <span class="eyebrow">Discounted cash flow</span>
+  <h2>DCF value, implied return and input uncertainty</h2>
+  <p class="note">Year-1 cash flow is forward net income (market cap ÷ forward P/E) times each company's own free-cash-flow conversion over its last four fiscal years. Cash flow then grows at the analyst next-year rate (capped at 20%) for four years and fades to terminal growth by year 10. SK Hynix and Samsung trade on peak-cycle earnings (forward P/E near 3), so their cash flow falls to half of year 1 by year 4 before growing with the economy. The implied return is the discount rate at which the DCF equals today's enterprise value. The Monte Carlo redraws growth, terminal growth, WACC, the starting cash flow and, for the memory makers, how far the cycle falls.</p>
+  <div class="panel scroll"><table id="dcf-table"></table></div>
+</section>
+
+<section id="gk">
+  <span class="eyebrow">Building blocks</span>
+  <h2>Grinold-Kroner decomposition</h2>
+  <p class="note">Expected return = dividend yield + inflation + real earnings growth − net share issuance + repricing. Repricing assumes the forward P/E drifts to a target over ten years; targets are judgement calls listed in the assumptions.</p>
+  <div class="panel scroll"><table id="gk-table"></table></div>
+</section>
+
+<section id="bonds">
+  <span class="eyebrow">Fixed income</span>
+  <h2>Government bonds: yield, scenarios and the currency drag</h2>
+  <p class="note">For a bond held to the horizon, the yield is most of the expected return; the rest is the price change when yields move. The base case moves yields halfway toward a fair value of a real yield (1.2% for France, 4% for Turkey) plus expected inflation. The dollar return then depends on the currency, and for the lira that is the whole story.</p>
+  <div class="panel scroll"><table id="bond-table"></table></div>
+  <div class="panel scroll"><table id="fx-table"></table></div>
+  <div id="bond-note"></div>
+</section>
+
+<section id="test">
+  <span class="eyebrow">Testing the methods</span>
+  <h2>How well did each method forecast the next year?</h2>
+  <p class="note">Each December from 2015 to 2024, every method forecast the next 12 months' USD return using only data available at the time. Rank correlation asks whether a method at least put the assets in the right order (1 is perfect, 0 is a coin toss). DCF and Grinold-Kroner need point-in-time fundamentals that Yahoo does not keep, so they could not be tested this way.</p>
+  <div class="panel scroll"><table id="test-table"></table></div>
+  <div id="test-note"></div>
+</section>
+
+<section id="frontier">
+  <span class="eyebrow">Ex-ante efficient frontier</span>
+  <h2>Combining the assets using the expected returns</h2>
+  <p class="note">Expected returns are the USD consensus; risk is the historical covariance of monthly USD returns, shrunk 30% toward its diagonal. Long only, 25% cap per asset. The darker curve requires at least 70% non-US assets.</p>
+  <div class="legend"><span><i class="sw line" style="background:var(--s1)"></i>≥ 70% non-US</span><span><i class="sw dash" style="border-color:var(--s2)"></i>No country rule</span><span><i class="sw" style="background:var(--fg)"></i>Single asset</span><span><i class="sw" style="background:var(--s3)"></i>Max Sharpe (70% rule)</span></div>
+  <div class="two">
+    <div class="panel"><div id="fr-chart"></div></div>
+    <div class="panel scroll"><table id="fr-table"></table></div>
+  </div>
+</section>
+
+<section id="sample">
+  <span class="eyebrow">Backtest of a 70/30 mix</span>
+  <h2>Holding all of them, monthly rebalanced</h2>
+  <div class="callout">This backtest has hindsight bias built in. These stocks were picked in 2026, after they became winners, so the past result says little about the next five years. Use the forward-looking sections for expectations.</div>
+  <div class="two">
+    <div class="panel"><div class="legend"><span><i class="sw line" style="background:var(--s1)"></i>70/30 mix</span><span><i class="sw line" style="background:var(--s2)"></i>MSCI ACWI</span></div><div id="sp-chart"></div></div>
+    <div class="panel scroll"><table id="sp-table"></table></div>
+  </div>
+</section>
+
+<section id="assumptions">
+  <span class="eyebrow">Inputs</span>
+  <h2>Assumptions you may want to change</h2>
+  <p class="note">All of these live in <code>research/config.py</code>. Edit and rerun <code>python research_run.py</code>, then <code>python -m research.html_report</code>.</p>
+  <div class="panel scroll"><table id="as-table"></table></div>
+  <div class="panel scroll"><table id="as2-table"></table></div>
+  <div class="prose note"><ul class="tight" id="caveats"></ul></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = s => document.querySelector(s);
+const pct = (v, d = 1) => v == null || !isFinite(v) ? "–" : (v * 100).toFixed(d) + "%";
+const sgn = (v, d = 1) => { if (v == null || !isFinite(v)) return "–"; const t = (v * 100).toFixed(d); return (+t === 0 ? (0).toFixed(d) : (v > 0 ? "+" : "") + t) + "%"; };
+const num = (v, d = 2) => v == null || !isFinite(v) ? "–" : v.toFixed(d);
+const cls = v => v == null ? "" : v < -0.0005 ? "neg" : "";
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const SHORT = {SKHYNIX:"SK Hynix",SAMSUNG:"Samsung",TSMC:"TSMC",AAPL:"Apple",NVDA:"Nvidia",META:"Meta",MSFT:"Microsoft",FR_OAT10:"France OAT 10Y",TR_GOV2:"Turkey 2Y",TR_GOV10:"Turkey 10Y",PORTFOLIO:"70/30 portfolio"};
+const name = k => SHORT[k] || k;
+const assets = [...Object.keys(D.stocks), ...Object.keys(D.bonds)];
+const histAssets = assets.filter(k => D.historical[k]);
+const rec = k => D.stocks[k] || D.bonds[k];
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs = {}, parent) { const e = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (parent) parent.appendChild(e); return e; }
+function svg(container, h) { container.innerHTML = ""; const w = Math.max(280, container.clientWidth); const s = el("svg", {width: "100%", viewBox: `0 0 ${w} ${h}`, role: "img"}, container); return [s, w]; }
+const tip = $("#tip");
+function showTip(ev, html) { tip.innerHTML = html; tip.hidden = false; const r = tip.getBoundingClientRect(); let x = ev.clientX + 14, y = ev.clientY + 14; if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 14; if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
+function hideTip() { tip.hidden = true; }
+function hover(node, html) { node.addEventListener("pointermove", e => showTip(e, html)); node.addEventListener("pointerleave", hideTip); }
+function seg(id, fn) { const g = $(id); g.addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return; g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); fn(b.dataset.v); }); return () => g.querySelector('[aria-pressed="true"]').dataset.v; }
+function ticks(lo, hi, n = 5) { const span = hi - lo, step0 = span / n, mag = 10 ** Math.floor(Math.log10(step0)); const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => span / s <= n) || 10 * mag; const out = []; for (let t = Math.ceil(lo / step) * step; t <= hi + 1e-9; t += step) out.push(+t.toFixed(10)); return out; }
+function table(id, head, rows) { $(id).innerHTML = "<thead><tr>" + head.map(h => `<th>${h}</th>`).join("") + "</tr></thead><tbody>" + rows.map(r => `<tr${r.cls ? ` class="${r.cls}"` : ""}>` + r.cells.join("") + "</tr>").join("") + "</tbody>"; }
+const td = (v, c = "") => `<td class="${c}">${v}</td>`;
+
+// ---------- header ----------
+const spot = Object.values(D.bonds).filter(b => !b.has_history);
+$("#asof").textContent = `Prices, fundamentals and FX from Yahoo Finance, yields from FRED, as of ${D.as_of}.` + (spot.length ? ` ${spot.map(b => b.name).join(" and ")}: spot yield from ${spot[0].yield_source} (${spot[0].yield_date}); no free history, so they are left out of the backtest, Monte Carlo and frontier.` : "") + " Annual figures unless stated.";
+$("#synthetic").hidden = !D.synthetic;
+
+// ---------- takeaways ----------
+(function () {
+  const byUsd = assets.map(k => [k, rec(k).consensus_usd]).sort((a, b) => b[1] - a[1]);
+  const fwd = D.monte_carlo.usd_forward, port = fwd.PORTFOLIO;
+  const tr = D.bonds.TR_GOV10 || D.bonds.TR_GOV2;
+  const ft = D.forecast_test;
+  const items = [
+    [pct(byUsd[0][1]), `${name(byUsd[0][0])} has the highest consensus expected return in USD; ${name(byUsd[byUsd.length - 1][0])} the lowest at ${pct(byUsd[byUsd.length - 1][1])}.`],
+    [pct(port.annualised["50"]), `Median five-year annual return of the 70/30 mix in the forward Monte Carlo, with a ${pct(port.prob_loss_5y, 0)} chance of losing money over five years.`],
+  ];
+  if (tr) items.push([sgn(tr.expected_usd), `${tr.name}: about ${pct(tr.expected_local, 0)} a year in lira, but expected lira depreciation of ${pct(-tr.fx_views.ppp, 0)} a year cuts the dollar return to ${pct(tr.expected_usd)}.`]);
+  else items.push([pct(D.fx_history.TRY.cagr_10y), `Average yearly change in the lira against the dollar over the last ten years. Recent Turkish bond yields were not available for this run.`]);
+  if (ft.hist5 && ft.yield) items.push([pct(ft.yield.mae), `Average miss of a bond's yield as a one-year forecast, against ${pct(ft.hist5.mae)} for a stock's trailing five-year return. Stock forecasts are noisy whatever the method.`]);
+  $("#takeaways").innerHTML = items.map(([n, t]) => `<div class="take"><span class="num">${n}</span><p>${esc(t)}</p></div>`).join("");
+  const sk = Object.keys(D.stocks), cu = sk.map(k => D.stocks[k].consensus_usd);
+  const over20 = sk.filter(k => D.historical[k].periods["Since 2010"].usd.CAGR > 0.2).length;
+  $("#lede").textContent = `Historical returns for these seven stocks were extraordinary: ${over20} of them compounded above 20% a year in dollars since 2010. Forward-looking methods expect far less, roughly ${pct(Math.min(...cu), 0)} to ${pct(Math.max(...cu), 0)} a year, because today's prices already reflect much of that success.`;
+})();
+
+// ---------- expected returns ----------
+const METHODS = [["CAPM", "--s1"], ["DCF implied", "--s2"], ["Grinold-Kroner", "--s3"], ["Yield-based", "--s4"]];
+$("#exp-legend").innerHTML = METHODS.map(([m, c]) => `<span><i class="sw" style="background:var(${c})"></i>${m}</span>`).join("") + `<span><i class="sw" style="background:var(--fg);border-radius:1px;transform:rotate(45deg)"></i>Consensus</span>`;
+function methodVals(k, ccy) {
+  const r = rec(k);
+  if (D.stocks[k]) return Object.fromEntries(Object.entries(ccy === "usd" ? r.methods_usd : r.methods_local));
+  return {"Yield-based": ccy === "usd" ? r.expected_usd : r.expected_local};
+}
+let expCcy = "usd";
+function drawExpected() {
+  const c = $("#exp-chart"), rowH = 30, top = 24, left = Math.min(130, c.clientWidth * 0.3), h = top + assets.length * rowH + 10;
+  const [s, w] = svg(c, h);
+  const all = assets.flatMap(k => Object.values(methodVals(k, expCcy)).filter(v => v != null));
+  const lo = Math.min(0, ...all) - 0.01, hi = Math.max(...all) + 0.01, right = 16;
+  const x = v => left + (v - lo) / (hi - lo) * (w - left - right);
+  for (const t of ticks(lo, hi, w < 500 ? 4 : 8)) { el("line", {x1: x(t), x2: x(t), y1: top - 6, y2: h - 6, class: t === 0 ? "zero" : "grid"}, s); el("text", {x: x(t), y: 12, "text-anchor": "middle"}, s).textContent = pct(t, 0); }
+  assets.forEach((k, i) => {
+    const y = top + i * rowH + rowH / 2, vals = methodVals(k, expCcy), cons = expCcy === "usd" ? rec(k).consensus_usd : rec(k).consensus_local;
+    el("text", {x: 0, y: y + 4, class: "lbl"}, s).textContent = name(k);
+    const vs = Object.values(vals).filter(v => v != null);
+    el("line", {x1: x(Math.min(...vs)), x2: x(Math.max(...vs)), y1: y, y2: y, stroke: "var(--line)", "stroke-width": 6, "stroke-linecap": "round"}, s);
+    METHODS.forEach(([m, col]) => { if (vals[m] == null) return; const d = el("circle", {cx: x(vals[m]), cy: y, r: 5.5, fill: `var(${col})`, stroke: "var(--panel)", "stroke-width": 2}, s); hover(d, `<b>${name(k)}</b><br>${m}: ${pct(vals[m])}`); });
+    const dm = el("rect", {x: x(cons) - 5, y: y - 5, width: 10, height: 10, fill: "var(--fg)", transform: `rotate(45 ${x(cons)} ${y})`, stroke: "var(--panel)", "stroke-width": 1.5}, s);
+    hover(dm, `<b>${name(k)}</b><br>Consensus: ${pct(cons)}`);
+  });
+}
+function expTable() {
+  const rows = assets.map(k => {
+    const r = rec(k), st = D.stocks[k], h = D.historical[k] ? D.historical[k].periods["10 years"].usd.CAGR : null;
+    const m = st ? st.methods_local : {};
+    const fx = st ? st.fx_views.ppp : r.fx_views.ppp;
+    return {cells: [td(`${name(k)}<span class="sub">${r.currency}</span>`), td(pct(m["CAPM"])), td(pct(m["DCF implied"])), td(pct(m["Grinold-Kroner"])), td(st ? "–" : pct(r.expected_local)), td(pct(r.consensus_local), "cons"), td(sgn(fx), cls(fx)), td(pct(r.consensus_usd), "cons"), td(pct(h))]};
+  });
+  table("#exp-table", ["Asset", "CAPM", "DCF implied", "Grinold-Kroner", "Yield-based", "Consensus local", "Expected FX vs USD", "Consensus USD", "Last 10y USD (actual)"], rows);
+}
+seg("#exp-ccy", v => { expCcy = v; drawExpected(); });
+
+// ---------- history small multiples ----------
+function drawMultiples() {
+  const box = $("#mult"); box.innerHTML = "";
+  histAssets.forEach(k => {
+    const g = D.growth[k]; if (!g) return;
+    const card = document.createElement("div"); card.className = "mult";
+    const lastU = g.usd[g.usd.length - 1], lastL = g.local[g.local.length - 1];
+    card.innerHTML = `<h3>${esc(name(k))}</h3><span class="fig">USD ×${lastU.toFixed(1)} · local ×${lastL.toFixed(1)}</span><div></div>`;
+    box.appendChild(card);
+    const c = card.lastElementChild, H = 120; const [s, w] = svg(c, H);
+    const vals = [...g.usd, ...g.local].filter(v => v > 0), lo = Math.log(Math.min(...vals)), hi = Math.log(Math.max(...vals));
+    const pad = 4, n = g.dates.length, x = i => pad + i / (n - 1) * (w - 2 * pad), y = v => H - 18 - (Math.log(v) - lo) / ((hi - lo) || 1) * (H - 26);
+    el("line", {x1: pad, x2: w - pad, y1: y(1), y2: y(1), class: "zero"}, s);
+    const path = arr => arr.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+    el("path", {d: path(g.local), fill: "none", stroke: "var(--s2)", "stroke-width": 1.5, "stroke-dasharray": "4 3"}, s);
+    el("path", {d: path(g.usd), fill: "none", stroke: "var(--s1)", "stroke-width": 2}, s);
+    el("text", {x: pad, y: H - 3}, s).textContent = g.dates[0].slice(0, 4);
+    el("text", {x: w - pad, y: H - 3, "text-anchor": "end"}, s).textContent = g.dates[n - 1].slice(0, 4);
+    const cross = el("line", {y1: 0, y2: H - 18, stroke: "var(--faint)", "stroke-width": 1, visibility: "hidden"}, s);
+    const hit = el("rect", {x: 0, y: 0, width: w, height: H, fill: "transparent"}, s);
+    hit.addEventListener("pointermove", e => { const r = s.getBoundingClientRect(); const i = Math.max(0, Math.min(n - 1, Math.round(((e.clientX - r.left) / r.width * w - pad) / (w - 2 * pad) * (n - 1)))); cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible"); showTip(e, `<b>${name(k)}</b> ${g.dates[i]}<br>USD ×${g.usd[i].toFixed(2)}<br>Local ×${g.local[i].toFixed(2)}`); });
+    hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+  });
+}
+let histPeriod = "Since 2010";
+function histTable() {
+  const rows = histAssets.map(k => { const h = D.historical[k], p = h.periods[histPeriod]; return {cells: [
+    td(`${name(k)}<span class="sub">from ${p.usd.Start.slice(0, 7)}</span>`), td(pct(p.local.CAGR), cls(p.local.CAGR)), td(pct(p.usd.CAGR), cls(p.usd.CAGR)), td(sgn(p.fx_contribution), cls(p.fx_contribution)),
+    td(pct(p.usd.Volatility)), td(num(p.local.Sharpe)), td(num(p.usd.Sharpe)), td(pct(p.usd["Max drawdown"]), "neg"), td(num(p.usd.Beta)), td(num(p.usd["Info ratio"]))]}; });
+  table("#hist-table", ["Asset", "CAGR local", "CAGR USD", "Currency effect", "Volatility USD", "Sharpe local", "Sharpe USD", "Max drawdown USD", "Beta ACWI", "Info ratio vs ACWI"], rows);
+}
+seg("#hist-period", v => { histPeriod = v; histTable(); });
+
+// ---------- Monte Carlo ----------
+let mcMode = "usd_forward";
+function drawMC() {
+  const data = D.monte_carlo[mcMode], keys = [...assets.filter(k => data[k]), ...(data.PORTFOLIO ? ["PORTFOLIO"] : [])];
+  const c = $("#mc-chart"), rowH = 28, top = 22, left = Math.min(130, c.clientWidth * 0.3), h = top + keys.length * rowH + 8;
+  const [s, w] = svg(c, h);
+  const lo = Math.min(-0.1, ...keys.map(k => data[k].annualised["5"])), hi = Math.max(0.2, ...keys.map(k => data[k].annualised["95"]));
+  const x = v => left + (v - lo) / (hi - lo) * (w - left - 16);
+  for (const t of ticks(lo, hi, w < 500 ? 4 : 8)) { el("line", {x1: x(t), x2: x(t), y1: top - 6, y2: h - 4, class: t === 0 ? "zero" : "grid"}, s); el("text", {x: x(t), y: 12, "text-anchor": "middle"}, s).textContent = pct(t, 0); }
+  keys.forEach((k, i) => {
+    const a = data[k].annualised, y = top + i * rowH + rowH / 2, col = k === "PORTFOLIO" ? "var(--s3)" : "var(--s1)";
+    el("text", {x: 0, y: y + 4, class: "lbl"}, s).textContent = name(k);
+    el("rect", {x: x(a["5"]), y: y - 7, width: x(a["95"]) - x(a["5"]), height: 14, rx: 3, fill: col, opacity: 0.28}, s);
+    el("rect", {x: x(a["25"]), y: y - 7, width: x(a["75"]) - x(a["25"]), height: 14, rx: 3, fill: col}, s);
+    el("line", {x1: x(a["50"]), x2: x(a["50"]), y1: y - 9, y2: y + 9, stroke: "var(--fg)", "stroke-width": 2}, s);
+    const hit = el("rect", {x: left, y: y - rowH / 2, width: w - left, height: rowH, fill: "transparent"}, s);
+    hover(hit, `<b>${name(k)}</b> · annual return over 5 years<br>5th ${pct(a["5"])} · 25th ${pct(a["25"])}<br>Median ${pct(a["50"])}<br>75th ${pct(a["75"])} · 95th ${pct(a["95"])}<br>Chance of a 5-year loss ${pct(data[k].prob_loss_5y, 0)}`);
+  });
+  const rows = keys.map(k => { const m = data[k]; return {cls: k === "PORTFOLIO" ? "em" : "", cells: [td(name(k)), td(pct(m.annualised["50"])), td(pct(m.annualised["5"]), cls(m.annualised["5"])), td(pct(m.prob_loss_5y, 0)), td(pct(m.var95_1y)), td(pct(m.cvar95_1y)), td("$" + Math.round(m.terminal_100k["50"] / 1000) + "k")]}; });
+  table("#mc-table", ["Asset", "Median annual", "Bad case (5th)", "P(5-yr loss)", "1-yr VaR 95%", "1-yr CVaR 95%", "$100k → median"], rows);
+  drawFan(data.PORTFOLIO);
+}
+function drawFan(p) {
+  const c = $("#fan"); if (!p || !p.fan) { c.innerHTML = '<p class="note">Portfolio paths are simulated in USD only.</p>'; return; }
+  const H = 220, [s, w] = svg(c, H), f = p.fan, n = f["50"].length, left = 44, b = 22;
+  const hi = Math.max(...f["95"]) * 100000, lo = Math.min(...f["5"]) * 100000;
+  const x = i => left + i / (n - 1) * (w - left - 8), y = v => H - b - (v - lo) / (hi - lo) * (H - b - 8);
+  for (const t of ticks(lo, hi, 4)) { el("line", {x1: left, x2: w - 8, y1: y(t), y2: y(t), class: "grid"}, s); el("text", {x: left - 6, y: y(t) + 4, "text-anchor": "end"}, s).textContent = "$" + Math.round(t / 1000) + "k"; }
+  for (let yr = 0; yr <= 5; yr++) el("text", {x: x(Math.min(n - 1, yr * 12 - 1 < 0 ? 0 : yr * 12 - 1)), y: H - 6, "text-anchor": "middle"}, s).textContent = yr === 0 ? "Start" : "Y" + yr;
+  const band = (a, bb, op) => el("path", {d: f[a].map((v, i) => `${i ? "L" : "M"}${x(i)},${y(v * 1e5)}`).join("") + f[bb].map((v, i) => `L${x(n - 1 - i)},${y(f[bb][n - 1 - i] * 1e5)}`).join("") + "Z", fill: "var(--s3)", opacity: op}, s);
+  band("5", "95", 0.18); band("25", "75", 0.35);
+  el("path", {d: f["50"].map((v, i) => `${i ? "L" : "M"}${x(i)},${y(v * 1e5)}`).join(""), fill: "none", stroke: "var(--s3)", "stroke-width": 2}, s);
+  el("line", {x1: left, x2: w - 8, y1: y(1e5), y2: y(1e5), class: "zero", "stroke-dasharray": "3 3"}, s);
+  const cross = el("line", {y1: 8, y2: H - b, stroke: "var(--faint)", visibility: "hidden"}, s);
+  const hit = el("rect", {x: left, y: 0, width: w - left, height: H, fill: "transparent"}, s);
+  hit.addEventListener("pointermove", e => { const r = s.getBoundingClientRect(); const i = Math.max(0, Math.min(n - 1, Math.round(((e.clientX - r.left) / r.width * w - left) / (w - left - 8) * (n - 1)))); cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible"); const m = v => "$" + Math.round(v * 100) + "k"; showTip(e, `<b>Month ${i + 1}</b><br>95th ${m(f["95"][i])}<br>Median ${m(f["50"][i])}<br>5th ${m(f["5"][i])}`); });
+  hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+}
+seg("#mc-mode", v => { mcMode = v; drawMC(); });
+
+// ---------- DCF ----------
+(function () {
+  const rows = Object.entries(D.stocks).map(([k, s]) => { const d = s.dcf; if (!d || d.note) return {cells: [td(name(k)), `<td colspan="9" class="wrap-ok">${esc(d ? d.note : "No fundamentals")}</td>`]};
+    return {cells: [td(`${name(k)}<span class="sub">${s.currency}</span>`), td(pct(d.fcf_conversion, 0)), td(esc(d.g_source.startsWith("cyclical") ? "Cycle: to 50% by Y4" : pct(d.g0)), ""), td(pct(d.g_terminal)), td(pct(d.wacc)), td(sgn(d.upside, 0), d.upside < 0 ? "neg" : "pos"), td(pct(d.expected_local), "cons"), td(`${pct(d.mc_implied_return["5"])} to ${pct(d.mc_implied_return["95"])}`), td(pct(d.mc_prob_undervalued, 0)), td(pct(d.terminal_share_of_value, 0))]}; });
+  table("#dcf-table", ["Company", "FCF / net income", "Growth yrs 2-5", "Terminal growth", "WACC", "DCF value vs price", "Implied return", "Implied return, 90% range", "P(undervalued)", "Value from terminal"], rows);
+})();
+
+// ---------- GK ----------
+(function () {
+  const rows = Object.entries(D.stocks).map(([k, s]) => { const g = s.gk; return {cells: [td(`${name(k)}<span class="sub">${s.currency}</span>`), td(pct(g.dividend_yield)), td(pct(g.inflation)), td(pct(g.real_growth), cls(g.real_growth)), td(sgn(-g.net_dilution), cls(-g.net_dilution)), td(`${num(g.forward_pe, 1)} → ${num(g.target_pe, 0)}`), td(sgn(g.repricing), cls(g.repricing)), td(pct(g.expected_local), "cons"), td(esc(g.growth_source), "wrap-ok")]}; });
+  table("#gk-table", ["Company", "Dividend yield", "Inflation", "Real growth", "Buybacks", "Forward P/E → target", "Repricing", "Expected (local)", "Growth basis"], rows);
+})();
+
+// ---------- bonds ----------
+(function () {
+  const bs = Object.entries(D.bonds);
+  if (!bs.length) { $("#bond-table").innerHTML = "<tbody><tr><td>No current bond yields in this run.</td></tr></tbody>"; return; }
+  const sc = Object.keys(bs[0][1].scenarios_local).map(k => k === "Yields up" ? "Yields up (+2 pts; Turkey +8)" : k === "Yields down" ? "Yields down" : k);
+  table("#bond-table", ["Bond", "Yield now", "Fair yield", "Duration", ...sc.map(s => esc(s)), "Expected local", "Expected FX", "Expected USD"],
+    bs.map(([k, b]) => ({cells: [td(`${esc(b.name)}<span class="sub">${b.currency}</span>`), td(`${pct(b.yield, 2)}<span class="sub">${esc(b.yield_date || "")}</span>`), td(pct(b.fair_yield)), td(num(b.duration, 1)), ...Object.keys(b.scenarios_local).map(s => td(pct(b.scenarios_local[s]), cls(b.scenarios_local[s]))), td(pct(b.expected_local), "cons"), td(sgn(b.fx_views.ppp), cls(b.fx_views.ppp)), td(pct(b.expected_usd), "cons " + cls(b.expected_usd))]})));
+  const ccys = ["EUR", "KRW", "TWD", "TRY"];
+  const v = ccy => (D.bonds.FR_OAT10 && ccy === "EUR" ? D.bonds.FR_OAT10.fx_views : Object.values(D.stocks).concat(Object.values(D.bonds)).find(r => r.currency === ccy)?.fx_views);
+  table("#fx-table", ["Currency vs USD", "PPP (base case)", "Interest parity", "10-year trend", "Actual last 10y"], ccys.filter(v).map(c => { const f = v(c); return {cells: [td(c), td(sgn(f.ppp), cls(f.ppp)), td(sgn(f.uip), cls(f.uip)), td(sgn(f.trend), cls(f.trend)), td(sgn(D.fx_history[c].cagr_10y), cls(D.fx_history[c].cagr_10y))]}; }));
+  const trb = D.bonds.TR_GOV10 || D.bonds.TR_GOV2;
+  if (trb) $("#bond-note").innerHTML = `<p class="note">A ${pct(trb.yield, 1)} lira yield looks huge, but the dollar return depends on how fast the lira falls. If it falls in line with the inflation gap (PPP, the base case), ${esc(trb.name)} returns ${pct(trb.expected_usd)} a year in dollars. If it falls by the interest-rate gap, which is what currency forwards price in, the dollar return is ${pct((1 + trb.expected_local) * (1 + trb.fx_views.uip) - 1)}. If the last decade's ${pct(-trb.fx_views.trend, 0)} a year depreciation repeats, it is ${pct((1 + trb.expected_local) * (1 + trb.fx_views.trend) - 1)}.</p>`;
+  if (!D.bonds.TR_GOV2 && !D.bonds.TR_GOV10) $("#bond-note").innerHTML = `<div class="callout">Turkish government bonds are missing from this run: the free FRED series stop in 2010. The lira lost ${pct(-D.fx_history.TRY.cagr_10y, 0)} a year against the dollar over the last decade, which is the main risk for a dollar investor.</div>`;
+})();
+
+// ---------- forecast test ----------
+(function () {
+  const lab = {hist5: "Trailing 5-year return (stocks and bonds)", capm: "Global CAPM (stocks)", flat8: "Flat 8% (stocks)", yield: "Bond yield (bonds)"};
+  table("#test-table", ["Method", "Mean absolute error", "Average bias", "Rank correlation", "Forecasts"], Object.entries(D.forecast_test).map(([k, f]) => ({cells: [td(lab[k] || k), td(pct(f.mae)), td(sgn(f.bias), cls(f.bias)), td(f.rank_corr == null ? "–" : num(f.rank_corr)), td(f.n)]})));
+  const f = D.forecast_test;
+  if (f.capm && f.hist5) $("#test-note").innerHTML = `<p class="note">Every stock method missed by ${pct(Math.min(f.capm.mae, f.hist5.mae), 0)} or more a year on average, and all were too low (negative bias) because these seven stocks beat almost every forecast over 2015-2025. One-year stock returns are close to unpredictable; the methods are better used to compare assets and size risk over longer horizons. Bond yields were far better forecasts of bond returns.</p>`;
+})();
+
+// ---------- frontier ----------
+function drawFrontier() {
+  const F = D.frontier, c = $("#fr-chart"), H = 300, [s, w] = svg(c, H), left = 44, b = 28;
+  const pts = [...F.rule_70.points, ...F.unconstrained.points, ...F.rule_70.assets];
+  const vmax = Math.max(...pts.map(p => p.vol)) * 1.05, rlo = Math.min(0, ...pts.map(p => p.ret)), rhi = Math.max(...pts.map(p => p.ret)) * 1.08;
+  const x = v => left + v / vmax * (w - left - 12), y = r => H - b - (r - rlo) / (rhi - rlo) * (H - b - 10);
+  for (const t of ticks(0, vmax, 5)) { el("line", {x1: x(t), x2: x(t), y1: 10, y2: H - b, class: "grid"}, s); el("text", {x: x(t), y: H - b + 14, "text-anchor": "middle"}, s).textContent = pct(t, 0); }
+  for (const t of ticks(rlo, rhi, 5)) { el("line", {x1: left, x2: w - 12, y1: y(t), y2: y(t), class: "grid"}, s); el("text", {x: left - 6, y: y(t) + 4, "text-anchor": "end"}, s).textContent = pct(t, 0); }
+  el("text", {x: w - 12, y: H - 2, "text-anchor": "end"}, s).textContent = "Volatility";
+  const line = (p, col, dash) => el("path", {d: p.map((q, i) => `${i ? "L" : "M"}${x(q.vol)},${y(q.ret)}`).join(""), fill: "none", stroke: col, "stroke-width": 2, ...(dash ? {"stroke-dasharray": "5 4"} : {})}, s);
+  line(F.unconstrained.points, "var(--s2)", true); line(F.rule_70.points, "var(--s1)");
+  F.rule_70.assets.forEach(a => { const d = el("circle", {cx: x(a.vol), cy: y(a.ret), r: 4.5, fill: "var(--fg)", stroke: "var(--panel)", "stroke-width": 2}, s); const nearRight = x(a.vol) > w - 90; el("text", {x: x(a.vol) + (nearRight ? -7 : 7), y: y(a.ret) + 4, "text-anchor": nearRight ? "end" : "start"}, s).textContent = name(a.key); hover(d, `<b>${name(a.key)}</b><br>Expected ${pct(a.ret)}<br>Volatility ${pct(a.vol)}`); });
+  const m = F.rule_70.max_sharpe, d = el("circle", {cx: x(m.vol), cy: y(m.ret), r: 7, fill: "var(--s3)", stroke: "var(--panel)", "stroke-width": 2}, s);
+  hover(d, `<b>Max Sharpe, ≥70% non-US</b><br>Expected ${pct(m.ret)}<br>Volatility ${pct(m.vol)}<br>Sharpe ${num(m.sharpe)}`);
+  const W = F.rule_70.max_sharpe.weights, M = F.rule_70.min_variance.weights, U = F.unconstrained.max_sharpe.weights;
+  table("#fr-table", ["Asset", "Max Sharpe (70% rule)", "Min variance (70% rule)", "Max Sharpe (no rule)"], [...Object.keys(W).map(k => ({cells: [td(name(k)), td(pct(W[k], 0)), td(pct(M[k], 0)), td(pct(U[k], 0))]})),
+    {cls: "em", cells: [td("Expected return"), td(pct(F.rule_70.max_sharpe.ret)), td(pct(F.rule_70.min_variance.ret)), td(pct(F.unconstrained.max_sharpe.ret))]},
+    {cls: "em", cells: [td("Volatility"), td(pct(F.rule_70.max_sharpe.vol)), td(pct(F.rule_70.min_variance.vol)), td(pct(F.unconstrained.max_sharpe.vol))]},
+    {cls: "em", cells: [td("Sharpe"), td(num(F.rule_70.max_sharpe.sharpe)), td(num(F.rule_70.min_variance.sharpe)), td(num(F.unconstrained.max_sharpe.sharpe))]}]);
+}
+
+// ---------- sample portfolio ----------
+function drawSample() {
+  const P = D.sample_portfolio, g = P.growth, c = $("#sp-chart"), H = 240, [s, w] = svg(c, H), left = 40, b = 22, n = g.dates.length;
+  const all = [...g.portfolio, ...g.acwi], lo = Math.log(Math.min(...all)), hi = Math.log(Math.max(...all));
+  const x = i => left + i / (n - 1) * (w - left - 8), y = v => H - b - (Math.log(v) - lo) / (hi - lo) * (H - b - 8);
+  [1, 2, 5, 10, 20, 50].filter(t => Math.log(t) >= lo && Math.log(t) <= hi).forEach(t => { el("line", {x1: left, x2: w - 8, y1: y(t), y2: y(t), class: "grid"}, s); el("text", {x: left - 6, y: y(t) + 4, "text-anchor": "end"}, s).textContent = "×" + t; });
+  [0, Math.floor(n / 2), n - 1].forEach(i => el("text", {x: x(i), y: H - 5, "text-anchor": i === 0 ? "start" : i === n - 1 ? "end" : "middle"}, s).textContent = g.dates[i].slice(0, 4));
+  const path = a => a.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join("");
+  el("path", {d: path(g.acwi), fill: "none", stroke: "var(--s2)", "stroke-width": 2}, s);
+  el("path", {d: path(g.portfolio), fill: "none", stroke: "var(--s1)", "stroke-width": 2}, s);
+  const cross = el("line", {y1: 8, y2: H - b, stroke: "var(--faint)", visibility: "hidden"}, s), hit = el("rect", {x: left, y: 0, width: w - left, height: H, fill: "transparent"}, s);
+  hit.addEventListener("pointermove", e => { const r = s.getBoundingClientRect(); const i = Math.max(0, Math.min(n - 1, Math.round(((e.clientX - r.left) / r.width * w - left) / (w - left - 8) * (n - 1)))); cross.setAttribute("x1", x(i)); cross.setAttribute("x2", x(i)); cross.setAttribute("visibility", "visible"); showTip(e, `<b>${g.dates[i]}</b><br>70/30 mix ×${g.portfolio[i].toFixed(2)}<br>ACWI ×${g.acwi[i].toFixed(2)}`); });
+  hit.addEventListener("pointerleave", () => { cross.setAttribute("visibility", "hidden"); hideTip(); });
+  const p = P.portfolio, a = P.acwi;
+  table("#sp-table", ["", "70/30 mix", "MSCI ACWI"], [["CAGR", pct(p.CAGR), pct(a.CAGR)], ["Volatility", pct(p.Volatility), pct(a.Volatility)], ["Sharpe", num(p.Sharpe), num(a.Sharpe)], ["Max drawdown", pct(p["Max drawdown"]), pct(a["Max drawdown"])], ["Information ratio", num(p["Info ratio"]), "–"], ["Beta to ACWI", num(p.Beta), "1.00"]].map(r => ({cells: [td(r[0]), td(r[1]), td(r[2])]}))
+    .concat([{cells: [`<td colspan="3" class="wrap-ok">${P.start.slice(0, 7)} to ${P.end.slice(0, 7)}. Weights: ${Object.entries(P.weights).map(([k, v]) => `${esc(name(k))} ${pct(v, 1)}`).join(", ")}.</td>`]}]));
+}
+
+// ---------- assumptions ----------
+(function () {
+  const A = D.assumptions, c = ["USD", "KRW", "TWD", "EUR", "TRY"], ctry = {USD: "US", KRW: "KR", TWD: "TW", EUR: "FR", TRY: "TR"};
+  table("#as-table", ["Currency", "Risk-free rate", "Inflation", "Country risk premium", "Real GDP growth"], c.map(k => ({cells: [td(k), td(pct(A.risk_free[k])), td(pct(A.inflation[k])), td(pct(A.country_risk_premium[ctry[k]])), td(pct(A.long_run_real_gdp[ctry[k]]))]})));
+  const G = D.gk_settings.target_pe;
+  table("#as2-table", ["Setting", "Value"], [["Mature-market equity risk premium", pct(A.mature_erp)], ["DCF growth cap (years 2-5)", pct(D.dcf_settings.max_start_growth)], ["DCF terminal growth cap", pct(D.dcf_settings.terminal_growth_cap)], ["Memory makers: mid-cycle cash flow, share of year 1", pct(D.dcf_settings.cyclical_mid_cycle.SKHYNIX, 0)], ["Target forward P/E (Grinold-Kroner)", Object.entries(G).map(([k, v]) => `${name(k)} ${v}`).join(", ")]].map(r => ({cells: [td(r[0]), td(r[1], "wrap-ok")]})));
+  $("#caveats").innerHTML = [
+    "Fundamentals and analyst estimates are Yahoo Finance's current snapshot. Samsung's market cap includes preferred shares; SK Hynix and Samsung analyst growth rates (hundreds of percent this year) reflect the memory price boom.",
+    "The DCF's year-1 cash flow uses forward earnings, so it depends on analyst forecasts being right. The memory makers' result depends most on how far the cycle falls; the DCF Monte Carlo tries 30% to 80% of the peak.",
+    "Bond total returns are built from monthly yields (a constant-maturity bond bought at par and sold a month later), not from a traded index.",
+    "Expected currency moves use relative PPP. Interest parity and the 10-year trend are shown for comparison; for the lira they are all large and negative.",
+    "Grading rules from class (at least 70% non-US, $100,000) are applied only to the sample portfolio and frontier, and are easy to switch off in the code."
+  ].map(t => `<li>${esc(t)}</li>`).join("");
+  $("#foot").innerHTML = `Generated by <code>research_run.py</code> and <code>research/html_report.py</code> in the Investment-Portfolio repository. Data as of ${esc(D.as_of)}. Educational research for AFMBA 622, not investment advice.`;
+})();
+
+function drawAll() { drawExpected(); drawMultiples(); drawMC(); drawFrontier(); drawSample(); }
+expTable(); histTable(); drawAll();
+let rz; addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(drawAll, 150); });
+</script>
