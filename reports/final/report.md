@@ -980,7 +980,7 @@ One OOS regime (a strong dollar, the 2022 rate shock, an AI rally) and no 2008 t
 5. The international fundamentals. All eight shortlisted international names were screened on current, not point-in-time, statements, and the in-sample table that chose them was later regenerated after a bug fix, moving Constellation from 8th to 10th and HDFC Bank from 11th to 7th; the shortlist was kept as frozen (Section 4.6).
 6. The mostly-passive label for the stock sleeve, and the technical half of "technical plus fundamental".
 
-**What we recommend.** Hold the order list in Section 6.2 ($97,285 invested, $2,715 in cash), rebalance quarterly with the 68% drift trigger, and report the drawdown shortfall. Treat any switch to a 5-year lookback or minimum variance to meet the -25% limit as a post-hoc choice, label it as one, and leave the decision to John. Do not add the put.
+**What we recommend.** Hold the order list in Section 6.2 ($97,285 invested, $2,715 in cash), rebalance quarterly with the 68% drift trigger, and report the drawdown shortfall. Treat any switch to a 5-year lookback or minimum variance to meet the -25% limit as a post-hoc choice, label it as one, and leave the decision to John. On 2026-11-07 John accepted the 0.47-point shortfall and kept the optimized portfolio as the recommendation. Do not add the put.
 
 ---
 

@@ -202,6 +202,7 @@ Answers log:
 | Date | Question | Answer |
 |---|---|---|
 | 2026-11-07 | Check-in 4: try the dashboard; any changes before the report and PR? | "No changes, finish." |
+| 2026-11-07 | Drawdown budget: the optimized portfolio's -25.47% misses the -25% limit by 0.47 points; accept it, or switch to a post-hoc variant? | "The miss is ok." The optimized portfolio stands as the recommendation; the 5-year-lookback and minimum-variance variants stay in the report as alternatives only. |
 | 2026-11-07 | Check-in 3: approve the picks and runners-up, SK Hynix left out per the downgrade rule? | "Approved, please continue." Picks stand as in `scorecard.md`; SK Hynix stays out; Phase 5 started. |
 | 2026-11-07 | Approve method and benchmarks, start Phase 2? | "Approve, start Phase 2." Defaults stand until John says otherwise: gold/commodities/cash/US TIPS count as US-neutral under the 70% rule (both treatments will be shown); open-end EM bond funds stay in the universe as candidates with their fees scored; the four-fund course analysis is not started unless John asks; no course brief file was provided. |
 
