@@ -1,0 +1,315 @@
+{
+  "type": "intl_growth_stock",
+  "reviewer": "opus",
+  "date": "2026-11-07",
+  "reproduced": true,
+  "reproduce_note": "python -m research.candidates.intl_growth --all --write gave byte-identical outputs; independent checks: python -m research.reviews.intl_growth_check",
+  "candidates": {
+    "2330_TW": {
+      "verdict": "pass",
+      "claims": [
+        {
+          "claim": "OOS USD Sharpe 0.96, IR 1.13 (t 3.4), max DD -46%, CAGR 32.2%",
+          "status": "pass",
+          "evidence": "Independent recompute: 0.959 / 1.127 / t 3.35 / -0.463 / 0.3219 over 106 months, 2018-01 to 2026-10 (check script 1c)."
+        },
+        {
+          "claim": "deflated Sharpe 0.78 (N=31)",
+          "status": "pass",
+          "evidence": "0.783 with V=1/(T-1) (E[max SR] 0.71 annual); 0.915 with the measured cross-sectional V=0.00506. Below 0.95 under the pre-registered V."
+        },
+        {
+          "claim": "fx -1.0%/yr; hedged minus unhedged +2.6%",
+          "status": "pass",
+          "evidence": "fx -0.0101 and hedged-unhedged +0.0256; identity error 2e-16. Split: TWD fall avoided +0.85%, carry +0.25%, lower variance drag +0.89%, the rest compounding."
+        },
+        {
+          "claim": "flat 1.8% TWD short rate (no series on disk)",
+          "status": "weak evidence",
+          "evidence": "yields.csv has no TW_ column. The flat rate is conservative: at 1.0% the hedge gain is +3.62%/yr, at 0.5% +4.29%/yr. The local Sharpe of 1.09 also depends on it."
+        },
+        {
+          "claim": "TSM ADR cross-check",
+          "status": "pass",
+          "evidence": "OOS corr 0.933; CAGR gap -0.93%/yr (mean-return gap -1.60%/yr). The ADR premium over 5 local shares rose from 1.044 to 1.110 (+0.70%/yr), leaving about 0.2%/yr unexplained. This is not an FX or dividend error."
+        },
+        {
+          "claim": "adjusted close includes dividends",
+          "status": "pass",
+          "evidence": "Over 37 ex-dates since 2012 the mean of (r_2330 - r_TWII)/(div/P) is +0.44; about -0.6 would be expected if the close were unadjusted."
+        },
+        {
+          "claim": "local IR vs ^TWII 0.90",
+          "status": "pass with caveat",
+          "evidence": "0.897 reproduced. Grossing ^TWII up by the EWT-minus-index gap (+1.42%/yr) gives 0.810."
+        },
+        {
+          "claim": "memo: only one of the eight whose OOS edge 'largely survives' the multiple-testing haircut",
+          "status": "pass, wording fix",
+          "evidence": "t 3.35 is above the 2.95 Bonferroni bar for 31 trials (the only shortlisted name to clear it), but DSR 0.78 is below 0.95."
+        },
+        {
+          "claim": "in-sample selection free of look-ahead",
+          "status": "weak evidence",
+          "evidence": "research/plan/longlists/intl_growth_stock_scored.csv has as_of 2017-12-31, but fy_end is 2025-12-31 and fy_filed 2026-03-31 (fundamentals_pit False) for all 8 shortlisted names. That fundamental score is 50% of the in-sample composite (shortlist.md). Price-only rank = 0.5 pct(IS Sharpe) + 0.5 pct(IS IR). TSMC is composite rank 3 and price-only rank 5, so it survives."
+        }
+      ],
+      "notes": "All numbers reproduce. Geopolitical risk is correctly stated as a tail that no backtest contains; 'sizing, not exclusion' is a judgement call, not evidence."
+    },
+    "000660_KS": {
+      "verdict": "downgrade",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.73, IR 0.76 (t 2.3), 59% vol, DSR 0.54",
+          "status": "pass",
+          "evidence": "0.735 / 0.757 / t 2.25 / vol 0.590 / DSR 0.540."
+        },
+        {
+          "claim": "shortlisted on in-sample (2017) data",
+          "status": "fail (look-ahead)",
+          "evidence": "research/plan/longlists/intl_growth_stock_scored.csv has as_of 2017-12-31, but fy_end is 2025-12-31 and fy_filed 2026-03-31 (fundamentals_pit False) for all 8 shortlisted names. That fundamental score is 50% of the in-sample composite (shortlist.md). Price-only rank = 0.5 pct(IS Sharpe) + 0.5 pct(IS IR). SK Hynix's fundamental score of 0.83 comes from FY2025 statements (net-income CAGR 168%, operating margin 48.6%). Price-only it ranks 19 of 31, so its shortlist slot is a product of 2026 data."
+        },
+        {
+          "claim": "statistical edge",
+          "status": "weak evidence",
+          "evidence": "t 2.25 is below the 2.95 Bonferroni bar for 31 trials; DSR 0.54."
+        },
+        {
+          "claim": "forward P/E 2.7",
+          "status": "pass (data); weak (model)",
+          "evidence": "Price 1,277,000 / FY2027 consensus EPS 467,761 (39 analysts, earnings_estimate.csv) = 2.73. That EPS is 7.7x FY2025 diluted EPS of 60,378."
+        },
+        {
+          "claim": "cyclical mid-cycle fade applied (DCFSettings.cyclical_mid_cycle 0.5)",
+          "status": "pass",
+          "evidence": "G-K growth_source: 'cyclical: earnings to 50% of forward'. DCF g_source: 'falls to 50% of year 1 by year 4'."
+        },
+        {
+          "claim": "forward consensus 12.4% USD",
+          "status": "weak evidence",
+          "evidence": "The 50% mid-cycle level is still 3.9x FY2025 EPS. Rerunning the analyst pipeline: mid 0.35 gives 11.0% (DCF 10.9%, G-K 5.1%); mid 0.25 gives 10.0% (DCF 8.8%, G-K 4.6%). At a forward P/E of 5.5, G-K alone would be 0.3%."
+        },
+        {
+          "claim": "fx -2.4%/yr; hedge +3.2%",
+          "status": "pass",
+          "evidence": "-0.0236 / +0.0321. Carry cost 0.20%/yr; the gain is the KRW fall plus lower variance drag."
+        }
+      ],
+      "notes": "Downgrade to runner-up or a small position. The OOS numbers are right, but: its slot came from look-ahead fundamentals; t is below the multiple-testing bar; the forward case rests on peak-cycle consensus EPS; and at 2026-10 it is 44% below its OOS high. The memo's 'highest in-sample fundamental score' should read 'highest fundamental score on FY2025 statements'."
+    },
+    "CSU_TO": {
+      "verdict": "pass",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.64, IR 0.51 (t 1.5)",
+          "status": "pass",
+          "evidence": "0.644 / 0.506 / t 1.50; DSR 0.429."
+        },
+        {
+          "claim": "-52% drawdown in 2025-26",
+          "status": "pass",
+          "evidence": "Peak 2025-06, trough 2026-03, -0.519; -33% at 2026-10."
+        },
+        {
+          "claim": "not overclaimed at t < 2",
+          "status": "pass",
+          "evidence": "Memo verdict is 'good runner-up' and it discusses the drawdown."
+        },
+        {
+          "claim": "selection free of look-ahead",
+          "status": "pass",
+          "evidence": "Price-only in-sample rank 1."
+        }
+      ],
+      "notes": "DCF WACC of 5.8% (CAD rf 2.45% + 0.81 local beta x 4.5%) gives 167% upside, which looks too high; the 8.7% median consensus does not depend on it."
+    },
+    "BAJFINANCE_NS": {
+      "verdict": "pass",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.51, IR 0.43 (t 1.3)",
+          "status": "pass",
+          "evidence": "0.511 / 0.433 / t 1.29; DSR 0.285."
+        },
+        {
+          "claim": "rupee -4.4%/yr",
+          "status": "pass",
+          "evidence": "-0.0438. fx.csv INR is USD per unit (OOS range 0.0103-0.0157)."
+        },
+        {
+          "claim": "hedging raised the USD return by 2.2%/yr",
+          "status": "pass as history; weak as advice",
+          "evidence": "Uses US_3M - IN_3M (IN_3M OOS mean 5.48% vs US 2.65%). Carry cost of 3.42%/yr reproduced. The forward priced a -2.82%/yr INR fall and the realised fall was -4.38%/yr, so the hedge won only because the rupee fell 1.56%/yr more than priced (a UIP failure, not a structural gain)."
+        },
+        {
+          "claim": "DCF not applied to a lender",
+          "status": "pass",
+          "evidence": "DCF is null. Consensus = median(CAPM global 10.1%, CAPM local via PPP 12.7%, G-K 11.1%) = 11.1%, so two of the three votes are CAPM."
+        },
+        {
+          "claim": "not overclaimed at t < 2",
+          "status": "pass",
+          "evidence": "Memo says 'positive but statistically weak'."
+        }
+      ],
+      "notes": "Price-only rank 2, so the selection is robust. The memo should put the 3.4%/yr hedge carry cost next to the +2.2%."
+    },
+    "REA_AX": {
+      "verdict": "pass",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.34, IR 0.24",
+          "status": "pass",
+          "evidence": "0.339 / 0.244 / t 0.73."
+        },
+        {
+          "claim": "not overclaimed",
+          "status": "pass",
+          "evidence": "Memo says 'Not recommended'."
+        },
+        {
+          "claim": "hedge +1.9%",
+          "status": "pass",
+          "evidence": "+0.0185 despite a 0.31%/yr carry cost (AU rates above US); mostly lower variance drag (+1.32%)."
+        }
+      ],
+      "notes": "^AXJO is a price index; EWA beat it by 3.6%/yr OOS, the largest gap of any market, so REA's local IR is the most overstated."
+    },
+    "NOVO-B_CO": {
+      "verdict": "pass",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.30, IR 0.16, -74% drawdown",
+          "status": "pass",
+          "evidence": "0.305 / 0.158 / -0.738 (2024-06 to 2026-03; -70% at 2026-10)."
+        },
+        {
+          "claim": "Denmark home index = Euro Stoxx 50 in DKK",
+          "status": "weak evidence",
+          "evidence": "OOS monthly correlation with Novo is 0.17, beta 0.30. As a result the local IR is uninformative, the CAPM-local vote (5.8%) is too low, and so is the DCF WACC (5.0%, upside 111%)."
+        },
+        {
+          "claim": "not overclaimed",
+          "status": "pass",
+          "evidence": "Memo says 'Runner-up at best', and the -74% drawdown is outside the -25% budget."
+        }
+      ],
+      "notes": "Dropping the CAPM-local vote moves the consensus from 7.9% to 8.1%, which is immaterial. Novo is the top composite only because of its 2025 fundamental score; price-only it ranks 9."
+    },
+    "1299_HK": {
+      "verdict": "downgrade",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.17, IR 0.01",
+          "status": "pass",
+          "evidence": "0.165 / +0.0071 / t 0.02."
+        },
+        {
+          "claim": "drop rule 8.2 not triggered",
+          "status": "pass (letter only)",
+          "evidence": "Sharpe 0.165 is below 0.273, but IR +0.007 is above 0. It escapes the rule by 0.007 of IR, which is statistically zero."
+        },
+        {
+          "claim": "G-K 15.8%",
+          "status": "weak evidence",
+          "evidence": "Rests on -3.1%/yr net dilution (buybacks) and the +1y analyst growth applied for 5 years. The 9.2% consensus is the CAPM-local vote: DCF is null and two of the three votes are CAPM."
+        }
+      ],
+      "notes": "Agree with the memo: do not pick. Price-only in-sample rank 11."
+    },
+    "0700_HK": {
+      "verdict": "downgrade",
+      "claims": [
+        {
+          "claim": "OOS Sharpe 0.12, IR -0.01; drop rule 8.2 triggered",
+          "status": "pass",
+          "evidence": "0.119 < 0.273 and IR -0.0107 < 0: triggered. With 7 other survivors it cannot be a runner-up."
+        },
+        {
+          "claim": "hedging lowered the USD return (HKD)",
+          "status": "pass",
+          "evidence": "-0.49%: the HKD rate is US_3M, so fp = 0 and the cost is 12 x 5 bp = 0.60%/yr."
+        }
+      ],
+      "notes": "Dropped under the pre-registered rule (confirmed). This is not a reviewer 'fail': its numbers are correct."
+    }
+  },
+  "methodology": [
+    {
+      "severity": "high",
+      "finding": "In-sample composite uses current fundamentals, which is look-ahead, and applies it unevenly (faded leaders are point-in-time)",
+      "evidence": "intl_growth_stock_scored.csv: all 8 shortlisted names have fundamentals_pit False with FY2025 statements filed in 2026 (Bajaj: FY to 2026-03). All 4 faded leaders are point-in-time on FY2016. The fundamental score is 50% of the composite. Price-only top 8: CSU, BAJ, DOL, Tencent, TSMC, Keyence, REA, Naspers; SK Hynix would be 19th, Novo 9th, AIA 11th. shortlist.md flags the issue but does not quantify it. Spearman(composite, OOS Sharpe) is 0.008 either way.",
+      "where": "research/plan/longlists/intl_growth_stock_scored.csv (Phase 2 screen, not the analyst's code)"
+    },
+    {
+      "severity": "medium",
+      "finding": "'Hedging improved USD returns for every non-HKD name' comes from the 2018-26 dollar rally, not from carry",
+      "evidence": "The hedge formula is correct: hedged = u + fp - f - 5 bp, with fp from US_3M(t-1) against the local 3M(t-1), rolled monthly (intl_growth.py hedged_returns). Carry was a cost for AUD (0.31%/yr), KRW (0.20%), CAD (0.13%) and INR (3.42%), and a gain only for DKK (0.89%) and TWD (0.25%). The gains came from the depreciation avoided and from lower variance drag (0.36-1.32%/yr)."
+    },
+    {
+      "severity": "medium",
+      "finding": "SK Hynix forward consensus depends on peak-cycle FY2027 EPS",
+      "evidence": "Forward EPS is 7.7x FY2025, and the 50% mid-cycle level is still 3.9x FY2025. Consensus: 12.4% at mid 0.5, 11.0% at 0.35, 10.0% at 0.25."
+    },
+    {
+      "severity": "medium",
+      "finding": "Multiple testing: only TSMC clears a Bonferroni bar, and no name has DSR >= 0.95",
+      "evidence": "t needed 2.95 (31 trials, 5% one-sided). TSMC 3.35, SK Hynix 2.25, CSU 1.50, Bajaj 1.29. With the measured trial variance V = 0.00506, DSR is 0.915 for TSMC and 0.777 for SK Hynix. is_oos_rank_test returns predictive=True at rho 0.008 (p 0.96): by the letter of method.md s7 the type counts as 'predictive', in substance it is not. Report it that way; no rule change needed."
+    },
+    {
+      "severity": "medium",
+      "finding": "The Denmark proxy index is uninformative",
+      "evidence": "Novo vs Euro Stoxx 50 in DKK: correlation 0.17, beta 0.30. It distorts the CAPM-local vote (5.8%) and the DCF WACC (5.0%)."
+    },
+    {
+      "severity": "low",
+      "finding": "Home indices are price indices, so local IRs are overstated by roughly the dividend yield",
+      "evidence": "OOS, total-return ETF (net of fee) minus home price index, both in USD: EWT-^TWII +1.42%/yr, EWA-^AXJO +3.60%, EWC-^GSPTSE +2.62%, INDA-^NSEI -0.15% (fees and taxes). Grossing up ^TWII cuts TSMC's local IR from 0.897 to 0.810."
+    },
+    {
+      "severity": "low",
+      "finding": "TWD flat 1.8% and HKD = US_3M are proxies",
+      "evidence": "yields.csv has no TW_ or HK_ columns. A lower TWD rate raises the TSMC hedge gain (+3.6% at 1.0%), so the +2.6% claim is conservative. US_3M is a T-bill rate while the foreign rates are OECD interbank; this small basis slightly understates fp."
+    },
+    {
+      "severity": "low",
+      "finding": "Financials: DCF correctly withheld, but the consensus becomes CAPM-heavy",
+      "evidence": "AIA and Bajaj have 3 votes, 2 of them CAPM. AIA's consensus is its CAPM-local 9.2%; the 15.8% G-K is outvoted."
+    },
+    {
+      "severity": "low",
+      "finding": "G-K treats the +1y analyst growth as 5-year growth (research/grinold_kroner.py)",
+      "evidence": "TSMC's real growth hits the 10% cap (G-K 14.9%); AIA gets 5.7% real. The median damps the effect."
+    },
+    {
+      "severity": "info",
+      "finding": "Reproduction is exact",
+      "evidence": "--all --write reproduced all 8 JSONs, 8 memos, the control CSV and the summary byte for byte (cmp against a pre-run copy). The independent recompute matches every Sharpe, IR, t, max DD, CAGR, DSR and currency figure at the printed precision. spikes=False changes nothing, and max DD is the same with or without the start point."
+    },
+    {
+      "severity": "info",
+      "finding": "FX direction and conversion are correct",
+      "evidence": "All 7 currencies are USD per unit (check 1a). Level parity ADR / (k x local x FX): TSM 1.05 to 1.14, NVO 1.00, TCEHY 1.00-1.01, AAGIY 1.01-1.02."
+    },
+    {
+      "severity": "info",
+      "finding": "Benchmark is correct",
+      "evidence": "0.5 EFG + 0.5 EEM monthly returns: Sharpe 0.273, CAGR 5.82%, max DD -32.98%. ACWX is shown alongside (0.364 / 7.22% / -28.35%). The IR is against EFG_EEM_5050."
+    },
+    {
+      "severity": "info",
+      "finding": "Control-table claims hold",
+      "evidence": "Spearman 0.008 (p 0.96, n 31); Baidu last OOS; Petrobras from 30th in-sample to 4th OOS; ASML 0.839 (t 2.84, in-sample rank 24); Keyence 22nd OOS. The best non-shortlisted names by OOS Sharpe are ASML, PETR4, DOL, 9983.T and MELI (Titan is 6th). No post-hoc substitution: the deep-research set equals the in-sample top 8, and ASML is not cited as a pick in any candidate JSON or memo."
+    }
+  ],
+  "recommended_changes": [
+    "SK Hynix: downgrade to runner-up or a small position. Label its shortlist slot 'selected on FY2025 fundamentals (look-ahead)' and show the consensus at mid_cycle 0.35 and 0.25.",
+    "Planner, Phase 4: show the price-only in-sample ranking next to the composite, and state that all 8 shortlisted composites use 2025-26 statements while the faded leaders use 2017 point-in-time data.",
+    "Rewrite the hedging sentences as history: 'in 2018-26 a monthly hedge would have added X%; carry was +/-Y%/yr; the gain came from the dollar's rise'. For Bajaj, put the 3.42%/yr carry cost next to the +2.2%.",
+    "Report the type's rank test as 'no predictive value in substance (rho 0.008, p 0.96)', while keeping the rule unchanged.",
+    "Novo: drop the CAPM-local vote (or use the global beta), and say the local IR against the Euro Stoxx 50 proxy is not meaningful (correlation 0.17).",
+    "TSMC memo: write 'survives a Bonferroni t-test (3.35 > 2.95); deflated Sharpe 0.78' instead of 'largely survives the multiple-testing haircut'.",
+    "AIA: keep it out of the picks; its IR of +0.007 (t 0.02) escapes rule 8.2 only on the letter.",
+    "Tencent: dropped under rule 8.2 (confirmed); with 7 survivors it cannot be a runner-up."
+  ]
+}

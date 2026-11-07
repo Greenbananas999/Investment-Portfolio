@@ -26,8 +26,11 @@ def bootstrap_paths(R, months, n_paths, block, rng):
     """Indices of resampled months, shape (n_paths, months)."""
     T = R.shape[0]
     n_blocks = int(np.ceil(months / block))
-    starts = rng.integers(0, T - block + 1, size=(n_paths, n_blocks))
-    idx = (starts[:, :, None] + np.arange(block)[None, None, :]).reshape(n_paths, -1)[:, :months]
+    # Circular block bootstrap: block starts anywhere in 0..T-1 and wrap around,
+    # so every month is drawn equally often. (Before 2026-11-07 the first and
+    # last months were drawn about 1/block as often as the middle ones.)
+    starts = rng.integers(0, T, size=(n_paths, n_blocks))
+    idx = ((starts[:, :, None] + np.arange(block)[None, None, :]) % T).reshape(n_paths, -1)[:, :months]
     return idx
 
 

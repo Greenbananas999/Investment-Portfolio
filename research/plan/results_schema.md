@@ -18,7 +18,11 @@ otherwise, computed from **monthly total returns** unless the key says
   "name": "Taiwan Semiconductor",
   "position_type": "intl_growth_stock",// us_growth_stock | intl_growth_stock | em_bond | other | overlay
   "instrument": "stock",               // stock | etf | mutual_fund | index | overlay
-  "country": "TW", "currency": "TWD", "sector": "Semiconductors",
+  "country": "TW", "currency_code": "TWD", "sector": "Semiconductors",
+  // `currency_code` is the ISO code of the price currency (added 2026-11-07 after
+  // the first draft used the key `currency` twice; files written before the fix
+  // may lack it, and readers fall back to research/plan/universe.csv). The
+  // `currency` key below is the FX block.
   "non_us": true,                      // per the non-US rule in method.md
   "benchmark": "EFG_EEM_5050",         // benchmark id from method.md
   "data": {

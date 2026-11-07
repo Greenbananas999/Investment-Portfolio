@@ -1,0 +1,585 @@
+{
+  "schema_version": 1,
+  "id": "cc_spx_atm_1m",
+  "ticker": null,
+  "usd_ticker": null,
+  "name": "Covered call, at-the-money, 1-month (BXM-style)",
+  "position_type": "overlay",
+  "instrument": "overlay",
+  "country": "US",
+  "currency": "USD",
+  "sector": null,
+  "non_us": false,
+  "benchmark": "SPY",
+  "data": {
+    "price_start": "2010-01-31",
+    "price_end": "2026-10-31",
+    "months_total": 202,
+    "months_in_sample": 96,
+    "months_out_of_sample": 106,
+    "sources": [
+      "data/research/prices.csv",
+      "data/research/yields.csv",
+      "data/research/cboe/BXM.csv"
+    ],
+    "fund_fee": null,
+    "notes": "SPY/^GSPC end 2026-10-23 in prices.csv, so October 2026 is a partial month. PPUT values before its 2015 launch are back-calculated by Cboe."
+  },
+  "metrics": {
+    "in_sample": {
+      "usd": {
+        "start": "2010-01-31",
+        "end": "2017-12-31",
+        "months": 96,
+        "cagr": -0.08900844485442827,
+        "vol": 0.09604183698516738,
+        "sharpe": -0.9189512985644425,
+        "sortino": -1.0602714495767667,
+        "max_drawdown": -0.5582834988429062,
+        "calmar": -0.15943234044872623,
+        "best_month": 0.06994649973949796,
+        "worst_month": -0.06973261141347731,
+        "pct_positive_months": 0.4270833333333333,
+        "deflated_sharpe": 0.005431586995356876
+      },
+      "local": null
+    },
+    "out_of_sample": {
+      "usd": {
+        "start": "2018-01-31",
+        "end": "2026-10-31",
+        "months": 106,
+        "cagr": -0.09371636185211052,
+        "vol": 0.12930914057343687,
+        "sharpe": -0.692367296760918,
+        "sortino": -0.8089771516428186,
+        "max_drawdown": -0.6129000798906403,
+        "calmar": -0.15290642786150774,
+        "best_month": 0.07282025732810438,
+        "worst_month": -0.13125622817399263,
+        "pct_positive_months": 0.42452830188679247,
+        "deflated_sharpe": 0.016434104783782794
+      },
+      "local": null
+    },
+    "full": {
+      "usd": {
+        "start": "2010-01-31",
+        "end": "2026-10-31",
+        "months": 202,
+        "cagr": -0.09148197749142706,
+        "vol": 0.11443088061793712,
+        "sharpe": -0.7771072934777169,
+        "sortino": -0.9019643662514001,
+        "max_drawdown": -0.8291144979224193,
+        "calmar": -0.11033696518473746,
+        "best_month": 0.07282025732810438,
+        "worst_month": -0.13125622817399263,
+        "pct_positive_months": 0.42574257425742573,
+        "deflated_sharpe": 0.0005357291393476961
+      },
+      "local": null
+    }
+  },
+  "stress": {
+    "gfc_2008": {
+      "start": "2007-10-31",
+      "end": "2009-02-28",
+      "with": {
+        "return": -0.20078336987669454,
+        "max_drawdown": -0.2565275816635958
+      },
+      "without": {
+        "return": -0.5078483603825359,
+        "max_drawdown": -0.4880178193999788
+      },
+      "drawdown_reduction": 0.231490237736383,
+      "return_difference": 0.30706499050584135
+    },
+    "taper_2013": {
+      "start": "2013-04-30",
+      "end": "2013-08-31",
+      "with": {
+        "return": -0.0464509084607716,
+        "max_drawdown": -0.025150072146922442
+      },
+      "without": {
+        "return": 0.030284990808346235,
+        "max_drawdown": -0.029992903897790635
+      },
+      "drawdown_reduction": 0.004842831750868193,
+      "return_difference": -0.07673589926911784
+    },
+    "covid_2020": {
+      "start": "2020-01-31",
+      "end": "2020-03-31",
+      "with": {
+        "return": -0.24756986169390172,
+        "max_drawdown": -0.19941921966178489
+      },
+      "without": {
+        "return": -0.19415148924841463,
+        "max_drawdown": -0.12487110526035561
+      },
+      "drawdown_reduction": -0.07454811440142928,
+      "return_difference": -0.05341837244548708
+    },
+    "inflation_2022": {
+      "start": "2021-12-31",
+      "end": "2022-10-31",
+      "with": {
+        "return": -0.05471008541372058,
+        "max_drawdown": -0.14607940005785824
+      },
+      "without": {
+        "return": -0.177443337974033,
+        "max_drawdown": -0.2024700361901075
+      },
+      "drawdown_reduction": 0.05639063613224926,
+      "return_difference": 0.12273325256031242
+    },
+    "strong_usd": {
+      "definition": "months when FRED DTWEXBGS (monthly) rose >= 2%",
+      "months": 29,
+      "avg_return_with": -0.018319792628768088,
+      "avg_return_without": -0.03942658918265433,
+      "usd_2014": {
+        "start": "2014-06-30",
+        "end": "2015-03-31",
+        "with": {
+          "return": -0.006300980993997118,
+          "max_drawdown": -0.048667845766084294
+        },
+        "without": {
+          "return": 0.07025563126119172,
+          "max_drawdown": -0.03209077150929973
+        }
+      },
+      "usd_2021": {
+        "start": "2021-06-30",
+        "end": "2022-09-30",
+        "with": {
+          "return": -0.028741876597512928,
+          "max_drawdown": -0.14607940005785824
+        },
+        "without": {
+          "return": -0.1502442059256498,
+          "max_drawdown": -0.23927184758789377
+        }
+      }
+    }
+  },
+  "overlay": {
+    "underlying": "SPY (S&P 500 total return, index-level equity sleeve)",
+    "strategy": "sell a 1-month at-the-money S&P 500 call each monthly expiry",
+    "parameters": {
+      "legs": [
+        {
+          "kind": "call",
+          "side": "sell",
+          "strike": [
+            "atm"
+          ],
+          "roll": "monthly"
+        }
+      ],
+      "hedge_ratio": 1.3861236683238636,
+      "underlying_series": "SPY adjusted close",
+      "implied_vol": "^VIX (30d), ^VIX3M (93d), total-variance interpolation",
+      "rate": "TB3MS (US_3M), previous month"
+    },
+    "assumptions": "research/candidates/assumptions_overlays.py",
+    "calibration": {
+      "fitted_on": "2010-01-01..2017-12-31, frozen",
+      "params": {
+        "atm_level": -0.03066658066237202,
+        "skew_call": 0.23227130304286137,
+        "skew_put": 0.2929930312586298
+      },
+      "fit_by_index": {
+        "BXM": {
+          "in_sample": {
+            "start": "2010-01-31",
+            "end": "2017-12-31",
+            "months": 96,
+            "r2_total_return": 0.9543191946560309,
+            "r2_overlay_component": 0.9241143664958354,
+            "corr_overlay_component": 0.9667691293101687,
+            "tracking_error": 0.017844930059092896,
+            "mean_diff_annual": -0.0007079045244405974
+          },
+          "out_of_sample": {
+            "start": "2018-01-31",
+            "end": "2026-10-31",
+            "months": 106,
+            "r2_total_return": 0.9520526616021461,
+            "r2_overlay_component": 0.921075658870925,
+            "corr_overlay_component": 0.9670726705412369,
+            "tracking_error": 0.02395416554302569,
+            "mean_diff_annual": 0.00928214276658329
+          }
+        },
+        "BXMD": {
+          "in_sample": {
+            "start": "2010-01-31",
+            "end": "2017-12-31",
+            "months": 96,
+            "r2_total_return": 0.9811004007588006,
+            "r2_overlay_component": 0.9069424320366435,
+            "corr_overlay_component": 0.9555585837078157,
+            "tracking_error": 0.013407851788454134,
+            "mean_diff_annual": 0.002531298364538956
+          },
+          "out_of_sample": {
+            "start": "2018-01-31",
+            "end": "2026-10-31",
+            "months": 106,
+            "r2_total_return": 0.9755947231547771,
+            "r2_overlay_component": 0.8651362608463739,
+            "corr_overlay_component": 0.9413459346665407,
+            "tracking_error": 0.020190158232184174,
+            "mean_diff_annual": 0.009291751355517908
+          }
+        },
+        "PPUT": {
+          "in_sample": {
+            "start": "2010-01-31",
+            "end": "2017-12-31",
+            "months": 96,
+            "r2_total_return": 0.9562580060421689,
+            "r2_overlay_component": 0.7665168995607478,
+            "corr_overlay_component": 0.8827657474119458,
+            "tracking_error": 0.020884245946413447,
+            "mean_diff_annual": -0.005302765215261657
+          },
+          "out_of_sample": {
+            "start": "2018-01-31",
+            "end": "2026-10-31",
+            "months": 106,
+            "r2_total_return": 0.9684126052257422,
+            "r2_overlay_component": 0.8836129455229477,
+            "corr_overlay_component": 0.9747045178162606,
+            "tracking_error": 0.023222943003326106,
+            "mean_diff_annual": 0.0003415719911026252
+          }
+        }
+      },
+      "this_overlay_vs_reference": {
+        "reference": "BXM",
+        "note": "",
+        "in_sample": {
+          "start": "2010-01-31",
+          "end": "2017-12-31",
+          "months": 96,
+          "r2_total_return": 0.9543191946560309,
+          "r2_overlay_component": 0.9241143664958354,
+          "corr_overlay_component": 0.9667691293101687,
+          "tracking_error": 0.017844930059092896,
+          "mean_diff_annual": -0.0007079045244405974
+        },
+        "out_of_sample": {
+          "start": "2018-01-31",
+          "end": "2026-10-31",
+          "months": 106,
+          "r2_total_return": 0.9520526616021461,
+          "r2_overlay_component": 0.921075658870925,
+          "corr_overlay_component": 0.9670726705412369,
+          "tracking_error": 0.02395416554302569,
+          "mean_diff_annual": 0.00928214276658329
+        },
+        "cross_check_XYLD": {
+          "in_sample_partial": {
+            "start": "2013-07-31",
+            "end": "2017-12-31",
+            "months": 54,
+            "r2_total_return": 0.6379442893617366,
+            "r2_overlay_component": -2.0179773103907754,
+            "corr_overlay_component": 0.5317806838625682,
+            "tracking_error": 0.05364057259416167,
+            "mean_diff_annual": -0.0240045355813387
+          },
+          "out_of_sample": {
+            "start": "2018-01-31",
+            "end": "2026-10-31",
+            "months": 106,
+            "r2_total_return": 0.9130989439400264,
+            "r2_overlay_component": 0.8124370249111288,
+            "corr_overlay_component": 0.9282177216207322,
+            "tracking_error": 0.03495960028394455,
+            "mean_diff_annual": 0.0004319825085059277
+          },
+          "note": "model gross of option costs minus the 0.60% fund fee; XYLD starts 2013-06"
+        }
+      }
+    },
+    "vrp_in_sample": {
+      "start": "2010-01-04",
+      "end": "2017-12-29",
+      "days": 2013,
+      "avg_vix": 17.070332834155657,
+      "avg_realised": 13.037983756854644,
+      "avg_vrp_points": 4.032349077301013,
+      "share_days_positive": 0.8663686040735221
+    },
+    "vrp_oos": {
+      "start": "2018-01-02",
+      "end": "2026-09-24",
+      "days": 2194,
+      "avg_vix": 19.637456713965946,
+      "avg_realised": 15.928303352475956,
+      "avg_vrp_points": 3.7091533614899865,
+      "share_days_positive": 0.8167730173199635
+    },
+    "with": {
+      "in_sample": {
+        "start": "2010-01-31",
+        "end": "2017-12-31",
+        "months": 96,
+        "cagr": 0.047228652792186576,
+        "vol": 0.07315657557044175,
+        "sharpe": 0.660375156912589,
+        "sortino": 0.9655986838400036,
+        "max_drawdown": -0.13419218379640585,
+        "worst_month": -0.09589515262656179,
+        "up_capture": 0.31696293045721885,
+        "down_capture": 0.2750452184315327,
+        "info_ratio": -0.9189512985644425,
+        "tracking_error": 0.09604183698516738
+      },
+      "out_of_sample": {
+        "start": "2018-01-31",
+        "end": "2026-10-31",
+        "months": 106,
+        "cagr": 0.05318953755890443,
+        "vol": 0.10500403688398367,
+        "sharpe": 0.3077799220950504,
+        "sortino": 0.3748719709911222,
+        "max_drawdown": -0.2850105427967172,
+        "worst_month": -0.19941921966178489,
+        "up_capture": 0.3843494217874394,
+        "down_capture": 0.37710340877484266,
+        "info_ratio": -0.692367296760918,
+        "tracking_error": 0.12930914057343687
+      },
+      "full": {
+        "start": "2010-01-31",
+        "end": "2026-10-31",
+        "months": 202,
+        "cagr": 0.050352422811390296,
+        "vol": 0.09105444145031275,
+        "sharpe": 0.4382027979622416,
+        "sortino": 0.55936532387284,
+        "max_drawdown": -0.28501054279671734,
+        "worst_month": -0.19941921966178489,
+        "up_capture": 0.35645261249898524,
+        "down_capture": 0.339625522186629,
+        "info_ratio": -0.7771072934777169,
+        "tracking_error": 0.11443088061793712
+      }
+    },
+    "without": {
+      "in_sample": {
+        "start": "2010-01-31",
+        "end": "2017-12-31",
+        "months": 96,
+        "cagr": 0.13820844533631882,
+        "vol": 0.11938815027894602,
+        "sharpe": 1.1436124097215858,
+        "sortino": 2.0175122693741985,
+        "max_drawdown": -0.16221320977003673,
+        "worst_month": -0.07945452883598414,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      },
+      "out_of_sample": {
+        "start": "2018-01-31",
+        "end": "2026-10-31",
+        "months": 106,
+        "cagr": 0.14282163307204088,
+        "vol": 0.16219311173172257,
+        "sharpe": 0.751404446472202,
+        "sortino": 1.1808108292595625,
+        "max_drawdown": -0.23927184758789388,
+        "worst_month": -0.12487110526035561,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      },
+      "full": {
+        "start": "2010-01-31",
+        "end": "2026-10-31",
+        "months": 202,
+        "cagr": 0.14062690021144952,
+        "vol": 0.1431123582151862,
+        "sharpe": 0.9002900876170608,
+        "sortino": 1.4621170348271806,
+        "max_drawdown": -0.23927184758789377,
+        "worst_month": -0.12487110526035561,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      }
+    },
+    "drawdown_reduction": {
+      "gfc_2008": 0.231490237736383,
+      "taper_2013": 0.004842831750868193,
+      "covid_2020": -0.07454811440142928,
+      "inflation_2022": 0.05639063613224926
+    },
+    "annual_cost": {
+      "full": 0.0035131422841553524,
+      "in_sample": 0.0033663613817705405,
+      "out_of_sample": 0.0036460759315982
+    },
+    "feasibility": {
+      "contract": "XSP (Mini-SPX) option, European, cash-settled, $100 x SPX/10",
+      "source": "https://www.cboe.com/tradable_products/sp_500/mini_spx_options/ (read 2026-11-07)",
+      "spx_level": 7623.68017578125,
+      "spx_date": "2026-10-23",
+      "notional_per_contract": 76236.8017578125,
+      "contracts": 1,
+      "max_fully_covered_contracts": 0,
+      "sleeve_usd": 55000,
+      "hedge_ratio": 1.3861236683238636,
+      "hedge_ratio_on_us_half_only": 2.772247336647727,
+      "legs_today": [
+        {
+          "leg": "sell call ('atm',)",
+          "strike_xsp": 762.368017578125,
+          "premium_usd_per_contract": 1572.6240721924978,
+          "implied_vol": 0.1664067102263744
+        }
+      ],
+      "margin": "The short XSP call is not covered by the sleeve's stocks, so a broker margins it as an uncovered broad-based index call: about $13,008 per contract at today's level (premium + 15% of notional less the OTM amount, minimum premium + 10%; Cboe margin rule recalled, not re-verified). Needs the broker's uncovered-option approval level.",
+      "note": "One XSP contract ($76,237) is 139% of a $55,000 equity sleeve; zero contracts is 0%. The series is modelled at the 1-contract ratio (column hedge_ratio); overlay_return_h100 is the same overlay at exactly 100%. Writing calls on 139% of the sleeve leaves part of the call uncovered, which breaks the overlay-only rule; it becomes a covered overlay only once the equity sleeve is at least $76,237."
+    },
+    "verdict_rule": {
+      "rule": "method.md s8 item 5, standalone sleeve: OOS Sharpe higher, or OOS max drawdown at least 2 points smaller, net of costs; the portfolio-level test is Phase 5's",
+      "oos_sharpe_change": -0.44362452437715155,
+      "oos_max_drawdown_change": -0.04573869520882334,
+      "oos_vol_change": -0.0571890748477389,
+      "passes_standalone": false
+    },
+    "monthly_series": "reports/candidates/overlays/cc_spx_atm_1m_monthly.csv",
+    "at_100pct": {
+      "with": {
+        "in_sample": {
+          "start": "2010-01-31",
+          "end": "2017-12-31",
+          "months": 96,
+          "cagr": 0.07294193047081743,
+          "vol": 0.07719833779452182,
+          "sharpe": 0.9446394756642437,
+          "sortino": 1.4498216469502034,
+          "max_drawdown": -0.13883301465266895,
+          "worst_month": -0.08420609193184214,
+          "up_capture": 0.5078658620460887,
+          "down_capture": 0.47770932728126064,
+          "info_ratio": -0.9189212954650756,
+          "tracking_error": 0.06920509373062361
+        },
+        "out_of_sample": {
+          "start": "2018-01-31",
+          "end": "2026-10-31",
+          "months": 106,
+          "cagr": 0.07960944897945832,
+          "vol": 0.10923171076354993,
+          "sharpe": 0.5267018256023408,
+          "sortino": 0.6743193972058772,
+          "max_drawdown": -0.2418848748795006,
+          "worst_month": -0.17849218648369924,
+          "up_capture": 0.5573903801929174,
+          "down_capture": 0.551574878006193,
+          "info_ratio": -0.692397379508669,
+          "tracking_error": 0.09282019164562536
+        },
+        "full": {
+          "start": "2010-01-31",
+          "end": "2026-10-31",
+          "months": 202,
+          "cagr": 0.07643557653752864,
+          "vol": 0.09513935851237006,
+          "sharpe": 0.6814332575948033,
+          "sortino": 0.9149463780211932,
+          "max_drawdown": -0.24188487487950072,
+          "worst_month": -0.17849218648369924,
+          "up_capture": 0.5368881102190379,
+          "down_capture": 0.524449914066183,
+          "info_ratio": -0.7775257604533747,
+          "tracking_error": 0.08224542878883098
+        }
+      },
+      "verdict": {
+        "rule": "method.md s8 item 5, standalone sleeve: OOS Sharpe higher, or OOS max drawdown at least 2 points smaller, net of costs; the portfolio-level test is Phase 5's",
+        "oos_sharpe_change": -0.22470262086986115,
+        "oos_max_drawdown_change": -0.0026130272916067288,
+        "oos_vol_change": -0.052961400968172645,
+        "passes_standalone": false
+      },
+      "annual_cost": {
+        "full": 0.002536036968616446,
+        "in_sample": 0.002430040416575336,
+        "out_of_sample": 0.002632033845936697
+      }
+    },
+    "sleeve_proxy_50_IVW_50_EFG_EEM": {
+      "with_oos": {
+        "start": "2018-01-31",
+        "end": "2026-10-31",
+        "months": 106,
+        "cagr": 0.02432773656931042,
+        "vol": 0.1061535106756403,
+        "sharpe": 0.0433865356860606,
+        "sortino": 0.05281423523456742,
+        "max_drawdown": -0.3082793096115819,
+        "worst_month": -0.1910776217925931,
+        "up_capture": 0.3490109982022068,
+        "down_capture": 0.4174417676919156,
+        "info_ratio": -0.692367296760918,
+        "tracking_error": 0.12930914057343687
+      },
+      "without_oos": {
+        "start": "2018-01-31",
+        "end": "2026-10-31",
+        "months": 106,
+        "cagr": 0.11149071255388598,
+        "vol": 0.16390591402476454,
+        "sharpe": 0.5745254311821058,
+        "sortino": 0.8869250569818855,
+        "max_drawdown": -0.3039209759274486,
+        "worst_month": -0.11652950739116383,
+        "up_capture": 1.0,
+        "down_capture": 1.0,
+        "info_ratio": null,
+        "tracking_error": null
+      },
+      "verdict": {
+        "rule": "method.md s8 item 5, standalone sleeve: OOS Sharpe higher, or OOS max drawdown at least 2 points smaller, net of costs; the portfolio-level test is Phase 5's",
+        "oos_sharpe_change": -0.5311388954960452,
+        "oos_max_drawdown_change": -0.004358333684133298,
+        "oos_vol_change": -0.05775240334912424,
+        "passes_standalone": false
+      }
+    },
+    "basis": {
+      "corr_EFG_EEM_5050_SPY_oos": 0.8251449225009347,
+      "corr_EFG_EEM_5050_SPY_in_sample": 0.8337539127359714,
+      "corr_IVW_SPY_oos": 0.9497890922361095,
+      "corr_sleeve_proxy_SPY_oos": 0.9489322915735929
+    }
+  },
+  "explain": [
+    "Run on the S&P 500 at one XSP contract (139% of a $55,000 sleeve), the overlay changed the 2018-2026 Sharpe from 0.75 to 0.31, volatility from 16.2% to 10.5% and the worst drawdown from -24% to -29%, after costs.",
+    "Option prices are modelled from the VIX with a smile fitted to CBOE's BXM index on 2010-2017 only; out of sample the like-for-like model tracks that index with an error of 2.4% a year.",
+    "On the standalone test it fails method.md rule 8.5; the S&P 500 options hedge the international half of the sleeve only loosely (correlation 0.83)."
+  ],
+  "memo": "research/candidates/memos/cc_spx_atm_1m.md",
+  "charts": {
+    "growth": "reports/candidates/charts/cc_spx_atm_1m_growth.png"
+  },
+  "reproduce": "python -m research.candidates.overlays --overlay cc_spx_atm_1m --write"
+}

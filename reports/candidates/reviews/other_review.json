@@ -1,0 +1,215 @@
+{
+ "type": "other",
+ "reviewer": "opus",
+ "date": "2026-11-07",
+ "reproduced": true,
+ "reproduce_note": "python -m research.candidates.other_sleeve --all --write rewrote all 8 JSONs, 8 memos, other_control.csv and other_control_rank.json byte-identical to a pre-run snapshot. Independent recompute (plain pandas on data/research/prices.csv, raw and via read_wide_csv) matches OOS Sharpe, IR vs GLD and max DD for all 8 funds to 4 decimals, the 2022 stress return for all 8, OOS correlations with ACWX/EMB/GLD for GSG, GNR, IGF, IAU, and IR vs GUIDE_BENCH and CPI+2% for IAU, GSG, SCHP.",
+ "check_command": "python -m research.reviews.other_check",
+ "candidates": {
+  "IAU": {
+   "verdict": "pass",
+   "claims": [
+    {
+     "claim": "OOS Sharpe 0.68, max DD -26%, 2022 -11%, corr ACWX 0.35, DSR 0.46",
+     "status": "pass",
+     "evidence": "recomputed 0.683 / -0.264 / -0.110 / 0.351; DSR 0.464 (own formula, V=1/(T-1))"
+    },
+    {
+     "claim": "IR vs GLD nulled",
+     "status": "pass",
+     "evidence": "IR would be 0.51 on 0.28% tracking error = fee difference; JSON null is correct; but other_control.csv keeps IAU 0.507 and SGOL 0.471"
+    },
+    {
+     "claim": "negative inflation beta (gold not an inflation hedge)",
+     "status": "weak evidence",
+     "evidence": "IS -1.09 (t -0.64), OOS -1.10 (t -1.00); pairing CPI with its release month flips IS to +2.04 (t +1.27); m/m surprise IS +0.09, OOS -0.89 (t -0.54); GLD full history +0.16 (t 0.25). No definition reaches |t| 1.65: no detectable monthly CPI link, not a negative one"
+    },
+    {
+     "claim": "expected return 0.6% (real-yield) vs 10.0% (history), consensus 5.3%",
+     "status": "weak evidence",
+     "evidence": "0.6% = (1-2.60%+1.00%)(1+2.23%)-1 reproduced; 10.0% = 2005-02..2026-10 real CAGR 7.58% plus breakeven. Back-test of the real-yield model on GLD, 166 overlapping 7y windows from 2006-01: corr(pred, realised) -0.55, under-predicts by 3.0 pts on average; OOS real10 rose -1.04 to 2.60 while GLD gained 108%"
+    }
+   ],
+   "notes": "Passes 8.2 only by fee: Sharpe 0.683 vs GLD 0.673. DSR 0.46 (0.69 with measured trial variance) is far from significance; t of mean excess 2.03. ROLE text 'simplest inflation ... diversifier' contradicts its own inflation beta and the -11% 2022 result."
+  },
+  "SLV": {
+   "verdict": "pass (weak)",
+   "claims": [
+    {
+     "claim": "OOS IR vs GLD +0.15, max DD -47%",
+     "status": "pass",
+     "evidence": "0.151 / -0.475 recomputed"
+    },
+    {
+     "claim": "gold and silver have negative inflation betas",
+     "status": "wrong",
+     "evidence": "SLV's own JSON: IS +1.04, OOS +0.004; m/m inflation IS +9.3 (t 2.00)"
+    }
+   ],
+   "notes": "Survives 8.2 only through IR +0.15 (t 0.45); Sharpe 0.44 is well below GLD 0.67. Correlation 0.77 with GLD: gold beta at double the volatility (-72% IS drawdown)."
+  },
+  "GSG": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "+28% in 2022, corr -0.04 with GLD, -53% max DD",
+     "status": "pass",
+     "evidence": "+0.277 / -0.042 / -0.532"
+    },
+    {
+     "claim": "1.3% 7-year consensus, roll yield -1% assumed",
+     "status": "weak evidence",
+     "evidence": "collateral model 3.94-1.00+2.23-0.75 = 4.42% reproduced; realised 2006-08..2026-10 CAGR -1.55% vs BIL 1.40% and CPI 2.55% implies roll plus real-spot drag of -5.5%/yr, so -1% roll is optimistic; consensus 1.29% = mean(4.42%, -1.84%)"
+    },
+    {
+     "claim": "positive inflation beta",
+     "status": "pass with caveat",
+     "evidence": "IS 4.13 (t 2.27), OOS 5.75 (t 3.79) contemporaneous, but -0.13 (t -0.08) when paired with the CPI release month: co-movement with the energy component of CPI, not a reaction to news"
+    }
+   ],
+   "notes": "Sharpe 0.411 < 0.673 and IR -0.042 < 0: 8.2 triggered (the memo says so). The only candidate with real 2022 and CPI co-movement; dropped on the pre-registered rule."
+  },
+  "GNR": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "corr ACWX 0.80, IR vs GLD negative",
+     "status": "pass",
+     "evidence": "0.801; IR -0.132; Sharpe 0.381 < 0.673"
+    },
+    {
+     "claim": "non-US share 0.65",
+     "status": "pass",
+     "evidence": "SSGA factsheet 2026-09-30, US 35.20% (other_notes.md); shortlist.md said 'about 0.5'"
+    }
+   ],
+   "notes": "Equity-like; adds little beyond the stock sleeve."
+  },
+  "IGF": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "corr ACWX 0.82, IR vs GLD negative",
+     "status": "pass",
+     "evidence": "0.821; IR -0.250; Sharpe 0.368 < 0.673"
+    },
+    {
+     "claim": "non-US share 0.64",
+     "status": "pass",
+     "evidence": "iShares product page 2026-11-05, US 36.15%"
+    }
+   ],
+   "notes": "ROLE 'smallest in-sample drawdown of the real-asset funds' (-16.4%) holds on the shortlist, but GII (-15.8%) is lower on the long list."
+  },
+  "VNQI": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "fails 8.2",
+     "status": "pass",
+     "evidence": "Sharpe -0.069, IR -0.633; 2022 -30.7%; corr ACWX 0.89"
+    },
+    {
+     "claim": "non-US 1.00",
+     "status": "unverified",
+     "evidence": "by index name only; holdings not retrieved (other_notes.md)"
+    }
+   ],
+   "notes": "IS Sharpe 0.57 to OOS -0.07: a clear IS/OOS reversal."
+  },
+  "SCHP": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "fails 8.2",
+     "status": "pass",
+     "evidence": "Sharpe 0.036, IR -0.710; 2022 -12.6%"
+    },
+    {
+     "claim": "expected return 4.8%",
+     "status": "weak evidence",
+     "evidence": "real10 + be10 - fee = nominal 10y (4.99%) - fee; second method is trailing distribution yield 4.89% (past CPI accruals), averaged into consensus"
+    }
+   ],
+   "notes": "Contemporaneous CPI regression mis-measures TIPS: indexation uses CPI with about a 3-month lag; the OOS m/m beta -1.12 (t -2.2) is a timing artefact."
+  },
+  "WIP": {
+   "verdict": "fail (drop rule 8.2 triggered)",
+   "claims": [
+    {
+     "claim": "fails 8.2",
+     "status": "pass",
+     "evidence": "Sharpe -0.146, IR -0.880; 2022 -19.9%"
+    },
+    {
+     "claim": "expected return model 4.4%",
+     "status": "weak evidence",
+     "evidence": "real proxy (nominal - CPI) + CPI = nominal exactly, so it is a nominal-yield model, not a linker model; covers 26% of the fund with Brazil at 30% instead of 8%"
+    },
+    {
+     "claim": "non-US 1.00",
+     "status": "pass",
+     "evidence": "SSGA factsheet 2026-09-30, no US in country table"
+    }
+   ],
+   "notes": "ROLE 'inflation protection' is not supported by the 2022 result."
+  }
+ },
+ "methodology": [
+  {
+   "severity": "high",
+   "finding": "Drop rule 8.2's runner-up clause is applied on the 8-fund shortlist (2 survivors). On the 33-fund long list there are 5 survivors besides GLD (IAU, SGOL, SIVR, SLV, IGE), so under that reading the six dropped funds may not remain even as runners-up. Either way the surviving sleeve is precious metals only.",
+   "evidence": "other_check section 4; other_sleeve.py line 571"
+  },
+  {
+   "severity": "high",
+   "finding": "Inflation-beta conclusions are not robust. Gold's negative beta flips sign when CPI is paired with its release month (IAU IS +2.04) and no definition gives |t| above 1.65; SLV's beta is positive (IS +1.04), so 'gold and silver have negative inflation betas' is wrong for silver. The defensible statement is 'no detectable monthly relationship'; gold's -11% in 2022 and its real-yield sensitivity (OOS slope -8.0, t -4.4) are the stronger evidence.",
+   "evidence": "other_check section 2; research/screen/fundamental.py lines 273-288"
+  },
+  {
+   "severity": "medium",
+   "finding": "The gold real-yield model has negative historical skill (corr -0.55 between prediction and realised 7y GLD CAGR, mean under-prediction 3.0 pts, overlapping windows) and broke OOS. Averaging 0.6% and 10.0% into 5.3% hides that neither is reliable; show the range.",
+   "evidence": "other_check section 5"
+  },
+  {
+   "severity": "medium",
+   "finding": "Rank-test p-values are overstated by near-duplicates (8 TIPS funds, 3 gold clones, 4 precious baskets). On 13 category means: in-sample Sharpe vs OOS Sharpe -0.55 (p 0.052, not 0.0003); fundamental score vs OOS Sharpe +0.65 (p 0.017, survives); composite vs OOS Sharpe +0.21 (p 0.49). IAU/SGOL fee-artefact IRs vs GLD (0.51/0.47) sit in other_control.csv; removing them cuts composite vs OOS IR from +0.25 to +0.12.",
+   "evidence": "other_check section 7; other_sleeve.py line 461 nulls only GLD"
+  },
+  {
+   "severity": "medium",
+   "finding": "GSG roll assumption -1% is optimistic: its history implies about -5.5%/yr of roll plus real-spot drag (cannot be split: no GSCI spot series). The WIP model is nominal yields on 26% of the fund. SCHP's fund-yield method is backward-looking CPI accrual.",
+   "evidence": "other_check section 5; assumptions_other.py lines 38, 63"
+  },
+  {
+   "severity": "low",
+   "finding": "US_CPI has no 2025-10 print; inflation_beta and cpi_plus drop NaN before diff/pct_change, so the 2025-11 observation is a two-month change counted as one month.",
+   "evidence": "fundamental.py lines 280-283; other_sleeve.py lines 106, 129"
+  },
+  {
+   "severity": "low",
+   "finding": "Deflated Sharpe with V = 1/(T-1) is conservative here; the measured variance of the 32 OOS Sharpes gives IAU 0.69 (vs 0.46). Neither is near 0.95.",
+   "evidence": "other_check section 7"
+  },
+  {
+   "severity": "low",
+   "finding": "The in-sample fundamental score's cost component and the AUM hard screen use today's values (flagged in other_scored.csv); funds closed after 2017 are absent (survivorship). The composite itself uses only in-sample columns.",
+   "evidence": "research/plan/longlists/other_insample_table.csv flags"
+  },
+  {
+   "severity": "low",
+   "finding": "Memo 'How to explain' sentences match the JSON for all 8 (they are generated from it). The ROLE strings are hard-coded and overclaim inflation protection for IAU, WIP and IGF.",
+   "evidence": "other_sleeve.py lines 533-542"
+  }
+ ],
+ "recommended_changes": [
+  "State the 8.2 survivor count explicitly and decide (through the change log if a rule needs clarifying) whether it is counted on the shortlist or the long list; report that only IAU and SLV survive on the shortlist.",
+  "Replace 'gold and silver have negative inflation betas' with 'no statistically detectable monthly CPI relationship; gold lost 11% in 2022'; show t-stats beside every inflation beta and a release-month variant as a sensitivity.",
+  "For SCHP/WIP, regress on CPI lagged 3 months (indexation lag) or label the contemporaneous beta as not meaningful.",
+  "Show the IAU expected return as a range (0.6% to 10.0%) with the real-yield model's negative back-test, not only the 5.3% midpoint.",
+  "Null IAU and SGOL IR vs GLD in other_control.csv as in the JSON, and add category-clustered rank tests.",
+  "Show GSG sensitivity with roll -3% and -5% (consensus falls by 1 and 2 points to about 0.3% and -0.7%).",
+  "Rewrite the IAU, WIP and IGF ROLE sentences so they do not claim inflation protection the data do not show.",
+  "Reindex CPI to a full monthly calendar before diff/pct_change so the missing 2025-10 print stays a gap."
+ ]
+}

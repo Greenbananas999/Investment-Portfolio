@@ -1,0 +1,264 @@
+{
+ "type": "us_growth_stock",
+ "reviewer": "opus",
+ "date": "2026-11-07",
+ "reproduced": true,
+ "candidates": {
+  "NVDA": {
+   "verdict": "pass",
+   "claims": [
+    {
+     "claim": "OOS Sharpe 1.11, IR 1.04 (t 3.1)",
+     "status": "pass",
+     "evidence": "Recomputed 1.110 / 1.043 / t 3.10 (IR/sqrt12*sqrt106). Newey-West(3) t 2.75. IR vs QQQ 1.02."
+    },
+    {
+     "claim": "Deflated Sharpe 0.84 (N=46)",
+     "status": "pass",
+     "evidence": "Recomputed 0.840 with T=106, raw-return skew and kurtosis, V=1/(T-1). 0.84 is below the conventional 0.95 bar: supporting, not decisive."
+    },
+    {
+     "claim": "Evidence is one regime (2023-2026)",
+     "status": "pass",
+     "evidence": "Edge is in both halves: 2018-22 IR 0.63 (t 1.41), 2023-26 IR 1.64 (t 3.21); all 71 wholly-OOS 36-month windows have IR>0 (min 0.50). The caveat is conservative."
+    },
+    {
+     "claim": "Vol 47%, -77% 2008, -54% 2022, -63% OOS max DD",
+     "status": "pass",
+     "evidence": "0.467, -0.766, -0.541, -0.628."
+    },
+    {
+     "claim": "Forward consensus 15%",
+     "status": "pass",
+     "evidence": "15.3%, but 5.2 pts/yr of the G-K leg is P/E drift from a forward (non-GAAP) P/E of 13.3 to 22; forward EPS is 2.0x trailing EPS. Consensus without repricing 13.6%; with G-K started from trailing P/E 13.0%."
+    }
+   ],
+   "notes": "In-sample composite rank 9; included over FANG/LRCX/ORLY by a pre-OOS diversity choice (shortlist.md, commit 86159a0). Keep."
+  },
+  "AVGO": {
+   "verdict": "pass",
+   "claims": [
+    {
+     "claim": "OOS Sharpe 0.98, IR 0.72 (t 2.2)",
+     "status": "pass",
+     "evidence": "0.978 / 0.724 / t 2.15 (NW 2.60). Alpha t only 1.85. t 2.15 does not survive a Bonferroni correction for picking among the 8 (one-sided 5% z=2.24): moderate evidence."
+    },
+    {
+     "claim": "Every 36-month OOS window has positive IR",
+     "status": "pass",
+     "evidence": "71 of 71 windows ending 2020-12..2026-10, min IR 0.27."
+    },
+    {
+     "claim": "-32% drawdown close to IVW -30%",
+     "status": "pass",
+     "evidence": "-31.7% vs -30.5%. It still breaks the -25% budget; 'best risk-adjusted name for the security budget' overstates."
+    },
+    {
+     "claim": "Top in-sample composite (rank 1)",
+     "status": "fail",
+     "evidence": "The 2017 fundamental score (50% of the composite) is built from FY2025 yfinance statements (fy_end 2025-10-31, fundamentals_pit False): look-ahead. With a neutral fundamental score AVGO ranks 5th; with the ROE bug fixed 2nd. Still in the top 8, so the selection survives, but 'picked by a screen using only data to 2017' is untrue for AVGO."
+    },
+    {
+     "claim": "Forward consensus 14%",
+     "status": "pass",
+     "evidence": "14.4%. G-K repricing +4.3%/yr from forward P/E 15.1 (forward EPS 2.5x trailing GAAP). If G-K starts from trailing P/E 37.5 the repricing is -4.8%/yr and the consensus is 11.4%; without repricing 13.0%."
+    }
+   ],
+   "notes": "Edge in both halves (2018-22 IR 0.54 t 1.2; 2023-26 IR 0.91 t 1.8). The spike filter alters two genuine AVGO days (2020-03-18; 2024-07-31, a month end): OOS Sharpe 0.978 filtered vs 0.986 raw, immaterial. Keep; fix the wording."
+  },
+  "MA": {
+   "verdict": "downgrade",
+   "claims": [
+    {
+     "claim": "Smallest OOS drawdown of the eight, -26%",
+     "status": "pass",
+     "evidence": "-26.2% (next GILD -29.4%)."
+    },
+    {
+     "claim": "-8% in the 2022 window vs -27% IVW",
+     "status": "pass",
+     "evidence": "-8.1% vs -27.4%."
+    },
+    {
+     "claim": "Defensive pick",
+     "status": "fail",
+     "evidence": "Window-dependent: in the Covid window MA fell -23.5% vs -16.4% for IVW. Lower drawdown mostly reflects beta 0.68."
+    },
+    {
+     "claim": "OOS Sharpe 0.72 below IVW 0.77, IR 0.14 (t 0.4)",
+     "status": "pass",
+     "evidence": "0.721 / 0.137 / t 0.41; IR vs QQQ 0.008; 2023-26 IR -0.26; only 52% of OOS 36-month windows IR>0."
+    }
+   ],
+   "notes": "Survives rule 8.2 (IR>0) but no evidence it beat holding IVW; the defensive case rests on one of the two OOS stress windows. Keep only as the low-beta option and state the Covid number."
+  },
+  "AMZN": {
+   "verdict": "pass",
+   "claims": [
+    {
+     "claim": "Alpha about 0, IR 0.19 (t 0.6)",
+     "status": "pass",
+     "evidence": "Alpha -0.2% (t -0.03), IR 0.193 (t 0.57)."
+    },
+    {
+     "claim": "Drawdown -52% vs -30%",
+     "status": "pass",
+     "evidence": "-52.1% vs -30.5%."
+    },
+    {
+     "claim": "Lowest consensus (8%) and lowest DCF (6%)",
+     "status": "pass",
+     "evidence": "7.7% and 6.05%, both lowest of the eight."
+    }
+   ],
+   "notes": "Runner-up verdict supported."
+  },
+  "META": {
+   "verdict": "pass",
+   "claims": [
+    {
+     "claim": "-75% drawdown",
+     "status": "pass",
+     "evidence": "-75.4%."
+    },
+    {
+     "claim": "2022 window -72% vs -27%",
+     "status": "pass",
+     "evidence": "-72.3% vs -27.4%."
+    },
+    {
+     "claim": "IR 0.17 (t 0.5), Sharpe 0.51 below IVW",
+     "status": "pass",
+     "evidence": "0.169 (t 0.50), 0.513. 2018-22 IR -0.37, 2023-26 IR 0.91."
+    }
+   ],
+   "notes": "Runner-up verdict supported. MC median 13.0% is 2.3 pts above consensus 10.7%, the largest gap, from the bootstrap edge effect."
+  },
+  "REGN": {
+   "verdict": "fail",
+   "claims": [
+    {
+     "claim": "Fails method.md 8.2 (Sharpe 0.40 < IVW, IR -0.04)",
+     "status": "pass",
+     "evidence": "0.397 < 0.775 and IR -0.036."
+    },
+    {
+     "claim": "Covid +44%, 2022 +19%, beta 0.08",
+     "status": "pass",
+     "evidence": "+44.5%, +18.6%, 0.076."
+    }
+   ],
+   "notes": "Drop correct. Alpha +11.9%/yr (t 1.05): IR against IVW penalises low-beta names; that is the pre-registered rule. With 5 shortlist survivors (rule 2 clarification 2026-11-07) it cannot be a runner-up."
+  },
+  "GILD": {
+   "verdict": "fail",
+   "claims": [
+    {
+     "claim": "Fails method.md 8.2 (Sharpe 0.57 < IVW, IR -0.02)",
+     "status": "pass",
+     "evidence": "0.568 < 0.775 and IR -0.019."
+    },
+    {
+     "claim": "Beta 0.17, up in Covid and 2022",
+     "status": "pass",
+     "evidence": "0.171; +19.4% and +12.1%."
+    },
+    {
+     "claim": "Growth cap 6.98% from revenue consensus",
+     "status": "pass",
+     "evidence": "data/research/fundamentals/GILD/revenue_estimate.csv row +1y growth 0.0698."
+    }
+   ],
+   "notes": "Drop correct. Alpha +11.4% (t 1.36), same low-beta caveat as REGN."
+  },
+  "ADBE": {
+   "verdict": "fail",
+   "claims": [
+    {
+     "claim": "Worst OOS of the eight (Sharpe 0.21, IR -0.26, DD -69%)",
+     "status": "pass",
+     "evidence": "0.214, -0.259, -69.4%; 41st of 46 passers."
+    },
+    {
+     "claim": "16.5% forward return depends on P/E rising from 8.7 to 23",
+     "status": "pass",
+     "evidence": "Repricing (23/8.73)^(1/10)-1 = 10.2%/yr; G-K without it 10.4%; consensus without repricing 13.1%."
+    },
+    {
+     "claim": "DCF takes today's low price at face value",
+     "status": "pass",
+     "evidence": "DCF 19.4%, +207% upside; it starts from forward net income on forward EPS 27.4 = 1.53x trailing 17.9, so the DCF also leans on a non-GAAP forward EPS jump."
+    }
+   ],
+   "notes": "Drop correct under rule 8.2."
+  }
+ },
+ "methodology": [
+  {
+   "item": "1 Reproduce",
+   "status": "pass",
+   "evidence": "`python -m research.candidates.us_growth --all --write` rewrote the 8 JSONs, control CSV/summary and memos byte-identically (md5 unchanged); `--reproduce` in the check script diffs every leaf. Independent numpy recomputation (read_wide_csv prices, last close per calendar month, OOS 2018-01-31..2026-10-31, Nov 2026 partial month dropped) matches every OOS Sharpe, IR, t, alpha, beta, max DD, CAGR, DSR and stress return of the 8 names and IVW to <1e-6. Analyst convention is the same."
+  },
+  {
+   "item": "2 Look-ahead",
+   "status": "fail (contained)",
+   "evidence": "OOS metrics and the composite's IS returns use only <=2017 data (IS Sharpe diff 1e-16). The 2017 fundamental score for AVGO, BKR and MRVL uses current yfinance statements (FY2025/26); the universe is 2026 index membership with a today-market-cap screen. AVGO composite rank 1 -> 5 with a neutral fundamental score; top-8 membership unchanged. Forward inputs (info.json snapshot, CAPM 60-month beta to 2026-10) are current, allowed for a forward thesis, but the snapshot date is not recorded in the JSON."
+  },
+  {
+   "item": "3 Survivorship",
+   "status": "pass with caveat",
+   "evidence": "Control has all 46 passers incl. 6 faded leaders. 9/46 = 19.6% beat IVW's 0.775 OOS Sharpe. Faded-leader median 0.136; BIIB IS rank 10 -> OOS 45. Shortlist median OOS Sharpe 0.572 = all-passer median 0.572. Swapped-in NVDA/MA/GILD median 0.72 vs swapped-out FANG/LRCX/ORLY 0.82. OOS top 10 had IS ranks 9,1,32,19,29,7,21,8,23,30: the 2017 screen would not have picked most winners. 'Near misses LRCX, PANW, FTNT, APH placed 3rd-6th OOS' mislabels: only LRCX (IS rank 7) is a shortlist.md near miss; PANW, FTNT, APH were IS ranks 19, 29, 32. A 2026-member universe still biases the 20% up."
+  },
+  {
+   "item": "4 Windows",
+   "status": "pass",
+   "evidence": "Stress windows equal method.md s11 exactly (taper 2013-04-30..08-31). Rolling: full from 2010, OOS-only windows from 2020-12. USD episodes start at the month end (exclude June 2014 / June 2021): ambiguous, minor. Memo verdicts pick the favourable window for MA (2022, not Covid)."
+  },
+  {
+   "item": "5 Benchmark",
+   "status": "pass",
+   "evidence": "IVW adjusted-close total return (single ETF, no rebalancing); QQQ in alt_benchmark; IR vs IVW monthly."
+  },
+  {
+   "item": "6 Fees and dividends",
+   "status": "pass",
+   "evidence": "Adjusted close: GILD OOS CAGR 14.4% vs 10.3% price-only (4.0%/yr dividends), MA +0.7%/yr. No fund fee; no trades, no cost."
+  },
+  {
+   "item": "7 Currency",
+   "status": "pass",
+   "evidence": "USD throughout; local blocks identical to usd blocks."
+  },
+  {
+   "item": "8 Multiple testing",
+   "status": "pass with caveat",
+   "evidence": "DSR recomputed (N=46, T=106, skew, raw kurtosis): matches. NVDA t by hand 1.0433/sqrt(12)*sqrt(106) = 3.10. Spearman 0.147 (p 0.33) is labelled 'predictive: true': rho>0 avoids the rho<=0 trigger but is insignificant. Only NVDA clears a Bonferroni bar for the 8; AVGO t 2.15 does not."
+  },
+  {
+   "item": "9 Forward models",
+   "status": "weak",
+   "evidence": "G-K repricing compares a target anchored on trailing GAAP P/E medians (cap 23 = median of config.py targets 20/22/24/26, no external source) with a Yahoo forward non-GAAP P/E (forward/trailing EPS AVGO 2.49, NVDA 2.01, REGN 1.56, ADBE 1.53), adding +4.3 to +10.2 pts/yr for those four. Monte Carlo claim TRUE: research/montecarlo.py bootstrap_paths draws block starts in [0, T-block] without wrap-around, so the first and last month are drawn 1/6 as often as a middle month (empirical 0.17). This alone shifts the implied median by -1.4 to +2.2 pts (NVDA +2.2 of a +2.6 gap; META +2.2 of +2.3). It affects the MC medians, 5-95 ranges and any Phase 5 use; not the consensus (MC excluded)."
+  },
+  {
+   "item": "10 AVGO ROE bug",
+   "status": "confirmed, no effect on shortlist",
+   "evidence": "research/screen/cli.py line 27 FIN_WORDS and line 154: 'financ' matches 'yfinance' in universe.csv notes; hits AVGO and SIRI (passers), KDP, GEN. AVGO ROE 28.4% vs ROIC 20.0%; net debt/EBITDA skipped vs 1.40. Quality 0.659 -> 0.506, fundamental 0.636 -> 0.590, composite rank 1 -> 2 (META first). SIRI 17 -> 25. Top 8 unchanged."
+  },
+  {
+   "item": "11 Memos",
+   "status": "pass with caveat",
+   "evidence": "Explain sentences 2-3 match the JSON for all 8. Sentence 1 ('a screen using only data to 2017 picked it') overclaims for AVGO and, through the 2026 universe, for all. AVGO 'best for the security budget' overstates (-32% vs -25%). MA's defensive label omits Covid -23.5% vs -16.4%."
+  }
+ ],
+ "recommended_changes": [
+  "Reword AVGO's memo: its 2017 fundamentals are FY2025 data; state rank 5 with a neutral fundamental score and that -32% breaks the -25% budget.",
+  "Add MA's Covid result (-23.5% vs -16.4%) and 2023-26 IR (-0.26); present MA as low-beta, not proven defensive.",
+  "Fix the near-miss wording: PANW, FTNT, APH were in-sample ranks 19, 29, 32, evidence that the screen did not find the OOS winners.",
+  "Show the forward consensus without G-K repricing next to the headline (AVGO 13.0%, NVDA 13.6%, ADBE 13.1%), or put target and start P/E on one EPS basis, before scoring the forward-return component.",
+  "Label the Spearman result 'positive, not significant (p 0.33)' instead of 'predictive: true'.",
+  "Fix FIN_WORDS matching (word boundary / exclude 'yfinance') through the change log in a later run; it does not change this shortlist.",
+  "Fix or document the bootstrap edge under-sampling (circular blocks) before Phase 5 relies on research/montecarlo.py.",
+  "Record the info.json snapshot date in expected_return_7y."
+ ],
+ "command": "python -m research.reviews.us_growth_check [--reproduce]"
+}

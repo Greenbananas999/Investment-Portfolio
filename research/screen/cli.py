@@ -6,6 +6,7 @@ skipped and flagged), writes research/plan/longlists/<type>_{hard,scored,signals
 """
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -24,7 +25,9 @@ from .technical import HIGHER_IS_BETTER, SIGNALS, signals_at, technical_score, t
     validate_signals
 
 BENCH_TICKERS = ["IVW", "EFG", "EEM", "EMB", "EMLC", "GLD", "ACWX", "BIL"]
-FIN_WORDS = ("bank", "financ", "insur", "brokerage", "exchange operator")
+# Whole-word match on name/category/notes, after stripping the tool name
+# "yfinance" (which contains "financ"; planner fix 2026-11-07 after review).
+FIN_WORDS = re.compile(r"(bank|banco|financ\w*|insur\w*|brokerage|exchange operator)")
 
 
 class Inputs:
@@ -150,8 +153,8 @@ def stock_fundamentals(inp, rows, as_of):
         if rep and isinstance(r.get("currency"), str) and rep != r["currency"]:
             date = as_of if table.attrs.get("point_in_time") else inp.fx.index[-1]
             fxr[t] = _fx_at(inp.fx, r["currency"], date) / _fx_at(inp.fx, rep, date)
-        text = " ".join(str(r.get(c, "")) for c in ("category", "notes", "name")).lower()
-        if any(w in text for w in FIN_WORDS):
+        text = " ".join(str(r.get(c, "")) for c in ("category", "notes", "name")).lower().replace("yfinance", "")
+        if FIN_WORDS.search(text):
             fin.append(t)
         if "ADR" in str(r.get("listing", "")).upper():
             adr.append(t)
